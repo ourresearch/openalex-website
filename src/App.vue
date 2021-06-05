@@ -6,7 +6,7 @@
       <router-view class="mb-12" :key="$route.fullPath"/>
       <single-journal/>
     </v-main>
-    <site-footer/>
+<!--    <site-footer/>-->
 
     <v-snackbar
         color="warning"
@@ -51,8 +51,8 @@ export default {
   },
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Unsub',
-    titleTemplate: '%s | Unsub',
+    title: 'OpenAlex',
+    titleTemplate: '%s | OpenAlex',
     link: [
       // copied over from unpaywall
       // {rel: 'favicon', href: 'favicon.png'},
