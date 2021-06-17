@@ -95,7 +95,7 @@
         href="https://en.wikipedia.org/wiki/MIT_License">MIT License.</a> The MIT license is a "permissive license,"
       meaning it imposes very few restrictions on downstream use. We're happy that our code has often been reused and
       repurposed, by both nonprofit and for-profit organizations. You can find the code for all our projects on <a
-        href="htthttps://github.com/ourresearch">GitHub.</a>
+        href="https://github.com/ourresearch">GitHub.</a>
     </p>
     <p>
       If OurResearch or GitHub were to become sufficiently evil, this GitHub-hosted code could be removed or
