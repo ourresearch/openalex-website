@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Accessibility from "../views/Accessibility";
 import Transparency from "../views/Transparency";
+import Schema from "@/views/Schema";
 import goTo from 'vuetify/es5/services/goto'
 
 Vue.use(VueRouter)
@@ -16,6 +17,7 @@ const routes = [
     {path: '/team', redirect: "/about"},
     {path: '/accessibility', component: Accessibility},
     {path: '/transparency', component: Transparency},
+    {path: '/schema', component: Schema},
     {
         path: '/about',
         name: 'About',
