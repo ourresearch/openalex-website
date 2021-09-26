@@ -2,10 +2,17 @@
   <v-container class="about mt-12 pt-12">
     <DIV class="text-h2 mb-6">Schema</DIV>
     <div class="mt-6">
-      <h2 class="text-h4" id="affiliations">Affiliations</h2>
-      <p><strong>Path</strong> <code>mag/Affiliations.txt</code></p>
-      
 
+<!--      ***************************************************************************************************************-->
+<!--      CONTINUOUSLY UPDATED -->
+<!--      ***************************************************************************************************************-->
+      <div class="text-h4">Continuously updated tables</div>
+      <div class="mb-8">
+        Every day, we add about 50,000 articles (as well as their authors, affiliations, and so forth) to the OpenAlex database. The tables below are continuously updated with this new data, every day.
+      </div>
+
+      <h2 class="text-h5" id="affiliations">Affiliations</h2>
+      <p><strong>Path</strong> <code>mag/Affiliations.txt</code></p>
       <table>
         <thead>
         <tr>
@@ -106,9 +113,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="authorextendedattributes">AuthorExtendedAttributes</h2>
+
+      <h2 class="text-h5" id="authorextendedattributes">AuthorExtendedAttributes</h2>
       <p><strong>Path</strong> <code>mag/AuthorExtendedAttributes.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -139,9 +146,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="authors">Authors</h2>
+
+      <h2 class="text-h5" id="authors">Authors</h2>
       <p><strong>Path</strong> <code>mag/Authors.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -208,251 +215,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="conference-instances">Conference Instances</h2>
-      <p><strong>Path</strong> <code>mag/ConferenceInstances.txt</code></p>
-      
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>ConferenceInstanceId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>NormalizedName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>DisplayName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>ConferenceSeriesId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES ConferenceSeries.ConferenceSeriesId</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Location</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>OfficialUrl</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>StartDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>EndDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>AbstractRegistrationDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>SubmissionDeadlineDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>NotificationDueDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>FinalVersionDueDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>PaperCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>PaperFamilyCount</td>
-          <td>long</td>
-          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>Latitude</td>
-          <td>float?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>Longitude</td>
-          <td>float?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-      <h2 class="text-h4" id="conference-series">Conference Series</h2>
-      <p><strong>Path</strong> <code>mag/ConferenceSeries.txt</code></p>
-      
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>ConferenceSeriesId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Rank</td>
-          <td>uint</td>
-          <td>See <a href="resources-faq#what-is-the-rank-value-on-entities" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>NormalizedName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>DisplayName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>PaperCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>PaperFamilyCount</td>
-          <td>long</td>
-          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-      <h2 class="text-h4" id="entity-related-entities">Entity Related Entities</h2>
-      <p><strong>Path</strong> <code>advanced/EntityRelatedEntities.txt</code></p>
-      
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>EntityId</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>EntityType</td>
-          <td>string</td>
-          <td>af: Affiliation <br> j: Journal <br> c: Conference</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>RelatedEntityId</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>RelatedEntityType</td>
-          <td>string</td>
-          <td>af: Affiliation <br> j: Journal <br> c: Conference</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>RelatedType</td>
-          <td>int</td>
-          <td>0: Two entities are similar if they appear on the same paper <br> 1: Two entities are similar if they have
-            common coauthors <br> 2: Two entities are similar if they are co-cited by others <br> 3: Two entities are
-            similar if they have common fields of study <br> 4: Two entities are similar if they appear in the same
-            venue <br> 5: Entity A is similar to entity B if A cites B <br> 6: Entity A is similar to entity B if A is
-            cited by B
-          </td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Score</td>
-          <td>float</td>
-          <td>Confidence range between 0 and 1. Larger number representing higher confidence.</td>
-        </tr>
-        </tbody>
-      </table>
-      <h2 class="text-h4" id="field-of-study-children">Field of Study Children</h2>
+
+      <h2 class="text-h5" id="field-of-study-children">Field of Study Children</h2>
       <p><strong>Path</strong> <code>advanced/FieldOfStudyChildren.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -477,9 +242,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="field-of-study-extended-attributes">Field of Study Extended Attributes</h2>
+
+      <h2 class="text-h5" id="field-of-study-extended-attributes">Field of Study Extended Attributes</h2>
       <p><strong>Path</strong> <code>advanced/FieldOfStudyExtendedAttributes.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -519,9 +284,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="fields-of-study">Fields of Study</h2>
+
+      <h2 class="text-h5" id="fields-of-study">Fields of Study</h2>
       <p><strong>Path</strong> <code>advanced/FieldsOfStudy.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -594,9 +359,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="journals">Journals</h2>
+
+      <h2 class="text-h5" id="journals">Journals</h2>
       <p><strong>Path</strong> <code>mag/Journals.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -675,43 +440,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="paper-abstracts-inverted-index">Paper Abstracts Inverted Index</h2>
-      <p><strong>Path</strong> <code>nlp/PaperAbstractsInvertedIndex.txt.{*}</code></p>
-      
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>IndexedAbstract</td>
-          <td>string</td>
-          <td>See <a href="resources-faq#what-format-are-paper-abstracts-published-in"
-                     data-linktype="relative-path">FAQ</a> for format
-          </td>
-        </tr>
-        </tbody>
-      </table>
-      <div class="NOTE">
-        <p>Note</p>
-        <p>Paper Abstracts Inverted Index is split to multiple files. Use
-          <code>nlp/PaperAbstractsInvertedIndex.txt.{*}</code> as the path for the combined file.</p>
-      </div>
-      <h2 class="text-h4" id="paper-author-affiliations">Paper Author Affiliations</h2>
+
+      <h2 class="text-h5" id="paper-author-affiliations">Paper Author Affiliations</h2>
       <p><strong>Path</strong> <code>mag/PaperAuthorAffiliations.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -767,42 +498,9 @@
         <p>It is possible to have multiple rows with same (PaperId, AuthorId, AffiliationId) when an author is
           associated with multiple affiliations.</p>
       </div>
-      <h2 class="text-h4" id="paper-citation-contexts">Paper Citation Contexts</h2>
-      <p><strong>Path</strong> <code>nlp/PaperCitationContexts.txt</code></p>
-      
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>PaperReferenceId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>CitationContext</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-      <h2 class="text-h4" id="paper-extended-attributes">Paper Extended Attributes</h2>
+
+      <h2 class="text-h5" id="paper-extended-attributes">Paper Extended Attributes</h2>
       <p><strong>Path</strong> <code>mag/PaperExtendedAttributes.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -833,9 +531,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="paper-fields-of-study">Paper Fields of Study</h2>
+
+      <h2 class="text-h5" id="paper-fields-of-study">Paper Fields of Study</h2>
       <p><strong>Path</strong> <code>advanced/PaperFieldsOfStudy.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -866,9 +564,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="paper-mesh">Paper MeSH</h2>
+
+      <h2 class="text-h5" id="paper-mesh">Paper MeSH</h2>
       <p><strong>Path</strong> <code>advanced/PaperMeSH.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -919,42 +617,9 @@
       </table>
       <p>Please see <a href="https://www.nlm.nih.gov/mesh/mbinfo.html" data-linktype="external">Medical Subject Headings
         documentation</a> for descriptor and qualifier definitions.</p>
-      <h2 class="text-h4" id="paper-recommendations">Paper Recommendations</h2>
-      <p><strong>Path</strong> <code>advanced/PaperRecommendations.txt</code></p>
-      
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>RecommendedPaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Score</td>
-          <td>float</td>
-          <td>Confidence range between 0 and 1. Bigger number representing higher confidence.</td>
-        </tr>
-        </tbody>
-      </table>
-      <h2 class="text-h4" id="paper-references">Paper References</h2>
+
+      <h2 class="text-h5" id="paper-references">Paper References</h2>
       <p><strong>Path</strong> <code>mag/PaperReferences.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -979,9 +644,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="paper-resources">Paper Resources</h2>
+
+      <h2 class="text-h5" id="paper-resources">Paper Resources</h2>
       <p><strong>Path</strong> <code>mag/PaperResources.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -1024,9 +689,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="paper-urls">Paper Urls</h2>
+
+      <h2 class="text-h5" id="paper-urls">Paper Urls</h2>
       <p><strong>Path</strong> <code>mag/PaperUrls.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -1065,9 +730,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="papers">Papers</h2>
+
+      <h2 class="text-h5" id="papers">Papers</h2>
       <p><strong>Path</strong> <code>mag/Papers.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -1237,9 +902,9 @@
         </tr>
         </tbody>
       </table>
-      <h2 class="text-h4" id="related-field-of-study">Related Field of Study</h2>
+
+      <h2 class="text-h5" id="related-field-of-study">Related Field of Study</h2>
       <p><strong>Path</strong> <code>advanced/RelatedFieldOfStudy.txt</code></p>
-      
       <table>
         <thead>
         <tr>
@@ -1283,9 +948,375 @@
         </tbody>
       </table>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--      ***************************************************************************************************************-->
+<!--      MAG LEGACY COLLECTION -->
+<!--      ***************************************************************************************************************-->
+      <div class="text-h4">MAG legacy tables (no longer updated)</div>
+      <div class="mb-8">
+        There is some data that MAG collected, which OpenAlex no longer collects in an ongoing way. You can download this data from OpenAlex, but be aware that the tables below are no longer being updated, and will grow stale over time. Note that all the "Fields of Study" tables were updated once or twice a year by MAG. This makes sense because (a) it's expensive to compute and (b) the world doens't actually create brand new fields of study very often. Following MAG's lead, we expect to update these in due time, but they will not be updated very often.
+      </div>
+
+      <h2 class="text-h5" id="conference-instances">Conference Instances</h2>
+      <p><strong>Path</strong> <code>mag/ConferenceInstances.txt</code></p>
+      <table>
+        <thead>
+        <tr>
+          <th>Column #</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>ConferenceInstanceId</td>
+          <td>long</td>
+          <td>PRIMARY KEY</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>NormalizedName</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>DisplayName</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ConferenceSeriesId</td>
+          <td>long</td>
+          <td>FOREIGN KEY REFERENCES ConferenceSeries.ConferenceSeriesId</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Location</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>OfficialUrl</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>StartDate</td>
+          <td>DateTime?</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>EndDate</td>
+          <td>DateTime?</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>AbstractRegistrationDate</td>
+          <td>DateTime?</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>SubmissionDeadlineDate</td>
+          <td>DateTime?</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>NotificationDueDate</td>
+          <td>DateTime?</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>FinalVersionDueDate</td>
+          <td>DateTime?</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>PaperCount</td>
+          <td>long</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>PaperFamilyCount</td>
+          <td>long</td>
+          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>CitationCount</td>
+          <td>long</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Latitude</td>
+          <td>float?</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Longitude</td>
+          <td>float?</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>CreatedDate</td>
+          <td>DateTime</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-h5" id="conference-series">Conference Series</h2>
+      <p><strong>Path</strong> <code>mag/ConferenceSeries.txt</code></p>
+      <table>
+        <thead>
+        <tr>
+          <th>Column #</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>ConferenceSeriesId</td>
+          <td>long</td>
+          <td>PRIMARY KEY</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Rank</td>
+          <td>uint</td>
+          <td>See <a href="resources-faq#what-is-the-rank-value-on-entities" data-linktype="relative-path">FAQ</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>NormalizedName</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>DisplayName</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>PaperCount</td>
+          <td>long</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>PaperFamilyCount</td>
+          <td>long</td>
+          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>CitationCount</td>
+          <td>long</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>CreatedDate</td>
+          <td>DateTime</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-h5" id="entity-related-entities">Entity Related Entities</h2>
+      <p><strong>Path</strong> <code>advanced/EntityRelatedEntities.txt</code></p>
+      <table>
+        <thead>
+        <tr>
+          <th>Column #</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>EntityId</td>
+          <td>long</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>EntityType</td>
+          <td>string</td>
+          <td>af: Affiliation <br> j: Journal <br> c: Conference</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>RelatedEntityId</td>
+          <td>long</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>RelatedEntityType</td>
+          <td>string</td>
+          <td>af: Affiliation <br> j: Journal <br> c: Conference</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>RelatedType</td>
+          <td>int</td>
+          <td>0: Two entities are similar if they appear on the same paper <br> 1: Two entities are similar if they have
+            common coauthors <br> 2: Two entities are similar if they are co-cited by others <br> 3: Two entities are
+            similar if they have common fields of study <br> 4: Two entities are similar if they appear in the same
+            venue <br> 5: Entity A is similar to entity B if A cites B <br> 6: Entity A is similar to entity B if A is
+            cited by B
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Score</td>
+          <td>float</td>
+          <td>Confidence range between 0 and 1. Larger number representing higher confidence.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-h5" id="paper-abstracts-inverted-index">Paper Abstracts Inverted Index</h2>
+      <p><strong>Path</strong> <code>nlp/PaperAbstractsInvertedIndex.txt.{*}</code></p>
+      <table>
+        <thead>
+        <tr>
+          <th>Column #</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>PaperId</td>
+          <td>long</td>
+          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>IndexedAbstract</td>
+          <td>string</td>
+          <td>See <a href="resources-faq#what-format-are-paper-abstracts-published-in"
+                     data-linktype="relative-path">FAQ</a> for format
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="NOTE">
+        <p>Note</p>
+        <p>Paper Abstracts Inverted Index is split to multiple files. Use
+          <code>nlp/PaperAbstractsInvertedIndex.txt.{*}</code> as the path for the combined file.</p>
+      </div>
+
+      <h2 class="text-h5" id="paper-citation-contexts">Paper Citation Contexts</h2>
+      <p><strong>Path</strong> <code>nlp/PaperCitationContexts.txt</code></p>
+      <table>
+        <thead>
+        <tr>
+          <th>Column #</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>PaperId</td>
+          <td>long</td>
+          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>PaperReferenceId</td>
+          <td>long</td>
+          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>CitationContext</td>
+          <td>string</td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-h5" id="paper-recommendations">Paper Recommendations</h2>
+      <p><strong>Path</strong> <code>advanced/PaperRecommendations.txt</code></p>
+      <table>
+        <thead>
+        <tr>
+          <th>Column #</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>PaperId</td>
+          <td>long</td>
+          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>RecommendedPaperId</td>
+          <td>long</td>
+          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Score</td>
+          <td>float</td>
+          <td>Confidence range between 0 and 1. Bigger number representing higher confidence.</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
-
-
   </v-container>
 </template>
 
@@ -1297,11 +1328,12 @@ export default {
 
 <style scoped lang="scss">
 h2 {
-  margin-top: 100px;
 }
 table {
   border-collapse: collapse;
   border-bottom: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 100px;
   thead {
     tr {
       th {
