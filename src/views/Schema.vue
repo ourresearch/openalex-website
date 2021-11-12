@@ -21,7 +21,7 @@
 
     <a name='layout1'/><h4>Main Layout</h4>
     <div class='svgContainer'>
-        <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1584' height='1550'
+        <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%' height='1550'
              viewBox='0 0 1584 1550'>
 
             <defs>
@@ -2218,27 +2218,7 @@
                     <td> NEW&#59; set values updated from new ror data</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON AffiliationId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON AffiliationId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Referring Foreign Keys</th>
@@ -2317,27 +2297,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON AuthorId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON AuthorId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -2453,27 +2413,7 @@
                     <td> NEW&#59; set when changes are made going forward</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON AuthorId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON AuthorId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -2664,27 +2604,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON ConferenceInstanceId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON ConferenceInstanceId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -2796,27 +2716,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON ConferenceSeriesId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON ConferenceSeriesId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Referring Foreign Keys</th>
@@ -2912,27 +2812,7 @@
                     <td> Confidence range between 0 and 1&#46; Larger number representing higher confidence&#46;</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON EntityId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON EntityId</td>
-                    <td></td>
+                    
                 </tr>
                 </tbody>
             </table>
@@ -2976,27 +2856,7 @@
                     <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON FieldOfStudyId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON FieldOfStudyId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -3078,27 +2938,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON FieldOfStudyId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON FieldOfStudyId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -3204,27 +3044,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON FieldOfStudyId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON FieldOfStudyId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Referring Foreign Keys</th>
@@ -3438,27 +3258,7 @@
                     <td> NEW&#59; set when changes are made going forward</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON JournalId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON JournalId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Referring Foreign Keys</th>
@@ -3517,27 +3317,7 @@
                     <td> Inverted index&#44; see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Inverted&#95;index</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -3631,27 +3411,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -3749,27 +3509,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -3850,27 +3590,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -3946,27 +3666,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -4074,27 +3774,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -4163,27 +3843,7 @@
                     <td> Confidence range between 0 and 1&#46; Bigger number representing higher confidence&#46;</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -4258,29 +3918,6 @@
                     <td><a name='outs.PaperReferences_PaperReferenceId'>PaperReferenceId</a></td>
                     <td> bigint encode az64</td>
                     <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
-                </tr>
-                <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -4371,27 +4008,7 @@
                     <td> Bit flags&#58; 1&#61;Own&#44; 2&#61;Cite</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -4516,27 +4133,7 @@
                     <td> NEW&#59; OAH&#45;PMH id of the repository record</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -4809,27 +4406,7 @@
                     <td> NEW&#59; set when changes are made going forward</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON PaperId</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON PaperId</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
@@ -5141,27 +4718,7 @@
                     <td> FROZEN&#59; no new ranks are being added&#46;</td>
                 </tr>
                 <tr>
-                    <th colspan='4'>Indexes</th>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Distribution</td>
-                    <td> ON FieldOfStudyId1</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <svg width='14' height='14'>
-                            <use xlink:href='#idx'/>
-                        </svg>
-                    </td>
-                    <td>Sorting</td>
-                    <td> ON FieldOfStudyId1</td>
-                    <td></td>
+                    
                 </tr>
                 <tr>
                     <th colspan='4'>Foreign Keys</th>
