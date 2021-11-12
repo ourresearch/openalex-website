@@ -1,6 +1,6 @@
 <template>
 <v-container class="page">
-  <h2 class="text-h3">Contact us</h2>
+  <h2 class="text-h3">Pricing</h2>
 
 
 </v-container>
@@ -8,8 +8,8 @@
 
 <script>
 export default {
-  name: "Contact",
-  metaInfo: {title: "Contact"}
+  name: "Pricing",
+  metaInfo: {title: "Pricing"}
 }
 </script>
 

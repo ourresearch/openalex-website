@@ -1,10 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Accessibility from "../views/Accessibility";
-import Transparency from "../views/Transparency";
-import Schema from "@/views/Schema";
 import goTo from 'vuetify/es5/services/goto'
+
+
+import DataDump from "@/views/DataDump";
+import RestApi from "@/views/RestApi";
+import Schema from "@/views/Schema";
+import MagMigrationGuide from "@/views/MagMigrationGuide";
+
+import Faq from "@/views/Faq";
+import Coverage from "@/views/Coverage";
+import Roadmap from "@/views/Roadmap";
+import License from "@/views/License";
+import Pricing from "@/views/Pricing";
 
 import Contact from "@/views/Contact";
 
@@ -16,19 +25,18 @@ const routes = [
         name: 'Home',
         component: Home
     },
-    {path: '/team', redirect: "/about"},
-    {path: '/accessibility', component: Accessibility},
-    {path: '/transparency', component: Transparency},
+    {path: '/data-dump', component: DataDump},
+    {path: '/rest-api', component: RestApi},
     {path: '/schema', component: Schema},
+    {path: '/mag-migration-guide', component: MagMigrationGuide},
+
+    {path: '/faq', component: Faq},
+    {path: '/coverage', component: Coverage},
+    {path: '/roadmap', component: Roadmap},
+    {path: '/license', component: License},
+    {path: '/pricing', component: Pricing},
+
     {path: '/contact', component: Contact},
-    {
-        path: '/about',
-        name: 'About',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-    }
 ]
 
 const router = new VueRouter({

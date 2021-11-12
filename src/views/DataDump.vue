@@ -1,6 +1,6 @@
 <template>
 <v-container class="page">
-  <h2 class="text-h3">Contact us</h2>
+  <h2 class="text-h3">Data dump</h2>
 
 
 </v-container>
@@ -8,8 +8,8 @@
 
 <script>
 export default {
-  name: "Contact",
-  metaInfo: {title: "Contact"}
+  name: "DataDump",
+  metaInfo: {title: "Data dump"}
 }
 </script>
 

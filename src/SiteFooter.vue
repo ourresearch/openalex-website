@@ -45,10 +45,10 @@
             <a href="http://eepurl.com/hA8PhL" target="_blank">Mailing list</a>
           </div>
           <div>
-            <a href="https://twitter.com/unsub_org" target="_blank">Twitter</a>
+            <a href="https://twitter.com/openalex_org" target="_blank">Twitter</a>
           </div>
           <div>
-            <a href="https://github.com/ourresearch/get-unsub" target="_blank">Source code</a>
+            <a href="https://github.com/ourresearch/openalex-guts" target="_blank">Source code</a>
           </div>
         </v-col>
         <v-col cols="12" sm="2" class="text-center">

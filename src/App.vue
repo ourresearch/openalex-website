@@ -159,8 +159,8 @@ body {
       font-family: Inconsolata !important;
 
     p {
-      font-family: dosis !important;
-      font-family: roboto !important;
+      //font-family: dosis !important;
+      //font-family: roboto !important;
       font-family: Inconsolata !important;
       //font-family: Helvetica !important;
       font-size: 20px !important;
@@ -168,9 +168,10 @@ body {
     }
 
     .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
-      font-family: dosis !important;
       font-family: roboto !important;
-      font-weight: 300;
+      font-family: Inconsolata !important;
+      //font-family: dosis !important;
+      font-weight: 100;
       letter-spacing: 0.01em !important;
       color: #000 !important;
     }

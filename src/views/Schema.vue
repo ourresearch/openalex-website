@@ -5225,7 +5225,8 @@
 
 <script>
 export default {
-  name: "Schema.vue"
+  name: "Schema",
+  metaInfo: {title: "Schema"}
 }
 </script>
 
