@@ -3,10 +3,11 @@
     <div class="above-the-fold">
       <v-container class="">
         <div class="text-h3" style="line-height: 1.3;">
-          An open, comprehensive catalog of scholarly papers, authors, institutions, and more.
+          An open and comprehensive catalog of scholarly papers, authors, institutions, and more.
         </div>
-        <div class="text-h5 mt-6">
+        <div class="mt-12">
           <p style="">
+
             OpenAlex will launch in December 2021, as a drop-in replacement for
             <a href="https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/">Microsoft
               Academic Graph.</a> Learn more in our latest blog post, and join the mailing list to stay up-to-date.
@@ -108,7 +109,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+
+
 
 .above-the-fold {
   /*background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);*/

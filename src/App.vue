@@ -5,32 +5,90 @@
         elevate-on-scroll
         fixed
         color="white"
+        clipped-left
 
     >
-      <router-link to="/" class="d-flex align-center text-h4 text-decoration-none">
-        OpenAlex
-<!--        <v-img-->
-<!--            alt="OurResearch Logo"-->
-<!--            class="shrink mr-2"-->
-<!--            contain-->
-<!--            src="@/assets/logos/ourresearch_logo.png"-->
-<!--            transition="scale-transition"-->
-<!--            width="200"-->
-<!--        />-->
+      <router-link to="/" class="d-flex main-logo">
+        <img src="./assets/OpenAlex-logo-5.png" />
+<!--        <span class="logo-text">-->
+<!--          OpenAlex-->
+<!--        </span>-->
+        <!--        <v-img-->
+        <!--            alt="OurResearch Logo"-->
+        <!--            class="shrink mr-2"-->
+        <!--            contain-->
+        <!--            src="@/assets/logos/ourresearch_logo.png"-->
+        <!--            transition="scale-transition"-->
+        <!--            width="200"-->
+        <!--        />-->
       </router-link>
 
       <v-spacer></v-spacer>
 
-<!--      DESKTOP MENU -->
-      <v-toolbar-items class="d-none hidden-sm-and-down">
+      <!--      DESKTOP MENU -->
+      <v-toolbar-items class=" hidden-sm-and-down">
         <v-btn class="no-active low-key-button" text to="/">Home</v-btn>
-        <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
-        <v-btn class="no-active low-key-button" text to="./projects">Projects</v-btn>
-        <v-btn class="no-active low-key-button" text to="./transparency">Transparency</v-btn>
+
+        <v-menu offset-y content-class="no-highlight">
+          <template v-slot:activator="{on}">
+            <v-btn text color="" v-on="on" class="low-key-button">
+              Get the data
+              <v-icon class="">mdi-menu-down</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item to="/data-dump">
+              Data dump
+            </v-list-item>
+            <v-list-item to="/rest-api">
+              REST API
+            </v-list-item>
+            <v-list-item to="/schema">
+              Schema
+            </v-list-item>
+            <v-list-item to="/mag-migration-guide">
+              MAG migration guide
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+        <v-menu offset-y content-class="no-highlight">
+          <template v-slot:activator="{on}">
+            <v-btn text color="" v-on="on" class="low-key-button">
+              Learn more
+              <v-icon class="">mdi-menu-down</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item to="/faq">
+              FAQ
+            </v-list-item>
+            <v-list-item to="/coverage">
+              Coverage
+            </v-list-item>
+            <v-list-item to="/roadmap">
+              Roadmap
+            </v-list-item>
+            <v-list-item to="/license">
+              License
+            </v-list-item>
+            <v-list-item to="/pricing">
+              Pricing
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+
+
+
+
+        <v-btn class="no-active low-key-button" text to="./contact">Contact</v-btn>
+<!--        <v-btn class="no-active low-key-button" text to="./projects">Projects</v-btn>-->
+<!--        <v-btn class="no-active low-key-button" text to="./transparency">Transparency</v-btn>-->
       </v-toolbar-items>
 
-<!--      MOBILE MENU -->
-      <div class="d-none hidden-md-and-up">
+      <!--      MOBILE MENU -->
+      <div class="hidden-md-and-up">
         <v-menu offset-y content-class="no-highlight" min-width="150">
           <template v-slot:activator="{on}">
             <v-btn icon color="" v-on="on">
@@ -45,75 +103,33 @@
           </v-list>
         </v-menu>
       </div>
-
-
     </v-app-bar>
+
 
     <v-main>
       <router-view/>
     </v-main>
 
-    <v-footer
-        v-if="0"
-        class="py-10 site-footer"
-        style="margin-top: 150px;"
-        dark
-        color="#555"
-    >
-      <v-container>
-        <v-row>
-          <v-col cols="12" sm="2">
-            <div>
-              <router-link to="/">Home</router-link>
-            </div>
-            <div>
-              <router-link to="/about">About</router-link>
-            </div>
-            <div>
-              <router-link to="/projects">Projects</router-link>
-            </div>
-            <div>
-              <router-link to="/transparency">Transparency</router-link>
-            </div>
-            <div>
-              <router-link to="/accessibility">Accessibility</router-link>
-            </div>
-          </v-col>
-          <v-col cols="12" sm="2">
-            <div><a href="https://twitter.com/OurResearch_org" target="_blank">Twitter</a></div>
-            <div><a href="https://blog.ourresearch.org" target="_blank">Blog</a></div>
-            <div><a href="https://github.com/ourresearch" target="_blank">GitHub</a></div>
-            <div><a href="mailto:team@ourresearch.org">Email</a></div>
-          </v-col>
-          <v-col cols="12" sm="4" class="text-center">
-            <router-link to="/">
-              <img class="site-footer-logo" src="@/assets/logos/ourresearch-logo-icon-white.png" alt=""/>
-            </router-link>
-          </v-col>
-          <v-col cols="12" sm="4" class="body-2">
-            OurResearch is supported in part by <a
-              style="text-decoration: underline;"
-              href="https://www.arcadiafund.org.uk/">Arcadia&mdash;a
-            charitable fund of Lisbet Rausing and Peter Baldwin</a>.
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-footer>
+    <site-footer />
+
   </v-app>
 </template>
 
 <script>
+import SiteFooter from "@/SiteFooter";
 
 export default {
   name: 'App',
-    metaInfo: {
+  metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
     title: 'OurResearch',
     titleTemplate: '%s | OurResearch',
-    link: [
-    ],
+    link: [],
 
     meta: []
+  },
+  components: {
+    SiteFooter,
   },
 
   data: () => ({
@@ -131,10 +147,38 @@ export default {
 .v-btn--active.no-active::before {
   opacity: 0.05 !important;
 }
+
 .v-btn--active.no-active {
-    //text-decoration: underline !important;
+  //text-decoration: underline !important;
   //border-bottom: 3px solid #333;
 }
+
+
+body {
+  .v-application {
+      font-family: Inconsolata !important;
+
+    p {
+      font-family: dosis !important;
+      font-family: roboto !important;
+      font-family: Inconsolata !important;
+      //font-family: Helvetica !important;
+      font-size: 20px !important;
+      //letter-spacing: .05em !important;
+    }
+
+    .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
+      font-family: dosis !important;
+      font-family: roboto !important;
+      font-weight: 300;
+      letter-spacing: 0.01em !important;
+      color: #000 !important;
+    }
+
+  }
+
+}
+
 
 .low-key-button {
   font-size: 16px !important;
@@ -143,21 +187,26 @@ export default {
   letter-spacing: 0 !important;
 }
 
-.site-footer {
-  line-height: 1.8;
 
-  a {
-    text-decoration: none;
-    color: #fff !important;
 
-    &:hover {
-      text-decoration: underline;
-    }
+a.main-logo {
+  img {
+    height: 70px;
+    margin-left: -20px;
   }
+  color: #000 !important;
+  font-family: dosis;
+  font-weight: 300;
+  letter-spacing: .05em;
+  font-size: 30px;
+  text-decoration: none;
+  .logo-text {
+    margin-left: 10px;
+    padding-left: 10px;
+    //border-left: 1px solid #000;
+
+  }
+
 }
 
-img.site-footer-logo {
-  width: 30px;
-
-}
 </style>

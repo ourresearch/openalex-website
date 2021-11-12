@@ -6,6 +6,8 @@ import Transparency from "../views/Transparency";
 import Schema from "@/views/Schema";
 import goTo from 'vuetify/es5/services/goto'
 
+import Contact from "@/views/Contact";
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,6 +20,7 @@ const routes = [
     {path: '/accessibility', component: Accessibility},
     {path: '/transparency', component: Transparency},
     {path: '/schema', component: Schema},
+    {path: '/contact', component: Contact},
     {
         path: '/about',
         name: 'About',

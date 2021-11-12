@@ -1,952 +1,9 @@
 <template>
-  <v-container class="about mt-12 pt-12">
-    <DIV class="text-h2 mb-6">Schema</DIV>
-    <div class="mt-6">
 
-<!--      ***************************************************************************************************************-->
-<!--      CONTINUOUSLY UPDATED -->
-<!--      ***************************************************************************************************************-->
-      <div class="text-h4">Continuously updated tables</div>
-      <div class="mb-8">
-        Every day, we add about 50,000 articles (as well as their authors, affiliations, and so forth) to the OpenAlex database. The tables below are continuously updated with this new data, every day.
-      </div>
+  <div style="margin-top: 100px;">
 
-      <h2 class="text-h5" id="affiliations">Affiliations</h2>
-      <p><strong>Path</strong> <code>mag/Affiliations.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>AffiliationId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Rank</td>
-          <td>uint</td>
-          <td>See <a href="resources-faq#what-is-the-rank-value-on-entities" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>NormalizedName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>DisplayName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>GridId</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>OfficialPage</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>WikiPage</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>PaperCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>PaperFamilyCount</td>
-          <td>long</td>
-          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Iso3166Code</td>
-          <td>string</td>
-          <td>Two-letter codes (alpha-2) defined in <a href="https://www.iso.org/iso-3166-country-codes.html"
-                                                       data-linktype="external">ISO_3166 Code (ISO.org)</a> and <a
-              href="https://en.wikipedia.org/wiki/ISO_3166-2" data-linktype="external">ISO 3166-2 (Wiki)</a>. Example:
-            US
-          </td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Latitude</td>
-          <td>float?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>Longitude</td>
-          <td>float?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="authorextendedattributes">AuthorExtendedAttributes</h2>
-      <p><strong>Path</strong> <code>mag/AuthorExtendedAttributes.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>AuthorId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Authors.AuthorId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>AttributeType</td>
-          <td>int</td>
-          <td>1: Alternative Name</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>AttributeValue</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="authors">Authors</h2>
-      <p><strong>Path</strong> <code>mag/Authors.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>AuthorId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Rank</td>
-          <td>uint</td>
-          <td>See <a href="resources-faq#what-is-the-rank-value-on-entities" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>NormalizedName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>DisplayName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>LastKnownAffiliationId</td>
-          <td>long?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>PaperCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>PaperFamilyCount</td>
-          <td>long</td>
-          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="field-of-study-children">Field of Study Children</h2>
-      <p><strong>Path</strong> <code>advanced/FieldOfStudyChildren.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>FieldOfStudyId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>ChildFieldOfStudyId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="field-of-study-extended-attributes">Field of Study Extended Attributes</h2>
-      <p><strong>Path</strong> <code>advanced/FieldOfStudyExtendedAttributes.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>FieldOfStudyId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>AttributeType</td>
-          <td>int</td>
-          <td>1: AUI: Atom Unique Identifier defined in <a
-              href="https://www.nlm.nih.gov/research/umls/new_users/glossary.html#a" data-linktype="external">Unified
-            Medical Language System (UMLS)</a>, version <a
-              href="https://www.nlm.nih.gov/research/umls/licensedcontent/umlsarchives04.html#2018AA"
-              data-linktype="external">2018AA</a>. <br> 2: SourceUrl <br> 3: CUI: Concept Unique Identifier defined in
-            <a href="https://www.nlm.nih.gov/research/umls/new_users/glossary.html#c" data-linktype="external">Unified
-              Medical Language System (UMLS)</a>, version <a
-                href="https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html"
-                data-linktype="external">2020AB</a>.
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>AttributeValue</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="fields-of-study">Fields of Study</h2>
-      <p><strong>Path</strong> <code>advanced/FieldsOfStudy.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>FieldOfStudyId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Rank</td>
-          <td>uint</td>
-          <td>See <a href="resources-faq#what-is-the-rank-value-on-entities" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>NormalizedName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>DisplayName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>MainType</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Level</td>
-          <td>Int</td>
-          <td>0 - 5</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>PaperCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>PaperFamilyCount</td>
-          <td>long</td>
-          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="journals">Journals</h2>
-      <p><strong>Path</strong> <code>mag/Journals.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>JournalId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Rank</td>
-          <td>uint</td>
-          <td>See <a href="resources-faq#what-is-the-rank-value-on-entities" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>NormalizedName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>DisplayName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Issn</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Publisher</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Webpage</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>PaperCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>PaperFamilyCount</td>
-          <td>long</td>
-          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="paper-author-affiliations">Paper Author Affiliations</h2>
-      <p><strong>Path</strong> <code>mag/PaperAuthorAffiliations.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>AuthorId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Authors.AuthorId</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>AffiliationId</td>
-          <td>long?</td>
-          <td>FOREIGN KEY REFERENCES Affiliations.AffiliationId</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>AuthorSequenceNumber</td>
-          <td>uint</td>
-          <td>1-based author sequence number. 1: the 1st author listed on paper, 2: the 2nd author listed on paper,
-            etc.
-          </td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>OriginalAuthor</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>OriginalAffiliation</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-      <div class="NOTE">
-        <p>Note</p>
-        <p>It is possible to have multiple rows with same (PaperId, AuthorId, AffiliationId) when an author is
-          associated with multiple affiliations.</p>
-      </div>
-
-      <h2 class="text-h5" id="paper-extended-attributes">Paper Extended Attributes</h2>
-      <p><strong>Path</strong> <code>mag/PaperExtendedAttributes.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>AttributeType</td>
-          <td>int</td>
-          <td>1: PatentId <br> 2: PubMedId <br> 3: PmcId <br> 4: Alternative Title</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>AttributeValue</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="paper-fields-of-study">Paper Fields of Study</h2>
-      <p><strong>Path</strong> <code>advanced/PaperFieldsOfStudy.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>FieldOfStudyId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Score</td>
-          <td>float</td>
-          <td>Confidence range between 0 and 1. Bigger number representing higher confidence.</td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="paper-mesh">Paper MeSH</h2>
-      <p><strong>Path</strong> <code>advanced/PaperMeSH.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>DescriptorUI</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>DescriptorName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>QualifierUI</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>QualifierName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>IsMajorTopic</td>
-          <td>boolean</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-      <p>Please see <a href="https://www.nlm.nih.gov/mesh/mbinfo.html" data-linktype="external">Medical Subject Headings
-        documentation</a> for descriptor and qualifier definitions.</p>
-
-      <h2 class="text-h5" id="paper-references">Paper References</h2>
-      <p><strong>Path</strong> <code>mag/PaperReferences.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>PaperReferenceId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="paper-resources">Paper Resources</h2>
-      <p><strong>Path</strong> <code>mag/PaperResources.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>ResourceType</td>
-          <td>int</td>
-          <td>Bit flags. 1 = Project, 2 = Data, 4 = Code</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>ResourceUrl</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>SourceUrl</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>RelationshipType</td>
-          <td>int</td>
-          <td>Bit flags. 1 = Own, 2 = Cite</td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="paper-urls">Paper Urls</h2>
-      <p><strong>Path</strong> <code>mag/PaperUrls.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>SourceType</td>
-          <td>int?</td>
-          <td>1 = Html, 2 = Text, 3 = Pdf, 4 = Doc, 5 = Ppt, 6 = Xls, 8 = Rtf, 12 = Xml, 13 = Rss, 20 = Swf, 27 = Ics,
-            31 = Pub, 33 = Ods, 34 = Odp, 35 = Odt, 36 = Zip, 40 = Mp3, 0/999/NULL = unknown
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>SourceUrl</td>
-          <td>string</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>LanguageCode</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="papers">Papers</h2>
-      <p><strong>Path</strong> <code>mag/Papers.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Rank</td>
-          <td>uint</td>
-          <td>See <a href="resources-faq#what-is-the-rank-value-on-entities" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Doi</td>
-          <td>string</td>
-          <td>Doi values are upper-cased per <a href="https://www.doi.org/doi_handbook/2_Numbering.html#2.4"
-                                                data-linktype="external">DOI standard</a></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>DocType</td>
-          <td>string</td>
-          <td>Book, BookChapter, Conference, Dataset, Journal, Patent, Repository, Thesis, NULL : unknown</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>PaperTitle</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>OriginalTitle</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>BookTitle</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Year</td>
-          <td>int?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Date</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>OnlineDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Publisher</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>JournalId</td>
-          <td>long?</td>
-          <td>FOREIGN KEY REFERENCES Journals.JournalId</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>ConferenceSeriesId</td>
-          <td>long?</td>
-          <td>FOREIGN KEY REFERENCES ConferenceSeries.ConferenceSeriesId</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>ConferenceInstanceId</td>
-          <td>long?</td>
-          <td>FOREIGN KEY REFERENCES ConferenceInstances.ConferenceInstanceId</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>Volume</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>Issue</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>FirstPage</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>LastPage</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>19</td>
-          <td>ReferenceCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>20</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>21</td>
-          <td>EstimatedCitation</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>22</td>
-          <td>OriginalVenue</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td>FamilyId</td>
-          <td>long?</td>
-          <td>See <a href="resources-faq#what-is-familyid-in-papers" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td>FamilyRank</td>
-          <td>uint?</td>
-          <td>See <a href="resources-faq#rank-vs-familyrank-in-papers" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>25</td>
-          <td>DocSubTypes</td>
-          <td>string</td>
-          <td>&quot;Retracted Publication&quot;, &quot;Retraction Notice&quot;</td>
-        </tr>
-        <tr>
-          <td>26</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="related-field-of-study">Related Field of Study</h2>
-      <p><strong>Path</strong> <code>advanced/RelatedFieldOfStudy.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>FieldOfStudyId1</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Type1</td>
-          <td>string</td>
-          <td>general, disease, disease_cause, medical_treatment, symptom</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>FieldOfStudyId2</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Type2</td>
-          <td>string</td>
-          <td>general, disease, disease_cause, medical_treatment, symptom</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Rank</td>
-          <td>float</td>
-          <td>Confidence. Bigger number representing higher confidence.</td>
-        </tr>
-        </tbody>
-      </table>
+    <div class="about mt-12 pt-12">
+      <DIV class="text-h2 mb-6">Schema</DIV>
 
 
 
@@ -959,365 +16,5211 @@
 
 
 
+      <div class='container-fluid' style='text-align: center;'>
+
+
+    <a name='layout1'/><h4>Main Layout</h4>
+    <div class='svgContainer'>
+        <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1584' height='1550'
+             viewBox='0 0 1584 1550'>
+
+            <defs>
+                <radialGradient id='layoutBgB' cx='100%' cy='100%' r='100%'>
+                    <stop offset='0%' stop-color='#dfdfdf'/>
+                    <stop offset='100%' stop-color='#f2f2f2'/>
+                </radialGradient>
+                <pattern id="layoutBgA" width="60" height="34.64" patternUnits="userSpaceOnUse">
+                    <rect width="100%" height="100%" fill="#f5f5f5"/>
+                    <path class='bgPattern' d='M 0 17.32 L 10 0 L 30 0 L 40 17.326 L 30 34.64 L 10 34.64 Z'/>
+                    <path class='bgPattern' d='M 40 17.32 L 60 17.32 Z'/>
+                </pattern>
+                <!-- https://norbat.de/svg-pattern-3d-webmuster/ -->
+                <linearGradient id='groupUnderTitleLine' x1='0%' y1='0%' x2='100%' y2='0%'>
+                    <stop offset='0%' stop-color='#999999' stop-opacity='0.7'/>
+                    <stop offset='100%' stop-color='#999999' stop-opacity='0'/>
+                </linearGradient>
+                <radialGradient id='calloutGradient' cx='25%' cy='20%' r='80%' fx='10%' fy='10%'>
+                    <stop offset='0%' stop-color='#ffffff'/>
+                    <stop offset='100%' stop-color='#f8f6d1'/>
+                </radialGradient>
+                <filter id="shadow" width="120%" height="120%">
+                    <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#333" flood-opacity="0.2"/>
+                </filter>
+                <!--
+  <filter id='shadow2' width='120%' height='120%'>
+    <feOffset result='offOut' in='SourceGraphic' dx='0' dy='0' />
+    <feColorMatrix result='matrixOut' in='offOut'
+                   values='0.5 0 0 0 0 0 0.5 0 0 0 0 0 0.5 0 0 0 0 0 0.5 0' />
+    <feGaussianBlur result='blurOut' in='matrixOut' stdDeviation='3' />
+    <feBlend in='SourceGraphic' in2='blurOut' />
+  </filter>
+  -->
+                <filter id='fkShadow' height='130%'>
+                    <feGaussianBlur in='SourceAlpha' stdDeviation='1.5'/> <!-- stdDeviation is how much to blur -->
+                    <feOffset dx='1.2' dy='1.2' result='offsetblur'/> <!-- how much to offset -->
+                    <feMerge>
+                        <feMergeNode/> <!-- this contains the offset blurred image -->
+                        <feMergeNode in='SourceGraphic'/>
+                        <!-- this contains the element that the filter is applied to -->
+                    </feMerge>
+                </filter>
+                <radialGradient id='legendGradient' cx='5%' cy='5%' r='100%'>
+                    <stop offset='0%' stop-color='#e4eeff' stop-opacity='1'/>
+                    <stop offset='100%' stop-color='#c3d2ea' stop-opacity='1'/>
+                </radialGradient>
+                <symbol id='calloutArrowDown'>
+                    <path d='M 0,0 L 8,12 L 16,0 z' style='fill:#f8f6d1;stroke:none; filter: url(#shadow);'/>
+                    <path d='M 0,0 L 8,12 L 16,0' style='stroke:#bebdbd; stroke-width:0.5;'/>
+                </symbol>
+                <symbol id='calloutArrowUp'>
+                    <path d='M 0,16 L 8,4 L 16,16 z' style='fill:#ffffff; stroke:none; filter: url(#shadow);'/>
+                    <path d='M 0,16 L 8,4 L 16,16' style='stroke:#bebdbd; stroke-width:0.5;'/>
+                </symbol>
+                <symbol id='pk' width="13" height="13">
+                    <g transform='scale(0.99)'>
+                        <path style='fill:#f0d938;stroke:#906b25;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;'
+                              d='M 9.3678877,3.5695485 C 9.1030218,3.2729386 9.0796382,2.7628519 9.3396185,2.4517097 9.5449651,2.1956495 9.9040386,2.0980533 10.199638,2.2169415 10.533525,2.3415459 10.775153,2.706942 10.750675,3.0842709 10.737029,3.3980003 10.541153,3.699122 10.258248,3.8066067 9.966649,3.9250429 9.6169668,3.8418805 9.4008073,3.6062324 9.3894892,3.5943518 9.3785264,3.582104 9.3678886,3.5695487 z M 11.226617,6.9916004 C 11.888137,6.3548946 12.293488,5.4172188 12.311087,4.442353 12.378144,2.7379364 11.248678,1.0541269 9.7322318,0.44767357 8.3887112,-0.1280313 6.7865012,0.26822889 5.8918395,1.4007929 5.080823,2.3839145 4.9336815,3.8452096 5.3635544,5.101615 L 4.3670905,5.315913 C 4.0664984,5.3682645 4.0967703,5.6316724 4.2574957,5.8208829 L 4.9124,6.5655244 4.1543436,7.2512357 3.2136002,7.2163506 3.1674775,8.5586827 2.0406832,8.5086512 1.5965306,8.9299953 1.5471661,10.179833 0.75616674,10.195223 0.2112857,10.758575 0.15354288,11.735988 0.07199052,12.765553 c 0.36440953,0.238225 0.79006967,0.195492 1.44938278,-0.02675 L 6.3033562,8.1282037 6.8217102,8.6765688 C 6.9985465,8.8799427 7.3003699,8.7497574 7.358381,8.5016252 L 7.4938877,7.5084164 c 0.8537488,0.3985387 1.8303125,0.4711541 2.6851793,0.1427713 0.393927,-0.1407258 0.746858,-0.3701772 1.04755,-0.6595873 z'/>
+                        <path d='M 6.8014948,6.3102123 0.15369063,13.024481 0.21560535,12.141962 6.0062342,6.2683782 z'
+                              style='fill:#ffe5a5;fill-opacity:1;stroke:#906b25;stroke-width:0.06912433;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:3.00300009'/>
+                    </g>
+                </symbol>
+                <symbol id='idx1' width="13" height="13">
+                    <g transform='scale(0.99)'>
+                        <rect width='4' height='4' x='7' y='1' style='fill:#ffff3f;stroke:#b48333;stroke-width:0.6;'
+                              ry='0.83'/>
+                        <rect width='4' height='4' x='1' y='7' style='fill:#ffff3f;stroke:#b48333;stroke-width:0.6;'
+                              ry='0.832'/>
+                        <rect width='4' height='4' x='7' y='7' style='fill:#ffff3f;stroke:#b48333;stroke-width:0.6;'
+                              ry='0.832'/>
+                    </g>
+                </symbol>
+                <symbol id='idx2' width="13" height="13">
+                    <g transform='scale(0.99)'>
+                        <rect width='4' height='3' x='6' y='1' style='fill:#7fc8e9;stroke:#2f6f8c;stroke-width:0.6;'
+                              ry='0.83'/>
+                        <rect width='7' height='3' x='3' y='6' style='fill:#7fc8e9;stroke:#2f6f8c;stroke-width:0.6;'
+                              ry='0.832'/>
+                    </g>
+                </symbol>
+                <symbol id='unq' width="13" height="13">
+                    <g transform='scale(0.99)'>
+                        <rect style='fill:none;stroke:#7e4d31;stroke-width:0.71934468;stroke-linecap:round;stroke-linejoin:round;'
+                              width='2.29' height='8.43' x='7.48' y='-0.76' ry='1.14'
+                              transform='matrix(0.701,0.713,-0.727,0.685,0,0)'/>
+                        <path style='fill:white;stroke:#858585;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;'
+                              d='m 26.04,8.64 a 4.13,4.13 0 1 1 -8.26,0 4.13,4.13 0 1 1 8.26,0 z'
+                              transform='matrix(1.025,0,0,0.987,-14.690,-3.862)'/>
+                        <text x='5.8' y='7.4' style='font-size:7px;fill:#8a8a8a;'>U</text>
+                    </g>
+                </symbol>
+                <symbol id='idx' width="13" height="13">
+                    <g transform='scale(0.99)'>
+                        <rect style='fill:none;stroke:#7e4d31;stroke-width:0.71934468;stroke-linecap:round;stroke-linejoin:round;'
+                              width='2.29' height='8.43' x='7.48' y='-0.76' ry='1.14'
+                              transform='matrix(0.701,0.713,-0.727,0.685,0,0)'/>
+                        <path style='fill:white;stroke:#858585;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;'
+                              d='m 26.04,8.64 a 4.13,4.13 0 1 1 -8.26,0 4.13,4.13 0 1 1 8.26,0 z'
+                              transform='matrix(1.025,0,0,0.987,-14.690,-3.862)'/>
+                    </g>
+                </symbol>
+                <symbol id='fk' width="13" height="13">
+                    <g transform='scale(0.87)'>
+                        <path style='fill:#6a88cd;stroke:#5a72a8;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                              d='M 12.48,0.33 7.07,0.89 9.067,2.974 0.329,11.731 1.073,12.597 9.811,3.841 11.77,5.78 z'/>
+                    </g>
+                </symbol>
+                <symbol id='ref' width="13" height="13">
+                    <g transform='scale(0.87)'>
+                        <path style='fill:#f0d938;stroke:#906b25;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                              d='M 0.10,12.70 5.31,12.15 3.40,10.06 11.82,1.32 11.11,0.45 2.68,9.19 0.80,7.24 z'/>
+                    </g>
+                </symbol>
+                <symbol id='flag0' width="13" height="13">
+                    <g transform='scale(0.92)'>
+                        <path style='fill:#b7d0f6;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                              d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+                    </g>
+                </symbol>
+                <symbol id='flag1' width="13" height="13">
+                    <g transform='scale(0.92)'>
+                        <path style='fill:#f4a393;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                              d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+                    </g>
+                </symbol>
+                <symbol id='flag2' width="13" height="13">
+                    <g transform='scale(0.92)'>
+                        <path style='fill:#77ec8b;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                              d='M 0.12,12.67 0.16,7.22 C 2.59,7.22 4.13,8.78 9.22,4.22 5.68,4.98 2.53,4.50 0.09,1.80 z'/>
+                    </g>
+                </symbol>
+                <symbol id='nn' width="3" height="3">
+                    <path style='stroke:#9b3e50;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                          d='M 0,0 3,3 M 0,3 3,0 z'/>
+                </symbol>
+                <symbol id='virtual' width="13" height="13">
+                    <circle cx='6' cy='6.5' r='5.5' fill='#a3dda3' stroke='#4c6a4c' stroke-width='0.5'/>
+                    <path style='stroke:#ffffff;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;'
+                          d='M 3,4 6,10 9,4'/>
+                </symbol>
+                <symbol id='view' width="13" height="13">
+                    <g transform='scale(0.99)'>
+                        <line x1='12' y1='6' x2='19' y2='0' stroke='black' stroke-width='0.5'/>
+                        <line x1='0' y1='6' x2='7' y2='0' stroke='black' stroke-width='0.5'/>
+                        <circle cx='3' cy='6' r='3' fill='#f9ebbc' stroke='black' stroke-width='0.5'/>
+                        <circle cx='10' cy='6' r='3' fill='#f9ebbc' stroke='black' stroke-width='0.5'/>
+                    </g>
+                </symbol>
+
+            </defs>
+
+            <defs>
+                <marker id='arrow0u' viewBox='0 0 16.00 16.00' refX='8.00' refY='8.00' markerWidth='16.00'
+                        markerHeight='16.00' orient='auto'>
+                    <path d='M 0.00,8.00 L 16.00,8.00 z'/>
+                    <circle cx='13.33' cy='8.00' r='2.67' style='fill:#5e554d;'/>
+                    <text x='5.33' y='8.00' style='font-size:9px;fill:#5e554d;'>Z</text>
+                </marker>
+                <marker id='arrow1u' viewBox='0 0 16.00 16.00' refX='8.00' refY='8.00' markerWidth='16.00'
+                        markerHeight='16.00' orient='auto'>
+                    <path d='M 0.00,8.00 L 16.00,8.00 z'/>
+                    <circle cx='13.33' cy='8.00' r='2.67' style='fill:#5e554d;'/>
+                    <text x='5.33' y='8.00' style='font-size:9px;fill:#5e554d;'>1</text>
+                </marker>
+                <marker id='arrow0' viewBox='0 0 16.00 16.00' refX='8.00' refY='8.00' markerWidth='16.00'
+                        markerHeight='16.00' orient='auto'>
+                    <path d='M 0.00,8.00 L 16.00,8.00 z'/>
+                    <circle cx='13.33' cy='8.00' r='2.67' style='fill:#5e554d;'/>
+                </marker>
+                <marker id='arrow1' viewBox='0 0 16.00 16.00' refX='8.00' refY='8.00' markerWidth='16.00'
+                        markerHeight='16.00' orient='auto'>
+                    <path d='M 0.00,8.00 L 16.00,8.00 z'/>
+                    <circle cx='13.33' cy='8.00' r='2.67' style='fill:#5e554d;'/>
+                </marker>
+                <marker id='foot0u' viewBox='0 0 16.00 16.00' refX='8.00' refY='8.00' markerWidth='16.00'
+                        markerHeight='16.00' orient='auto'>
+                    <path d='M 0.00,8.00 L 16.00,8.00 z'/>
+                    <circle cx='2.67' cy='8.00' r='2.67' style='fill:#5e554d;'/>
+                    <text x='5.33' y='8.00' style='font-size:9px;fill:#5e554d;'>Z</text>
+                </marker>
+                <marker id='foot0' viewBox='0 0 16.00 16.00' refX='8.00' refY='8.00' markerWidth='16.00'
+                        markerHeight='16.00' orient='auto'>
+                    <path d='M 0.00,8.00 L 16.00,8.00 z'/>
+                    <circle cx='2.67' cy='8.00' r='2.67' style='fill:#5e554d;'/>
+                </marker>
+                <marker id='foot1u' viewBox='0 0 16.00 16.00' refX='8.00' refY='8.00' markerWidth='16.00'
+                        markerHeight='16.00' orient='auto'>
+                    <path d='M 0.00,8.00 L 16.00,8.00 z'/>
+                    <circle cx='2.67' cy='8.00' r='2.67' style='fill:#5e554d;'/>
+                    <text x='5.33' y='8.00' style='font-size:9px;fill:#5e554d;'>1</text>
+                </marker>
+                <marker id='foot1' viewBox='0 0 16.00 16.00' refX='8.00' refY='8.00' markerWidth='16.00'
+                        markerHeight='16.00' orient='auto'>
+                    <path d='M 0.00,8.00 L 16.00,8.00 z'/>
+                    <circle cx='2.67' cy='8.00' r='2.67' style='fill:#5e554d;'/>
+                    <text x='5.33' y='8.00' style='font-size:9px;fill:#5e554d;'>P</text>
+                </marker>
+                <marker id='line_arrow' viewBox='0 0 16.00 8.00' refX='8.00' refY='4.00' markerWidth='16.00'
+                        markerHeight='8.00' orient='auto'>
+                    <path d='M 8.000,4.000 L 16.000,4.000 L 8.000,0.000 L 16.000,4.000 L 8.000,8.000'/>
+                </marker>
+                <marker id='line_straight' viewBox='0 0 16.00 8.00' refX='8.00' refY='4.00' markerWidth='16.00'
+                        markerHeight='8.00' orient='auto'>
+                    <path d='M 0.00,4.00 L 16.00,4.00 z'/>
+                </marker>
+                <linearGradient id='tbg_B3801A' x1='0%' y1='0%' x2='0%' y2='100%'>
+                    <stop offset='0%' stop-color='#FFF8EA'/>
+                    <stop offset='40%' stop-color='#E2D9C9'/>
+                    <stop offset='100%' stop-color='#FFF7E7'/>
+                </linearGradient>
+                <linearGradient id='tbg_8066CC' x1='0%' y1='0%' x2='0%' y2='100%'>
+                    <stop offset='0%' stop-color='#EFEAFF'/>
+                    <stop offset='40%' stop-color='#CFC9E2'/>
+                    <stop offset='100%' stop-color='#EDE7FF'/>
+                </linearGradient>
+                <linearGradient id='tbg_F4BECB' x1='0%' y1='0%' x2='0%' y2='100%'>
+                    <stop offset='0%' stop-color='#FFEAEE'/>
+                    <stop offset='40%' stop-color='#E2C9CE'/>
+                    <stop offset='100%' stop-color='#FFE7EC'/>
+                </linearGradient>
+                <linearGradient id='tbg_4D66CC' x1='0%' y1='0%' x2='0%' y2='100%'>
+                    <stop offset='0%' stop-color='#EAEEFF'/>
+                    <stop offset='40%' stop-color='#C9CDE2'/>
+                    <stop offset='100%' stop-color='#E7EBFF'/>
+                </linearGradient>
+                <linearGradient id='tbg_F4BEEE' x1='0%' y1='0%' x2='0%' y2='100%'>
+                    <stop offset='0%' stop-color='#FFEAFC'/>
+                    <stop offset='40%' stop-color='#E2C9DF'/>
+                    <stop offset='100%' stop-color='#FFE7FC'/>
+                </linearGradient>
+                <linearGradient id='tbg_C4E0F9' x1='0%' y1='0%' x2='0%' y2='100%'>
+                    <stop offset='0%' stop-color='#EAF5FF'/>
+                    <stop offset='40%' stop-color='#C9D6E2'/>
+                    <stop offset='100%' stop-color='#E7F3FF'/>
+                </linearGradient>
+                <linearGradient id='tbg_3986C1' x1='0%' y1='0%' x2='0%' y2='100%'>
+                    <stop offset='0%' stop-color='#EAF5FF'/>
+                    <stop offset='40%' stop-color='#C9D7E2'/>
+                    <stop offset='100%' stop-color='#E7F4FF'/>
+                </linearGradient>
+                <linearGradient id='tbg_C7F4BE' x1='0%' y1='0%' x2='0%' y2='100%'>
+                    <stop offset='0%' stop-color='#EDFFEA'/>
+                    <stop offset='40%' stop-color='#CDE2C9'/>
+                    <stop offset='100%' stop-color='#EBFFE7'/>
+                </linearGradient>
+            </defs>
+
+            <!-- == Shape Colors == -->
+            <!-- == Desktop == -->
+            <rect x='1' y='1' width='1582' height='1548' rx='8' ry='8'
+                  style='fill:url(#layoutBgA); stroke:#aaa; stroke-width:1px;'/>
+
+            <!-- == Legend == -->
+            <g transform='translate(10,10)'>
+                <rect x='10' y='10' width='420' height='70' rx='6' ry='6'
+                      style='fill:url(#legendGradient);filter:url(#shadow);'/>
+                <text x='20' y='25' class='legendTitle'>Redshift</text>
+                <text x='20' y='53' class='legendSubTitle'>
+                    <tspan>Read table and column comments as mouse-over tooltips.</tspan>
+                </text>
+                <text x='20' y='67' class='legendSubTitle'>
+                    <tspan>Zoom ~ Ctrl + mouse wheel, panning ~ drag + right-mouse button.</tspan>
+                </text>
+            </g>
+
+            <g transform='translate(0,110)'>
+                <!-- == Group 'Conferences' == -->
+                <rect class='grp' style='fill:#E7E1FC;stroke:#A89EC7' x='624' y='989' width='448' height='386'/>
+                <text x='636' y='1005'>Conferences</text>
+                <rect style='fill:url(#groupUnderTitleLine); stroke-width:2;' x='636' y='1009' width='424' height='2'/>
+
+                <!-- == Group 'Authors and Affiliations' == -->
+                <rect class='grp' style='fill:#FCF3E1;stroke:#C7B99E' x='880' y='445' width='672' height='530'/>
+                <text x='892' y='461'>Authors and Affiliations</text>
+                <rect style='fill:url(#groupUnderTitleLine); stroke-width:2;' x='892' y='465' width='648' height='2'/>
+
+                <!-- == Group 'Fields of Study' == -->
+                <rect class='grp' style='fill:#E1E6FC;stroke:#9EA6C7' x='416' y='45' width='656' height='386'/>
+                <text x='428' y='61'>Fields of Study</text>
+                <rect style='fill:url(#groupUnderTitleLine); stroke-width:2;' x='428' y='65' width='632' height='2'/>
+
+                <!-- == Fk 'AuthorExtendedAttributes_Fk_AuthorExtendedAttributes_Authors' == -->
+                <path id='AuthorExtendedAttributes_Fk_AuthorExtendedAttributes_Authors'
+                      onmouseover="hghl(['AuthorExtendedAttributes_Fk_AuthorExtendedAttributes_Authors','outs.AuthorExtendedAttributes.AuthorId','outs.Authors.AuthorId'])"
+                      onmouseout="uhghl(['AuthorExtendedAttributes_Fk_AuthorExtendedAttributes_Authors','outs.AuthorExtendedAttributes.AuthorId','outs.Authors.AuthorId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 1328,496L 1312,496'>
+                    <title>Fk Fk_AuthorExtendedAttributes_Authors
+                        AuthorExtendedAttributes ref Authors ( AuthorId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 1328,496L 1312,496'><title>Fk Fk_AuthorExtendedAttributes_Authors
+                    AuthorExtendedAttributes ref Authors ( AuthorId )</title></path>
+                <!-- == Fk 'Authors_Fk_Authors_Affiliations' == -->
+                <path id='Authors_Fk_Authors_Affiliations'
+                      onmouseover="hghl(['Authors_Fk_Authors_Affiliations','outs.Authors.LastKnownAffiliationId','outs.Affiliations.AffiliationId'])"
+                      onmouseout="uhghl(['Authors_Fk_Authors_Affiliations','outs.Authors.LastKnownAffiliationId','outs.Affiliations.AffiliationId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 1104,672L 1072,672'>
+                    <title>Fk Fk_Authors_Affiliations
+                        Authors ref Affiliations ( LastKnownAffiliationId -&gt; AffiliationId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 1104,672L 1072,672'><title>Fk Fk_Authors_Affiliations
+                    Authors ref Affiliations ( LastKnownAffiliationId -&gt; AffiliationId )</title></path>
+                <!-- == Fk 'ConferenceInstances_Fk_ConferenceInstances_ConferenceSeries' == -->
+                <path id='ConferenceInstances_Fk_ConferenceInstances_ConferenceSeries'
+                      onmouseover="hghl(['ConferenceInstances_Fk_ConferenceInstances_ConferenceSeries','outs.ConferenceInstances.ConferenceSeriesId','outs.ConferenceSeries.ConferenceSeriesId'])"
+                      onmouseout="uhghl(['ConferenceInstances_Fk_ConferenceInstances_ConferenceSeries','outs.ConferenceInstances.ConferenceSeriesId','outs.ConferenceSeries.ConferenceSeriesId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 832,1072L 816,1072'>
+                    <title>Fk Fk_ConferenceInstances_ConferenceSeries
+                        ConferenceInstances ref ConferenceSeries ( ConferenceSeriesId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 832,1072L 816,1072'><title>Fk Fk_ConferenceInstances_ConferenceSeries
+                    ConferenceInstances ref ConferenceSeries ( ConferenceSeriesId )</title></path>
+                <!-- == Fk 'FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy' == -->
+                <path id='FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy'
+                      onmouseover="hghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy','outs.FieldOfStudyChildren.FieldOfStudyId','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      onmouseout="uhghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy','outs.FieldOfStudyChildren.FieldOfStudyId','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 816,192L 784,192'>
+                    <title>Fk Fk_FieldOfStudyChildren_FieldsOfStudy
+                        FieldOfStudyChildren ref FieldsOfStudy ( FieldOfStudyId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 816,192L 784,192'><title>Fk Fk_FieldOfStudyChildren_FieldsOfStudy
+                    FieldOfStudyChildren ref FieldsOfStudy ( FieldOfStudyId )</title></path>
+                <!-- == Fk 'FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy_0' == -->
+                <path id='FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy_0'
+                      onmouseover="hghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy_0','outs.FieldOfStudyChildren.ChildFieldOfStudyId','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      onmouseout="uhghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy_0','outs.FieldOfStudyChildren.ChildFieldOfStudyId','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 816,208L 784,208'>
+                    <title>Fk Fk_FieldOfStudyChildren_FieldsOfStudy_0
+                        FieldOfStudyChildren ref FieldsOfStudy ( ChildFieldOfStudyId -&gt; FieldOfStudyId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 816,208L 784,208'><title>Fk Fk_FieldOfStudyChildren_FieldsOfStudy_0
+                    FieldOfStudyChildren ref FieldsOfStudy ( ChildFieldOfStudyId -&gt; FieldOfStudyId )</title></path>
+                <!-- == Fk 'FieldOfStudyExtendedAttributes_Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy' == -->
+                <path id='FieldOfStudyExtendedAttributes_Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy'
+                      onmouseover="hghl(['FieldOfStudyExtendedAttributes_Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy','outs.FieldOfStudyExtendedAttributes.FieldOfStudyId','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      onmouseout="uhghl(['FieldOfStudyExtendedAttributes_Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy','outs.FieldOfStudyExtendedAttributes.FieldOfStudyId','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 816,128L 784,128'>
+                    <title>Fk Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy
+                        FieldOfStudyExtendedAttributes ref FieldsOfStudy ( FieldOfStudyId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 816,128L 784,128'><title>Fk Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy
+                    FieldOfStudyExtendedAttributes ref FieldsOfStudy ( FieldOfStudyId )</title></path>
+                <!-- == Fk 'PaperAbstractsInvertedIndex_Fk_PaperAbstractsInvertedIndex_Papers' == -->
+                <path id='PaperAbstractsInvertedIndex_Fk_PaperAbstractsInvertedIndex_Papers'
+                      onmouseover="hghl(['PaperAbstractsInvertedIndex_Fk_PaperAbstractsInvertedIndex_Papers','outs.PaperAbstractsInvertedIndex.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperAbstractsInvertedIndex_Fk_PaperAbstractsInvertedIndex_Papers','outs.PaperAbstractsInvertedIndex.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 512,1264L 512,1072'>
+                    <title>Fk Fk_PaperAbstractsInvertedIndex_Papers
+                        PaperAbstractsInvertedIndex ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 512,1264L 512,1072'><title>Fk Fk_PaperAbstractsInvertedIndex_Papers
+                    PaperAbstractsInvertedIndex ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Papers' == -->
+                <path id='PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Papers'
+                      onmouseover="hghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Papers','outs.PaperAuthorAffiliations.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Papers','outs.PaperAuthorAffiliations.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 880,496L 544,496'>
+                    <title>Fk Fk_PaperAuthorAffiliations_Papers
+                        PaperAuthorAffiliations ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 880,496L 544,496'><title>Fk Fk_PaperAuthorAffiliations_Papers
+                    PaperAuthorAffiliations ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Authors' == -->
+                <path id='PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Authors'
+                      onmouseover="hghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Authors','outs.PaperAuthorAffiliations.AuthorId','outs.Authors.AuthorId'])"
+                      onmouseout="uhghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Authors','outs.PaperAuthorAffiliations.AuthorId','outs.Authors.AuthorId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 1088,496L 1104,496'>
+                    <title>Fk Fk_PaperAuthorAffiliations_Authors
+                        PaperAuthorAffiliations ref Authors ( AuthorId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 1088,496L 1104,496'><title>Fk Fk_PaperAuthorAffiliations_Authors
+                    PaperAuthorAffiliations ref Authors ( AuthorId )</title></path>
+                <!-- == Fk 'PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Affiliations' == -->
+                <path id='PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Affiliations'
+                      onmouseover="hghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Affiliations','outs.PaperAuthorAffiliations.AffiliationId','outs.Affiliations.AffiliationId'])"
+                      onmouseout="uhghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Affiliations','outs.PaperAuthorAffiliations.AffiliationId','outs.Affiliations.AffiliationId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 928,624L 928,640'>
+                    <title>Fk Fk_PaperAuthorAffiliations_Affiliations
+                        PaperAuthorAffiliations ref Affiliations ( AffiliationId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 928,624L 928,640'><title>Fk Fk_PaperAuthorAffiliations_Affiliations
+                    PaperAuthorAffiliations ref Affiliations ( AffiliationId )</title></path>
+                <!-- == Fk 'PaperCitationContexts_Fk_PaperCitationContexts_Papers' == -->
+                <path id='PaperCitationContexts_Fk_PaperCitationContexts_Papers'
+                      onmouseover="hghl(['PaperCitationContexts_Fk_PaperCitationContexts_Papers','outs.PaperCitationContexts.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperCitationContexts_Fk_PaperCitationContexts_Papers','outs.PaperCitationContexts.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 384,1120L 384,1072'>
+                    <title>Fk Fk_PaperCitationContexts_Papers
+                        PaperCitationContexts ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 384,1120L 384,1072'><title>Fk Fk_PaperCitationContexts_Papers
+                    PaperCitationContexts ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperCitationContexts_Fk_PaperCitationContexts_Papers_0' == -->
+                <path id='PaperCitationContexts_Fk_PaperCitationContexts_Papers_0'
+                      onmouseover="hghl(['PaperCitationContexts_Fk_PaperCitationContexts_Papers_0','outs.PaperCitationContexts.PaperReferenceId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperCitationContexts_Fk_PaperCitationContexts_Papers_0','outs.PaperCitationContexts.PaperReferenceId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 400,1120L 400,1072'>
+                    <title>Fk Fk_PaperCitationContexts_Papers_0
+                        PaperCitationContexts ref Papers ( PaperReferenceId -&gt; PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 400,1120L 400,1072'><title>Fk Fk_PaperCitationContexts_Papers_0
+                    PaperCitationContexts ref Papers ( PaperReferenceId -&gt; PaperId )</title></path>
+                <!-- == Fk 'PaperExtendedAttributes_Fk_PaperExtendedAttributes_Papers' == -->
+                <path id='PaperExtendedAttributes_Fk_PaperExtendedAttributes_Papers'
+                      onmouseover="hghl(['PaperExtendedAttributes_Fk_PaperExtendedAttributes_Papers','outs.PaperExtendedAttributes.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperExtendedAttributes_Fk_PaperExtendedAttributes_Papers','outs.PaperExtendedAttributes.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 240,480L 352,480'>
+                    <title>Fk Fk_PaperExtendedAttributes_Papers
+                        PaperExtendedAttributes ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 240,480L 352,480'><title>Fk Fk_PaperExtendedAttributes_Papers
+                    PaperExtendedAttributes ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_Papers' == -->
+                <path id='PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_Papers'
+                      onmouseover="hghl(['PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_Papers','outs.PaperFieldsOfStudy.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_Papers','outs.PaperFieldsOfStudy.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 448,352L 448,464'>
+                    <title>Fk Fk_PaperFieldsOfStudy_Papers
+                        PaperFieldsOfStudy ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 448,352L 448,464'><title>Fk Fk_PaperFieldsOfStudy_Papers
+                    PaperFieldsOfStudy ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_FieldsOfStudy' == -->
+                <path id='PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_FieldsOfStudy'
+                      onmouseover="hghl(['PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_FieldsOfStudy','outs.PaperFieldsOfStudy.FieldOfStudyId','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      onmouseout="uhghl(['PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_FieldsOfStudy','outs.PaperFieldsOfStudy.FieldOfStudyId','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 592,256L 608,256'>
+                    <title>Fk Fk_PaperFieldsOfStudy_FieldsOfStudy
+                        PaperFieldsOfStudy ref FieldsOfStudy ( FieldOfStudyId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 592,256L 608,256'><title>Fk Fk_PaperFieldsOfStudy_FieldsOfStudy
+                    PaperFieldsOfStudy ref FieldsOfStudy ( FieldOfStudyId )</title></path>
+                <!-- == Fk 'PaperMeSH_Fk_PaperMeSH_Papers' == -->
+                <path id='PaperMeSH_Fk_PaperMeSH_Papers'
+                      onmouseover="hghl(['PaperMeSH_Fk_PaperMeSH_Papers','outs.PaperMeSH.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperMeSH_Fk_PaperMeSH_Papers','outs.PaperMeSH.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 240,784L 352,784'>
+                    <title>Fk Fk_PaperMeSH_Papers
+                        PaperMeSH ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 240,784L 352,784'><title>Fk Fk_PaperMeSH_Papers
+                    PaperMeSH ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperRecommendations_Fk_PaperRecommendations_Papers' == -->
+                <path id='PaperRecommendations_Fk_PaperRecommendations_Papers'
+                      onmouseover="hghl(['PaperRecommendations_Fk_PaperRecommendations_Papers','outs.PaperRecommendations.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperRecommendations_Fk_PaperRecommendations_Papers','outs.PaperRecommendations.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 240,528L 352,528'>
+                    <title>Fk Fk_PaperRecommendations_Papers
+                        PaperRecommendations ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 240,528L 352,528'><title>Fk Fk_PaperRecommendations_Papers
+                    PaperRecommendations ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperRecommendations_Fk_PaperRecommendations_Papers_0' == -->
+                <path id='PaperRecommendations_Fk_PaperRecommendations_Papers_0'
+                      onmouseover="hghl(['PaperRecommendations_Fk_PaperRecommendations_Papers_0','outs.PaperRecommendations.RecommendedPaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperRecommendations_Fk_PaperRecommendations_Papers_0','outs.PaperRecommendations.RecommendedPaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 240,544L 352,544'>
+                    <title>Fk Fk_PaperRecommendations_Papers_0
+                        PaperRecommendations ref Papers ( RecommendedPaperId -&gt; PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 240,544L 352,544'><title>Fk Fk_PaperRecommendations_Papers_0
+                    PaperRecommendations ref Papers ( RecommendedPaperId -&gt; PaperId )</title></path>
+                <!-- == Fk 'PaperReferences_Fk_PaperReferences_Papers' == -->
+                <path id='PaperReferences_Fk_PaperReferences_Papers'
+                      onmouseover="hghl(['PaperReferences_Fk_PaperReferences_Papers','outs.PaperReferences.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperReferences_Fk_PaperReferences_Papers','outs.PaperReferences.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 240,944L 352,944'>
+                    <title>Fk Fk_PaperReferences_Papers
+                        PaperReferences ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 240,944L 352,944'><title>Fk Fk_PaperReferences_Papers
+                    PaperReferences ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperReferences_Fk_PaperReferences_Papers_0' == -->
+                <path id='PaperReferences_Fk_PaperReferences_Papers_0'
+                      onmouseover="hghl(['PaperReferences_Fk_PaperReferences_Papers_0','outs.PaperReferences.PaperReferenceId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperReferences_Fk_PaperReferences_Papers_0','outs.PaperReferences.PaperReferenceId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 240,960L 352,960'>
+                    <title>Fk Fk_PaperReferences_Papers_0
+                        PaperReferences ref Papers ( PaperReferenceId -&gt; PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 240,960L 352,960'><title>Fk Fk_PaperReferences_Papers_0
+                    PaperReferences ref Papers ( PaperReferenceId -&gt; PaperId )</title></path>
+                <!-- == Fk 'PaperResources_Fk_PaperResources_Papers' == -->
+                <path id='PaperResources_Fk_PaperResources_Papers'
+                      onmouseover="hghl(['PaperResources_Fk_PaperResources_Papers','outs.PaperResources.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperResources_Fk_PaperResources_Papers','outs.PaperResources.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 240,640L 352,640'>
+                    <title>Fk Fk_PaperResources_Papers
+                        PaperResources ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 240,640L 352,640'><title>Fk Fk_PaperResources_Papers
+                    PaperResources ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'PaperUrls_Fk_PaperUrls_Papers' == -->
+                <path id='PaperUrls_Fk_PaperUrls_Papers'
+                      onmouseover="hghl(['PaperUrls_Fk_PaperUrls_Papers','outs.PaperUrls.PaperId','outs.Papers.PaperId'])"
+                      onmouseout="uhghl(['PaperUrls_Fk_PaperUrls_Papers','outs.PaperUrls.PaperId','outs.Papers.PaperId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 240,1040L 352,1040'>
+                    <title>Fk Fk_PaperUrls_Papers
+                        PaperUrls ref Papers ( PaperId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 240,1040L 352,1040'><title>Fk Fk_PaperUrls_Papers
+                    PaperUrls ref Papers ( PaperId )</title></path>
+                <!-- == Fk 'Papers_Fk_Papers_Journals' == -->
+                <path id='Papers_Fk_Papers_Journals'
+                      onmouseover="hghl(['Papers_Fk_Papers_Journals','outs.Papers.JournalId','outs.Journals.JournalId'])"
+                      onmouseout="uhghl(['Papers_Fk_Papers_Journals','outs.Papers.JournalId','outs.Journals.JournalId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 544,560L 640,560'>
+                    <title>Fk Fk_Papers_Journals
+                        Papers ref Journals ( JournalId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 544,560L 640,560'><title>Fk Fk_Papers_Journals
+                    Papers ref Journals ( JournalId )</title></path>
+                <!-- == Fk 'Papers_Fk_Papers_ConferenceSeries' == -->
+                <path id='Papers_Fk_Papers_ConferenceSeries'
+                      onmouseover="hghl(['Papers_Fk_Papers_ConferenceSeries','outs.Papers.ConferenceSeriesId','outs.ConferenceSeries.ConferenceSeriesId'])"
+                      onmouseout="uhghl(['Papers_Fk_Papers_ConferenceSeries','outs.Papers.ConferenceSeriesId','outs.ConferenceSeries.ConferenceSeriesId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 544,1056L 624,1056'>
+                    <title>Fk Fk_Papers_ConferenceSeries
+                        Papers ref ConferenceSeries ( ConferenceSeriesId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 544,1056L 624,1056'><title>Fk Fk_Papers_ConferenceSeries
+                    Papers ref ConferenceSeries ( ConferenceSeriesId )</title></path>
+                <!-- == Fk 'Papers_Fk_Papers_ConferenceInstances' == -->
+                <path id='Papers_Fk_Papers_ConferenceInstances'
+                      onmouseover="hghl(['Papers_Fk_Papers_ConferenceInstances','outs.Papers.ConferenceInstanceId','outs.ConferenceInstances.ConferenceInstanceId'])"
+                      onmouseout="uhghl(['Papers_Fk_Papers_ConferenceInstances','outs.Papers.ConferenceInstanceId','outs.ConferenceInstances.ConferenceInstanceId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 544,1024L 832,1024'>
+                    <title>Fk Fk_Papers_ConferenceInstances
+                        Papers ref ConferenceInstances ( ConferenceInstanceId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 544,1024L 832,1024'><title>Fk Fk_Papers_ConferenceInstances
+                    Papers ref ConferenceInstances ( ConferenceInstanceId )</title></path>
+                <!-- == Fk 'RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy' == -->
+                <path id='RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy'
+                      onmouseover="hghl(['RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy','outs.RelatedFieldOfStudy.FieldOfStudyId1','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      onmouseout="uhghl(['RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy','outs.RelatedFieldOfStudy.FieldOfStudyId1','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 816,288L 784,288'>
+                    <title>Fk Fk_RelatedFieldOfStudy_FieldsOfStudy
+                        RelatedFieldOfStudy ref FieldsOfStudy ( FieldOfStudyId1 -&gt; FieldOfStudyId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 816,288L 784,288'><title>Fk Fk_RelatedFieldOfStudy_FieldsOfStudy
+                    RelatedFieldOfStudy ref FieldsOfStudy ( FieldOfStudyId1 -&gt; FieldOfStudyId )</title></path>
+                <!-- == Fk 'RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy_0' == -->
+                <path id='RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy_0'
+                      onmouseover="hghl(['RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy_0','outs.RelatedFieldOfStudy.FieldOfStudyId2','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      onmouseout="uhghl(['RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy_0','outs.RelatedFieldOfStudy.FieldOfStudyId2','outs.FieldsOfStudy.FieldOfStudyId'])"
+                      transform='translate(8,0)' class='unhighlight' d='M 816,304L 784,304'>
+                    <title>Fk Fk_RelatedFieldOfStudy_FieldsOfStudy_0
+                        RelatedFieldOfStudy ref FieldsOfStudy ( FieldOfStudyId2 -&gt; FieldOfStudyId )</title>
+                </path>
+                <path transform='translate(8,0)' marker-start='url(#foot0)' marker-end='url(#arrow0)' class='virtual'
+                      d='M 816,304L 784,304'><title>Fk Fk_RelatedFieldOfStudy_FieldsOfStudy_0
+                    RelatedFieldOfStudy ref FieldsOfStudy ( FieldOfStudyId2 -&gt; FieldOfStudyId )</title></path>
+                <!-- == Table 'Affiliations' == -->
+                <rect id='depict_outs.Affiliations' class='entity' style='stroke:#C9BFAD' x='912' y='648' width='160'
+                      height='304'/>
+                <rect class='entity' x='912' y='648' width='160' height='28' style='stroke:#C9BFAD; fill:#A18E6A'/>
+                <a xlink:href='#outs.Affiliations'>
+                    <text x='954' y='667' class='white'>Affiliations</text>
+                    <title>Table outs.Affiliations
+                        Base table for affiliations/institutions (mag/Affiliations.txt)</title></a>
+                <use id='idx1' x='914' y='684' xlink:href='#idx1'><title>Distribution ( AffiliationId ) Sorting (
+                    AffiliationId ) </title></use>
+                <a xlink:href='#outs.Affiliations_AffiliationId'>
+                    <text id='outs.Affiliations.AffiliationId' x='931' y='695'
+                          onmouseover="hghl(['Authors_Fk_Authors_Affiliations','outs.Authors.LastKnownAffiliationId','PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Affiliations','outs.PaperAuthorAffiliations.AffiliationId'])"
+                          onmouseout="uhghl(['Authors_Fk_Authors_Affiliations','outs.Authors.LastKnownAffiliationId','PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Affiliations','outs.PaperAuthorAffiliations.AffiliationId'])">
+                        AffiliationId
+                    </text>
+                    <title>AffiliationId
+                        bigint
+                        PRIMARY KEY</title></a>
+                <a xlink:href='#outs.Affiliations.AffiliationId'>
+                    <use id='ref' x='1060' y='684' xlink:href='#ref'/>
+                    <title>Referred by Authors ( LastKnownAffiliationId -&gt; AffiliationId )
+                        Referred by PaperAuthorAffiliations ( AffiliationId ) </title></a>
+                <a xlink:href='#outs.Affiliations_Rank'>
+                    <text id='outs.Affiliations.Rank' x='931' y='711'>Rank</text>
+                    <title>Rank
+                        integer
+                        FROZEN; no new ranks are being added.</title></a>
+                <text x='1069' y='708' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Affiliations_NormalizedName'>
+                    <text id='outs.Affiliations.NormalizedName' x='931' y='727'>NormalizedName</text>
+                    <title>NormalizedName
+                        varchar
+                        UPDATED; slightly different normalization algorithm</title></a>
+                <text x='1069' y='724' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Affiliations_DisplayName'>
+                    <text id='outs.Affiliations.DisplayName' x='931' y='743'>DisplayName</text>
+                    <title>DisplayName
+                        varchar</title></a>
+                <text x='1069' y='740' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Affiliations_GridId'>
+                    <text id='outs.Affiliations.GridId' x='931' y='759'>GridId</text>
+                    <title>GridId
+                        varchar
+                        FROZEN; ror_id is the new standard identifier for organizations</title></a>
+                <text x='1069' y='756' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Affiliations_RorId'>
+                    <text id='outs.Affiliations.RorId' x='931' y='775'>RorId</text>
+                    <title>RorId
+                        varchar
+                        NEW; ROR for this organization, see https://ror.org, https://ror.org/:ror_id</title></a>
+                <text x='1069' y='772' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Affiliations_OfficialPage'>
+                    <text id='outs.Affiliations.OfficialPage' x='931' y='791'>OfficialPage</text>
+                    <title>OfficialPage
+                        varchar</title></a>
+                <text x='1069' y='788' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Affiliations_WikiPage'>
+                    <text id='outs.Affiliations.WikiPage' x='931' y='807'>WikiPage</text>
+                    <title>WikiPage
+                        varchar</title></a>
+                <text x='1069' y='804' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Affiliations_PaperCount'>
+                    <text id='outs.Affiliations.PaperCount' x='931' y='823'>PaperCount</text>
+                    <title>PaperCount
+                        bigint</title></a>
+                <text x='1069' y='820' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Affiliations_PaperFamilyCount'>
+                    <text id='outs.Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount</text>
+                    <title>PaperFamilyCount
+                        bigint
+                        FROZEN; same value as &quot;paper_count.</title></a>
+                <text x='1069' y='836' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Affiliations_CitationCount'>
+                    <text id='outs.Affiliations.CitationCount' x='931' y='855'>CitationCount</text>
+                    <title>CitationCount
+                        bigint</title></a>
+                <text x='1069' y='852' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Affiliations_Iso3166Code'>
+                    <text id='outs.Affiliations.Iso3166Code' x='931' y='871'>Iso3166Code</text>
+                    <title>Iso3166Code
+                        varchar
+                        Two-letter country codes, see https://en.wikipedia.org/wiki/ISO_3166-2</title></a>
+                <text x='1069' y='868' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Affiliations_Latitude'>
+                    <text id='outs.Affiliations.Latitude' x='931' y='887'>Latitude</text>
+                    <title>Latitude
+                        real</title></a>
+                <text x='1069' y='884' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Affiliations_Longitude'>
+                    <text id='outs.Affiliations.Longitude' x='931' y='903'>Longitude</text>
+                    <title>Longitude
+                        real</title></a>
+                <text x='1069' y='900' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Affiliations_CreatedDate'>
+                    <text id='outs.Affiliations.CreatedDate' x='931' y='919'>CreatedDate</text>
+                    <title>CreatedDate
+                        varchar</title></a>
+                <text x='1069' y='916' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Affiliations_UpdatedDate'>
+                    <text id='outs.Affiliations.UpdatedDate' x='931' y='935'>UpdatedDate</text>
+                    <title>UpdatedDate
+                        timestamp
+                        NEW; set values updated from new ror data</title></a>
+                <text x='1069' y='932' text-anchor='end' class='colType'>d</text>
+                <!-- == Table 'AuthorExtendedAttributes' == -->
+                <rect id='depict_outs.AuthorExtendedAttributes' class='entity' style='stroke:#C9BFAD' x='1344' y='472'
+                      width='192' height='96'/>
+                <rect class='entity' x='1344' y='472' width='192' height='28' style='stroke:#C9BFAD; fill:#A18E6A'/>
+                <a xlink:href='#outs.AuthorExtendedAttributes'>
+                    <text x='1354' y='491' class='white'>AuthorExtendedAttributes</text>
+                    <title>Table outs.AuthorExtendedAttributes
+                        Additional author name representations (mag/AuthorExtendedAttributes.txt)</title></a>
+                <use id='idx1' x='1346' y='508' xlink:href='#idx1'><title>Distribution ( AuthorId ) Sorting ( AuthorId
+                    ) </title></use>
+                <a xlink:href='#outs.AuthorExtendedAttributes_AuthorId'>
+                    <text id='outs.AuthorExtendedAttributes.AuthorId' x='1363' y='519'
+                          onmouseover="hghl(['AuthorExtendedAttributes_Fk_AuthorExtendedAttributes_Authors','outs.Authors.AuthorId'])"
+                          onmouseout="uhghl(['AuthorExtendedAttributes_Fk_AuthorExtendedAttributes_Authors','outs.Authors.AuthorId'])">
+                        AuthorId
+                    </text>
+                    <title>AuthorId
+                        bigint
+                        FOREIGN KEY REFERENCES Authors.AuthorId</title></a>
+                <a xlink:href='#outs.AuthorExtendedAttributes.AuthorId'>
+                    <use id='fk' x='1524' y='508' xlink:href='#fk'/>
+                    <title>References Authors ( AuthorId ) </title></a>
+                <a xlink:href='#outs.AuthorExtendedAttributes_AttributeType'>
+                    <text id='outs.AuthorExtendedAttributes.AttributeType' x='1363' y='535'>AttributeType</text>
+                    <title>AttributeType
+                        integer
+                        Possible values: 1=Alternative name</title></a>
+                <text x='1533' y='532' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.AuthorExtendedAttributes_AttributeValue'>
+                    <text id='outs.AuthorExtendedAttributes.AttributeValue' x='1363' y='551'>AttributeValue</text>
+                    <title>AttributeValue
+                        varchar</title></a>
+                <text x='1533' y='548' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'Authors' == -->
+                <rect id='depict_outs.Authors' class='entity' style='stroke:#C9BFAD' x='1120' y='472' width='192'
+                      height='224'/>
+                <rect class='entity' x='1120' y='472' width='192' height='28' style='stroke:#C9BFAD; fill:#A18E6A'/>
+                <a xlink:href='#outs.Authors'>
+                    <text x='1188' y='491' class='white'>Authors</text>
+                    <title>Table outs.Authors
+                        Base table for authors (mag/Authors.txt)</title></a>
+                <use id='idx1' x='1122' y='508' xlink:href='#idx1'><title>Distribution ( AuthorId ) Sorting ( AuthorId
+                    ) </title></use>
+                <a xlink:href='#outs.Authors_AuthorId'>
+                    <text id='outs.Authors.AuthorId' x='1139' y='519'
+                          onmouseover="hghl(['AuthorExtendedAttributes_Fk_AuthorExtendedAttributes_Authors','outs.AuthorExtendedAttributes.AuthorId','PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Authors','outs.PaperAuthorAffiliations.AuthorId'])"
+                          onmouseout="uhghl(['AuthorExtendedAttributes_Fk_AuthorExtendedAttributes_Authors','outs.AuthorExtendedAttributes.AuthorId','PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Authors','outs.PaperAuthorAffiliations.AuthorId'])">
+                        AuthorId
+                    </text>
+                    <title>AuthorId
+                        bigint
+                        PRIMARY KEY</title></a>
+                <a xlink:href='#outs.Authors.AuthorId'>
+                    <use id='ref' x='1300' y='508' xlink:href='#ref'/>
+                    <title>Referred by AuthorExtendedAttributes ( AuthorId )
+                        Referred by PaperAuthorAffiliations ( AuthorId ) </title></a>
+                <a xlink:href='#outs.Authors_Rank'>
+                    <text id='outs.Authors.Rank' x='1139' y='535'>Rank</text>
+                    <title>Rank
+                        integer
+                        FROZEN; no new ranks are being added</title></a>
+                <text x='1309' y='532' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Authors_NormalizedName'>
+                    <text id='outs.Authors.NormalizedName' x='1139' y='551'>NormalizedName</text>
+                    <title>NormalizedName
+                        varchar
+                        UPDATED; slightly different normalization algorithm</title></a>
+                <text x='1309' y='548' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Authors_DisplayName'>
+                    <text id='outs.Authors.DisplayName' x='1139' y='567'>DisplayName</text>
+                    <title>DisplayName
+                        varchar</title></a>
+                <text x='1309' y='564' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Authors_Orcid'>
+                    <text id='outs.Authors.Orcid' x='1139' y='583'>Orcid</text>
+                    <title>Orcid
+                        varchar
+                        NEW; ORCID identifier for this author</title></a>
+                <text x='1309' y='580' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Authors_LastKnownAffiliationId'>
+                    <text id='outs.Authors.LastKnownAffiliationId' x='1139' y='599'
+                          onmouseover="hghl(['Authors_Fk_Authors_Affiliations','outs.Affiliations.AffiliationId'])"
+                          onmouseout="uhghl(['Authors_Fk_Authors_Affiliations','outs.Affiliations.AffiliationId'])">
+                        LastKnownAffiliationId
+                    </text>
+                    <title>LastKnownAffiliationId
+                        integer</title></a>
+                <a xlink:href='#outs.Authors.LastKnownAffiliationId'>
+                    <use id='fk' x='1300' y='588' xlink:href='#fk'/>
+                    <title>References Affiliations ( LastKnownAffiliationId -&gt; AffiliationId ) </title></a>
+                <a xlink:href='#outs.Authors_PaperCount'>
+                    <text id='outs.Authors.PaperCount' x='1139' y='615'>PaperCount</text>
+                    <title>PaperCount
+                        bigint</title></a>
+                <text x='1309' y='612' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Authors_PaperFamilyCount'>
+                    <text id='outs.Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount</text>
+                    <title>PaperFamilyCount
+                        bigint
+                        FROZEN; same value as &quot;paper_count</title></a>
+                <text x='1309' y='628' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Authors_CitationCount'>
+                    <text id='outs.Authors.CitationCount' x='1139' y='647'>CitationCount</text>
+                    <title>CitationCount
+                        bigint</title></a>
+                <text x='1309' y='644' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Authors_CreatedDate'>
+                    <text id='outs.Authors.CreatedDate' x='1139' y='663'>CreatedDate</text>
+                    <title>CreatedDate
+                        varchar</title></a>
+                <text x='1309' y='660' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Authors_UpdatedDate'>
+                    <text id='outs.Authors.UpdatedDate' x='1139' y='679'>UpdatedDate</text>
+                    <title>UpdatedDate
+                        timestamp
+                        NEW; set when changes are made going forward</title></a>
+                <text x='1309' y='676' text-anchor='end' class='colType'>d</text>
+                <!-- == Table 'ConferenceInstances' == -->
+                <rect id='depict_outs.ConferenceInstances' class='entity' style='stroke:#B4ADC9' x='848' y='1016'
+                      width='208' height='336'/>
+                <rect class='entity' x='848' y='1016' width='208' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
+                <a xlink:href='#outs.ConferenceInstances'>
+                    <text x='883' y='1035' class='white'>ConferenceInstances</text>
+                    <title>Table outs.ConferenceInstances
+                        FROZEN; Base table for Conference Instances (mag/ConferenceInstances.txt)</title></a>
+                <use id='idx1' x='850' y='1052' xlink:href='#idx1'><title>Distribution ( ConferenceInstanceId ) Sorting
+                    ( ConferenceInstanceId ) </title></use>
+                <a xlink:href='#outs.ConferenceInstances_ConferenceInstanceId'>
+                    <text id='outs.ConferenceInstances.ConferenceInstanceId' x='867' y='1063'
+                          onmouseover="hghl(['Papers_Fk_Papers_ConferenceInstances','outs.Papers.ConferenceInstanceId'])"
+                          onmouseout="uhghl(['Papers_Fk_Papers_ConferenceInstances','outs.Papers.ConferenceInstanceId'])">
+                        ConferenceInstanceId
+                    </text>
+                    <title>ConferenceInstanceId
+                        bigint
+                        PRIMARY KEY</title></a>
+                <a xlink:href='#outs.ConferenceInstances.ConferenceInstanceId'>
+                    <use id='ref' x='1044' y='1052' xlink:href='#ref'/>
+                    <title>Referred by Papers ( ConferenceInstanceId ) </title></a>
+                <a xlink:href='#outs.ConferenceInstances_NormalizedName'>
+                    <text id='outs.ConferenceInstances.NormalizedName' x='867' y='1079'>NormalizedName</text>
+                    <title>NormalizedName
+                        varchar
+                        UPDATED; slightly different normalization algorithm</title></a>
+                <text x='1053' y='1076' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_DisplayName'>
+                    <text id='outs.ConferenceInstances.DisplayName' x='867' y='1095'>DisplayName</text>
+                    <title>DisplayName
+                        varchar</title></a>
+                <text x='1053' y='1092' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_ConferenceSeriesId'>
+                    <text id='outs.ConferenceInstances.ConferenceSeriesId' x='867' y='1111'
+                          onmouseover="hghl(['ConferenceInstances_Fk_ConferenceInstances_ConferenceSeries','outs.ConferenceSeries.ConferenceSeriesId'])"
+                          onmouseout="uhghl(['ConferenceInstances_Fk_ConferenceInstances_ConferenceSeries','outs.ConferenceSeries.ConferenceSeriesId'])">
+                        ConferenceSeriesId
+                    </text>
+                    <title>ConferenceSeriesId
+                        bigint
+                        FOREIGN KEY REFERENCES ConferenceSeries.ConferenceSeriesId</title></a>
+                <a xlink:href='#outs.ConferenceInstances.ConferenceSeriesId'>
+                    <use id='fk' x='1044' y='1100' xlink:href='#fk'/>
+                    <title>References ConferenceSeries ( ConferenceSeriesId ) </title></a>
+                <a xlink:href='#outs.ConferenceInstances_Location'>
+                    <text id='outs.ConferenceInstances.Location' x='867' y='1127'>Location</text>
+                    <title>Location
+                        varchar</title></a>
+                <text x='1053' y='1124' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_OfficialUrl'>
+                    <text id='outs.ConferenceInstances.OfficialUrl' x='867' y='1143'>OfficialUrl</text>
+                    <title>OfficialUrl
+                        varchar</title></a>
+                <text x='1053' y='1140' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_StartDate'>
+                    <text id='outs.ConferenceInstances.StartDate' x='867' y='1159'>StartDate</text>
+                    <title>StartDate
+                        varchar</title></a>
+                <text x='1053' y='1156' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_EndDate'>
+                    <text id='outs.ConferenceInstances.EndDate' x='867' y='1175'>EndDate</text>
+                    <title>EndDate
+                        varchar</title></a>
+                <text x='1053' y='1172' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_AbstractRegistrationDate'>
+                    <text id='outs.ConferenceInstances.AbstractRegistrationDate' x='867' y='1191'>
+                        AbstractRegistrationDate
+                    </text>
+                    <title>AbstractRegistrationDate
+                        varchar</title></a>
+                <text x='1053' y='1188' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_SubmissionDeadlineDate'>
+                    <text id='outs.ConferenceInstances.SubmissionDeadlineDate' x='867' y='1207'>SubmissionDeadlineDate
+                    </text>
+                    <title>SubmissionDeadlineDate
+                        varchar</title></a>
+                <text x='1053' y='1204' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_NotificationDueDate'>
+                    <text id='outs.ConferenceInstances.NotificationDueDate' x='867' y='1223'>NotificationDueDate</text>
+                    <title>NotificationDueDate
+                        varchar</title></a>
+                <text x='1053' y='1220' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_FinalVersionDueDate'>
+                    <text id='outs.ConferenceInstances.FinalVersionDueDate' x='867' y='1239'>FinalVersionDueDate</text>
+                    <title>FinalVersionDueDate
+                        varchar</title></a>
+                <text x='1053' y='1236' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceInstances_PaperCount'>
+                    <text id='outs.ConferenceInstances.PaperCount' x='867' y='1255'>PaperCount</text>
+                    <title>PaperCount
+                        bigint</title></a>
+                <text x='1053' y='1252' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceInstances_PaperFamilyCount'>
+                    <text id='outs.ConferenceInstances.PaperFamilyCount' x='867' y='1271'>PaperFamilyCount</text>
+                    <title>PaperFamilyCount
+                        bigint
+                        FROZEN; same value as &quot;paper_count</title></a>
+                <text x='1053' y='1268' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceInstances_CitationCount'>
+                    <text id='outs.ConferenceInstances.CitationCount' x='867' y='1287'>CitationCount</text>
+                    <title>CitationCount
+                        bigint</title></a>
+                <text x='1053' y='1284' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceInstances_Latitude'>
+                    <text id='outs.ConferenceInstances.Latitude' x='867' y='1303'>Latitude</text>
+                    <title>Latitude
+                        real</title></a>
+                <text x='1053' y='1300' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceInstances_Longitude'>
+                    <text id='outs.ConferenceInstances.Longitude' x='867' y='1319'>Longitude</text>
+                    <title>Longitude
+                        real</title></a>
+                <text x='1053' y='1316' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceInstances_CreatedDate'>
+                    <text id='outs.ConferenceInstances.CreatedDate' x='867' y='1335'>CreatedDate</text>
+                    <title>CreatedDate
+                        varchar</title></a>
+                <text x='1053' y='1332' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'ConferenceSeries' == -->
+                <rect id='depict_outs.ConferenceSeries' class='entity' style='stroke:#B4ADC9' x='640' y='1048'
+                      width='176' height='176'/>
+                <rect class='entity' x='640' y='1048' width='176' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
+                <a xlink:href='#outs.ConferenceSeries'>
+                    <text x='669' y='1067' class='white'>ConferenceSeries</text>
+                    <title>Table outs.ConferenceSeries
+                        FROZEN; Base table for Conference Series (mag/ConferenceSeries.txt)</title></a>
+                <use id='idx1' x='642' y='1084' xlink:href='#idx1'><title>Distribution ( ConferenceSeriesId ) Sorting (
+                    ConferenceSeriesId ) </title></use>
+                <a xlink:href='#outs.ConferenceSeries_ConferenceSeriesId'>
+                    <text id='outs.ConferenceSeries.ConferenceSeriesId' x='659' y='1095'
+                          onmouseover="hghl(['Papers_Fk_Papers_ConferenceSeries','outs.Papers.ConferenceSeriesId','ConferenceInstances_Fk_ConferenceInstances_ConferenceSeries','outs.ConferenceInstances.ConferenceSeriesId'])"
+                          onmouseout="uhghl(['Papers_Fk_Papers_ConferenceSeries','outs.Papers.ConferenceSeriesId','ConferenceInstances_Fk_ConferenceInstances_ConferenceSeries','outs.ConferenceInstances.ConferenceSeriesId'])">
+                        ConferenceSeriesId
+                    </text>
+                    <title>ConferenceSeriesId
+                        bigint
+                        PRIMARY KEY</title></a>
+                <a xlink:href='#outs.ConferenceSeries.ConferenceSeriesId'>
+                    <use id='ref' x='804' y='1084' xlink:href='#ref'/>
+                    <title>Referred by Papers ( ConferenceSeriesId )
+                        Referred by ConferenceInstances ( ConferenceSeriesId ) </title></a>
+                <a xlink:href='#outs.ConferenceSeries_Rank'>
+                    <text id='outs.ConferenceSeries.Rank' x='659' y='1111'>Rank</text>
+                    <title>Rank
+                        integer
+                        FROZEN; no new ranks are being added</title></a>
+                <text x='813' y='1108' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceSeries_NormalizedName'>
+                    <text id='outs.ConferenceSeries.NormalizedName' x='659' y='1127'>NormalizedName</text>
+                    <title>NormalizedName
+                        varchar
+                        UPDATED; slightly different normalization algorithm</title></a>
+                <text x='813' y='1124' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceSeries_DisplayName'>
+                    <text id='outs.ConferenceSeries.DisplayName' x='659' y='1143'>DisplayName</text>
+                    <title>DisplayName
+                        varchar</title></a>
+                <text x='813' y='1140' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.ConferenceSeries_PaperCount'>
+                    <text id='outs.ConferenceSeries.PaperCount' x='659' y='1159'>PaperCount</text>
+                    <title>PaperCount
+                        bigint</title></a>
+                <text x='813' y='1156' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceSeries_PaperFamilyCount'>
+                    <text id='outs.ConferenceSeries.PaperFamilyCount' x='659' y='1175'>PaperFamilyCount</text>
+                    <title>PaperFamilyCount
+                        bigint
+                        FROZEN; same value as &quot;paper_count</title></a>
+                <text x='813' y='1172' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceSeries_CitationCount'>
+                    <text id='outs.ConferenceSeries.CitationCount' x='659' y='1191'>CitationCount</text>
+                    <title>CitationCount
+                        bigint</title></a>
+                <text x='813' y='1188' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.ConferenceSeries_CreatedDate'>
+                    <text id='outs.ConferenceSeries.CreatedDate' x='659' y='1207'>CreatedDate</text>
+                    <title>CreatedDate
+                        varchar</title></a>
+                <text x='813' y='1204' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'EntityRelatedEntities' == -->
+                <rect id='depict_outs.EntityRelatedEntities' class='entity' style='stroke:#C9ADB3' x='144' y='136'
+                      width='160' height='144'/>
+                <rect class='entity' x='144' y='136' width='160' height='28' style='stroke:#C9ADB3; fill:#A16A76'/>
+                <a xlink:href='#outs.EntityRelatedEntities'>
+                    <text x='153' y='155' class='white'>EntityRelatedEntities</text>
+                    <title>Table outs.EntityRelatedEntities
+                        Relationship between papers, authors, fields of study.
+                        (advanced/EntityRelatedEntities.txt)</title></a>
+                <use id='idx1' x='146' y='172' xlink:href='#idx1'><title>Distribution ( EntityId ) Sorting ( EntityId
+                    ) </title></use>
+                <a xlink:href='#outs.EntityRelatedEntities_EntityId'>
+                    <text id='outs.EntityRelatedEntities.EntityId' x='163' y='183'>EntityId</text>
+                    <title>EntityId
+                        bigint</title></a>
+                <text x='301' y='180' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.EntityRelatedEntities_EntityType'>
+                    <text id='outs.EntityRelatedEntities.EntityType' x='163' y='199'>EntityType</text>
+                    <title>EntityType
+                        varchar
+                        Possible values: af (Affiliation), j (Journal), c (Conference)</title></a>
+                <text x='301' y='196' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.EntityRelatedEntities_RelatedEntityId'>
+                    <text id='outs.EntityRelatedEntities.RelatedEntityId' x='163' y='215'>RelatedEntityId</text>
+                    <title>RelatedEntityId
+                        bigint</title></a>
+                <text x='301' y='212' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.EntityRelatedEntities_RelatedEntityType'>
+                    <text id='outs.EntityRelatedEntities.RelatedEntityType' x='163' y='231'>RelatedEntityType</text>
+                    <title>RelatedEntityType
+                        varchar
+                        Possible values: af (Affiliation), j (Journal), c (Conference)</title></a>
+                <text x='301' y='228' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.EntityRelatedEntities_RelatedType'>
+                    <text id='outs.EntityRelatedEntities.RelatedType' x='163' y='247'>RelatedType</text>
+                    <title>RelatedType
+                        integer
+                        Possible values: 0 (same paper), 1 (common coauthors), 2 (co-cited), 3 (common field of study),
+                        4 (same venue), 5 (A cites B), 6 (B cites A)</title></a>
+                <text x='301' y='244' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.EntityRelatedEntities_Score'>
+                    <text id='outs.EntityRelatedEntities.Score' x='163' y='263'>Score</text>
+                    <title>Score
+                        real
+                        Confidence range between 0 and 1. Larger number representing higher confidence.</title></a>
+                <text x='301' y='260' text-anchor='end' class='colType'>#</text>
+                <!-- == Table 'FieldOfStudyChildren' == -->
+                <rect id='depict_outs.FieldOfStudyChildren' class='entity' style='stroke:#ADB2C9' x='832' y='184'
+                      width='176' height='80'/>
+                <rect class='entity' x='832' y='184' width='176' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
+                <a xlink:href='#outs.FieldOfStudyChildren'>
+                    <text x='849' y='203' class='white'>FieldOfStudyChildren</text>
+                    <title>Table outs.FieldOfStudyChildren
+                        Relationship between Fields of Study (advanced/FieldOfStudyChildren.txt)</title></a>
+                <use id='idx1' x='834' y='220' xlink:href='#idx1'><title>Distribution ( FieldOfStudyId ) Sorting (
+                    FieldOfStudyId ) </title></use>
+                <a xlink:href='#outs.FieldOfStudyChildren_FieldOfStudyId'>
+                    <text id='outs.FieldOfStudyChildren.FieldOfStudyId' x='851' y='231'
+                          onmouseover="hghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy','outs.FieldsOfStudy.FieldOfStudyId'])"
+                          onmouseout="uhghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy','outs.FieldsOfStudy.FieldOfStudyId'])">
+                        FieldOfStudyId
+                    </text>
+                    <title>FieldOfStudyId
+                        bigint
+                        FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</title></a>
+                <a xlink:href='#outs.FieldOfStudyChildren.FieldOfStudyId'>
+                    <use id='fk' x='996' y='220' xlink:href='#fk'/>
+                    <title>References FieldsOfStudy ( FieldOfStudyId ) </title></a>
+                <a xlink:href='#outs.FieldOfStudyChildren_ChildFieldOfStudyId'>
+                    <text id='outs.FieldOfStudyChildren.ChildFieldOfStudyId' x='851' y='247'
+                          onmouseover="hghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy_0','outs.FieldsOfStudy.FieldOfStudyId'])"
+                          onmouseout="uhghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy_0','outs.FieldsOfStudy.FieldOfStudyId'])">
+                        ChildFieldOfStudyId
+                    </text>
+                    <title>ChildFieldOfStudyId
+                        bigint
+                        FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</title></a>
+                <a xlink:href='#outs.FieldOfStudyChildren.ChildFieldOfStudyId'>
+                    <use id='fk' x='996' y='236' xlink:href='#fk'/>
+                    <title>References FieldsOfStudy ( ChildFieldOfStudyId -&gt; FieldOfStudyId ) </title></a>
+
+                <!-- == Table 'FieldOfStudyExtendedAttributes' == -->
+                <rect id='depict_outs.FieldOfStudyExtendedAttributes' class='entity' style='stroke:#ADB2C9' x='832'
+                      y='72' width='224' height='96'/>
+                <rect class='entity' x='832' y='72' width='224' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
+                <a xlink:href='#outs.FieldOfStudyExtendedAttributes'>
+                    <text x='838' y='91' class='white'>FieldOfStudyExtendedAttributes</text>
+                    <title>Table outs.FieldOfStudyExtendedAttributes
+                        Other identifiers for Fields of Study (advanced/FieldOfStudyExtendedAttributes.txt)</title></a>
+                <use id='idx1' x='834' y='108' xlink:href='#idx1'><title>Distribution ( FieldOfStudyId ) Sorting (
+                    FieldOfStudyId ) </title></use>
+                <a xlink:href='#outs.FieldOfStudyExtendedAttributes_FieldOfStudyId'>
+                    <text id='outs.FieldOfStudyExtendedAttributes.FieldOfStudyId' x='851' y='119'
+                          onmouseover="hghl(['FieldOfStudyExtendedAttributes_Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy','outs.FieldsOfStudy.FieldOfStudyId'])"
+                          onmouseout="uhghl(['FieldOfStudyExtendedAttributes_Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy','outs.FieldsOfStudy.FieldOfStudyId'])">
+                        FieldOfStudyId
+                    </text>
+                    <title>FieldOfStudyId
+                        bigint
+                        FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</title></a>
+                <a xlink:href='#outs.FieldOfStudyExtendedAttributes.FieldOfStudyId'>
+                    <use id='fk' x='1044' y='108' xlink:href='#fk'/>
+                    <title>References FieldsOfStudy ( FieldOfStudyId ) </title></a>
+                <a xlink:href='#outs.FieldOfStudyExtendedAttributes_AttributeType'>
+                    <text id='outs.FieldOfStudyExtendedAttributes.AttributeType' x='851' y='135'>AttributeType</text>
+                    <title>AttributeType
+                        bigint
+                        Possible values: 1 (AUI from UMLS
+                        https://www.nlm.nih.gov/research/umls/licensedcontent/umlsarchives04.html#2018AA), 2 (source
+                        url), 3 (CUI from UMLS
+                        https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html)</title></a>
+                <text x='1053' y='132' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.FieldOfStudyExtendedAttributes_AttributeValue'>
+                    <text id='outs.FieldOfStudyExtendedAttributes.AttributeValue' x='851' y='151'>AttributeValue</text>
+                    <title>AttributeValue
+                        varchar</title></a>
+                <text x='1053' y='148' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'FieldsOfStudy' == -->
+                <rect id='depict_outs.FieldsOfStudy' class='entity' style='stroke:#ADB2C9' x='624' y='104' width='160'
+                      height='208'/>
+                <rect class='entity' x='624' y='104' width='160' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
+                <a xlink:href='#outs.FieldsOfStudy'>
+                    <text x='657' y='123' class='white'>FieldsOfStudy</text>
+                    <title>Table outs.FieldsOfStudy
+                        Base table for Fields of Study (advanced/FieldsOfStudy.txt)</title></a>
+                <use id='idx1' x='626' y='140' xlink:href='#idx1'><title>Distribution ( FieldOfStudyId ) Sorting (
+                    FieldOfStudyId ) </title></use>
+                <a xlink:href='#outs.FieldsOfStudy_FieldOfStudyId'>
+                    <text id='outs.FieldsOfStudy.FieldOfStudyId' x='643' y='151'
+                          onmouseover="hghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy','outs.FieldOfStudyChildren.FieldOfStudyId','FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy_0','outs.FieldOfStudyChildren.ChildFieldOfStudyId','RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy','outs.RelatedFieldOfStudy.FieldOfStudyId1','RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy_0','outs.RelatedFieldOfStudy.FieldOfStudyId2','FieldOfStudyExtendedAttributes_Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy','outs.FieldOfStudyExtendedAttributes.FieldOfStudyId','PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_FieldsOfStudy','outs.PaperFieldsOfStudy.FieldOfStudyId'])"
+                          onmouseout="uhghl(['FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy','outs.FieldOfStudyChildren.FieldOfStudyId','FieldOfStudyChildren_Fk_FieldOfStudyChildren_FieldsOfStudy_0','outs.FieldOfStudyChildren.ChildFieldOfStudyId','RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy','outs.RelatedFieldOfStudy.FieldOfStudyId1','RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy_0','outs.RelatedFieldOfStudy.FieldOfStudyId2','FieldOfStudyExtendedAttributes_Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy','outs.FieldOfStudyExtendedAttributes.FieldOfStudyId','PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_FieldsOfStudy','outs.PaperFieldsOfStudy.FieldOfStudyId'])">
+                        FieldOfStudyId
+                    </text>
+                    <title>FieldOfStudyId
+                        bigint
+                        PRIMARY KEY</title></a>
+                <a xlink:href='#outs.FieldsOfStudy.FieldOfStudyId'>
+                    <use id='ref' x='772' y='140' xlink:href='#ref'/>
+                    <title>Referred by FieldOfStudyChildren ( FieldOfStudyId )
+                        Referred by FieldOfStudyChildren ( ChildFieldOfStudyId -&gt; FieldOfStudyId )
+                        Referred by RelatedFieldOfStudy ( FieldOfStudyId1 -&gt; FieldOfStudyId )
+                        Referred by RelatedFieldOfStudy ( FieldOfStudyId2 -&gt; FieldOfStudyId )
+                        Referred by FieldOfStudyExtendedAttributes ( FieldOfStudyId )
+                        Referred by PaperFieldsOfStudy ( FieldOfStudyId ) </title></a>
+                <a xlink:href='#outs.FieldsOfStudy_Rank'>
+                    <text id='outs.FieldsOfStudy.Rank' x='643' y='167'>Rank</text>
+                    <title>Rank
+                        varchar
+                        FROZEN; no new ranks are being added.</title></a>
+                <text x='781' y='164' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.FieldsOfStudy_NormalizedName'>
+                    <text id='outs.FieldsOfStudy.NormalizedName' x='643' y='183'>NormalizedName</text>
+                    <title>NormalizedName
+                        varchar
+                        UPDATED; slightly different normalization algorithm</title></a>
+                <text x='781' y='180' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.FieldsOfStudy_DisplayName'>
+                    <text id='outs.FieldsOfStudy.DisplayName' x='643' y='199'>DisplayName</text>
+                    <title>DisplayName
+                        varchar</title></a>
+                <text x='781' y='196' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.FieldsOfStudy_MainType'>
+                    <text id='outs.FieldsOfStudy.MainType' x='643' y='215'>MainType</text>
+                    <title>MainType
+                        varchar</title></a>
+                <text x='781' y='212' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.FieldsOfStudy_Level'>
+                    <text id='outs.FieldsOfStudy.Level' x='643' y='231'>Level</text>
+                    <title>Level
+                        integer
+                        Possible values: 0-5</title></a>
+                <text x='781' y='228' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.FieldsOfStudy_PaperCount'>
+                    <text id='outs.FieldsOfStudy.PaperCount' x='643' y='247'>PaperCount</text>
+                    <title>PaperCount
+                        bigint</title></a>
+                <text x='781' y='244' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.FieldsOfStudy_PaperFamilyCount'>
+                    <text id='outs.FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount</text>
+                    <title>PaperFamilyCount
+                        bigint
+                        FROZEN; same value as &quot;paper_count.</title></a>
+                <text x='781' y='260' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.FieldsOfStudy_CitationCount'>
+                    <text id='outs.FieldsOfStudy.CitationCount' x='643' y='279'>CitationCount</text>
+                    <title>CitationCount
+                        bigint</title></a>
+                <text x='781' y='276' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.FieldsOfStudy_CreatedDate'>
+                    <text id='outs.FieldsOfStudy.CreatedDate' x='643' y='295'>CreatedDate</text>
+                    <title>CreatedDate
+                        varchar</title></a>
+                <text x='781' y='292' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'Journals' == -->
+                <rect id='depict_outs.Journals' class='entity' style='stroke:#C9ADC5' x='656' y='552' width='160'
+                      height='288'/>
+                <rect class='entity' x='656' y='552' width='160' height='28' style='stroke:#C9ADC5; fill:#A16A9B'/>
+                <a xlink:href='#outs.Journals'>
+                    <text x='706' y='571' class='white'>Journals</text>
+                    <title>Table outs.Journals
+                        Base table for Journals (mag/Journals.txt)</title></a>
+                <use id='idx1' x='658' y='588' xlink:href='#idx1'><title>Distribution ( JournalId ) Sorting ( JournalId
+                    ) </title></use>
+                <a xlink:href='#outs.Journals_JournalId'>
+                    <text id='outs.Journals.JournalId' x='675' y='599'
+                          onmouseover="hghl(['Papers_Fk_Papers_Journals','outs.Papers.JournalId'])"
+                          onmouseout="uhghl(['Papers_Fk_Papers_Journals','outs.Papers.JournalId'])">JournalId
+                    </text>
+                    <title>JournalId
+                        bigint
+                        PRIMARY KEY</title></a>
+                <a xlink:href='#outs.Journals.JournalId'>
+                    <use id='ref' x='804' y='588' xlink:href='#ref'/>
+                    <title>Referred by Papers ( JournalId ) </title></a>
+                <a xlink:href='#outs.Journals_Rank'>
+                    <text id='outs.Journals.Rank' x='675' y='615'>Rank</text>
+                    <title>Rank
+                        integer
+                        FROZEN; no new ranks are being added</title></a>
+                <text x='813' y='612' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Journals_NormalizedName'>
+                    <text id='outs.Journals.NormalizedName' x='675' y='631'>NormalizedName</text>
+                    <title>NormalizedName
+                        varchar
+                        UPDATED; slightly different normalization algorithm</title></a>
+                <text x='813' y='628' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Journals_DisplayName'>
+                    <text id='outs.Journals.DisplayName' x='675' y='647'>DisplayName</text>
+                    <title>DisplayName
+                        varchar</title></a>
+                <text x='813' y='644' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Journals_Issn'>
+                    <text id='outs.Journals.Issn' x='675' y='663'>Issn</text>
+                    <title>Issn
+                        varchar
+                        UPDATED; the ISSN-L for the journal (see
+                        https://en.wikipedia.org/wiki/International_Standard_Serial_Number#Linking_ISSN)</title></a>
+                <text x='813' y='660' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Journals_Issns'>
+                    <text id='outs.Journals.Issns' x='675' y='679'>Issns</text>
+                    <title>Issns
+                        varchar
+                        NEW; JSON list of all ISSNs for this journal (example: &apos;[&quot;1469-5073&quot;,&quot;0016-6723&quot;]&apos;
+                        )</title></a>
+                <text x='813' y='676' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Journals_IsOa'>
+                    <text id='outs.Journals.IsOa' x='675' y='695'>IsOa</text>
+                    <title>IsOa
+                        boolean
+                        NEW; TRUE when the journal is 100% OA</title></a>
+                <text x='813' y='692' text-anchor='end' class='colType'>b</text>
+                <a xlink:href='#outs.Journals_IsInDoaj'>
+                    <text id='outs.Journals.IsInDoaj' x='675' y='711'>IsInDoaj</text>
+                    <title>IsInDoaj
+                        boolean
+                        NEW; TRUE when the journal is in DOAJ (see https://doaj.org/)</title></a>
+                <text x='813' y='708' text-anchor='end' class='colType'>b</text>
+                <a xlink:href='#outs.Journals_Publisher'>
+                    <text id='outs.Journals.Publisher' x='675' y='727'>Publisher</text>
+                    <title>Publisher
+                        varchar</title></a>
+                <text x='813' y='724' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Journals_Webpage'>
+                    <text id='outs.Journals.Webpage' x='675' y='743'>Webpage</text>
+                    <title>Webpage
+                        varchar</title></a>
+                <text x='813' y='740' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Journals_PaperCount'>
+                    <text id='outs.Journals.PaperCount' x='675' y='759'>PaperCount</text>
+                    <title>PaperCount
+                        bigint</title></a>
+                <text x='813' y='756' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Journals_PaperFamilyCount'>
+                    <text id='outs.Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount</text>
+                    <title>PaperFamilyCount
+                        bigint
+                        FROZEN; same value as &quot;paper_count</title></a>
+                <text x='813' y='772' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Journals_CitationCount'>
+                    <text id='outs.Journals.CitationCount' x='675' y='791'>CitationCount</text>
+                    <title>CitationCount
+                        bigint</title></a>
+                <text x='813' y='788' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Journals_CreatedDate'>
+                    <text id='outs.Journals.CreatedDate' x='675' y='807'>CreatedDate</text>
+                    <title>CreatedDate
+                        varchar</title></a>
+                <text x='813' y='804' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Journals_UpdatedDate'>
+                    <text id='outs.Journals.UpdatedDate' x='675' y='823'>UpdatedDate</text>
+                    <title>UpdatedDate
+                        timestamp
+                        NEW; set when changes are made going forward</title></a>
+                <text x='813' y='820' text-anchor='end' class='colType'>d</text>
+                <!-- == Table 'PaperAbstractsInvertedIndex' == -->
+                <rect id='depict_outs.PaperAbstractsInvertedIndex' class='entity' style='stroke:#ADBBC9' x='336'
+                      y='1272' width='208' height='80'/>
+                <rect class='entity' x='336' y='1272' width='208' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
+                <a xlink:href='#outs.PaperAbstractsInvertedIndex'>
+                    <text x='345' y='1291' class='white'>PaperAbstractsInvertedIndex</text>
+                    <title>Table outs.PaperAbstractsInvertedIndex
+                        Inverted abstracts (nlp/PaperAbstractsInvertedIndex.txt.</title></a>
+                <use id='idx1' x='338' y='1308' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperAbstractsInvertedIndex_PaperId'>
+                    <text id='outs.PaperAbstractsInvertedIndex.PaperId' x='355' y='1319'
+                          onmouseover="hghl(['PaperAbstractsInvertedIndex_Fk_PaperAbstractsInvertedIndex_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperAbstractsInvertedIndex_Fk_PaperAbstractsInvertedIndex_Papers','outs.Papers.PaperId'])">
+                        PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                <a xlink:href='#outs.PaperAbstractsInvertedIndex.PaperId'>
+                    <use id='fk' x='532' y='1308' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperAbstractsInvertedIndex_IndexedAbstract'>
+                    <text id='outs.PaperAbstractsInvertedIndex.IndexedAbstract' x='355' y='1335'>IndexedAbstract</text>
+                    <title>IndexedAbstract
+                        varchar
+                        Inverted index, see https://en.wikipedia.org/wiki/Inverted_index</title></a>
+                <text x='541' y='1332' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'PaperAuthorAffiliations' == -->
+                <rect id='depict_outs.PaperAuthorAffiliations' class='entity' style='stroke:#C9BFAD' x='896' y='472'
+                      width='192' height='144'/>
+                <rect class='entity' x='896' y='472' width='192' height='28' style='stroke:#C9BFAD; fill:#A18E6A'/>
+                <a xlink:href='#outs.PaperAuthorAffiliations'>
+                    <text x='914' y='491' class='white'>PaperAuthorAffiliations</text>
+                    <title>Table outs.PaperAuthorAffiliations
+                        Links between papers, authors, and affiliations/institutions. NOTE: It is possible to have
+                        multiple rows with same (PaperId, AuthorId, AffiliationId) when an author is associated with
+                        multiple affiliations. (mag/PaperAuthorAffiliations.txt)</title></a>
+                <use id='idx1' x='898' y='508' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperAuthorAffiliations_PaperId'>
+                    <text id='outs.PaperAuthorAffiliations.PaperId' x='915' y='519'
+                          onmouseover="hghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Papers','outs.Papers.PaperId'])">
+                        PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperAuthorAffiliations.PaperId'>
+                    <use id='fk' x='1076' y='508' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperAuthorAffiliations_AuthorId'>
+                    <text id='outs.PaperAuthorAffiliations.AuthorId' x='915' y='535'
+                          onmouseover="hghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Authors','outs.Authors.AuthorId'])"
+                          onmouseout="uhghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Authors','outs.Authors.AuthorId'])">
+                        AuthorId
+                    </text>
+                    <title>AuthorId
+                        bigint
+                        FOREIGN KEY REFERENCES Authors.AuthorId</title></a>
+                <a xlink:href='#outs.PaperAuthorAffiliations.AuthorId'>
+                    <use id='fk' x='1076' y='524' xlink:href='#fk'/>
+                    <title>References Authors ( AuthorId ) </title></a>
+                <a xlink:href='#outs.PaperAuthorAffiliations_AffiliationId'>
+                    <text id='outs.PaperAuthorAffiliations.AffiliationId' x='915' y='551'
+                          onmouseover="hghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Affiliations','outs.Affiliations.AffiliationId'])"
+                          onmouseout="uhghl(['PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Affiliations','outs.Affiliations.AffiliationId'])">
+                        AffiliationId
+                    </text>
+                    <title>AffiliationId
+                        bigint
+                        FOREIGN KEY REFERENCES Affiliations.AffiliationId</title></a>
+                <a xlink:href='#outs.PaperAuthorAffiliations.AffiliationId'>
+                    <use id='fk' x='1076' y='540' xlink:href='#fk'/>
+                    <title>References Affiliations ( AffiliationId ) </title></a>
+                <a xlink:href='#outs.PaperAuthorAffiliations_AuthorSequenceNumber'>
+                    <text id='outs.PaperAuthorAffiliations.AuthorSequenceNumber' x='915' y='567'>AuthorSequenceNumber
+                    </text>
+                    <title>AuthorSequenceNumber
+                        integer
+                        1-based author sequence number. 1: the 1st author listed on paper, 2: the 2nd author listed on
+                        paper, etc.</title></a>
+                <text x='1085' y='564' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.PaperAuthorAffiliations_OriginalAuthor'>
+                    <text id='outs.PaperAuthorAffiliations.OriginalAuthor' x='915' y='583'>OriginalAuthor</text>
+                    <title>OriginalAuthor
+                        varchar</title></a>
+                <text x='1085' y='580' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperAuthorAffiliations_OriginalAffiliation'>
+                    <text id='outs.PaperAuthorAffiliations.OriginalAffiliation' x='915' y='599'>OriginalAffiliation
+                    </text>
+                    <title>OriginalAffiliation
+                        varchar</title></a>
+                <text x='1085' y='596' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'PaperCitationContexts' == -->
+                <rect id='depict_outs.PaperCitationContexts' class='entity' style='stroke:#ADBBC9' x='336' y='1128'
+                      width='160' height='96'/>
+                <rect class='entity' x='336' y='1128' width='160' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
+                <a xlink:href='#outs.PaperCitationContexts'>
+                    <text x='341' y='1147' class='white'>PaperCitationContexts</text>
+                    <title>Table outs.PaperCitationContexts
+                        FROZEN; citation contexts (nlp/PaperCitationContexts.txt)</title></a>
+                <use id='idx1' x='338' y='1164' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperCitationContexts_PaperId'>
+                    <text id='outs.PaperCitationContexts.PaperId' x='355' y='1175'
+                          onmouseover="hghl(['PaperCitationContexts_Fk_PaperCitationContexts_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperCitationContexts_Fk_PaperCitationContexts_Papers','outs.Papers.PaperId'])">
+                        PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                <a xlink:href='#outs.PaperCitationContexts.PaperId'>
+                    <use id='fk' x='484' y='1164' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperCitationContexts_PaperReferenceId'>
+                    <text id='outs.PaperCitationContexts.PaperReferenceId' x='355' y='1191'
+                          onmouseover="hghl(['PaperCitationContexts_Fk_PaperCitationContexts_Papers_0','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperCitationContexts_Fk_PaperCitationContexts_Papers_0','outs.Papers.PaperId'])">
+                        PaperReferenceId
+                    </text>
+                    <title>PaperReferenceId
+                        bigint
+                        FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                <a xlink:href='#outs.PaperCitationContexts.PaperReferenceId'>
+                    <use id='fk' x='484' y='1180' xlink:href='#fk'/>
+                    <title>References Papers ( PaperReferenceId -&gt; PaperId ) </title></a>
+                <a xlink:href='#outs.PaperCitationContexts_CitationContext'>
+                    <text id='outs.PaperCitationContexts.CitationContext' x='355' y='1207'>CitationContext</text>
+                    <title>CitationContext
+                        varchar</title></a>
+                <text x='493' y='1204' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'PaperExtendedAttributes' == -->
+                <rect id='depict_outs.PaperExtendedAttributes' class='entity' style='stroke:#ADBBC9' x='64' y='392'
+                      width='176' height='96'/>
+                <rect class='entity' x='64' y='392' width='176' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
+                <a xlink:href='#outs.PaperExtendedAttributes'>
+                    <text x='69' y='411' class='white'>PaperExtendedAttributes</text>
+                    <title>Table outs.PaperExtendedAttributes
+                        Extra paper identifiers (mag/PaperExtendedAttributes.txt)</title></a>
+                <use id='idx1' x='66' y='428' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperExtendedAttributes_PaperId'>
+                    <text id='outs.PaperExtendedAttributes.PaperId' x='83' y='439'
+                          onmouseover="hghl(['PaperExtendedAttributes_Fk_PaperExtendedAttributes_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperExtendedAttributes_Fk_PaperExtendedAttributes_Papers','outs.Papers.PaperId'])">
+                        PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperExtendedAttributes.PaperId'>
+                    <use id='fk' x='228' y='428' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperExtendedAttributes_AttributeType'>
+                    <text id='outs.PaperExtendedAttributes.AttributeType' x='83' y='455'>AttributeType</text>
+                    <title>AttributeType
+                        integer
+                        Possible values: 1=PatentId, 2=PubMedId, 3=PmcId, 4=Alternative Title</title></a>
+                <text x='237' y='452' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.PaperExtendedAttributes_AttributeValue'>
+                    <text id='outs.PaperExtendedAttributes.AttributeValue' x='83' y='471'>AttributeValue</text>
+                    <title>AttributeValue
+                        varchar</title></a>
+                <text x='237' y='468' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'PaperFieldsOfStudy' == -->
+                <rect id='depict_outs.PaperFieldsOfStudy' class='entity' style='stroke:#ADB2C9' x='432' y='232'
+                      width='160' height='112'/>
+                <rect class='entity' x='432' y='232' width='160' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
+                <a xlink:href='#outs.PaperFieldsOfStudy'>
+                    <text x='447' y='251' class='white'>PaperFieldsOfStudy</text>
+                    <title>Table outs.PaperFieldsOfStudy
+                        Linking table from papers to fields, with score (advanced/PaperFieldsOfStudy.txt)</title></a>
+                <use id='idx1' x='434' y='268' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperFieldsOfStudy_PaperId'>
+                    <text id='outs.PaperFieldsOfStudy.PaperId' x='451' y='279'
+                          onmouseover="hghl(['PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_Papers','outs.Papers.PaperId'])">
+                        PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperFieldsOfStudy.PaperId'>
+                    <use id='fk' x='580' y='268' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperFieldsOfStudy_FieldOfStudyId'>
+                    <text id='outs.PaperFieldsOfStudy.FieldOfStudyId' x='451' y='295'
+                          onmouseover="hghl(['PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_FieldsOfStudy','outs.FieldsOfStudy.FieldOfStudyId'])"
+                          onmouseout="uhghl(['PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_FieldsOfStudy','outs.FieldsOfStudy.FieldOfStudyId'])">
+                        FieldOfStudyId
+                    </text>
+                    <title>FieldOfStudyId
+                        bigint
+                        FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</title></a>
+                <a xlink:href='#outs.PaperFieldsOfStudy.FieldOfStudyId'>
+                    <use id='fk' x='580' y='284' xlink:href='#fk'/>
+                    <title>References FieldsOfStudy ( FieldOfStudyId ) </title></a>
+                <a xlink:href='#outs.PaperFieldsOfStudy_Score'>
+                    <text id='outs.PaperFieldsOfStudy.Score' x='451' y='311'>Score</text>
+                    <title>Score
+                        real
+                        Confidence range between 0 and 1. Bigger number representing higher confidence.</title></a>
+                <text x='589' y='308' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.PaperFieldsOfStudy_AlgorithmVersion'>
+                    <text id='outs.PaperFieldsOfStudy.AlgorithmVersion' x='451' y='327'>AlgorithmVersion</text>
+                    <title>AlgorithmVersion
+                        integer
+                        NEW; version of algorithm to assign fields. Possible values: 1=old MAG (FROZEN),
+                        2=OpenAlex</title></a>
+                <text x='589' y='324' text-anchor='end' class='colType'>#</text>
+                <!-- == Table 'PaperMeSH' == -->
+                <rect id='depict_outs.PaperMeSH' class='entity' style='stroke:#ADBCC9' x='96' y='760' width='144'
+                      height='144'/>
+                <rect class='entity' x='96' y='760' width='144' height='28' style='stroke:#ADBCC9; fill:#6A89A1'/>
+                <a xlink:href='#outs.PaperMeSH'>
+                    <text x='129' y='779' class='white'>PaperMeSH</text>
+                    <title>Table outs.PaperMeSH
+                        MeSH headings assigned to the paper by PubMed (advanced/PaperMeSH.txt)</title></a>
+                <use id='idx1' x='98' y='796' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperMeSH_PaperId'>
+                    <text id='outs.PaperMeSH.PaperId' x='115' y='807'
+                          onmouseover="hghl(['PaperMeSH_Fk_PaperMeSH_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperMeSH_Fk_PaperMeSH_Papers','outs.Papers.PaperId'])">PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperMeSH.PaperId'>
+                    <use id='fk' x='228' y='796' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperMeSH_DescriptorUI'>
+                    <text id='outs.PaperMeSH.DescriptorUI' x='115' y='823'>DescriptorUI</text>
+                    <title>DescriptorUI
+                        varchar
+                        see https://en.wikipedia.org/wiki/Medical_Subject_Headings</title></a>
+                <text x='237' y='820' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperMeSH_DescriptorName'>
+                    <text id='outs.PaperMeSH.DescriptorName' x='115' y='839'>DescriptorName</text>
+                    <title>DescriptorName
+                        varchar
+                        see https://en.wikipedia.org/wiki/Medical_Subject_Headings</title></a>
+                <text x='237' y='836' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperMeSH_QualifierUI'>
+                    <text id='outs.PaperMeSH.QualifierUI' x='115' y='855'>QualifierUI</text>
+                    <title>QualifierUI
+                        varchar
+                        see https://en.wikipedia.org/wiki/Medical_Subject_Headings</title></a>
+                <text x='237' y='852' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperMeSH_QualifierName'>
+                    <text id='outs.PaperMeSH.QualifierName' x='115' y='871'>QualifierName</text>
+                    <title>QualifierName
+                        varchar
+                        see https://en.wikipedia.org/wiki/Medical_Subject_Headings</title></a>
+                <text x='237' y='868' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperMeSH_IsMajorTopic'>
+                    <text id='outs.PaperMeSH.IsMajorTopic' x='115' y='887'>IsMajorTopic</text>
+                    <title>IsMajorTopic
+                        boolean
+                        see https://en.wikipedia.org/wiki/Medical_Subject_Headings</title></a>
+                <text x='237' y='884' text-anchor='end' class='colType'>b</text>
+                <!-- == Table 'PaperRecommendations' == -->
+                <rect id='depict_outs.PaperRecommendations' class='entity' style='stroke:#ADBBC9' x='48' y='504'
+                      width='192' height='96'/>
+                <rect class='entity' x='48' y='504' width='192' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
+                <a xlink:href='#outs.PaperRecommendations'>
+                    <text x='64' y='523' class='white'>PaperRecommendations</text>
+                    <title>Table outs.PaperRecommendations
+                        Paper recommendations with score (advanced/PaperRecommendations.txt)</title></a>
+                <use id='idx1' x='50' y='540' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperRecommendations_PaperId'>
+                    <text id='outs.PaperRecommendations.PaperId' x='67' y='551'
+                          onmouseover="hghl(['PaperRecommendations_Fk_PaperRecommendations_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperRecommendations_Fk_PaperRecommendations_Papers','outs.Papers.PaperId'])">
+                        PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperRecommendations.PaperId'>
+                    <use id='fk' x='228' y='540' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperRecommendations_RecommendedPaperId'>
+                    <text id='outs.PaperRecommendations.RecommendedPaperId' x='67' y='567'
+                          onmouseover="hghl(['PaperRecommendations_Fk_PaperRecommendations_Papers_0','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperRecommendations_Fk_PaperRecommendations_Papers_0','outs.Papers.PaperId'])">
+                        RecommendedPaperId
+                    </text>
+                    <title>RecommendedPaperId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperRecommendations.RecommendedPaperId'>
+                    <use id='fk' x='228' y='556' xlink:href='#fk'/>
+                    <title>References Papers ( RecommendedPaperId -&gt; PaperId ) </title></a>
+                <a xlink:href='#outs.PaperRecommendations_Score'>
+                    <text id='outs.PaperRecommendations.Score' x='67' y='583'>Score</text>
+                    <title>Score
+                        real
+                        Confidence range between 0 and 1. Bigger number representing higher confidence.</title></a>
+                <text x='237' y='580' text-anchor='end' class='colType'>#</text>
+                <!-- == Table 'PaperReferences' == -->
+                <rect id='depict_outs.PaperReferences' class='entity' style='stroke:#ADBBC9' x='80' y='920' width='160'
+                      height='80'/>
+                <rect class='entity' x='80' y='920' width='160' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
+                <a xlink:href='#outs.PaperReferences'>
+                    <text x='103' y='939' class='white'>PaperReferences</text>
+                    <title>Table outs.PaperReferences
+                        Paper references and, in reverse, citations (mag/PaperReferences.txt)</title></a>
+                <use id='idx1' x='82' y='956' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperReferences_PaperId'>
+                    <text id='outs.PaperReferences.PaperId' x='99' y='967'
+                          onmouseover="hghl(['PaperReferences_Fk_PaperReferences_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperReferences_Fk_PaperReferences_Papers','outs.Papers.PaperId'])">
+                        PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperReferences.PaperId'>
+                    <use id='fk' x='228' y='956' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperReferences_PaperReferenceId'>
+                    <text id='outs.PaperReferences.PaperReferenceId' x='99' y='983'
+                          onmouseover="hghl(['PaperReferences_Fk_PaperReferences_Papers_0','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperReferences_Fk_PaperReferences_Papers_0','outs.Papers.PaperId'])">
+                        PaperReferenceId
+                    </text>
+                    <title>PaperReferenceId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperReferences.PaperReferenceId'>
+                    <use id='fk' x='228' y='972' xlink:href='#fk'/>
+                    <title>References Papers ( PaperReferenceId -&gt; PaperId ) </title></a>
+
+                <!-- == Table 'PaperResources' == -->
+                <rect id='depict_outs.PaperResources' class='entity' style='stroke:#ADBCC9' x='80' y='616' width='160'
+                      height='128'/>
+                <rect class='entity' x='80' y='616' width='160' height='28' style='stroke:#ADBCC9; fill:#6A89A1'/>
+                <a xlink:href='#outs.PaperResources'>
+                    <text x='107' y='635' class='white'>PaperResources</text>
+                    <title>Table outs.PaperResources
+                        FROZEN; no longer updated. Data and code urls associated with papers
+                        (mag/PaperResources.txt)</title></a>
+                <use id='idx1' x='82' y='652' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperResources_PaperId'>
+                    <text id='outs.PaperResources.PaperId' x='99' y='663'
+                          onmouseover="hghl(['PaperResources_Fk_PaperResources_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperResources_Fk_PaperResources_Papers','outs.Papers.PaperId'])">PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                <a xlink:href='#outs.PaperResources.PaperId'>
+                    <use id='fk' x='228' y='652' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperResources_ResourceType'>
+                    <text id='outs.PaperResources.ResourceType' x='99' y='679'>ResourceType</text>
+                    <title>ResourceType
+                        integer
+                        Bit flags: 1=Project, 2=Data, 4=Code</title></a>
+                <text x='237' y='676' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.PaperResources_ResourceUrl'>
+                    <text id='outs.PaperResources.ResourceUrl' x='99' y='695'>ResourceUrl</text>
+                    <title>ResourceUrl
+                        varchar
+                        Url of resource</title></a>
+                <text x='237' y='692' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperResources_SourceUrl'>
+                    <text id='outs.PaperResources.SourceUrl' x='99' y='711'>SourceUrl</text>
+                    <title>SourceUrl
+                        varchar
+                        List of urls associated with the project, used to derive resource_url</title></a>
+                <text x='237' y='708' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperResources_RelationshipType'>
+                    <text id='outs.PaperResources.RelationshipType' x='99' y='727'>RelationshipType</text>
+                    <title>RelationshipType
+                        integer
+                        Bit flags: 1=Own, 2=Cite</title></a>
+                <text x='237' y='724' text-anchor='end' class='colType'>#</text>
+                <!-- == Table 'PaperUrls' == -->
+                <rect id='depict_outs.PaperUrls' class='entity' style='stroke:#ADBBC9' x='64' y='1016' width='176'
+                      height='224'/>
+                <rect class='entity' x='64' y='1016' width='176' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
+                <a xlink:href='#outs.PaperUrls'>
+                    <text x='118' y='1035' class='white'>PaperUrls</text>
+                    <title>Table outs.PaperUrls
+                        Urls for the paper (mag/PaperUrls.txt)</title></a>
+                <use id='idx1' x='66' y='1052' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
+                <a xlink:href='#outs.PaperUrls_PaperId'>
+                    <text id='outs.PaperUrls.PaperId' x='83' y='1063'
+                          onmouseover="hghl(['PaperUrls_Fk_PaperUrls_Papers','outs.Papers.PaperId'])"
+                          onmouseout="uhghl(['PaperUrls_Fk_PaperUrls_Papers','outs.Papers.PaperId'])">PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        FOREIGN KEY REFERENCES Papers.PaperId</title></a>
+                <a xlink:href='#outs.PaperUrls.PaperId'>
+                    <use id='fk' x='228' y='1052' xlink:href='#fk'/>
+                    <title>References Papers ( PaperId ) </title></a>
+                <a xlink:href='#outs.PaperUrls_SourceType'>
+                    <text id='outs.PaperUrls.SourceType' x='83' y='1079'>SourceType</text>
+                    <title>SourceType
+                        integer
+                        Possible values: 1=Html, 2=Text, 3=Pdf, 4=Doc, 5=Ppt, 6=Xls, 8=Rtf, 12=Xml, 13=Rss, 20=Swf,
+                        27=Ics, 31=Pub, 33=Ods, 34=Odp, 35=Odt, 36=Zip, 40=Mp3, 0/999/NULL=unknown</title></a>
+                <text x='237' y='1076' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.PaperUrls_SourceUrl'>
+                    <text id='outs.PaperUrls.SourceUrl' x='83' y='1095'>SourceUrl</text>
+                    <title>SourceUrl
+                        varchar</title></a>
+                <text x='237' y='1092' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperUrls_LanguageCode'>
+                    <text id='outs.PaperUrls.LanguageCode' x='83' y='1111'>LanguageCode</text>
+                    <title>LanguageCode
+                        varchar</title></a>
+                <text x='237' y='1108' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperUrls_UrlForLandingPage'>
+                    <text id='outs.PaperUrls.UrlForLandingPage' x='83' y='1127'>UrlForLandingPage</text>
+                    <title>UrlForLandingPage
+                        varchar
+                        NEW; URL for the landing page, when article is free to read</title></a>
+                <text x='237' y='1124' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperUrls_UrlForPdf'>
+                    <text id='outs.PaperUrls.UrlForPdf' x='83' y='1143'>UrlForPdf</text>
+                    <title>UrlForPdf
+                        varchar
+                        NEW; URL for the PDF, when article is free to read</title></a>
+                <text x='237' y='1140' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperUrls_HostType'>
+                    <text id='outs.PaperUrls.HostType' x='83' y='1159'>HostType</text>
+                    <title>HostType
+                        varchar
+                        NEW; host type of the free-to-read URL, Possible values: publisher, repository</title></a>
+                <text x='237' y='1156' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperUrls_Version'>
+                    <text id='outs.PaperUrls.Version' x='83' y='1175'>Version</text>
+                    <title>Version
+                        varchar
+                        NEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion,
+                        publishedVersion</title></a>
+                <text x='237' y='1172' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperUrls_License'>
+                    <text id='outs.PaperUrls.License' x='83' y='1191'>License</text>
+                    <title>License
+                        varchar
+                        NEW; license of the free-to-read URL (example: cc0, cc-by, publisher-specific)</title></a>
+                <text x='237' y='1188' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperUrls_RepositoryInstitution'>
+                    <text id='outs.PaperUrls.RepositoryInstitution' x='83' y='1207'>RepositoryInstitution</text>
+                    <title>RepositoryInstitution
+                        varchar
+                        NEW; name of repository host of URL</title></a>
+                <text x='237' y='1204' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.PaperUrls_OaiPmhId'>
+                    <text id='outs.PaperUrls.OaiPmhId' x='83' y='1223'>OaiPmhId</text>
+                    <title>OaiPmhId
+                        varchar
+                        NEW; OAH-PMH id of the repository record</title></a>
+                <text x='237' y='1220' text-anchor='end' class='colType'>t</text>
+                <!-- == Table 'Papers' == -->
+                <rect id='depict_outs.Papers' class='entity' style='stroke:#B1C9AD' x='368' y='472' width='176'
+                      height='592'/>
+                <rect class='entity' x='368' y='472' width='176' height='28' style='stroke:#B1C9AD; fill:#73A16A'/>
+                <a xlink:href='#outs.Papers'>
+                    <text x='431' y='491' class='white'>Papers</text>
+                    <title>Table outs.Papers
+                        Main data for papers (mag/Papers.txt)</title></a>
+                <use id='idx1' x='370' y='508' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
+                    ) </title></use>
 
 
 
+                <a xlink:href='#outs.Papers_PaperId'>
+                    <text id='outs.Papers.PaperId' x='387' y='519'
+                          onmouseover="hghl(['PaperUrls_Fk_PaperUrls_Papers','outs.PaperUrls.PaperId','PaperResources_Fk_PaperResources_Papers','outs.PaperResources.PaperId','PaperReferences_Fk_PaperReferences_Papers','outs.PaperReferences.PaperId','PaperReferences_Fk_PaperReferences_Papers_0','outs.PaperReferences.PaperReferenceId','PaperRecommendations_Fk_PaperRecommendations_Papers','outs.PaperRecommendations.PaperId','PaperRecommendations_Fk_PaperRecommendations_Papers_0','outs.PaperRecommendations.RecommendedPaperId','PaperMeSH_Fk_PaperMeSH_Papers','outs.PaperMeSH.PaperId','PaperExtendedAttributes_Fk_PaperExtendedAttributes_Papers','outs.PaperExtendedAttributes.PaperId','PaperCitationContexts_Fk_PaperCitationContexts_Papers','outs.PaperCitationContexts.PaperId','PaperCitationContexts_Fk_PaperCitationContexts_Papers_0','outs.PaperCitationContexts.PaperReferenceId','PaperAbstractsInvertedIndex_Fk_PaperAbstractsInvertedIndex_Papers','outs.PaperAbstractsInvertedIndex.PaperId','PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_Papers','outs.PaperFieldsOfStudy.PaperId','PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Papers','outs.PaperAuthorAffiliations.PaperId'])"
+                          onmouseout="uhghl(['PaperUrls_Fk_PaperUrls_Papers','outs.PaperUrls.PaperId','PaperResources_Fk_PaperResources_Papers','outs.PaperResources.PaperId','PaperReferences_Fk_PaperReferences_Papers','outs.PaperReferences.PaperId','PaperReferences_Fk_PaperReferences_Papers_0','outs.PaperReferences.PaperReferenceId','PaperRecommendations_Fk_PaperRecommendations_Papers','outs.PaperRecommendations.PaperId','PaperRecommendations_Fk_PaperRecommendations_Papers_0','outs.PaperRecommendations.RecommendedPaperId','PaperMeSH_Fk_PaperMeSH_Papers','outs.PaperMeSH.PaperId','PaperExtendedAttributes_Fk_PaperExtendedAttributes_Papers','outs.PaperExtendedAttributes.PaperId','PaperCitationContexts_Fk_PaperCitationContexts_Papers','outs.PaperCitationContexts.PaperId','PaperCitationContexts_Fk_PaperCitationContexts_Papers_0','outs.PaperCitationContexts.PaperReferenceId','PaperAbstractsInvertedIndex_Fk_PaperAbstractsInvertedIndex_Papers','outs.PaperAbstractsInvertedIndex.PaperId','PaperFieldsOfStudy_Fk_PaperFieldsOfStudy_Papers','outs.PaperFieldsOfStudy.PaperId','PaperAuthorAffiliations_Fk_PaperAuthorAffiliations_Papers','outs.PaperAuthorAffiliations.PaperId'])">
+                        PaperId
+                    </text>
+                    <title>PaperId
+                        bigint
+                        PRIMARY KEY</title></a>
+                <a xlink:href='#outs.Papers.PaperId'>
+                    <use id='ref' x='532' y='508' xlink:href='#ref'/>
+                    <title>Referred by PaperUrls ( PaperId )
+                        Referred by PaperResources ( PaperId )
+                        Referred by PaperReferences ( PaperId )
+                        Referred by PaperReferences ( PaperReferenceId -&gt; PaperId )
+                        Referred by PaperRecommendations ( PaperId )
+                        Referred by PaperRecommendations ( RecommendedPaperId -&gt; PaperId )
+                        Referred by PaperMeSH ( PaperId )
+                        Referred by PaperExtendedAttributes ( PaperId )
+                        Referred by PaperCitationContexts ( PaperId )
+                        Referred by PaperCitationContexts ( PaperReferenceId -&gt; PaperId )
+                        Referred by PaperAbstractsInvertedIndex ( PaperId )
+                        Referred by PaperFieldsOfStudy ( PaperId )
+                        Referred by PaperAuthorAffiliations ( PaperId ) </title></a>
+                <a xlink:href='#outs.Papers_Rank'>
+                    <text id='outs.Papers.Rank' x='387' y='535'>Rank</text>
+                    <title>Rank
+                        integer
+                        FROZEN; no new ranks are being added</title></a>
+                <text x='541' y='532' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Papers_Doi'>
+                    <text id='outs.Papers.Doi' x='387' y='551'>Doi</text>
+                    <title>Doi
+                        varchar
+                        Doi values are upper-cased per DOI standard at
+                        https://www.doi.org/doi_handbook/2_Numbering.html#2.4</title></a>
+                <text x='541' y='548' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_DocType'>
+                    <text id='outs.Papers.DocType' x='387' y='567'>DocType</text>
+                    <title>DocType
+                        varchar
+                        Possible values: Book, BookChapter, Conference, Dataset, Journal, Patent, Repository, Thesis,
+                        NULL : unknown. Patent is FROZEN; no new Patents are being added.</title></a>
+                <text x='541' y='564' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_Genre'>
+                    <text id='outs.Papers.Genre' x='387' y='583'>Genre</text>
+                    <title>Genre
+                        varchar
+                        NEW; Crossref ontology for work type such as &quot;journal-article, posted-content, dataset, or
+                        book-chapter</title></a>
+                <text x='541' y='580' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_IsParatext'>
+                    <text id='outs.Papers.IsParatext' x='387' y='599'>IsParatext</text>
+                    <title>IsParatext
+                        boolean
+                        NEW; indicates front-matter. See
+                        https://support.unpaywall.org/support/solutions/articles/44001894783</title></a>
+                <text x='541' y='596' text-anchor='end' class='colType'>b</text>
+                <a xlink:href='#outs.Papers_PaperTitle'>
+                    <text id='outs.Papers.PaperTitle' x='387' y='615'>PaperTitle</text>
+                    <title>PaperTitle
+                        varchar
+                        UPDATED; slightly different normalization algorithm</title></a>
+                <text x='541' y='612' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_OriginalTitle'>
+                    <text id='outs.Papers.OriginalTitle' x='387' y='631'>OriginalTitle</text>
+                    <title>OriginalTitle
+                        varchar</title></a>
+                <text x='541' y='628' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_BookTitle'>
+                    <text id='outs.Papers.BookTitle' x='387' y='647'>BookTitle</text>
+                    <title>BookTitle
+                        varchar</title></a>
+                <text x='541' y='644' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_Year'>
+                    <text id='outs.Papers.Year' x='387' y='663'>Year</text>
+                    <title>Year
+                        integer</title></a>
+                <text x='541' y='660' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Papers_Date'>
+                    <text id='outs.Papers.Date' x='387' y='679'>Date</text>
+                    <title>Date
+                        varchar</title></a>
+                <text x='541' y='676' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_OnlineDate'>
+                    <text id='outs.Papers.OnlineDate' x='387' y='695'>OnlineDate</text>
+                    <title>OnlineDate
+                        varchar</title></a>
+                <text x='541' y='692' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_Publisher'>
+                    <text id='outs.Papers.Publisher' x='387' y='711'>Publisher</text>
+                    <title>Publisher
+                        varchar</title></a>
+                <text x='541' y='708' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_JournalId'>
+                    <text id='outs.Papers.JournalId' x='387' y='727'
+                          onmouseover="hghl(['Papers_Fk_Papers_Journals','outs.Journals.JournalId'])"
+                          onmouseout="uhghl(['Papers_Fk_Papers_Journals','outs.Journals.JournalId'])">JournalId
+                    </text>
+                    <title>JournalId
+                        bigint
+                        FOREIGN KEY references journals.journal_id</title></a>
+                <a xlink:href='#outs.Papers.JournalId'>
+                    <use id='fk' x='532' y='716' xlink:href='#fk'/>
+                    <title>References Journals ( JournalId ) </title></a>
+                <a xlink:href='#outs.Papers_ConferenceSeriesId'>
+                    <text id='outs.Papers.ConferenceSeriesId' x='387' y='743'
+                          onmouseover="hghl(['Papers_Fk_Papers_ConferenceSeries','outs.ConferenceSeries.ConferenceSeriesId'])"
+                          onmouseout="uhghl(['Papers_Fk_Papers_ConferenceSeries','outs.ConferenceSeries.ConferenceSeriesId'])">
+                        ConferenceSeriesId
+                    </text>
+                    <title>ConferenceSeriesId
+                        bigint
+                        FROZEN; no longer updated, no new Conference Series are being added. FOREIGN KEY references
+                        conference_series.conference_series_id.</title></a>
+                <a xlink:href='#outs.Papers.ConferenceSeriesId'>
+                    <use id='fk' x='532' y='732' xlink:href='#fk'/>
+                    <title>References ConferenceSeries ( ConferenceSeriesId ) </title></a>
+                <a xlink:href='#outs.Papers_ConferenceInstanceId'>
+                    <text id='outs.Papers.ConferenceInstanceId' x='387' y='759'
+                          onmouseover="hghl(['Papers_Fk_Papers_ConferenceInstances','outs.ConferenceInstances.ConferenceInstanceId'])"
+                          onmouseout="uhghl(['Papers_Fk_Papers_ConferenceInstances','outs.ConferenceInstances.ConferenceInstanceId'])">
+                        ConferenceInstanceId
+                    </text>
+                    <title>ConferenceInstanceId
+                        bigint
+                        FROZEN; no longer updated, no new Conference Instances are being added. FOREIGN KEY references
+                        conference_instances.conference_instance_id.</title></a>
+                <a xlink:href='#outs.Papers.ConferenceInstanceId'>
+                    <use id='fk' x='532' y='748' xlink:href='#fk'/>
+                    <title>References ConferenceInstances ( ConferenceInstanceId ) </title></a>
+                <a xlink:href='#outs.Papers_Volume'>
+                    <text id='outs.Papers.Volume' x='387' y='775'>Volume</text>
+                    <title>Volume
+                        varchar</title></a>
+                <text x='541' y='772' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_Issue'>
+                    <text id='outs.Papers.Issue' x='387' y='791'>Issue</text>
+                    <title>Issue
+                        varchar</title></a>
+                <text x='541' y='788' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_FirstPage'>
+                    <text id='outs.Papers.FirstPage' x='387' y='807'>FirstPage</text>
+                    <title>FirstPage
+                        varchar</title></a>
+                <text x='541' y='804' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_LastPage'>
+                    <text id='outs.Papers.LastPage' x='387' y='823'>LastPage</text>
+                    <title>LastPage
+                        varchar</title></a>
+                <text x='541' y='820' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_ReferenceCount'>
+                    <text id='outs.Papers.ReferenceCount' x='387' y='839'>ReferenceCount</text>
+                    <title>ReferenceCount
+                        bigint</title></a>
+                <text x='541' y='836' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Papers_CitationCount'>
+                    <text id='outs.Papers.CitationCount' x='387' y='855'>CitationCount</text>
+                    <title>CitationCount
+                        bigint</title></a>
+                <text x='541' y='852' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Papers_EstimatedCitation'>
+                    <text id='outs.Papers.EstimatedCitation' x='387' y='871'>EstimatedCitation</text>
+                    <title>EstimatedCitation
+                        bigint
+                        UPDATED; new algorithm</title></a>
+                <text x='541' y='868' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Papers_OriginalVenue'>
+                    <text id='outs.Papers.OriginalVenue' x='387' y='887'>OriginalVenue</text>
+                    <title>OriginalVenue
+                        varchar</title></a>
+                <text x='541' y='884' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_FamilyId'>
+                    <text id='outs.Papers.FamilyId' x='387' y='903'>FamilyId</text>
+                    <title>FamilyId
+                        bigint
+                        FROZEN; no longer updated.</title></a>
+                <text x='541' y='900' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Papers_FamilyRank'>
+                    <text id='outs.Papers.FamilyRank' x='387' y='919'>FamilyRank</text>
+                    <title>FamilyRank
+                        bigint
+                        FROZEN; no longer updated.</title></a>
+                <text x='541' y='916' text-anchor='end' class='colType'>#</text>
+                <a xlink:href='#outs.Papers_DocSubTypes'>
+                    <text id='outs.Papers.DocSubTypes' x='387' y='935'>DocSubTypes</text>
+                    <title>DocSubTypes
+                        varchar
+                        Possible values: Retracted Publication, Retraction Notice</title></a>
+                <text x='541' y='932' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_OaStatus'>
+                    <text id='outs.Papers.OaStatus' x='387' y='951'>OaStatus</text>
+                    <title>OaStatus
+                        varchar
+                        NEW; Possible values: closed, green, gold, hybrid, bronze (see
+                        https://en.wikipedia.org/wiki/Open_access#Colour_naming_system)</title></a>
+                <text x='541' y='948' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_BestUrl'>
+                    <text id='outs.Papers.BestUrl' x='387' y='967'>BestUrl</text>
+                    <title>BestUrl
+                        varchar
+                        NEW; An url for the paper (see paper_urls table for more)</title></a>
+                <text x='541' y='964' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_BestFreeUrl'>
+                    <text id='outs.Papers.BestFreeUrl' x='387' y='983'>BestFreeUrl</text>
+                    <title>BestFreeUrl
+                        varchar
+                        NEW; Url of best legal free-to-read copy when it exists (see
+                        https://support.unpaywall.org/support/solutions/articles/44001943223)</title></a>
+                <text x='541' y='980' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_BestFreeVersion'>
+                    <text id='outs.Papers.BestFreeVersion' x='387' y='999'>BestFreeVersion</text>
+                    <title>BestFreeVersion
+                        varchar
+                        NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion</title></a>
+                <text x='541' y='996' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_DoiLower'>
+                    <text id='outs.Papers.DoiLower' x='387' y='1015'>DoiLower</text>
+                    <title>DoiLower
+                        varchar
+                        NEW; lowercase doi for convenience linking to Unpaywall</title></a>
+                <text x='541' y='1012' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_CreatedDate'>
+                    <text id='outs.Papers.CreatedDate' x='387' y='1031'>CreatedDate</text>
+                    <title>CreatedDate
+                        varchar</title></a>
+                <text x='541' y='1028' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.Papers_UpdatedDate'>
+                    <text id='outs.Papers.UpdatedDate' x='387' y='1047'>UpdatedDate</text>
+                    <title>UpdatedDate
+                        timestamp
+                        NEW; set when changes are made going forward</title></a>
+                <text x='541' y='1044' text-anchor='end' class='colType'>d</text>
+                <!-- == Table 'RelatedFieldOfStudy' == -->
+                <rect id='depict_outs.RelatedFieldOfStudy' class='entity' style='stroke:#ADB2C9' x='832' y='280'
+                      width='144' height='128'/>
+                <rect class='entity' x='832' y='280' width='144' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
+                <a xlink:href='#outs.RelatedFieldOfStudy'>
+                    <text x='835' y='299' class='white'>RelatedFieldOfStudy</text>
+                    <title>Table outs.RelatedFieldOfStudy
+                        Relationships between fields of study (advanced/RelatedFieldOfStudy.txt)</title></a>
+                <use id='idx1' x='834' y='316' xlink:href='#idx1'><title>Distribution ( FieldOfStudyId1 ) Sorting (
+                    FieldOfStudyId1 ) </title></use>
+                <a xlink:href='#outs.RelatedFieldOfStudy_FieldOfStudyId1'>
+                    <text id='outs.RelatedFieldOfStudy.FieldOfStudyId1' x='851' y='327'
+                          onmouseover="hghl(['RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy','outs.FieldsOfStudy.FieldOfStudyId'])"
+                          onmouseout="uhghl(['RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy','outs.FieldsOfStudy.FieldOfStudyId'])">
+                        FieldOfStudyId1
+                    </text>
+                    <title>FieldOfStudyId1
+                        bigint
+                        FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</title></a>
+                <a xlink:href='#outs.RelatedFieldOfStudy.FieldOfStudyId1'>
+                    <use id='fk' x='964' y='316' xlink:href='#fk'/>
+                    <title>References FieldsOfStudy ( FieldOfStudyId1 -&gt; FieldOfStudyId ) </title></a>
 
 
+              <a xlink:href='#outs.RelatedFieldOfStudy_Type1'>
+                    <text id='outs.RelatedFieldOfStudy.Type1' x='851' y='343'>Type1</text>
 
-
-
-<!--      ***************************************************************************************************************-->
-<!--      MAG LEGACY COLLECTION -->
-<!--      ***************************************************************************************************************-->
-      <div class="text-h4">MAG legacy tables (no longer updated)</div>
-      <div class="mb-8">
-        There is some data that MAG collected, which OpenAlex no longer collects in an ongoing way. You can download this data from OpenAlex, but be aware that the tables below are no longer being updated, and will grow stale over time. Note that all the "Fields of Study" tables were updated once or twice a year by MAG. This makes sense because (a) it's expensive to compute and (b) the world doens't actually create brand new fields of study very often. Following MAG's lead, we expect to update these in due time, but they will not be updated very often.
-      </div>
-
-      <h2 class="text-h5" id="conference-instances">Conference Instances</h2>
-      <p><strong>Path</strong> <code>mag/ConferenceInstances.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>ConferenceInstanceId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>NormalizedName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>DisplayName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>ConferenceSeriesId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES ConferenceSeries.ConferenceSeriesId</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Location</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>OfficialUrl</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>StartDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>EndDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>AbstractRegistrationDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>SubmissionDeadlineDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>NotificationDueDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>FinalVersionDueDate</td>
-          <td>DateTime?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>PaperCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>PaperFamilyCount</td>
-          <td>long</td>
-          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>Latitude</td>
-          <td>float?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>Longitude</td>
-          <td>float?</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="conference-series">Conference Series</h2>
-      <p><strong>Path</strong> <code>mag/ConferenceSeries.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>ConferenceSeriesId</td>
-          <td>long</td>
-          <td>PRIMARY KEY</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Rank</td>
-          <td>uint</td>
-          <td>See <a href="resources-faq#what-is-the-rank-value-on-entities" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>NormalizedName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>DisplayName</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>PaperCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>PaperFamilyCount</td>
-          <td>long</td>
-          <td>See <a href="resources-faq#papercount-vs-paperfamilycount" data-linktype="relative-path">FAQ</a></td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>CitationCount</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>CreatedDate</td>
-          <td>DateTime</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="entity-related-entities">Entity Related Entities</h2>
-      <p><strong>Path</strong> <code>advanced/EntityRelatedEntities.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>EntityId</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>EntityType</td>
-          <td>string</td>
-          <td>af: Affiliation <br> j: Journal <br> c: Conference</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>RelatedEntityId</td>
-          <td>long</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>RelatedEntityType</td>
-          <td>string</td>
-          <td>af: Affiliation <br> j: Journal <br> c: Conference</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>RelatedType</td>
-          <td>int</td>
-          <td>0: Two entities are similar if they appear on the same paper <br> 1: Two entities are similar if they have
-            common coauthors <br> 2: Two entities are similar if they are co-cited by others <br> 3: Two entities are
-            similar if they have common fields of study <br> 4: Two entities are similar if they appear in the same
-            venue <br> 5: Entity A is similar to entity B if A cites B <br> 6: Entity A is similar to entity B if A is
-            cited by B
-          </td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Score</td>
-          <td>float</td>
-          <td>Confidence range between 0 and 1. Larger number representing higher confidence.</td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="paper-abstracts-inverted-index">Paper Abstracts Inverted Index</h2>
-      <p><strong>Path</strong> <code>nlp/PaperAbstractsInvertedIndex.txt.{*}</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>IndexedAbstract</td>
-          <td>string</td>
-          <td>See <a href="resources-faq#what-format-are-paper-abstracts-published-in"
-                     data-linktype="relative-path">FAQ</a> for format
-          </td>
-        </tr>
-        </tbody>
-      </table>
-      <div class="NOTE">
-        <p>Note</p>
-        <p>Paper Abstracts Inverted Index is split to multiple files. Use
-          <code>nlp/PaperAbstractsInvertedIndex.txt.{*}</code> as the path for the combined file.</p>
-      </div>
-
-      <h2 class="text-h5" id="paper-citation-contexts">Paper Citation Contexts</h2>
-      <p><strong>Path</strong> <code>nlp/PaperCitationContexts.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>PaperReferenceId</td>
-          <td>long</td>
-          <td>FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>CitationContext</td>
-          <td>string</td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-
-      <h2 class="text-h5" id="paper-recommendations">Paper Recommendations</h2>
-      <p><strong>Path</strong> <code>advanced/PaperRecommendations.txt</code></p>
-      <table>
-        <thead>
-        <tr>
-          <th>Column #</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Note</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>PaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>RecommendedPaperId</td>
-          <td>long</td>
-          <td>PRIMARY KEY <br> FOREIGN KEY REFERENCES Papers.PaperId</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Score</td>
-          <td>float</td>
-          <td>Confidence range between 0 and 1. Bigger number representing higher confidence.</td>
-        </tr>
-        </tbody>
-      </table>
+                    <title>Type1
+                        varchar
+                        Possible values: general, disease, disease_cause, medical_treatment, symptom</title></a>
+                <text x='973' y='340' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.RelatedFieldOfStudy_FieldOfStudyId2'>
+                    <text id='outs.RelatedFieldOfStudy.FieldOfStudyId2' x='851' y='359'
+                          onmouseover="hghl(['RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy_0','outs.FieldsOfStudy.FieldOfStudyId'])"
+                          onmouseout="uhghl(['RelatedFieldOfStudy_Fk_RelatedFieldOfStudy_FieldsOfStudy_0','outs.FieldsOfStudy.FieldOfStudyId'])">
+                        FieldOfStudyId2
+                    </text>
+                    <title>FieldOfStudyId2
+                        bigint
+                        FOREIGN KEY REFERENCES FieldsOfStudy.FieldOfStudyId</title></a>
+                <a xlink:href='#outs.RelatedFieldOfStudy.FieldOfStudyId2'>
+                    <use id='fk' x='964' y='348' xlink:href='#fk'/>
+                    <title>References FieldsOfStudy ( FieldOfStudyId2 -&gt; FieldOfStudyId ) </title></a>
+                <a xlink:href='#outs.RelatedFieldOfStudy_Type2'>
+                    <text id='outs.RelatedFieldOfStudy.Type2' x='851' y='375'>Type2</text>
+                    <title>Type2
+                        varchar
+                        Possible values: general, disease, disease_cause, medical_treatment, symptom</title></a>
+                <text x='973' y='372' text-anchor='end' class='colType'>t</text>
+                <a xlink:href='#outs.RelatedFieldOfStudy_Rank'>
+                    <text id='outs.RelatedFieldOfStudy.Rank' x='851' y='391'>Rank</text>
+                    <title>Rank
+                        real
+                        FROZEN; no new ranks are being added.</title></a>
+                <text x='973' y='388' text-anchor='end' class='colType'>#</text>
+            </g>
+        </svg>
     </div>
-  </v-container>
+</div>
+<div class='container pt-2'>
+
+<!--    <div class='card'>-->
+<!--        <div class='card-body'>-->
+<!--            <h5 class='card-title'>Tables</h5>-->
+<!--            <ul>-->
+<!--                <li><a href='#outs.Affiliations'/>outs.Affiliations</a>-->
+<!--                <li><a href='#outs.AuthorExtendedAttributes'/>outs.AuthorExtendedAttributes</a>-->
+<!--                <li><a href='#outs.Authors'/>outs.Authors</a>-->
+<!--                <li><a href='#outs.ConferenceInstances'/>outs.ConferenceInstances</a>-->
+<!--                <li><a href='#outs.ConferenceSeries'/>outs.ConferenceSeries</a>-->
+<!--                <li><a href='#outs.EntityRelatedEntities'/>outs.EntityRelatedEntities</a>-->
+<!--                <li><a href='#outs.FieldOfStudyChildren'/>outs.FieldOfStudyChildren</a>-->
+<!--                <li><a href='#outs.FieldOfStudyExtendedAttributes'/>outs.FieldOfStudyExtendedAttributes</a>-->
+<!--                <li><a href='#outs.FieldsOfStudy'/>outs.FieldsOfStudy</a>-->
+<!--                <li><a href='#outs.Journals'/>outs.Journals</a>-->
+<!--                <li><a href='#outs.PaperAbstractsInvertedIndex'/>outs.PaperAbstractsInvertedIndex</a>-->
+<!--                <li><a href='#outs.PaperAuthorAffiliations'/>outs.PaperAuthorAffiliations</a>-->
+<!--                <li><a href='#outs.PaperCitationContexts'/>outs.PaperCitationContexts</a>-->
+<!--                <li><a href='#outs.PaperExtendedAttributes'/>outs.PaperExtendedAttributes</a>-->
+<!--                <li><a href='#outs.PaperFieldsOfStudy'/>outs.PaperFieldsOfStudy</a>-->
+<!--                <li><a href='#outs.PaperMeSH'/>outs.PaperMeSH</a>-->
+<!--                <li><a href='#outs.PaperRecommendations'/>outs.PaperRecommendations</a>-->
+<!--                <li><a href='#outs.PaperReferences'/>outs.PaperReferences</a>-->
+<!--                <li><a href='#outs.PaperResources'/>outs.PaperResources</a>-->
+<!--                <li><a href='#outs.Papers'/>outs.Papers</a>-->
+<!--                <li><a href='#outs.PaperUrls'/>outs.PaperUrls</a>-->
+<!--                <li><a href='#outs.RelatedFieldOfStudy'/>outs.RelatedFieldOfStudy</a>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+    <br><br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.Affiliations'
+                                  onclick="window.scrollTo(712, 656);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Affiliations').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Schema dev.outs</h5><h5
+                class='card-title'>Table Affiliations</h5></a>
+            <p class="text-muted">Base table for affiliations&#47;institutions
+                &#40;mag&#47;Affiliations&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.Affiliations_AffiliationId'>AffiliationId</a></td>
+                    <td> bigint</td>
+                    <td> PRIMARY KEY</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_Rank'>Rank</a></td>
+                    <td> integer encode az64</td>
+                    <td> FROZEN&#59; no new ranks are being added&#46;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_NormalizedName'>NormalizedName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> UPDATED&#59; slightly different normalization algorithm</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_DisplayName'>DisplayName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_GridId'>GridId</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> FROZEN&#59; ror&#95;id is the new standard identifier for organizations</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_RorId'>RorId</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; ROR for this organization&#44; see https&#58;&#47;&#47;ror&#46;org&#44; https&#58;&#47;&#47;ror&#46;org&#47;&#58;ror&#95;id</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_OfficialPage'>OfficialPage</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_WikiPage'>WikiPage</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_PaperCount'>PaperCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_PaperFamilyCount'>PaperFamilyCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; same value as &quot;paper&#95;count&#46;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_CitationCount'>CitationCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_Iso3166Code'>Iso3166Code</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Two&#45;letter country codes&#44; see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;ISO&#95;3166&#45;2</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_Latitude'>Latitude</a></td>
+                    <td> real</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_Longitude'>Longitude</a></td>
+                    <td> real</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_CreatedDate'>CreatedDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Affiliations_UpdatedDate'>UpdatedDate</a></td>
+                    <td> timestamp encode az64</td>
+                    <td> NEW&#59; set values updated from new ror data</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON AffiliationId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON AffiliationId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Referring Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_Authors_Affiliations</td>
+                    <td> (AffiliationId) &#8592; <a href='#outs&#46;Authors'
+                                                    onclick="window.scrollTo(920, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Authors').classList.add('palpable'); return false;">Authors</a>(LastKnownAffiliationId)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperAuthorAffiliations_Affiliations</td>
+                    <td> (AffiliationId) &#8592; <a href='#outs&#46;PaperAuthorAffiliations'
+                                                    onclick="window.scrollTo(696, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperAuthorAffiliations').classList.add('palpable'); return false;">PaperAuthorAffiliations</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.AuthorExtendedAttributes'
+                                  onclick="window.scrollTo(1144, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.AuthorExtendedAttributes').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table AuthorExtendedAttributes</h5></a>
+            <p class="text-muted">Additional author name representations &#40;mag&#47;AuthorExtendedAttributes&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.AuthorExtendedAttributes_AuthorId'>AuthorId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES Authors&#46;AuthorId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.AuthorExtendedAttributes_AttributeType'>AttributeType</a></td>
+                    <td> integer encode az64</td>
+                    <td> Possible values&#58; 1&#61;Alternative name</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.AuthorExtendedAttributes_AttributeValue'>AttributeValue</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON AuthorId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON AuthorId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_AuthorExtendedAttributes_Authors</td>
+                    <td> (AuthorId) &#8594; <a href='#outs&#46;Authors'
+                                               onclick="window.scrollTo(920, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Authors').classList.add('palpable'); return false;">Authors</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.Authors'
+                                  onclick="window.scrollTo(920, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Authors').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table Authors</h5></a>
+            <p class="text-muted">Base table for authors &#40;mag&#47;Authors&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.Authors_AuthorId'>AuthorId</a></td>
+                    <td> bigint</td>
+                    <td> PRIMARY KEY</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_Rank'>Rank</a></td>
+                    <td> integer encode az64</td>
+                    <td> FROZEN&#59; no new ranks are being added</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_NormalizedName'>NormalizedName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> UPDATED&#59; slightly different normalization algorithm</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_DisplayName'>DisplayName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_Orcid'>Orcid</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; ORCID identifier for this author</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.Authors_LastKnownAffiliationId'>LastKnownAffiliationId</a></td>
+                    <td> integer encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_PaperCount'>PaperCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_PaperFamilyCount'>PaperFamilyCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_CitationCount'>CitationCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_CreatedDate'>CreatedDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Authors_UpdatedDate'>UpdatedDate</a></td>
+                    <td> timestamp encode az64</td>
+                    <td> NEW&#59; set when changes are made going forward</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON AuthorId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON AuthorId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_Authors_Affiliations</td>
+                    <td> (LastKnownAffiliationId) &#8594; <a href='#outs&#46;Affiliations'
+                                                             onclick="window.scrollTo(712, 656);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Affiliations').classList.add('palpable'); return false;">Affiliations</a>(AffiliationId)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Referring Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_AuthorExtendedAttributes_Authors</td>
+                    <td> (AuthorId) &#8592; <a href='#outs&#46;AuthorExtendedAttributes'
+                                               onclick="window.scrollTo(1144, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.AuthorExtendedAttributes').classList.add('palpable'); return false;">AuthorExtendedAttributes</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperAuthorAffiliations_Authors</td>
+                    <td> (AuthorId) &#8592; <a href='#outs&#46;PaperAuthorAffiliations'
+                                               onclick="window.scrollTo(696, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperAuthorAffiliations').classList.add('palpable'); return false;">PaperAuthorAffiliations</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.ConferenceInstances'
+                                  onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.ConferenceInstances').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table ConferenceInstances</h5></a>
+            <p class="text-muted">FROZEN&#59; Base table for Conference Instances &#40;mag&#47;ConferenceInstances&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.ConferenceInstances_ConferenceInstanceId'>ConferenceInstanceId</a></td>
+                    <td> bigint</td>
+                    <td> PRIMARY KEY</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_NormalizedName'>NormalizedName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> UPDATED&#59; slightly different normalization algorithm</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_DisplayName'>DisplayName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.ConferenceInstances_ConferenceSeriesId'>ConferenceSeriesId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES ConferenceSeries&#46;ConferenceSeriesId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_Location'>Location</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_OfficialUrl'>OfficialUrl</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_StartDate'>StartDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_EndDate'>EndDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_AbstractRegistrationDate'>AbstractRegistrationDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_SubmissionDeadlineDate'>SubmissionDeadlineDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_NotificationDueDate'>NotificationDueDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_FinalVersionDueDate'>FinalVersionDueDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_PaperCount'>PaperCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_PaperFamilyCount'>PaperFamilyCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_CitationCount'>CitationCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_Latitude'>Latitude</a></td>
+                    <td> real</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_Longitude'>Longitude</a></td>
+                    <td> real</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceInstances_CreatedDate'>CreatedDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON ConferenceInstanceId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON ConferenceInstanceId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_ConferenceInstances_ConferenceSeries</td>
+                    <td> (ConferenceSeriesId) &#8594; <a href='#outs&#46;ConferenceSeries'
+                                                         onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.ConferenceSeries').classList.add('palpable'); return false;">ConferenceSeries</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Referring Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_Papers_ConferenceInstances</td>
+                    <td> (ConferenceInstanceId) &#8592; <a href='#outs&#46;Papers'
+                                                           onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.ConferenceSeries'
+                                  onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.ConferenceSeries').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table ConferenceSeries</h5></a>
+            <p class="text-muted">FROZEN&#59; Base table for Conference Series &#40;mag&#47;ConferenceSeries&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.ConferenceSeries_ConferenceSeriesId'>ConferenceSeriesId</a></td>
+                    <td> bigint</td>
+                    <td> PRIMARY KEY</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceSeries_Rank'>Rank</a></td>
+                    <td> integer encode az64</td>
+                    <td> FROZEN&#59; no new ranks are being added</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceSeries_NormalizedName'>NormalizedName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> UPDATED&#59; slightly different normalization algorithm</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceSeries_DisplayName'>DisplayName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceSeries_PaperCount'>PaperCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceSeries_PaperFamilyCount'>PaperFamilyCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceSeries_CitationCount'>CitationCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.ConferenceSeries_CreatedDate'>CreatedDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON ConferenceSeriesId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON ConferenceSeriesId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Referring Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_Papers_ConferenceSeries</td>
+                    <td> (ConferenceSeriesId) &#8592; <a href='#outs&#46;Papers'
+                                                         onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_ConferenceInstances_ConferenceSeries</td>
+                    <td> (ConferenceSeriesId) &#8592; <a href='#outs&#46;ConferenceInstances'
+                                                         onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.ConferenceInstances').classList.add('palpable'); return false;">ConferenceInstances</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.EntityRelatedEntities'
+                                  onclick="window.scrollTo(60, 144);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.EntityRelatedEntities').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table EntityRelatedEntities</h5></a>
+            <p class="text-muted">Relationship between papers&#44; authors&#44; fields of study&#46; &#40;advanced&#47;EntityRelatedEntities&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.EntityRelatedEntities_EntityId'>EntityId</a></td>
+                    <td> bigint</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.EntityRelatedEntities_EntityType'>EntityType</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Possible values&#58; af &#40;Affiliation&#41;&#44; j &#40;Journal&#41;&#44; c &#40;Conference&#41;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.EntityRelatedEntities_RelatedEntityId'>RelatedEntityId</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.EntityRelatedEntities_RelatedEntityType'>RelatedEntityType</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Possible values&#58; af &#40;Affiliation&#41;&#44; j &#40;Journal&#41;&#44; c &#40;Conference&#41;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.EntityRelatedEntities_RelatedType'>RelatedType</a></td>
+                    <td> integer encode az64</td>
+                    <td> Possible values&#58; 0 &#40;same paper&#41;&#44; 1 &#40;common coauthors&#41;&#44; 2 &#40;co&#45;cited&#41;&#44;
+                        3 &#40;common field of study&#41;&#44; 4 &#40;same venue&#41;&#44; 5 &#40;A cites B&#41;&#44; 6
+                        &#40;B cites A&#41;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.EntityRelatedEntities_Score'>Score</a></td>
+                    <td> real</td>
+                    <td> Confidence range between 0 and 1&#46; Larger number representing higher confidence&#46;</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON EntityId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON EntityId</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.FieldOfStudyChildren'
+                                  onclick="window.scrollTo(632, 192);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldOfStudyChildren').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table FieldOfStudyChildren</h5></a>
+            <p class="text-muted">Relationship between Fields of Study &#40;advanced&#47;FieldOfStudyChildren&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.FieldOfStudyChildren_FieldOfStudyId'>FieldOfStudyId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.FieldOfStudyChildren_ChildFieldOfStudyId'>ChildFieldOfStudyId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON FieldOfStudyId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON FieldOfStudyId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_FieldOfStudyChildren_FieldsOfStudy</td>
+                    <td> (FieldOfStudyId) &#8594; <a href='#outs&#46;FieldsOfStudy'
+                                                     onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_FieldOfStudyChildren_FieldsOfStudy_0</td>
+                    <td> (ChildFieldOfStudyId) &#8594; <a href='#outs&#46;FieldsOfStudy'
+                                                          onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>(FieldOfStudyId)
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.FieldOfStudyExtendedAttributes'
+                                  onclick="window.scrollTo(632, 80);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldOfStudyExtendedAttributes').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table
+            FieldOfStudyExtendedAttributes</h5></a>
+            <p class="text-muted">Other identifiers for Fields of Study &#40;advanced&#47;FieldOfStudyExtendedAttributes&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.FieldOfStudyExtendedAttributes_FieldOfStudyId'>FieldOfStudyId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldOfStudyExtendedAttributes_AttributeType'>AttributeType</a></td>
+                    <td> bigint encode az64</td>
+                    <td> Possible values&#58; 1 &#40;AUI from UMLS https&#58;&#47;&#47;www&#46;nlm&#46;nih&#46;gov&#47;research&#47;umls&#47;licensedcontent&#47;umlsarchives04&#46;html&#35;2018AA&#41;&#44;
+                        2 &#40;source url&#41;&#44; 3 &#40;CUI from UMLS https&#58;&#47;&#47;www&#46;nlm&#46;nih&#46;gov&#47;research&#47;umls&#47;licensedcontent&#47;umlsknowledgesources&#46;html&#41;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldOfStudyExtendedAttributes_AttributeValue'>AttributeValue</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON FieldOfStudyId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON FieldOfStudyId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy</td>
+                    <td> (FieldOfStudyId) &#8594; <a href='#outs&#46;FieldsOfStudy'
+                                                     onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.FieldsOfStudy'
+                                  onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldsOfStudy').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table FieldsOfStudy</h5></a>
+            <p class="text-muted">Base table for Fields of Study &#40;advanced&#47;FieldsOfStudy&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.FieldsOfStudy_FieldOfStudyId'>FieldOfStudyId</a></td>
+                    <td> bigint</td>
+                    <td> PRIMARY KEY</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_Rank'>Rank</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> FROZEN&#59; no new ranks are being added&#46;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_NormalizedName'>NormalizedName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> UPDATED&#59; slightly different normalization algorithm</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_DisplayName'>DisplayName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_MainType'>MainType</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_Level'>Level</a></td>
+                    <td> integer encode az64</td>
+                    <td> Possible values&#58; 0&#45;5</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_PaperCount'>PaperCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_PaperFamilyCount'>PaperFamilyCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; same value as &quot;paper&#95;count&#46;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_CitationCount'>CitationCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.FieldsOfStudy_CreatedDate'>CreatedDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON FieldOfStudyId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON FieldOfStudyId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Referring Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_FieldOfStudyChildren_FieldsOfStudy</td>
+                    <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;FieldOfStudyChildren'
+                                                     onclick="window.scrollTo(632, 192);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldOfStudyChildren').classList.add('palpable'); return false;">FieldOfStudyChildren</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_FieldOfStudyChildren_FieldsOfStudy_0</td>
+                    <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;FieldOfStudyChildren'
+                                                     onclick="window.scrollTo(632, 192);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldOfStudyChildren').classList.add('palpable'); return false;">FieldOfStudyChildren</a>(ChildFieldOfStudyId)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_RelatedFieldOfStudy_FieldsOfStudy</td>
+                    <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;RelatedFieldOfStudy'
+                                                     onclick="window.scrollTo(632, 288);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.RelatedFieldOfStudy').classList.add('palpable'); return false;">RelatedFieldOfStudy</a>(FieldOfStudyId1)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_RelatedFieldOfStudy_FieldsOfStudy_0</td>
+                    <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;RelatedFieldOfStudy'
+                                                     onclick="window.scrollTo(632, 288);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.RelatedFieldOfStudy').classList.add('palpable'); return false;">RelatedFieldOfStudy</a>(FieldOfStudyId2)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy</td>
+                    <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;FieldOfStudyExtendedAttributes'
+                                                     onclick="window.scrollTo(632, 80);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldOfStudyExtendedAttributes').classList.add('palpable'); return false;">FieldOfStudyExtendedAttributes</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperFieldsOfStudy_FieldsOfStudy</td>
+                    <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;PaperFieldsOfStudy'
+                                                     onclick="window.scrollTo(232, 240);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperFieldsOfStudy').classList.add('palpable'); return false;">PaperFieldsOfStudy</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.Journals'
+                                  onclick="window.scrollTo(456, 560);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Journals').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table Journals</h5></a>
+            <p class="text-muted">Base table for Journals &#40;mag&#47;Journals&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.Journals_JournalId'>JournalId</a></td>
+                    <td> bigint</td>
+                    <td> PRIMARY KEY</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_Rank'>Rank</a></td>
+                    <td> integer encode az64</td>
+                    <td> FROZEN&#59; no new ranks are being added</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_NormalizedName'>NormalizedName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> UPDATED&#59; slightly different normalization algorithm</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_DisplayName'>DisplayName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_Issn'>Issn</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> UPDATED&#59; the ISSN&#45;L for the journal &#40;see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;International&#95;Standard&#95;Serial&#95;Number&#35;Linking&#95;ISSN&#41;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_Issns'>Issns</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; JSON list of all ISSNs for this journal &#40;example&#58; &#39;&#91;&quot;1469&#45;5073&quot;&#44;&quot;0016&#45;6723&quot;&#93;&#39;
+                        &#41;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_IsOa'>IsOa</a></td>
+                    <td> boolean</td>
+                    <td> NEW&#59; TRUE when the journal is 100&#37; OA</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_IsInDoaj'>IsInDoaj</a></td>
+                    <td> boolean</td>
+                    <td> NEW&#59; TRUE when the journal is in DOAJ &#40;see https&#58;&#47;&#47;doaj&#46;org&#47;&#41;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_Publisher'>Publisher</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_Webpage'>Webpage</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_PaperCount'>PaperCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_PaperFamilyCount'>PaperFamilyCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_CitationCount'>CitationCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_CreatedDate'>CreatedDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Journals_UpdatedDate'>UpdatedDate</a></td>
+                    <td> timestamp encode az64</td>
+                    <td> NEW&#59; set when changes are made going forward</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON JournalId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON JournalId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Referring Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_Papers_Journals</td>
+                    <td> (JournalId) &#8592; <a href='#outs&#46;Papers'
+                                                onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperAbstractsInvertedIndex'
+                                  onclick="window.scrollTo(136, 1280);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperAbstractsInvertedIndex').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperAbstractsInvertedIndex</h5>
+        </a>
+            <p class="text-muted">Inverted abstracts &#40;nlp&#47;PaperAbstractsInvertedIndex&#46;txt&#46;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperAbstractsInvertedIndex_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperAbstractsInvertedIndex_IndexedAbstract'>IndexedAbstract</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Inverted index&#44; see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Inverted&#95;index</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperAbstractsInvertedIndex_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperAuthorAffiliations'
+                                  onclick="window.scrollTo(696, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperAuthorAffiliations').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperAuthorAffiliations</h5></a>
+            <p class="text-muted">Links between papers&#44; authors&#44; and affiliations&#47;institutions&#46; NOTE&#58;
+                It is possible to have multiple rows with same &#40;PaperId&#44; AuthorId&#44; AffiliationId&#41; when
+                an author is associated with multiple affiliations&#46; &#40;mag&#47;PaperAuthorAffiliations&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperAuthorAffiliations_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperAuthorAffiliations_AuthorId'>AuthorId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES Authors&#46;AuthorId</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperAuthorAffiliations_AffiliationId'>AffiliationId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES Affiliations&#46;AffiliationId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperAuthorAffiliations_AuthorSequenceNumber'>AuthorSequenceNumber</a></td>
+                    <td> integer encode az64</td>
+                    <td> 1&#45;based author sequence number&#46; 1&#58; the 1st author listed on paper&#44; 2&#58; the
+                        2nd author listed on paper&#44; etc&#46;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperAuthorAffiliations_OriginalAuthor'>OriginalAuthor</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperAuthorAffiliations_OriginalAffiliation'>OriginalAffiliation</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperAuthorAffiliations_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperAuthorAffiliations_Authors</td>
+                    <td> (AuthorId) &#8594; <a href='#outs&#46;Authors'
+                                               onclick="window.scrollTo(920, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Authors').classList.add('palpable'); return false;">Authors</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperAuthorAffiliations_Affiliations</td>
+                    <td> (AffiliationId) &#8594; <a href='#outs&#46;Affiliations'
+                                                    onclick="window.scrollTo(712, 656);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Affiliations').classList.add('palpable'); return false;">Affiliations</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperCitationContexts'
+                                  onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperCitationContexts').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperCitationContexts</h5></a>
+            <p class="text-muted">FROZEN&#59; citation contexts &#40;nlp&#47;PaperCitationContexts&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperCitationContexts_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperCitationContexts_PaperReferenceId'>PaperReferenceId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperCitationContexts_CitationContext'>CitationContext</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperCitationContexts_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperCitationContexts_Papers_0</td>
+                    <td> (PaperReferenceId) &#8594; <a href='#outs&#46;Papers'
+                                                       onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>(PaperId)
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperExtendedAttributes'
+                                  onclick="window.scrollTo(60, 400);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperExtendedAttributes').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperExtendedAttributes</h5></a>
+            <p class="text-muted">Extra paper identifiers &#40;mag&#47;PaperExtendedAttributes&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperExtendedAttributes_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperExtendedAttributes_AttributeType'>AttributeType</a></td>
+                    <td> integer encode az64</td>
+                    <td> Possible values&#58; 1&#61;PatentId&#44; 2&#61;PubMedId&#44; 3&#61;PmcId&#44; 4&#61;Alternative
+                        Title
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperExtendedAttributes_AttributeValue'>AttributeValue</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperExtendedAttributes_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperFieldsOfStudy'
+                                  onclick="window.scrollTo(232, 240);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperFieldsOfStudy').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperFieldsOfStudy</h5></a>
+            <p class="text-muted">Linking table from papers to fields&#44; with score &#40;advanced&#47;PaperFieldsOfStudy&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperFieldsOfStudy_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperFieldsOfStudy_FieldOfStudyId'>FieldOfStudyId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperFieldsOfStudy_Score'>Score</a></td>
+                    <td> real</td>
+                    <td> Confidence range between 0 and 1&#46; Bigger number representing higher confidence&#46;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperFieldsOfStudy_AlgorithmVersion'>AlgorithmVersion</a></td>
+                    <td> integer encode az64</td>
+                    <td> NEW&#59; version of algorithm to assign fields&#46; Possible values&#58; 1&#61;old MAG &#40;FROZEN&#41;&#44;
+                        2&#61;OpenAlex
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperFieldsOfStudy_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperFieldsOfStudy_FieldsOfStudy</td>
+                    <td> (FieldOfStudyId) &#8594; <a href='#outs&#46;FieldsOfStudy'
+                                                     onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperMeSH'
+                                  onclick="window.scrollTo(60, 768);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperMeSH').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperMeSH</h5></a>
+            <p class="text-muted">MeSH headings assigned to the paper by PubMed
+                &#40;advanced&#47;PaperMeSH&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperMeSH_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperMeSH_DescriptorUI'>DescriptorUI</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> see
+                        https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperMeSH_DescriptorName'>DescriptorName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> see
+                        https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperMeSH_QualifierUI'>QualifierUI</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> see
+                        https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperMeSH_QualifierName'>QualifierName</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> see
+                        https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperMeSH_IsMajorTopic'>IsMajorTopic</a></td>
+                    <td> boolean</td>
+                    <td> see
+                        https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperMeSH_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperRecommendations'
+                                  onclick="window.scrollTo(60, 512);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperRecommendations').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperRecommendations</h5></a>
+            <p class="text-muted">Paper recommendations with score
+                &#40;advanced&#47;PaperRecommendations&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperRecommendations_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperRecommendations_RecommendedPaperId'>RecommendedPaperId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperRecommendations_Score'>Score</a></td>
+                    <td> real</td>
+                    <td> Confidence range between 0 and 1&#46; Bigger number representing higher confidence&#46;</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperRecommendations_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperRecommendations_Papers_0</td>
+                    <td> (RecommendedPaperId) &#8594; <a href='#outs&#46;Papers'
+                                                         onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>(PaperId)
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperReferences'
+                                  onclick="window.scrollTo(60, 928);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperReferences').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperReferences</h5></a>
+            <p class="text-muted">Paper references and&#44; in reverse&#44; citations &#40;mag&#47;PaperReferences&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperReferences_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperReferences_PaperReferenceId'>PaperReferenceId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperReferences_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperReferences_Papers_0</td>
+                    <td> (PaperReferenceId) &#8594; <a href='#outs&#46;Papers'
+                                                       onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>(PaperId)
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperResources'
+                                  onclick="window.scrollTo(60, 624);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperResources').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperResources</h5></a>
+            <p class="text-muted">FROZEN&#59; no longer updated&#46; Data and code urls associated with papers &#40;mag&#47;PaperResources&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperResources_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperResources_ResourceType'>ResourceType</a></td>
+                    <td> integer encode az64</td>
+                    <td> Bit flags&#58; 1&#61;Project&#44; 2&#61;Data&#44; 4&#61;Code</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperResources_ResourceUrl'>ResourceUrl</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Url of resource</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperResources_SourceUrl'>SourceUrl</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> List of urls associated with the project&#44; used to derive resource&#95;url</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperResources_RelationshipType'>RelationshipType</a></td>
+                    <td> integer encode az64</td>
+                    <td> Bit flags&#58; 1&#61;Own&#44; 2&#61;Cite</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperResources_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+
+
+
+
+    <div class='card'>
+        <div class='card-body'><a name='outs.PaperUrls'
+                                  onclick="window.scrollTo(60, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperUrls').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperUrls</h5></a>
+            <p class="text-muted">Urls for the paper &#40;mag&#47;PaperUrls&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.PaperUrls_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_SourceType'>SourceType</a></td>
+                    <td> integer encode az64</td>
+                    <td> Possible values&#58; 1&#61;Html&#44; 2&#61;Text&#44; 3&#61;Pdf&#44; 4&#61;Doc&#44; 5&#61;Ppt&#44;
+                        6&#61;Xls&#44; 8&#61;Rtf&#44; 12&#61;Xml&#44; 13&#61;Rss&#44; 20&#61;Swf&#44; 27&#61;Ics&#44; 31&#61;Pub&#44;
+                        33&#61;Ods&#44; 34&#61;Odp&#44; 35&#61;Odt&#44; 36&#61;Zip&#44; 40&#61;Mp3&#44; 0&#47;999&#47;NULL&#61;unknown
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_SourceUrl'>SourceUrl</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_LanguageCode'>LanguageCode</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_UrlForLandingPage'>UrlForLandingPage</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; URL for the landing page&#44; when article is free to read</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_UrlForPdf'>UrlForPdf</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; URL for the PDF&#44; when article is free to read</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_HostType'>HostType</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; host type of the free&#45;to&#45;read URL&#44; Possible values&#58; publisher&#44;
+                        repository
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_Version'>Version</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; version of the free&#45;to&#45;read URL Possible values&#58; submittedVersion&#44;
+                        acceptedVersion&#44; publishedVersion
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_License'>License</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; license of the free&#45;to&#45;read URL &#40;example&#58; cc0&#44; cc&#45;by&#44;
+                        publisher&#45;specific&#41;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_RepositoryInstitution'>RepositoryInstitution</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; name of repository host of URL</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.PaperUrls_OaiPmhId'>OaiPmhId</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; OAH&#45;PMH id of the repository record</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperUrls_Papers</td>
+                    <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
+                                              onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;">Papers</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.Papers'
+                                  onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Papers').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table Papers</h5></a>
+            <p class="text-muted">Main data for papers &#40;mag&#47;Papers&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.Papers_PaperId'>PaperId</a></td>
+                    <td> bigint</td>
+                    <td> PRIMARY KEY</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_Rank'>Rank</a></td>
+                    <td> integer encode az64</td>
+                    <td> FROZEN&#59; no new ranks are being added</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_Doi'>Doi</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Doi values are upper&#45;cased per DOI standard at https&#58;&#47;&#47;www&#46;doi&#46;org&#47;doi&#95;handbook&#47;2&#95;Numbering&#46;html&#35;2&#46;4</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_DocType'>DocType</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Possible values&#58; Book&#44; BookChapter&#44; Conference&#44; Dataset&#44; Journal&#44;
+                        Patent&#44; Repository&#44; Thesis&#44; NULL &#58; unknown&#46; Patent is FROZEN&#59; no new
+                        Patents are being added&#46;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_Genre'>Genre</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; Crossref ontology for work type such as &quot;journal&#45;article&#44; posted&#45;content&#44;
+                        dataset&#44; or book&#45;chapter
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_IsParatext'>IsParatext</a></td>
+                    <td> boolean</td>
+                    <td> NEW&#59; indicates front&#45;matter&#46; See https&#58;&#47;&#47;support&#46;unpaywall&#46;org&#47;support&#47;solutions&#47;articles&#47;44001894783</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_PaperTitle'>PaperTitle</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> UPDATED&#59; slightly different normalization algorithm</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_OriginalTitle'>OriginalTitle</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_BookTitle'>BookTitle</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_Year'>Year</a></td>
+                    <td> integer encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_Date'>Date</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_OnlineDate'>OnlineDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_Publisher'>Publisher</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.Papers_JournalId'>JournalId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY references journals&#46;journal&#95;id</td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.Papers_ConferenceSeriesId'>ConferenceSeriesId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; no longer updated&#44; no new Conference Series are being added&#46; FOREIGN KEY
+                        references conference&#95;series&#46;conference&#95;series&#95;id&#46;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.Papers_ConferenceInstanceId'>ConferenceInstanceId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; no longer updated&#44; no new Conference Instances are being added&#46; FOREIGN KEY
+                        references conference&#95;instances&#46;conference&#95;instance&#95;id&#46;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_Volume'>Volume</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_Issue'>Issue</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_FirstPage'>FirstPage</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_LastPage'>LastPage</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_ReferenceCount'>ReferenceCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_CitationCount'>CitationCount</a></td>
+                    <td> bigint encode az64</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_EstimatedCitation'>EstimatedCitation</a></td>
+                    <td> bigint encode az64</td>
+                    <td> UPDATED&#59; new algorithm</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_OriginalVenue'>OriginalVenue</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_FamilyId'>FamilyId</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; no longer updated&#46;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_FamilyRank'>FamilyRank</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FROZEN&#59; no longer updated&#46;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_DocSubTypes'>DocSubTypes</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Possible values&#58; Retracted Publication&#44; Retraction Notice</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_OaStatus'>OaStatus</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; Possible values&#58; closed&#44; green&#44; gold&#44; hybrid&#44; bronze &#40;see
+                        https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Open&#95;access&#35;Colour&#95;naming&#95;system&#41;
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_BestUrl'>BestUrl</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; An url for the paper &#40;see paper&#95;urls table for more&#41;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_BestFreeUrl'>BestFreeUrl</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; Url of best legal free&#45;to&#45;read copy when it exists &#40;see https&#58;&#47;&#47;support&#46;unpaywall&#46;org&#47;support&#47;solutions&#47;articles&#47;44001943223&#41;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_BestFreeVersion'>BestFreeVersion</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_DoiLower'>DoiLower</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> NEW&#59; lowercase doi for convenience linking to Unpaywall</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_CreatedDate'>CreatedDate</a></td>
+                    <td> varchar encode lzo</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.Papers_UpdatedDate'>UpdatedDate</a></td>
+                    <td> timestamp encode az64</td>
+                    <td> NEW&#59; set when changes are made going forward</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON PaperId</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_Papers_Journals</td>
+                    <td> (JournalId) &#8594; <a href='#outs&#46;Journals'
+                                                onclick="window.scrollTo(456, 560);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.Journals').classList.add('palpable'); return false;">Journals</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_Papers_ConferenceSeries</td>
+                    <td> (ConferenceSeriesId) &#8594; <a href='#outs&#46;ConferenceSeries'
+                                                         onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.ConferenceSeries').classList.add('palpable'); return false;">ConferenceSeries</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_Papers_ConferenceInstances</td>
+                    <td> (ConferenceInstanceId) &#8594; <a href='#outs&#46;ConferenceInstances'
+                                                           onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.ConferenceInstances').classList.add('palpable'); return false;">ConferenceInstances</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Referring Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperUrls_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperUrls'
+                                              onclick="window.scrollTo(60, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperUrls').classList.add('palpable'); return false;">PaperUrls</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperResources_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperResources'
+                                              onclick="window.scrollTo(60, 624);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperResources').classList.add('palpable'); return false;">PaperResources</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperReferences_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperReferences'
+                                              onclick="window.scrollTo(60, 928);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperReferences').classList.add('palpable'); return false;">PaperReferences</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperReferences_Papers_0</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperReferences'
+                                              onclick="window.scrollTo(60, 928);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperReferences').classList.add('palpable'); return false;">PaperReferences</a>(PaperReferenceId)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperRecommendations_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperRecommendations'
+                                              onclick="window.scrollTo(60, 512);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperRecommendations').classList.add('palpable'); return false;">PaperRecommendations</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperRecommendations_Papers_0</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperRecommendations'
+                                              onclick="window.scrollTo(60, 512);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperRecommendations').classList.add('palpable'); return false;">PaperRecommendations</a>(RecommendedPaperId)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperMeSH_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperMeSH'
+                                              onclick="window.scrollTo(60, 768);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperMeSH').classList.add('palpable'); return false;">PaperMeSH</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperExtendedAttributes_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperExtendedAttributes'
+                                              onclick="window.scrollTo(60, 400);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperExtendedAttributes').classList.add('palpable'); return false;">PaperExtendedAttributes</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperCitationContexts_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperCitationContexts'
+                                              onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperCitationContexts').classList.add('palpable'); return false;">PaperCitationContexts</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperCitationContexts_Papers_0</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperCitationContexts'
+                                              onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperCitationContexts').classList.add('palpable'); return false;">PaperCitationContexts</a>(PaperReferenceId)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperAbstractsInvertedIndex_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperAbstractsInvertedIndex'
+                                              onclick="window.scrollTo(136, 1280);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperAbstractsInvertedIndex').classList.add('palpable'); return false;">PaperAbstractsInvertedIndex</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperFieldsOfStudy_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperFieldsOfStudy'
+                                              onclick="window.scrollTo(232, 240);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperFieldsOfStudy').classList.add('palpable'); return false;">PaperFieldsOfStudy</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#ref'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_PaperAuthorAffiliations_Papers</td>
+                    <td> (PaperId) &#8592; <a href='#outs&#46;PaperAuthorAffiliations'
+                                              onclick="window.scrollTo(696, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.PaperAuthorAffiliations').classList.add('palpable'); return false;">PaperAuthorAffiliations</a>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br>
+    <div class='card'>
+        <div class='card-body'><a name='outs.RelatedFieldOfStudy'
+                                  onclick="window.scrollTo(632, 288);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.RelatedFieldOfStudy').classList.add('palpable'); return false;"
+                                  style='cursor:pointer;'><h5 class='card-title'>Table RelatedFieldOfStudy</h5></a>
+            <p class="text-muted">Relationships between fields of study &#40;advanced&#47;RelatedFieldOfStudy&#46;txt&#41;</p>
+            <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
+                <thead>
+                <tr>
+                    <th style='width:5%'>Idx</th>
+                    <th style='width:20%'>Field Name</th>
+                    <th style='width:23%'>Data Type</th>
+                    <th style='width:52%'>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.RelatedFieldOfStudy_FieldOfStudyId1'>FieldOfStudyId1</a></td>
+                    <td> bigint</td>
+                    <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.RelatedFieldOfStudy_Type1'>Type1</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Possible values&#58; general&#44; disease&#44; disease&#95;cause&#44; medical&#95;treatment&#44;
+                        symptom
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                    </td>
+                    <td><a name='outs.RelatedFieldOfStudy_FieldOfStudyId2'>FieldOfStudyId2</a></td>
+                    <td> bigint encode az64</td>
+                    <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.RelatedFieldOfStudy_Type2'>Type2</a></td>
+                    <td> varchar encode lzo</td>
+                    <td> Possible values&#58; general&#44; disease&#44; disease&#95;cause&#44; medical&#95;treatment&#44;
+                        symptom
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><a name='outs.RelatedFieldOfStudy_Rank'>Rank</a></td>
+                    <td> real</td>
+                    <td> FROZEN&#59; no new ranks are being added&#46;</td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Indexes</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Distribution</td>
+                    <td> ON FieldOfStudyId1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#idx'/>
+                        </svg>
+                    </td>
+                    <td>Sorting</td>
+                    <td> ON FieldOfStudyId1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan='4'>Foreign Keys</th>
+                </tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_RelatedFieldOfStudy_FieldsOfStudy</td>
+                    <td> (FieldOfStudyId1) &#8594; <a href='#outs&#46;FieldsOfStudy'
+                                                      onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>(FieldOfStudyId)
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#fk'/>
+                        </svg>
+                        <svg width='14' height='14'>
+                            <use xlink:href='#virtual'/>
+                        </svg>
+                    </td>
+                    <td>Fk_RelatedFieldOfStudy_FieldsOfStudy_0</td>
+                    <td> (FieldOfStudyId2) &#8594; <a href='#outs&#46;FieldsOfStudy'
+                                                      onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_outs.FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>(FieldOfStudyId)
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
 </template>
 
 <script>
@@ -1326,14 +5229,23 @@ export default {
 }
 </script>
 
+
+
 <style scoped lang="scss">
 h2 {
 }
+
+.card {
+  padding-top: 200px;
+
+}
+
 table {
   border-collapse: collapse;
   border-bottom: 1px solid #ddd;
   width: 100%;
   margin-bottom: 100px;
+
   thead {
     tr {
       th {
@@ -1352,3 +5264,137 @@ table {
 
 
 </style>
+
+
+
+
+
+
+
+<style scoped lang="scss">
+            text {
+              fill: #000000;
+              font-family: Trebuchet MS, 'Trebuchet MS', Dialog;
+              font-size: 14.083333015441895px;
+            }
+
+            a text:hover {
+              fill: #0d196f;
+              text-shadow: 0px 0px 6px #d0ce00;
+              font-size: 13px;
+              font-weight: bold;
+            }
+
+            text.highlight {
+              fill: #0d196f;
+              text-shadow: 0px 0px 4px #eac533;
+              font-size: 13px;
+              font-weight: bold;
+            }
+
+            text.white {
+              fill: #ffffff;
+            }
+
+            text.colType {
+              fill: #b3b3b3;
+            }
+
+            text.relName {
+              fill: #9c9a9a;
+            }
+
+            text.legendTitle {
+              fill: #d65c68;
+              font-weight: bold;
+            }
+
+            text.legendSubTitle {
+              fill: #717171;
+              font-size: 11px;
+            }
+
+            path {
+              stroke: #928c7e;
+              stroke-width: 1.25;
+              fill: none;
+            }
+
+            path.virtual {
+              stroke: #a364b5;
+            }
+
+            path.logo {
+              fill: #fbeac0;
+              fill-opacity: 1;
+              stroke-width: 0.3;
+              stroke: #222222;
+            }
+
+            path.dotted {
+              stroke-dasharray: 4, 2;
+            }
+
+            path.unhighlight {
+              stroke-width: 10;
+              opacity: 0;
+            }
+
+            path.highlight {
+              stroke-width: 3;
+              stroke: #0054c5;
+              opacity: 0.8;
+            }
+
+            path.line {
+              stroke-width: 10;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+            }
+
+            rect.entity {
+              fill: #ffffff;
+              stroke: #777;
+              stroke-width: 0;
+              shape-rendering: crispEdges;
+              filter: url(#shadow);
+            }
+
+            line.delim {
+              stroke-width: 1;
+              shape-rendering: crispEdges;
+            }
+
+            text.callout {
+              fill: #000000;
+              font-family: Trebuchet MS, 'Trebuchet MS', Dialog;
+              font-size: 14.625px;
+            }
+
+            rect.callout {
+              fill: url(#calloutGradient);
+              stroke: #bebdbd;
+              stroke-width: 0.5;
+            }
+
+            rect.shape {
+              stroke: #bebdbd;
+              stroke-width: 0.5;
+            }
+
+            rect.grp {
+              stroke: #a1a1a1;
+              stroke-width: 3;
+              opacity: 0.35;
+            }
+
+            path.bgPattern {
+              fill: none;
+              stroke-width: 0.6;
+              stroke: #e5e9ed;
+            }
+
+            rect.palpable {
+              fill: #fffbe5;
+            }
+          </style>
