@@ -623,7 +623,9 @@
               <title>Referred by Authors ( LastKnownAffiliationId -&gt; AffiliationId )
                 Referred by PaperAuthorAffiliations ( AffiliationId ) </title></a>
             <a xlink:href='#Affiliations_Rank'>
-              <text id='Affiliations.Rank' x='931' y='711'>Rank</text>
+              <text id='Affiliations.Rank' x='931' y='711'>
+                Rank ❄️
+              </text>
               <title>Rank
                 integer
                 FROZEN; no new ranks are being added.</title></a>
@@ -646,7 +648,7 @@
                 FROZEN; ror_id is the new standard identifier for organizations</title></a>
             <text x='1069' y='756' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Affiliations_RorId'>
-              <text id='Affiliations.RorId' x='931' y='775'>RorId</text>
+              <text id='Affiliations.RorId' x='931' y='775'>RorId 🔥</text>
               <title>RorId
                 varchar
                 NEW; ROR for this organization, see https://ror.org, https://ror.org/:ror_id</title></a>
@@ -667,7 +669,7 @@
                 bigint</title></a>
             <text x='1069' y='820' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Affiliations_PaperFamilyCount'>
-              <text id='Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount</text>
+              <text id='Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
                 FROZEN; same value as &quot;paper_count.</title></a>
@@ -699,7 +701,7 @@
                 varchar</title></a>
             <text x='1069' y='916' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Affiliations_UpdatedDate'>
-              <text id='Affiliations.UpdatedDate' x='931' y='935'>UpdatedDate</text>
+              <text id='Affiliations.UpdatedDate' x='931' y='935'>UpdatedDate 🔥</text>
               <title>UpdatedDate
                 timestamp
                 NEW; set values updated from new ror data</title></a>
@@ -760,7 +762,7 @@
               <title>Referred by AuthorExtendedAttributes ( AuthorId )
                 Referred by PaperAuthorAffiliations ( AuthorId ) </title></a>
             <a xlink:href='#Authors_Rank'>
-              <text id='Authors.Rank' x='1139' y='535'>Rank</text>
+              <text id='Authors.Rank' x='1139' y='535'>Rank ❄️</text>
               <title>Rank
                 integer
                 FROZEN; no new ranks are being added</title></a>
@@ -777,7 +779,7 @@
                 varchar</title></a>
             <text x='1309' y='564' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Authors_Orcid'>
-              <text id='Authors.Orcid' x='1139' y='583'>Orcid</text>
+              <text id='Authors.Orcid' x='1139' y='583'>Orcid 🔥</text>
               <title>Orcid
                 varchar
                 NEW; ORCID identifier for this author</title></a>
@@ -799,7 +801,7 @@
                 bigint</title></a>
             <text x='1309' y='612' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Authors_PaperFamilyCount'>
-              <text id='Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount</text>
+              <text id='Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
                 FROZEN; same value as &quot;paper_count</title></a>
@@ -815,7 +817,7 @@
                 varchar</title></a>
             <text x='1309' y='660' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Authors_UpdatedDate'>
-              <text id='Authors.UpdatedDate' x='1139' y='679'>UpdatedDate</text>
+              <text id='Authors.UpdatedDate' x='1139' y='679'>UpdatedDate 🔥</text>
               <title>UpdatedDate
                 timestamp
                 NEW; set when changes are made going forward</title></a>
@@ -825,7 +827,7 @@
                   height='336'/>
             <rect class='entity' x='848' y='1016' width='208' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
             <a xlink:href='#ConferenceInstances'>
-              <text x='883' y='1035' class='white'>ConferenceInstances</text>
+              <text x='883' y='1035' class='white'>ConferenceInstances ❄️</text>
               <title>Table ConferenceInstances
                 FROZEN; Base table for Conference Instances (mag/ConferenceInstances.txt)</title></a>
             <use id='idx1' x='850' y='1052' xlink:href='#idx1'><title>Distribution ( ConferenceInstanceId ) Sorting (
@@ -911,7 +913,7 @@
                 bigint</title></a>
             <text x='1053' y='1252' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceInstances_PaperFamilyCount'>
-              <text id='ConferenceInstances.PaperFamilyCount' x='867' y='1271'>PaperFamilyCount</text>
+              <text id='ConferenceInstances.PaperFamilyCount' x='867' y='1271'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
                 FROZEN; same value as &quot;paper_count</title></a>
@@ -941,7 +943,7 @@
                   height='176'/>
             <rect class='entity' x='640' y='1048' width='176' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
             <a xlink:href='#ConferenceSeries'>
-              <text x='669' y='1067' class='white'>ConferenceSeries</text>
+              <text x='669' y='1067' class='white'>ConferenceSeries ❄️</text>
               <title>Table ConferenceSeries
                 FROZEN; Base table for Conference Series (mag/ConferenceSeries.txt)</title></a>
             <use id='idx1' x='642' y='1084' xlink:href='#idx1'><title>Distribution ( ConferenceSeriesId ) Sorting (
@@ -960,7 +962,7 @@
               <title>Referred by Papers ( ConferenceSeriesId )
                 Referred by ConferenceInstances ( ConferenceSeriesId ) </title></a>
             <a xlink:href='#ConferenceSeries_Rank'>
-              <text id='ConferenceSeries.Rank' x='659' y='1111'>Rank</text>
+              <text id='ConferenceSeries.Rank' x='659' y='1111'>Rank ❄️</text>
               <title>Rank
                 integer
                 FROZEN; no new ranks are being added</title></a>
@@ -982,7 +984,7 @@
                 bigint</title></a>
             <text x='813' y='1156' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceSeries_PaperFamilyCount'>
-              <text id='ConferenceSeries.PaperFamilyCount' x='659' y='1175'>PaperFamilyCount</text>
+              <text id='ConferenceSeries.PaperFamilyCount' x='659' y='1175'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
                 FROZEN; same value as &quot;paper_count</title></a>
@@ -1141,7 +1143,7 @@
                 Referred by FieldOfStudyExtendedAttributes ( FieldOfStudyId )
                 Referred by PaperFieldsOfStudy ( FieldOfStudyId ) </title></a>
             <a xlink:href='#FieldsOfStudy_Rank'>
-              <text id='FieldsOfStudy.Rank' x='643' y='167'>Rank</text>
+              <text id='FieldsOfStudy.Rank' x='643' y='167'>Rank ❄️</text>
               <title>Rank
                 varchar
                 FROZEN; no new ranks are being added.</title></a>
@@ -1174,7 +1176,7 @@
                 bigint</title></a>
             <text x='781' y='244' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#FieldsOfStudy_PaperFamilyCount'>
-              <text id='FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount</text>
+              <text id='FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
                 FROZEN; same value as &quot;paper_count.</title></a>
@@ -1210,7 +1212,7 @@
               <use id='ref' x='804' y='588' xlink:href='#ref'/>
               <title>Referred by Papers ( JournalId ) </title></a>
             <a xlink:href='#Journals_Rank'>
-              <text id='Journals.Rank' x='675' y='615'>Rank</text>
+              <text id='Journals.Rank' x='675' y='615'>Rank ❄️</text>
               <title>Rank
                 integer
                 FROZEN; no new ranks are being added</title></a>
@@ -1234,20 +1236,20 @@
                 https://en.wikipedia.org/wiki/International_Standard_Serial_Number#Linking_ISSN)</title></a>
             <text x='813' y='660' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Journals_Issns'>
-              <text id='Journals.Issns' x='675' y='679'>Issns</text>
+              <text id='Journals.Issns' x='675' y='679'>Issns 🔥</text>
               <title>Issns
                 varchar
                 NEW; JSON list of all ISSNs for this journal (example: &apos;[&quot;1469-5073&quot;,&quot;0016-6723&quot;]&apos;
                 )</title></a>
             <text x='813' y='676' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Journals_IsOa'>
-              <text id='Journals.IsOa' x='675' y='695'>IsOa</text>
+              <text id='Journals.IsOa' x='675' y='695'>IsOa 🔥</text>
               <title>IsOa
                 boolean
                 NEW; TRUE when the journal is 100% OA</title></a>
             <text x='813' y='692' text-anchor='end' class='colType'>b</text>
             <a xlink:href='#Journals_IsInDoaj'>
-              <text id='Journals.IsInDoaj' x='675' y='711'>IsInDoaj</text>
+              <text id='Journals.IsInDoaj' x='675' y='711'>IsInDoaj 🔥</text>
               <title>IsInDoaj
                 boolean
                 NEW; TRUE when the journal is in DOAJ (see https://doaj.org/)</title></a>
@@ -1268,7 +1270,7 @@
                 bigint</title></a>
             <text x='813' y='756' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Journals_PaperFamilyCount'>
-              <text id='Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount</text>
+              <text id='Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
                 FROZEN; same value as &quot;paper_count</title></a>
@@ -1284,7 +1286,7 @@
                 varchar</title></a>
             <text x='813' y='804' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Journals_UpdatedDate'>
-              <text id='Journals.UpdatedDate' x='675' y='823'>UpdatedDate</text>
+              <text id='Journals.UpdatedDate' x='675' y='823'>UpdatedDate 🔥</text>
               <title>UpdatedDate
                 timestamp
                 NEW; set when changes are made going forward</title></a>
@@ -1387,7 +1389,7 @@
                   height='96'/>
             <rect class='entity' x='336' y='1128' width='160' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperCitationContexts'>
-              <text x='341' y='1147' class='white'>PaperCitationContexts</text>
+              <text x='341' y='1147' class='white'>PaperCitationContexts ❄️</text>
               <title>Table PaperCitationContexts
                 FROZEN; citation contexts (nlp/PaperCitationContexts.txt)</title></a>
             <use id='idx1' x='338' y='1164' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
@@ -1494,7 +1496,7 @@
                 Confidence range between 0 and 1. Bigger number representing higher confidence.</title></a>
             <text x='589' y='308' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#PaperFieldsOfStudy_AlgorithmVersion'>
-              <text id='PaperFieldsOfStudy.AlgorithmVersion' x='451' y='327'>AlgorithmVersion</text>
+              <text id='PaperFieldsOfStudy.AlgorithmVersion' x='451' y='327'>AlgorithmVersion 🔥</text>
               <title>AlgorithmVersion
                 integer
                 NEW; version of algorithm to assign fields. Possible values: 1=old MAG (FROZEN), 2=OpenAlex</title></a>
@@ -1627,7 +1629,7 @@
                   height='128'/>
             <rect class='entity' x='80' y='616' width='160' height='28' style='stroke:#ADBCC9; fill:#6A89A1'/>
             <a xlink:href='#PaperResources'>
-              <text x='107' y='635' class='white'>PaperResources</text>
+              <text x='107' y='635' class='white'>PaperResources ❄️</text>
               <title>Table PaperResources
                 FROZEN; no longer updated. Data and code urls associated with papers (mag/PaperResources.txt)</title>
             </a>
@@ -1706,44 +1708,44 @@
                 varchar</title></a>
             <text x='237' y='1108' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_UrlForLandingPage'>
-              <text id='PaperUrls.UrlForLandingPage' x='83' y='1127'>UrlForLandingPage</text>
+              <text id='PaperUrls.UrlForLandingPage' x='83' y='1127'>UrlForLandingPage 🔥</text>
               <title>UrlForLandingPage
                 varchar
                 NEW; URL for the landing page, when article is free to read</title></a>
             <text x='237' y='1124' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_UrlForPdf'>
-              <text id='PaperUrls.UrlForPdf' x='83' y='1143'>UrlForPdf</text>
+              <text id='PaperUrls.UrlForPdf' x='83' y='1143'>UrlForPdf 🔥</text>
               <title>UrlForPdf
                 varchar
                 NEW; URL for the PDF, when article is free to read</title></a>
             <text x='237' y='1140' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_HostType'>
-              <text id='PaperUrls.HostType' x='83' y='1159'>HostType</text>
+              <text id='PaperUrls.HostType' x='83' y='1159'>HostType 🔥</text>
               <title>HostType
                 varchar
                 NEW; host type of the free-to-read URL, Possible values: publisher, repository</title></a>
             <text x='237' y='1156' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_Version'>
-              <text id='PaperUrls.Version' x='83' y='1175'>Version</text>
+              <text id='PaperUrls.Version' x='83' y='1175'>Version 🔥</text>
               <title>Version
                 varchar
                 NEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion,
                 publishedVersion</title></a>
             <text x='237' y='1172' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_License'>
-              <text id='PaperUrls.License' x='83' y='1191'>License</text>
+              <text id='PaperUrls.License' x='83' y='1191'>License 🔥</text>
               <title>License
                 varchar
                 NEW; license of the free-to-read URL (example: cc0, cc-by, publisher-specific)</title></a>
             <text x='237' y='1188' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_RepositoryInstitution'>
-              <text id='PaperUrls.RepositoryInstitution' x='83' y='1207'>RepositoryInstitution</text>
+              <text id='PaperUrls.RepositoryInstitution' x='83' y='1207'>RepositoryInstitution 🔥</text>
               <title>RepositoryInstitution
                 varchar
                 NEW; name of repository host of URL</title></a>
             <text x='237' y='1204' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_OaiPmhId'>
-              <text id='PaperUrls.OaiPmhId' x='83' y='1223'>OaiPmhId</text>
+              <text id='PaperUrls.OaiPmhId' x='83' y='1223'>OaiPmhId 🔥</text>
               <title>OaiPmhId
                 varchar
                 NEW; OAH-PMH id of the repository record</title></a>
@@ -1782,7 +1784,7 @@
                 Referred by PaperFieldsOfStudy ( PaperId )
                 Referred by PaperAuthorAffiliations ( PaperId ) </title></a>
             <a xlink:href='#Papers_Rank'>
-              <text id='Papers.Rank' x='387' y='535'>Rank</text>
+              <text id='Papers.Rank' x='387' y='535'>Rank ❄️</text>
               <title>Rank
                 integer
                 FROZEN; no new ranks are being added</title></a>
@@ -1795,21 +1797,21 @@
                 https://www.doi.org/doi_handbook/2_Numbering.html#2.4</title></a>
             <text x='541' y='548' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_DocType'>
-              <text id='Papers.DocType' x='387' y='567'>DocType</text>
+              <text id='Papers.DocType' x='387' y='567'>DocType️</text>
               <title>DocType
                 varchar
                 Possible values: Book, BookChapter, Conference, Dataset, Journal, Patent, Repository, Thesis, NULL :
                 unknown. Patent is FROZEN; no new Patents are being added.</title></a>
             <text x='541' y='564' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_Genre'>
-              <text id='Papers.Genre' x='387' y='583'>Genre</text>
+              <text id='Papers.Genre' x='387' y='583'>Genre 🔥</text>
               <title>Genre
                 varchar
                 NEW; Crossref ontology for work type such as &quot;journal-article, posted-content, dataset, or
                 book-chapter</title></a>
             <text x='541' y='580' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_IsParatext'>
-              <text id='Papers.IsParatext' x='387' y='599'>IsParatext</text>
+              <text id='Papers.IsParatext' x='387' y='599'>IsParatext 🔥</text>
               <title>IsParatext
                 boolean
                 NEW; indicates front-matter. See
@@ -1866,7 +1868,7 @@
               <text id='Papers.ConferenceSeriesId' x='387' y='743'
                     onmouseover="hghl(['Papers_Fk_Papers_ConferenceSeries','ConferenceSeries.ConferenceSeriesId'])"
                     onmouseout="uhghl(['Papers_Fk_Papers_ConferenceSeries','ConferenceSeries.ConferenceSeriesId'])">
-                ConferenceSeriesId
+                ConferenceSeriesId ❄️
               </text>
               <title>ConferenceSeriesId
                 bigint
@@ -1879,7 +1881,7 @@
               <text id='Papers.ConferenceInstanceId' x='387' y='759'
                     onmouseover="hghl(['Papers_Fk_Papers_ConferenceInstances','ConferenceInstances.ConferenceInstanceId'])"
                     onmouseout="uhghl(['Papers_Fk_Papers_ConferenceInstances','ConferenceInstances.ConferenceInstanceId'])">
-                ConferenceInstanceId
+                ConferenceInstanceId ❄️
               </text>
               <title>ConferenceInstanceId
                 bigint
@@ -1930,13 +1932,13 @@
                 varchar</title></a>
             <text x='541' y='884' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_FamilyId'>
-              <text id='Papers.FamilyId' x='387' y='903'>FamilyId</text>
+              <text id='Papers.FamilyId' x='387' y='903'>FamilyId ❄️</text>
               <title>FamilyId
                 bigint
                 FROZEN; no longer updated.</title></a>
             <text x='541' y='900' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Papers_FamilyRank'>
-              <text id='Papers.FamilyRank' x='387' y='919'>FamilyRank</text>
+              <text id='Papers.FamilyRank' x='387' y='919'>FamilyRank ❄️</text>
               <title>FamilyRank
                 bigint
                 FROZEN; no longer updated.</title></a>
@@ -1948,33 +1950,33 @@
                 Possible values: Retracted Publication, Retraction Notice</title></a>
             <text x='541' y='932' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_OaStatus'>
-              <text id='Papers.OaStatus' x='387' y='951'>OaStatus</text>
+              <text id='Papers.OaStatus' x='387' y='951'>OaStatus 🔥</text>
               <title>OaStatus
                 varchar
                 NEW; Possible values: closed, green, gold, hybrid, bronze (see
                 https://en.wikipedia.org/wiki/Open_access#Colour_naming_system)</title></a>
             <text x='541' y='948' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_BestUrl'>
-              <text id='Papers.BestUrl' x='387' y='967'>BestUrl</text>
+              <text id='Papers.BestUrl' x='387' y='967'>BestUrl 🔥</text>
               <title>BestUrl
                 varchar
                 NEW; An url for the paper (see paper_urls table for more)</title></a>
             <text x='541' y='964' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_BestFreeUrl'>
-              <text id='Papers.BestFreeUrl' x='387' y='983'>BestFreeUrl</text>
+              <text id='Papers.BestFreeUrl' x='387' y='983'>BestFreeUrl 🔥</text>
               <title>BestFreeUrl
                 varchar
                 NEW; Url of best legal free-to-read copy when it exists (see
                 https://support.unpaywall.org/support/solutions/articles/44001943223)</title></a>
             <text x='541' y='980' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_BestFreeVersion'>
-              <text id='Papers.BestFreeVersion' x='387' y='999'>BestFreeVersion</text>
+              <text id='Papers.BestFreeVersion' x='387' y='999'>BestFreeVersion 🔥</text>
               <title>BestFreeVersion
                 varchar
                 NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion</title></a>
             <text x='541' y='996' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_DoiLower'>
-              <text id='Papers.DoiLower' x='387' y='1015'>DoiLower</text>
+              <text id='Papers.DoiLower' x='387' y='1015'>DoiLower 🔥</text>
               <title>DoiLower
                 varchar
                 NEW; lowercase doi for convenience linking to Unpaywall</title></a>
@@ -1985,7 +1987,7 @@
                 varchar</title></a>
             <text x='541' y='1028' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_UpdatedDate'>
-              <text id='Papers.UpdatedDate' x='387' y='1047'>UpdatedDate</text>
+              <text id='Papers.UpdatedDate' x='387' y='1047'>UpdatedDate 🔥</text>
               <title>UpdatedDate
                 timestamp
                 NEW; set when changes are made going forward</title></a>
@@ -2037,7 +2039,7 @@
                 Possible values: general, disease, disease_cause, medical_treatment, symptom</title></a>
             <text x='973' y='372' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#RelatedFieldOfStudy_Rank'>
-              <text id='RelatedFieldOfStudy.Rank' x='851' y='391'>Rank</text>
+              <text id='RelatedFieldOfStudy.Rank' x='851' y='391'>Rank ❄️</text>
               <title>Rank
                 real
                 FROZEN; no new ranks are being added.</title></a>
@@ -2105,7 +2107,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td><v-icon color="blue">mdi-snowflake-variant</v-icon></td>
+              <td>❄️</td>
               <td><a id='Affiliations_Rank'>Rank</a></td>
               <td> integer encode az64</td>
               <td> FROZEN&#59; no new ranks are being added&#46;</td>
@@ -2123,13 +2125,13 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️</td>
               <td><a id='Affiliations_GridId'>GridId</a></td>
               <td> varchar encode lzo</td>
               <td> FROZEN&#59; ror&#95;id is the new standard identifier for organizations</td>
             </tr>
             <tr>
-              <td><v-icon color="orange">mdi-new-box</v-icon></td>
+              <td>🔥</td>
               <td><a id='Affiliations_RorId'>RorId</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; ROR for this organization&#44; see https&#58;&#47;&#47;ror&#46;org&#44; https&#58;&#47;&#47;ror&#46;org&#47;&#58;ror&#95;id</td>
@@ -2153,8 +2155,8 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
-              <td><a id='Affiliations_PaperFamilyCount'>PaperFamilyCount</a></td>
+              <td>❄️</td>
+              <td><a id='Affiliations_PaperFamilyCount'>PaperFamilyCount </a></td>
               <td> bigint encode az64</td>
               <td> FROZEN&#59; same value as &quot;paper&#95;count&#46;</td>
             </tr>
@@ -2189,7 +2191,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Affiliations_UpdatedDate'>UpdatedDate</a></td>
               <td> timestamp encode az64</td>
               <td> NEW&#59; set values updated from new ror data</td>
@@ -2323,7 +2325,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️</td>
               <td><a id='Authors_Rank'>Rank</a></td>
               <td> integer encode az64</td>
               <td> FROZEN&#59; no new ranks are being added</td>
@@ -2341,7 +2343,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Authors_Orcid'>Orcid</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; ORCID identifier for this author</td>
@@ -2363,7 +2365,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️</td>
               <td><a id='Authors_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint encode az64</td>
               <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
@@ -2381,7 +2383,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Authors_UpdatedDate'>UpdatedDate</a></td>
               <td> timestamp encode az64</td>
               <td> NEW&#59; set when changes are made going forward</td>
@@ -2447,7 +2449,7 @@
         <div class='card-body'><a id='ConferenceInstances'
                                   onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceInstances').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'>Table ConferenceInstances</h5></a>
-          <p class="text-muted">FROZEN&#59; Base table for Conference Instances &#40;mag&#47;ConferenceInstances&#46;txt&#41;</p>
+          <p class="text-muted">❄️ FROZEN&#59; Base table for Conference Instances &#40;mag&#47;ConferenceInstances&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
@@ -2545,7 +2547,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️</td>
               <td><a id='ConferenceInstances_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint encode az64</td>
               <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
@@ -2620,7 +2622,7 @@
         <div class='card-body'><a id='ConferenceSeries'
                                   onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceSeries').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'>Table ConferenceSeries</h5></a>
-          <p class="text-muted">FROZEN&#59; Base table for Conference Series
+          <p class="text-muted">❄️ FROZEN&#59; Base table for Conference Series
             &#40;mag&#47;ConferenceSeries&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -2643,7 +2645,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️</td>
               <td><a id='ConferenceSeries_Rank'>Rank</a></td>
               <td> integer encode az64</td>
               <td> FROZEN&#59; no new ranks are being added</td>
@@ -2667,7 +2669,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='ConferenceSeries_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint encode az64</td>
               <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
@@ -2950,7 +2952,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='FieldsOfStudy_Rank'>Rank</a></td>
               <td> varchar encode lzo</td>
               <td> FROZEN&#59; no new ranks are being added&#46;</td>
@@ -2986,7 +2988,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='FieldsOfStudy_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint encode az64</td>
               <td> FROZEN&#59; same value as &quot;paper&#95;count&#46;</td>
@@ -3128,7 +3130,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='Journals_Rank'>Rank</a></td>
               <td> integer encode az64</td>
               <td> FROZEN&#59; no new ranks are being added</td>
@@ -3152,7 +3154,7 @@
               <td> UPDATED&#59; the ISSN&#45;L for the journal &#40;see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;International&#95;Standard&#95;Serial&#95;Number&#35;Linking&#95;ISSN&#41;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Journals_Issns'>Issns</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; JSON list of all ISSNs for this journal &#40;example&#58; &#39;&#91;&quot;1469&#45;5073&quot;&#44;&quot;0016&#45;6723&quot;&#93;&#39;
@@ -3160,13 +3162,13 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Journals_IsOa'>IsOa</a></td>
               <td> boolean</td>
               <td> NEW&#59; TRUE when the journal is 100&#37; OA</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Journals_IsInDoaj'>IsInDoaj</a></td>
               <td> boolean</td>
               <td> NEW&#59; TRUE when the journal is in DOAJ &#40;see https&#58;&#47;&#47;doaj&#46;org&#47;&#41;</td>
@@ -3190,7 +3192,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='Journals_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint encode az64</td>
               <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
@@ -3208,7 +3210,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Journals_UpdatedDate'>UpdatedDate</a></td>
               <td> timestamp encode az64</td>
               <td> NEW&#59; set when changes are made going forward</td>
@@ -3420,7 +3422,7 @@
         <div class='card-body'><a id='PaperCitationContexts'
                                   onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperCitationContexts').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'>Table PaperCitationContexts</h5></a>
-          <p class="text-muted">FROZEN&#59; citation contexts &#40;nlp&#47;PaperCitationContexts&#46;txt&#41;</p>
+          <p class="text-muted">❄️ FROZEN&#59; citation contexts &#40;nlp&#47;PaperCitationContexts&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
@@ -3601,7 +3603,7 @@
               <td> Confidence range between 0 and 1&#46; Bigger number representing higher confidence&#46;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='PaperFieldsOfStudy_AlgorithmVersion'>AlgorithmVersion</a></td>
               <td> integer encode az64</td>
               <td> NEW&#59; version of algorithm to assign fields&#46; Possible values&#58; 1&#61;old MAG &#40;FROZEN&#41;&#44;
@@ -3885,7 +3887,7 @@
         <div class='card-body'><a id='PaperResources'
                                   onclick="window.scrollTo(60, 624);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperResources').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'>Table PaperResources</h5></a>
-          <p class="text-muted">FROZEN&#59; no longer updated&#46; Data and code urls associated with papers &#40;mag&#47;PaperResources&#46;txt&#41;</p>
+          <p class="text-muted">❄️ FROZEN&#59; no longer updated&#46; Data and code urls associated with papers &#40;mag&#47;PaperResources&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
@@ -4001,19 +4003,19 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_UrlForLandingPage'>UrlForLandingPage</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; URL for the landing page&#44; when article is free to read</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_UrlForPdf'>UrlForPdf</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; URL for the PDF&#44; when article is free to read</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_HostType'>HostType</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; host type of the free&#45;to&#45;read URL&#44; Possible values&#58; publisher&#44;
@@ -4021,7 +4023,7 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_Version'>Version</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; version of the free&#45;to&#45;read URL Possible values&#58; submittedVersion&#44;
@@ -4029,19 +4031,19 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_License'>License</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; license of the free&#45;to&#45;read URL &#40;example&#58; cc0&#44; cc&#45;by&#44; publisher&#45;specific&#41;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_RepositoryInstitution'>RepositoryInstitution</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; name of repository host of URL</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_OaiPmhId'>OaiPmhId</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; OAH&#45;PMH id of the repository record</td>
@@ -4096,7 +4098,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='Papers_Rank'>Rank</a></td>
               <td> integer encode az64</td>
               <td> FROZEN&#59; no new ranks are being added</td>
@@ -4108,7 +4110,7 @@
               <td> Doi values are upper&#45;cased per DOI standard at https&#58;&#47;&#47;www&#46;doi&#46;org&#47;doi&#95;handbook&#47;2&#95;Numbering&#46;html&#35;2&#46;4</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='Papers_DocType'>DocType</a></td>
               <td> varchar encode lzo</td>
               <td> Possible values&#58; Book&#44; BookChapter&#44; Conference&#44; Dataset&#44; Journal&#44; Patent&#44;
@@ -4116,7 +4118,7 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Papers_Genre'>Genre</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; Crossref ontology for work type such as &quot;journal&#45;article&#44; posted&#45;content&#44;
@@ -4124,7 +4126,7 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Papers_IsParatext'>IsParatext</a></td>
               <td> boolean</td>
               <td> NEW&#59; indicates front&#45;matter&#46; See https&#58;&#47;&#47;support&#46;unpaywall&#46;org&#47;support&#47;solutions&#47;articles&#47;44001894783</td>
@@ -4186,6 +4188,7 @@
                 <svg width='14' height='14'>
                   <use xlink:href='#fk'/>
                 </svg>
+                ❄️
               </td>
               <td><a id='Papers_ConferenceSeriesId'>ConferenceSeriesId</a></td>
               <td> bigint encode az64</td>
@@ -4198,6 +4201,7 @@
                 <svg width='14' height='14'>
                   <use xlink:href='#fk'/>
                 </svg>
+                ❄️
               </td>
               <td><a id='Papers_ConferenceInstanceId'>ConferenceInstanceId</a></td>
               <td> bigint encode az64</td>
@@ -4254,13 +4258,13 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='Papers_FamilyId'>FamilyId</a></td>
               <td> bigint encode az64</td>
               <td> FROZEN&#59; no longer updated&#46;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='Papers_FamilyRank'>FamilyRank</a></td>
               <td> bigint encode az64</td>
               <td> FROZEN&#59; no longer updated&#46;</td>
@@ -4272,31 +4276,31 @@
               <td> Possible values&#58; Retracted Publication&#44; Retraction Notice</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Papers_OaStatus'>OaStatus</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; Possible values&#58; closed&#44; green&#44; gold&#44; hybrid&#44; bronze &#40;see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Open&#95;access&#35;Colour&#95;naming&#95;system&#41;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Papers_BestUrl'>BestUrl</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; An url for the paper &#40;see paper&#95;urls table for more&#41;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Papers_BestFreeUrl'>BestFreeUrl</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; Url of best legal free&#45;to&#45;read copy when it exists &#40;see https&#58;&#47;&#47;support&#46;unpaywall&#46;org&#47;support&#47;solutions&#47;articles&#47;44001943223&#41;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Papers_BestFreeVersion'>BestFreeVersion</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Papers_DoiLower'>DoiLower</a></td>
               <td> varchar encode lzo</td>
               <td> NEW&#59; lowercase doi for convenience linking to Unpaywall</td>
@@ -4308,7 +4312,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>🔥&nbsp;</td>
               <td><a id='Papers_UpdatedDate'>UpdatedDate</a></td>
               <td> timestamp encode az64</td>
               <td> NEW&#59; set when changes are made going forward</td>
@@ -4618,7 +4622,7 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td>❄️&nbsp;</td>
               <td><a id='RelatedFieldOfStudy_Rank'>Rank</a></td>
               <td> real</td>
               <td> FROZEN&#59; no new ranks are being added&#46;</td>
