@@ -44,14 +44,16 @@ const router = new VueRouter({
     mode: "history",
     scrollBehavior: (to, from, savedPosition) => {
         if (to.hash) {
-            return goTo(to.hash, {
-                offset: 75,
-            })
+            console.log("there's a hash, we should go there", to.hash)
+
+            // return goTo(to.hash, {
+            //     offset: 75,
+            // })
         } else if (savedPosition) {
-            return savedPosition
+            // return savedPosition
         }
         else {
-            return {x: 0, y: 0}
+            // return {x: 0, y: 0}
         }
 
     },
