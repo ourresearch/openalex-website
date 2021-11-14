@@ -631,7 +631,7 @@
             <rect class='entity' x='912' y='648' width='160' height='28' style='stroke:#C9BFAD; fill:#A18E6A'/>
             <a xlink:href='#Affiliations'>
               <text x='954' y='667' class='white'>Affiliations</text>
-              <title>Table Affiliations
+              <title> Affiliations
                 Base table for affiliations/institutions (mag/Affiliations.txt)</title></a>
             <use id='idx1' x='914' y='684' xlink:href='#idx1'><title>Distribution ( AffiliationId ) Sorting (
               AffiliationId ) </title></use>
@@ -671,13 +671,13 @@
               <text id='Affiliations.GridId' x='931' y='759'>GridId</text>
               <title>GridId
                 varchar
-                FROZEN; ror_id is the new standard identifier for organizations</title></a>
+                FROZEN; RorId is the new standard identifier for organizations</title></a>
             <text x='1069' y='756' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Affiliations_RorId'>
               <text id='Affiliations.RorId' x='931' y='775'>RorId 🔥</text>
               <title>RorId
                 varchar
-                NEW; ROR for this organization, see https://ror.org, https://ror.org/:ror_id</title></a>
+                NEW; ROR for this organization, see https://ror.org, https://ror.org/:RorId</title></a>
             <text x='1069' y='772' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Affiliations_OfficialPage'>
               <text id='Affiliations.OfficialPage' x='931' y='791'>OfficialPage</text>
@@ -698,7 +698,7 @@
               <text id='Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count.</title></a>
+                FROZEN; same value as PaperCount.</title></a>
             <text x='1069' y='836' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Affiliations_CitationCount'>
               <text id='Affiliations.CitationCount' x='931' y='855'>CitationCount</text>
@@ -738,7 +738,7 @@
             <rect class='entity' x='1344' y='472' width='192' height='28' style='stroke:#C9BFAD; fill:#A18E6A'/>
             <a xlink:href='#AuthorExtendedAttributes'>
               <text x='1354' y='491' class='white'>AuthorExtendedAttributes</text>
-              <title>Table AuthorExtendedAttributes
+              <title> AuthorExtendedAttributes
                 Additional author name representations (mag/AuthorExtendedAttributes.txt)</title></a>
             <use id='idx1' x='1346' y='508' xlink:href='#idx1'><title>Distribution ( AuthorId ) Sorting ( AuthorId
               ) </title></use>
@@ -770,7 +770,7 @@
             <rect class='entity' x='1120' y='472' width='192' height='28' style='stroke:#C9BFAD; fill:#A18E6A'/>
             <a xlink:href='#Authors'>
               <text x='1188' y='491' class='white'>Authors</text>
-              <title>Table Authors
+              <title> Authors
                 Base table for authors (mag/Authors.txt)</title></a>
             <use id='idx1' x='1122' y='508' xlink:href='#idx1'><title>Distribution ( AuthorId ) Sorting ( AuthorId
               ) </title></use>
@@ -808,7 +808,7 @@
               <text id='Authors.Orcid' x='1139' y='583'>Orcid 🔥</text>
               <title>Orcid
                 varchar
-                NEW; ORCID identifier for this author</title></a>
+                NEW; ORCID identifier for this author (see https://orcid.org)</title></a>
             <text x='1309' y='580' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Authors_LastKnownAffiliationId'>
               <text id='Authors.LastKnownAffiliationId' x='1139' y='599'
@@ -830,7 +830,7 @@
               <text id='Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count</title></a>
+                FROZEN; same value as PaperCount</title></a>
             <text x='1309' y='628' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Authors_CitationCount'>
               <text id='Authors.CitationCount' x='1139' y='647'>CitationCount</text>
@@ -854,7 +854,7 @@
             <rect class='entity' x='848' y='1016' width='208' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
             <a xlink:href='#ConferenceInstances'>
               <text x='883' y='1035' class='white'>ConferenceInstances ❄️</text>
-              <title>Table ConferenceInstances
+              <title> ConferenceInstances
                 FROZEN; Base table for Conference Instances (mag/ConferenceInstances.txt)</title></a>
             <use id='idx1' x='850' y='1052' xlink:href='#idx1'><title>Distribution ( ConferenceInstanceId ) Sorting (
               ConferenceInstanceId ) </title></use>
@@ -942,7 +942,7 @@
               <text id='ConferenceInstances.PaperFamilyCount' x='867' y='1271'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count</title></a>
+                FROZEN; same value as PaperCount</title></a>
             <text x='1053' y='1268' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceInstances_CitationCount'>
               <text id='ConferenceInstances.CitationCount' x='867' y='1287'>CitationCount</text>
@@ -970,7 +970,7 @@
             <rect class='entity' x='640' y='1048' width='176' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
             <a xlink:href='#ConferenceSeries'>
               <text x='669' y='1067' class='white'>ConferenceSeries ❄️</text>
-              <title>Table ConferenceSeries
+              <title> ConferenceSeries
                 FROZEN; Base table for Conference Series (mag/ConferenceSeries.txt)</title></a>
             <use id='idx1' x='642' y='1084' xlink:href='#idx1'><title>Distribution ( ConferenceSeriesId ) Sorting (
               ConferenceSeriesId ) </title></use>
@@ -1013,7 +1013,7 @@
               <text id='ConferenceSeries.PaperFamilyCount' x='659' y='1175'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count</title></a>
+                FROZEN; same value as PaperCount</title></a>
             <text x='813' y='1172' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceSeries_CitationCount'>
               <text id='ConferenceSeries.CitationCount' x='659' y='1191'>CitationCount</text>
@@ -1031,7 +1031,7 @@
             <rect class='entity' x='144' y='136' width='160' height='28' style='stroke:#C9ADB3; fill:#A16A76'/>
             <a xlink:href='#EntityRelatedEntities'>
               <text x='153' y='155' class='white'>EntityRelatedEntities</text>
-              <title>Table EntityRelatedEntities
+              <title> EntityRelatedEntities
                 Relationship between papers, authors, fields of study. (advanced/EntityRelatedEntities.txt)</title></a>
             <use id='idx1' x='146' y='172' xlink:href='#idx1'><title>Distribution ( EntityId ) Sorting ( EntityId
               ) </title></use>
@@ -1076,7 +1076,7 @@
             <rect class='entity' x='832' y='184' width='176' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
             <a xlink:href='#FieldOfStudyChildren'>
               <text x='849' y='203' class='white'>FieldOfStudyChildren</text>
-              <title>Table FieldOfStudyChildren
+              <title> FieldOfStudyChildren
                 Relationship between Fields of Study (advanced/FieldOfStudyChildren.txt)</title></a>
             <use id='idx1' x='834' y='220' xlink:href='#idx1'><title>Distribution ( FieldOfStudyId ) Sorting (
               FieldOfStudyId ) </title></use>
@@ -1111,7 +1111,7 @@
             <rect class='entity' x='832' y='72' width='224' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
             <a xlink:href='#FieldOfStudyExtendedAttributes'>
               <text x='838' y='91' class='white'>FieldOfStudyExtendedAttributes</text>
-              <title>Table FieldOfStudyExtendedAttributes
+              <title> FieldOfStudyExtendedAttributes
                 Other identifiers for Fields of Study (advanced/FieldOfStudyExtendedAttributes.txt)</title></a>
             <use id='idx1' x='834' y='108' xlink:href='#idx1'><title>Distribution ( FieldOfStudyId ) Sorting (
               FieldOfStudyId ) </title></use>
@@ -1147,7 +1147,7 @@
             <rect class='entity' x='624' y='104' width='160' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
             <a xlink:href='#FieldsOfStudy'>
               <text x='657' y='123' class='white'>FieldsOfStudy</text>
-              <title>Table FieldsOfStudy
+              <title> FieldsOfStudy
                 Base table for Fields of Study (advanced/FieldsOfStudy.txt)</title></a>
             <use id='idx1' x='626' y='140' xlink:href='#idx1'><title>Distribution ( FieldOfStudyId ) Sorting (
               FieldOfStudyId ) </title></use>
@@ -1205,7 +1205,7 @@
               <text id='FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count.</title></a>
+                FROZEN; same value as PaperCount.</title></a>
             <text x='781' y='260' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#FieldsOfStudy_CitationCount'>
               <text id='FieldsOfStudy.CitationCount' x='643' y='279'>CitationCount</text>
@@ -1222,7 +1222,7 @@
             <rect class='entity' x='656' y='552' width='160' height='28' style='stroke:#C9ADC5; fill:#A16A9B'/>
             <a xlink:href='#Journals'>
               <text x='706' y='571' class='white'>Journals</text>
-              <title>Table Journals
+              <title> Journals
                 Base table for Journals (mag/Journals.txt)</title></a>
             <use id='idx1' x='658' y='588' xlink:href='#idx1'><title>Distribution ( JournalId ) Sorting ( JournalId
               ) </title></use>
@@ -1299,7 +1299,7 @@
               <text id='Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count</title></a>
+                FROZEN; same value as PaperCount</title></a>
             <text x='813' y='772' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Journals_CitationCount'>
               <text id='Journals.CitationCount' x='675' y='791'>CitationCount</text>
@@ -1323,8 +1323,8 @@
             <rect class='entity' x='336' y='1272' width='208' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperAbstractsInvertedIndex'>
               <text x='345' y='1291' class='white'>PaperAbstractsInvertedIndex</text>
-              <title>Table PaperAbstractsInvertedIndex
-                Inverted abstracts (nlp/PaperAbstractsInvertedIndex.txt.</title></a>
+              <title> PaperAbstractsInvertedIndex
+                Inverted index of abstracts (nlp/PaperAbstractsInvertedIndex.txt{*} split across multiple files)</title></a>
             <use id='idx1' x='338' y='1308' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
             <a xlink:href='#PaperAbstractsInvertedIndex_PaperId'>
@@ -1335,7 +1335,7 @@
               </text>
               <title>PaperId
                 bigint
-                FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                FOREIGN KEY REFERENCES Papers.PaperId</title></a>
             <a xlink:href='#PaperAbstractsInvertedIndex.PaperId'>
               <use id='fk' x='532' y='1308' xlink:href='#fk'/>
               <title>References Papers ( PaperId ) </title></a>
@@ -1351,7 +1351,7 @@
             <rect class='entity' x='896' y='472' width='192' height='28' style='stroke:#C9BFAD; fill:#A18E6A'/>
             <a xlink:href='#PaperAuthorAffiliations'>
               <text x='914' y='491' class='white'>PaperAuthorAffiliations</text>
-              <title>Table PaperAuthorAffiliations
+              <title> PaperAuthorAffiliations
                 Links between papers, authors, and affiliations/institutions. NOTE: It is possible to have multiple rows
                 with same (PaperId, AuthorId, AffiliationId) when an author is associated with multiple affiliations.
                 (mag/PaperAuthorAffiliations.txt)</title></a>
@@ -1416,7 +1416,7 @@
             <rect class='entity' x='336' y='1128' width='160' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperCitationContexts'>
               <text x='341' y='1147' class='white'>PaperCitationContexts ❄️</text>
-              <title>Table PaperCitationContexts
+              <title> PaperCitationContexts
                 FROZEN; citation contexts (nlp/PaperCitationContexts.txt)</title></a>
             <use id='idx1' x='338' y='1164' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1428,7 +1428,7 @@
               </text>
               <title>PaperId
                 bigint
-                FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                FOREIGN KEY REFERENCES Papers.PaperId</title></a>
             <a xlink:href='#PaperCitationContexts.PaperId'>
               <use id='fk' x='484' y='1164' xlink:href='#fk'/>
               <title>References Papers ( PaperId ) </title></a>
@@ -1440,7 +1440,7 @@
               </text>
               <title>PaperReferenceId
                 bigint
-                FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                FOREIGN KEY REFERENCES Papers.PaperId</title></a>
             <a xlink:href='#PaperCitationContexts.PaperReferenceId'>
               <use id='fk' x='484' y='1180' xlink:href='#fk'/>
               <title>References Papers ( PaperReferenceId -&gt; PaperId ) </title></a>
@@ -1455,7 +1455,7 @@
             <rect class='entity' x='64' y='392' width='176' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperExtendedAttributes'>
               <text x='69' y='411' class='white'>PaperExtendedAttributes</text>
-              <title>Table PaperExtendedAttributes
+              <title> PaperExtendedAttributes
                 Extra paper identifiers (mag/PaperExtendedAttributes.txt)</title></a>
             <use id='idx1' x='66' y='428' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1488,7 +1488,7 @@
             <rect class='entity' x='432' y='232' width='160' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
             <a xlink:href='#PaperFieldsOfStudy'>
               <text x='447' y='251' class='white'>PaperFieldsOfStudy</text>
-              <title>Table PaperFieldsOfStudy
+              <title> PaperFieldsOfStudy
                 Linking table from papers to fields, with score (advanced/PaperFieldsOfStudy.txt)</title></a>
             <use id='idx1' x='434' y='268' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1532,7 +1532,7 @@
             <rect class='entity' x='96' y='760' width='144' height='28' style='stroke:#ADBCC9; fill:#6A89A1'/>
             <a xlink:href='#PaperMeSH'>
               <text x='129' y='779' class='white'>PaperMeSH</text>
-              <title>Table PaperMeSH
+              <title> PaperMeSH
                 MeSH headings assigned to the paper by PubMed (advanced/PaperMeSH.txt)</title></a>
             <use id='idx1' x='98' y='796' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1583,7 +1583,7 @@
             <rect class='entity' x='48' y='504' width='192' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperRecommendations'>
               <text x='64' y='523' class='white'>PaperRecommendations</text>
-              <title>Table PaperRecommendations
+              <title> PaperRecommendations
                 Paper recommendations with score (advanced/PaperRecommendations.txt)</title></a>
             <use id='idx1' x='50' y='540' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1622,7 +1622,7 @@
             <rect class='entity' x='80' y='920' width='160' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperReferences'>
               <text x='103' y='939' class='white'>PaperReferences</text>
-              <title>Table PaperReferences
+              <title> PaperReferences
                 Paper references and, in reverse, citations (mag/PaperReferences.txt)</title></a>
             <use id='idx1' x='82' y='956' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1656,7 +1656,7 @@
             <rect class='entity' x='80' y='616' width='160' height='28' style='stroke:#ADBCC9; fill:#6A89A1'/>
             <a xlink:href='#PaperResources'>
               <text x='107' y='635' class='white'>PaperResources ❄️</text>
-              <title>Table PaperResources
+              <title> PaperResources
                 FROZEN; no longer updated. Data and code urls associated with papers (mag/PaperResources.txt)</title>
             </a>
             <use id='idx1' x='82' y='652' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
@@ -1668,7 +1668,7 @@
               </text>
               <title>PaperId
                 bigint
-                FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                FOREIGN KEY REFERENCES Papers.PaperId</title></a>
             <a xlink:href='#PaperResources.PaperId'>
               <use id='fk' x='228' y='652' xlink:href='#fk'/>
               <title>References Papers ( PaperId ) </title></a>
@@ -1701,7 +1701,7 @@
             <rect class='entity' x='64' y='1016' width='176' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperUrls'>
               <text x='118' y='1035' class='white'>PaperUrls</text>
-              <title>Table PaperUrls
+              <title> PaperUrls
                 Urls for the paper (mag/PaperUrls.txt)</title></a>
             <use id='idx1' x='66' y='1052' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1756,7 +1756,7 @@
               <title>Version
                 varchar
                 NEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion,
-                publishedVersion</title></a>
+                publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</title></a>
             <text x='237' y='1172' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_License'>
               <text id='PaperUrls.License' x='83' y='1191'>License 🔥</text>
@@ -1781,7 +1781,7 @@
             <rect class='entity' x='368' y='472' width='176' height='28' style='stroke:#B1C9AD; fill:#73A16A'/>
             <a xlink:href='#Papers'>
               <text x='431' y='491' class='white'>Papers</text>
-              <title>Table Papers
+              <title> Papers
                 Main data for papers (mag/Papers.txt)</title></a>
             <use id='idx1' x='370' y='508' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1833,7 +1833,7 @@
               <text id='Papers.Genre' x='387' y='583'>Genre 🔥</text>
               <title>Genre
                 varchar
-                NEW; Crossref ontology for work type such as &quot;journal-article, posted-content, dataset, or
+                NEW; Crossref ontology for work type such as journal-article, posted-content, dataset, or
                 book-chapter</title></a>
             <text x='541' y='580' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_IsParatext'>
@@ -1886,7 +1886,7 @@
               </text>
               <title>JournalId
                 bigint
-                FOREIGN KEY references journals.journal_id</title></a>
+                FOREIGN KEY references Journals.JournalId</title></a>
             <a xlink:href='#Papers.JournalId'>
               <use id='fk' x='532' y='716' xlink:href='#fk'/>
               <title>References Journals ( JournalId ) </title></a>
@@ -1899,7 +1899,7 @@
               <title>ConferenceSeriesId
                 bigint
                 FROZEN; no longer updated, no new Conference Series are being added. FOREIGN KEY references
-                conference_series.conference_series_id.</title></a>
+                ConferenceSeries.ConferenceSeriesId.</title></a>
             <a xlink:href='#Papers.ConferenceSeriesId'>
               <use id='fk' x='532' y='732' xlink:href='#fk'/>
               <title>References ConferenceSeries ( ConferenceSeriesId ) </title></a>
@@ -1912,7 +1912,7 @@
               <title>ConferenceInstanceId
                 bigint
                 FROZEN; no longer updated, no new Conference Instances are being added. FOREIGN KEY references
-                conference_instances.conference_instance_id.</title></a>
+                ConferenceInstances.ConferenceInstanceId.</title></a>
             <a xlink:href='#Papers.ConferenceInstanceId'>
               <use id='fk' x='532' y='748' xlink:href='#fk'/>
               <title>References ConferenceInstances ( ConferenceInstanceId ) </title></a>
@@ -1986,7 +1986,7 @@
               <text id='Papers.BestUrl' x='387' y='967'>BestUrl 🔥</text>
               <title>BestUrl
                 varchar
-                NEW; An url for the paper (see paper_urls table for more)</title></a>
+                NEW; An url for the paper (see PaperUrls table for more)</title></a>
             <text x='541' y='964' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_BestFreeUrl'>
               <text id='Papers.BestFreeUrl' x='387' y='983'>BestFreeUrl 🔥</text>
@@ -1999,7 +1999,7 @@
               <text id='Papers.BestFreeVersion' x='387' y='999'>BestFreeVersion 🔥</text>
               <title>BestFreeVersion
                 varchar
-                NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion</title></a>
+                NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</title></a>
             <text x='541' y='996' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_DoiLower'>
               <text id='Papers.DoiLower' x='387' y='1015'>DoiLower 🔥</text>
@@ -2024,7 +2024,7 @@
             <rect class='entity' x='832' y='280' width='144' height='28' style='stroke:#ADB2C9; fill:#6A74A1'/>
             <a xlink:href='#RelatedFieldOfStudy'>
               <text x='835' y='299' class='white'>RelatedFieldOfStudy</text>
-              <title>Table RelatedFieldOfStudy
+              <title> RelatedFieldOfStudy
                 Relationships between fields of study (advanced/RelatedFieldOfStudy.txt)</title></a>
             <use id='idx1' x='834' y='316' xlink:href='#idx1'><title>Distribution ( FieldOfStudyId1 ) Sorting (
               FieldOfStudyId1 ) </title></use>
@@ -2136,67 +2136,67 @@
             <tr>
               <td>❄️</td>
               <td><a id='Affiliations_Rank'>Rank</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> FROZEN&#59; no new ranks are being added&#46;</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Affiliations_NormalizedName'>NormalizedName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Affiliations_DisplayName'>DisplayName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>❄️</td>
               <td><a id='Affiliations_GridId'>GridId</a></td>
-              <td> varchar encode lzo</td>
-              <td> FROZEN&#59; ror&#95;id is the new standard identifier for organizations</td>
+              <td> varchar</td>
+              <td> FROZEN&#59; RorId is the new standard identifier for organizations</td>
             </tr>
             <tr>
               <td>🔥</td>
               <td><a id='Affiliations_RorId'>RorId</a></td>
-              <td> varchar encode lzo</td>
-              <td> NEW&#59; ROR for this organization&#44; see https&#58;&#47;&#47;ror&#46;org&#44; https&#58;&#47;&#47;ror&#46;org&#47;&#58;ror&#95;id</td>
+              <td> varchar</td>
+              <td> NEW&#59; ROR for this organization&#44; see https&#58;&#47;&#47;ror&#46;org&#44; https&#58;&#47;&#47;ror&#46;org&#47;&#58;RorId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Affiliations_OfficialPage'>OfficialPage</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Affiliations_WikiPage'>WikiPage</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Affiliations_PaperCount'>PaperCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>❄️</td>
               <td><a id='Affiliations_PaperFamilyCount'>PaperFamilyCount </a></td>
-              <td> bigint encode az64</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count&#46;</td>
+              <td> bigint</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Affiliations_CitationCount'>CitationCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Affiliations_Iso3166Code'>Iso3166Code</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Two&#45;letter country codes&#44; see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;ISO&#95;3166&#45;2</td>
             </tr>
             <tr>
@@ -2214,13 +2214,13 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='Affiliations_CreatedDate'>CreatedDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Affiliations_UpdatedDate'>UpdatedDate</a></td>
-              <td> timestamp encode az64</td>
+              <td> timestamp</td>
               <td> NEW&#59; set values updated from new ror data</td>
             </tr>
             <tr>
@@ -2265,7 +2265,7 @@
       <div class='card'>
         <div class='card-body'><a id='AuthorExtendedAttributes'
                                   onclick="window.scrollTo(1144, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_AuthorExtendedAttributes').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table AuthorExtendedAttributes</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> AuthorExtendedAttributes</h5></a>
           <p class="text-muted">Additional author name representations &#40;mag&#47;AuthorExtendedAttributes&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -2290,13 +2290,13 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='AuthorExtendedAttributes_AttributeType'>AttributeType</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> Possible values&#58; 1&#61;Alternative name</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='AuthorExtendedAttributes_AttributeValue'>AttributeValue</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -2329,7 +2329,7 @@
       <div class='card'>
         <div class='card-body'><a id='Authors'
                                   onclick="window.scrollTo(920, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Authors').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table Authors</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> Authors</h5></a>
           <p class="text-muted">Base table for authors &#40;mag&#47;Authors&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -2354,26 +2354,26 @@
             <tr>
               <td>❄️</td>
               <td><a id='Authors_Rank'>Rank</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> FROZEN&#59; no new ranks are being added</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Authors_NormalizedName'>NormalizedName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Authors_DisplayName'>DisplayName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Authors_Orcid'>Orcid</a></td>
-              <td> varchar encode lzo</td>
-              <td> NEW&#59; ORCID identifier for this author</td>
+              <td> varchar</td>
+              <td> NEW&#59; ORCID identifier for this author (see https://orcid.org)</td>
             </tr>
             <tr>
               <td>
@@ -2382,37 +2382,37 @@
                 </svg>
               </td>
               <td><a id='Authors_LastKnownAffiliationId'>LastKnownAffiliationId</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Authors_PaperCount'>PaperCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>❄️</td>
               <td><a id='Authors_PaperFamilyCount'>PaperFamilyCount</a></td>
-              <td> bigint encode az64</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+              <td> bigint</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Authors_CitationCount'>CitationCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Authors_CreatedDate'>CreatedDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Authors_UpdatedDate'>UpdatedDate</a></td>
-              <td> timestamp encode az64</td>
+              <td> timestamp</td>
               <td> NEW&#59; set when changes are made going forward</td>
             </tr>
             <tr>
@@ -2475,7 +2475,7 @@
       <div class='card'>
         <div class='card-body'><a id='ConferenceInstances'
                                   onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceInstances').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table ConferenceInstances</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> ConferenceInstances</h5></a>
           <p class="text-muted">❄️ FROZEN&#59; Base table for Conference Instances &#40;mag&#47;ConferenceInstances&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -2500,13 +2500,13 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_NormalizedName'>NormalizedName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_DisplayName'>DisplayName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -2516,73 +2516,73 @@
                 </svg>
               </td>
               <td><a id='ConferenceInstances_ConferenceSeriesId'>ConferenceSeriesId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FOREIGN KEY REFERENCES ConferenceSeries&#46;ConferenceSeriesId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_Location'>Location</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_OfficialUrl'>OfficialUrl</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_StartDate'>StartDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_EndDate'>EndDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_AbstractRegistrationDate'>AbstractRegistrationDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_SubmissionDeadlineDate'>SubmissionDeadlineDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_NotificationDueDate'>NotificationDueDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_FinalVersionDueDate'>FinalVersionDueDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_PaperCount'>PaperCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>❄️</td>
               <td><a id='ConferenceInstances_PaperFamilyCount'>PaperFamilyCount</a></td>
-              <td> bigint encode az64</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+              <td> bigint</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_CitationCount'>CitationCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
@@ -2600,7 +2600,7 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceInstances_CreatedDate'>CreatedDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -2648,7 +2648,7 @@
       <div class='card'>
         <div class='card-body'><a id='ConferenceSeries'
                                   onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceSeries').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table ConferenceSeries</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> ConferenceSeries</h5></a>
           <p class="text-muted">❄️ FROZEN&#59; Base table for Conference Series
             &#40;mag&#47;ConferenceSeries&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
@@ -2674,43 +2674,43 @@
             <tr>
               <td>❄️</td>
               <td><a id='ConferenceSeries_Rank'>Rank</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> FROZEN&#59; no new ranks are being added</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceSeries_NormalizedName'>NormalizedName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceSeries_DisplayName'>DisplayName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceSeries_PaperCount'>PaperCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='ConferenceSeries_PaperFamilyCount'>PaperFamilyCount</a></td>
-              <td> bigint encode az64</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+              <td> bigint</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceSeries_CitationCount'>CitationCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='ConferenceSeries_CreatedDate'>CreatedDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -2755,7 +2755,7 @@
       <div class='card'>
         <div class='card-body'><a id='EntityRelatedEntities'
                                   onclick="window.scrollTo(60, 144);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_EntityRelatedEntities').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table EntityRelatedEntities</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> EntityRelatedEntities</h5></a>
           <p class="text-muted">Relationship between papers&#44; authors&#44; fields of study&#46; &#40;advanced&#47;EntityRelatedEntities&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -2776,27 +2776,27 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='EntityRelatedEntities_EntityType'>EntityType</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Possible values&#58; af &#40;Affiliation&#41;&#44; j &#40;Journal&#41;&#44; c &#40;Conference&#41;
               </td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='EntityRelatedEntities_RelatedEntityId'>RelatedEntityId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='EntityRelatedEntities_RelatedEntityType'>RelatedEntityType</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Possible values&#58; af &#40;Affiliation&#41;&#44; j &#40;Journal&#41;&#44; c &#40;Conference&#41;
               </td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='EntityRelatedEntities_RelatedType'>RelatedType</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> Possible values&#58; 0 &#40;same paper&#41;&#44; 1 &#40;common coauthors&#41;&#44; 2 &#40;co&#45;cited&#41;&#44;
                 3 &#40;common field of study&#41;&#44; 4 &#40;same venue&#41;&#44; 5 &#40;A cites B&#41;&#44; 6 &#40;B
                 cites A&#41;
@@ -2817,7 +2817,7 @@
       <div class='card'>
         <div class='card-body'><a id='FieldOfStudyChildren'
                                   onclick="window.scrollTo(632, 192);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldOfStudyChildren').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table FieldOfStudyChildren</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> FieldOfStudyChildren</h5></a>
           <p class="text-muted">Relationship between Fields of Study
             &#40;advanced&#47;FieldOfStudyChildren&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
@@ -2847,7 +2847,7 @@
                 </svg>
               </td>
               <td><a id='FieldOfStudyChildren_ChildFieldOfStudyId'>ChildFieldOfStudyId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
             </tr>
             <tr>
@@ -2892,7 +2892,7 @@
       <div class='card'>
         <div class='card-body'><a id='FieldOfStudyExtendedAttributes'
                                   onclick="window.scrollTo(632, 80);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldOfStudyExtendedAttributes').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table
+                                  style='cursor:pointer;'><h5 class='card-title'>
           FieldOfStudyExtendedAttributes</h5></a>
           <p class="text-muted">Other identifiers for Fields of Study &#40;advanced&#47;FieldOfStudyExtendedAttributes&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
@@ -2918,7 +2918,7 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldOfStudyExtendedAttributes_AttributeType'>AttributeType</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> Possible values&#58; 1 &#40;AUI from UMLS https&#58;&#47;&#47;www&#46;nlm&#46;nih&#46;gov&#47;research&#47;umls&#47;licensedcontent&#47;umlsarchives04&#46;html&#35;2018AA&#41;&#44;
                 2 &#40;source url&#41;&#44; 3 &#40;CUI from UMLS https&#58;&#47;&#47;www&#46;nlm&#46;nih&#46;gov&#47;research&#47;umls&#47;licensedcontent&#47;umlsknowledgesources&#46;html&#41;
               </td>
@@ -2926,7 +2926,7 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldOfStudyExtendedAttributes_AttributeValue'>AttributeValue</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -2956,7 +2956,7 @@
       <div class='card'>
         <div class='card-body'><a id='FieldsOfStudy'
                                   onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldsOfStudy').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table FieldsOfStudy</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> FieldsOfStudy</h5></a>
           <p class="text-muted">Base table for Fields of Study &#40;advanced&#47;FieldsOfStudy&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -2981,55 +2981,55 @@
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='FieldsOfStudy_Rank'>Rank</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> FROZEN&#59; no new ranks are being added&#46;</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldsOfStudy_NormalizedName'>NormalizedName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldsOfStudy_DisplayName'>DisplayName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldsOfStudy_MainType'>MainType</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldsOfStudy_Level'>Level</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> Possible values&#58; 0&#45;5</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldsOfStudy_PaperCount'>PaperCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='FieldsOfStudy_PaperFamilyCount'>PaperFamilyCount</a></td>
-              <td> bigint encode az64</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count&#46;</td>
+              <td> bigint</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldsOfStudy_CitationCount'>CitationCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='FieldsOfStudy_CreatedDate'>CreatedDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -3134,7 +3134,7 @@
       <div class='card'>
         <div class='card-body'><a id='Journals'
                                   onclick="window.scrollTo(456, 560);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Journals').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table Journals</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> Journals</h5></a>
           <p class="text-muted">Base table for Journals &#40;mag&#47;Journals&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -3159,31 +3159,31 @@
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='Journals_Rank'>Rank</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> FROZEN&#59; no new ranks are being added</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Journals_NormalizedName'>NormalizedName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Journals_DisplayName'>DisplayName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Journals_Issn'>Issn</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> UPDATED&#59; the ISSN&#45;L for the journal &#40;see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;International&#95;Standard&#95;Serial&#95;Number&#35;Linking&#95;ISSN&#41;</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Journals_Issns'>Issns</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; JSON list of all ISSNs for this journal &#40;example&#58; &#39;&#91;&quot;1469&#45;5073&quot;&#44;&quot;0016&#45;6723&quot;&#93;&#39;
                 &#41;
               </td>
@@ -3203,43 +3203,43 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='Journals_Publisher'>Publisher</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Journals_Webpage'>Webpage</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Journals_PaperCount'>PaperCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='Journals_PaperFamilyCount'>PaperFamilyCount</a></td>
-              <td> bigint encode az64</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+              <td> bigint</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Journals_CitationCount'>CitationCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Journals_CreatedDate'>CreatedDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Journals_UpdatedDate'>UpdatedDate</a></td>
-              <td> timestamp encode az64</td>
+              <td> timestamp</td>
               <td> NEW&#59; set when changes are made going forward</td>
             </tr>
             <tr>
@@ -3269,9 +3269,9 @@
       <div class='card'>
         <div class='card-body'><a id='PaperAbstractsInvertedIndex'
                                   onclick="window.scrollTo(136, 1280);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperAbstractsInvertedIndex').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperAbstractsInvertedIndex</h5>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperAbstractsInvertedIndex</h5>
         </a>
-          <p class="text-muted">Inverted abstracts &#40;nlp&#47;PaperAbstractsInvertedIndex&#46;txt&#46;</p>
+          <p class="text-muted">Inverted index of abstracts (nlp/PaperAbstractsInvertedIndex.txt{*} split across multiple files)</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
@@ -3290,12 +3290,12 @@
               </td>
               <td><a id='PaperAbstractsInvertedIndex_PaperId'>PaperId</a></td>
               <td> bigint</td>
-              <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+              <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperAbstractsInvertedIndex_IndexedAbstract'>IndexedAbstract</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Inverted index&#44; see
                 https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Inverted&#95;index
               </td>
@@ -3327,7 +3327,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperAuthorAffiliations'
                                   onclick="window.scrollTo(696, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperAuthorAffiliations').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperAuthorAffiliations</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperAuthorAffiliations</h5></a>
           <p class="text-muted">Links between papers&#44; authors&#44; and affiliations&#47;institutions&#46; NOTE&#58;
             It is possible to have multiple rows with same &#40;PaperId&#44; AuthorId&#44; AffiliationId&#41; when an
             author is associated with multiple affiliations&#46; &#40;mag&#47;PaperAuthorAffiliations&#46;txt&#41;</p>
@@ -3358,7 +3358,7 @@
                 </svg>
               </td>
               <td><a id='PaperAuthorAffiliations_AuthorId'>AuthorId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FOREIGN KEY REFERENCES Authors&#46;AuthorId</td>
             </tr>
             <tr>
@@ -3368,13 +3368,13 @@
                 </svg>
               </td>
               <td><a id='PaperAuthorAffiliations_AffiliationId'>AffiliationId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FOREIGN KEY REFERENCES Affiliations&#46;AffiliationId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperAuthorAffiliations_AuthorSequenceNumber'>AuthorSequenceNumber</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> 1&#45;based author sequence number&#46; 1&#58; the 1st author listed on paper&#44; 2&#58; the 2nd
                 author listed on paper&#44; etc&#46;
               </td>
@@ -3382,13 +3382,13 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperAuthorAffiliations_OriginalAuthor'>OriginalAuthor</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperAuthorAffiliations_OriginalAffiliation'>OriginalAffiliation</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -3448,7 +3448,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperCitationContexts'
                                   onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperCitationContexts').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperCitationContexts</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperCitationContexts</h5></a>
           <p class="text-muted">❄️ FROZEN&#59; citation contexts &#40;nlp&#47;PaperCitationContexts&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -3468,7 +3468,7 @@
               </td>
               <td><a id='PaperCitationContexts_PaperId'>PaperId</a></td>
               <td> bigint</td>
-              <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+              <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
               <td>
@@ -3477,13 +3477,13 @@
                 </svg>
               </td>
               <td><a id='PaperCitationContexts_PaperReferenceId'>PaperReferenceId</a></td>
-              <td> bigint encode az64</td>
-              <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+              <td> bigint</td>
+              <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperCitationContexts_CitationContext'>CitationContext</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -3528,7 +3528,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperExtendedAttributes'
                                   onclick="window.scrollTo(60, 400);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperExtendedAttributes').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperExtendedAttributes</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperExtendedAttributes</h5></a>
           <p class="text-muted">Extra paper identifiers &#40;mag&#47;PaperExtendedAttributes&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -3553,7 +3553,7 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperExtendedAttributes_AttributeType'>AttributeType</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> Possible values&#58; 1&#61;PatentId&#44; 2&#61;PubMedId&#44; 3&#61;PmcId&#44; 4&#61;Alternative
                 Title
               </td>
@@ -3561,7 +3561,7 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperExtendedAttributes_AttributeValue'>AttributeValue</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -3591,7 +3591,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperFieldsOfStudy'
                                   onclick="window.scrollTo(232, 240);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperFieldsOfStudy').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperFieldsOfStudy</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperFieldsOfStudy</h5></a>
           <p class="text-muted">Linking table from papers to fields&#44; with score &#40;advanced&#47;PaperFieldsOfStudy&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -3620,7 +3620,7 @@
                 </svg>
               </td>
               <td><a id='PaperFieldsOfStudy_FieldOfStudyId'>FieldOfStudyId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
             </tr>
             <tr>
@@ -3632,7 +3632,7 @@
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='PaperFieldsOfStudy_AlgorithmVersion'>AlgorithmVersion</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> NEW&#59; version of algorithm to assign fields&#46; Possible values&#58; 1&#61;old MAG &#40;FROZEN&#41;&#44;
                 2&#61;OpenAlex
               </td>
@@ -3679,7 +3679,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperMeSH'
                                   onclick="window.scrollTo(60, 768);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperMeSH').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperMeSH</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperMeSH</h5></a>
           <p class="text-muted">MeSH headings assigned to the paper by PubMed
             &#40;advanced&#47;PaperMeSH&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
@@ -3705,25 +3705,25 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperMeSH_DescriptorUI'>DescriptorUI</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperMeSH_DescriptorName'>DescriptorName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperMeSH_QualifierUI'>QualifierUI</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperMeSH_QualifierName'>QualifierName</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
             </tr>
             <tr>
@@ -3759,7 +3759,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperRecommendations'
                                   onclick="window.scrollTo(60, 512);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperRecommendations').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperRecommendations</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperRecommendations</h5></a>
           <p class="text-muted">Paper recommendations with score &#40;advanced&#47;PaperRecommendations&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -3788,7 +3788,7 @@
                 </svg>
               </td>
               <td><a id='PaperRecommendations_RecommendedPaperId'>RecommendedPaperId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
             </tr>
             <tr>
@@ -3839,7 +3839,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperReferences'
                                   onclick="window.scrollTo(60, 928);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperReferences').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperReferences</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperReferences</h5></a>
           <p class="text-muted">Paper references and&#44; in reverse&#44; citations &#40;mag&#47;PaperReferences&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -3868,7 +3868,7 @@
                 </svg>
               </td>
               <td><a id='PaperReferences_PaperReferenceId'>PaperReferenceId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
             </tr>
             <tr>
@@ -3913,7 +3913,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperResources'
                                   onclick="window.scrollTo(60, 624);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperResources').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperResources</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperResources</h5></a>
           <p class="text-muted">❄️ FROZEN&#59; no longer updated&#46; Data and code urls associated with papers &#40;mag&#47;PaperResources&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -3933,30 +3933,30 @@
               </td>
               <td><a id='PaperResources_PaperId'>PaperId</a></td>
               <td> bigint</td>
-              <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+              <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperResources_ResourceType'>ResourceType</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> Bit flags&#58; 1&#61;Project&#44; 2&#61;Data&#44; 4&#61;Code</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperResources_ResourceUrl'>ResourceUrl</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Url of resource</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperResources_SourceUrl'>SourceUrl</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> List of urls associated with the project&#44; used to derive resource&#95;url</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperResources_RelationshipType'>RelationshipType</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> Bit flags&#58; 1&#61;Own&#44; 2&#61;Cite</td>
             </tr>
             <tr>
@@ -3986,7 +3986,7 @@
       <div class='card'>
         <div class='card-body'><a id='PaperUrls'
                                   onclick="window.scrollTo(60, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperUrls').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table PaperUrls</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> PaperUrls</h5></a>
           <p class="text-muted">Urls for the paper &#40;mag&#47;PaperUrls&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -4011,7 +4011,7 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperUrls_SourceType'>SourceType</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> Possible values&#58; 1&#61;Html&#44; 2&#61;Text&#44; 3&#61;Pdf&#44; 4&#61;Doc&#44; 5&#61;Ppt&#44; 6&#61;Xls&#44;
                 8&#61;Rtf&#44; 12&#61;Xml&#44; 13&#61;Rss&#44; 20&#61;Swf&#44; 27&#61;Ics&#44; 31&#61;Pub&#44; 33&#61;Ods&#44;
                 34&#61;Odp&#44; 35&#61;Odt&#44; 36&#61;Zip&#44; 40&#61;Mp3&#44; 0&#47;999&#47;NULL&#61;unknown
@@ -4020,31 +4020,31 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperUrls_SourceUrl'>SourceUrl</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='PaperUrls_LanguageCode'>LanguageCode</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_UrlForLandingPage'>UrlForLandingPage</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; URL for the landing page&#44; when article is free to read</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_UrlForPdf'>UrlForPdf</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; URL for the PDF&#44; when article is free to read</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_HostType'>HostType</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; host type of the free&#45;to&#45;read URL&#44; Possible values&#58; publisher&#44;
                 repository
               </td>
@@ -4052,27 +4052,27 @@
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_Version'>Version</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; version of the free&#45;to&#45;read URL Possible values&#58; submittedVersion&#44;
-                acceptedVersion&#44; publishedVersion
+                acceptedVersion&#44; publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)
               </td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_License'>License</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; license of the free&#45;to&#45;read URL &#40;example&#58; cc0&#44; cc&#45;by&#44; publisher&#45;specific&#41;</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_RepositoryInstitution'>RepositoryInstitution</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; name of repository host of URL</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='PaperUrls_OaiPmhId'>OaiPmhId</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; OAH&#45;PMH id of the repository record</td>
             </tr>
             <tr>
@@ -4102,7 +4102,7 @@
       <div class='card'>
         <div class='card-body'><a id='Papers'
                                   onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table Papers</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> Papers</h5></a>
           <p class="text-muted">Main data for papers &#40;mag&#47;Papers&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -4127,19 +4127,19 @@
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='Papers_Rank'>Rank</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td> FROZEN&#59; no new ranks are being added</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_Doi'>Doi</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Doi values are upper&#45;cased per DOI standard at https&#58;&#47;&#47;www&#46;doi&#46;org&#47;doi&#95;handbook&#47;2&#95;Numbering&#46;html&#35;2&#46;4</td>
             </tr>
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='Papers_DocType'>DocType</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Possible values&#58; Book&#44; BookChapter&#44; Conference&#44; Dataset&#44; Journal&#44; Patent&#44;
                 Repository&#44; Thesis&#44; NULL &#58; unknown&#46; Patent is FROZEN&#59; no new Patents are being added&#46;
               </td>
@@ -4147,8 +4147,8 @@
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Papers_Genre'>Genre</a></td>
-              <td> varchar encode lzo</td>
-              <td> NEW&#59; Crossref ontology for work type such as &quot;journal&#45;article&#44; posted&#45;content&#44;
+              <td> varchar</td>
+              <td> NEW&#59; Crossref ontology for work type such as journal&#45;article&#44; posted&#45;content&#44;
                 dataset&#44; or book&#45;chapter
               </td>
             </tr>
@@ -4161,43 +4161,43 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_PaperTitle'>PaperTitle</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_OriginalTitle'>OriginalTitle</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_BookTitle'>BookTitle</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_Year'>Year</a></td>
-              <td> integer encode az64</td>
+              <td> integer</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_Date'>Date</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_OnlineDate'>OnlineDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_Publisher'>Publisher</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
@@ -4207,8 +4207,8 @@
                 </svg>
               </td>
               <td><a id='Papers_JournalId'>JournalId</a></td>
-              <td> bigint encode az64</td>
-              <td> FOREIGN KEY references journals&#46;journal&#95;id</td>
+              <td> bigint</td>
+              <td> FOREIGN KEY references Journals.JournalId</td>
             </tr>
             <tr>
               <td>
@@ -4218,9 +4218,9 @@
                 ❄️
               </td>
               <td><a id='Papers_ConferenceSeriesId'>ConferenceSeriesId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FROZEN&#59; no longer updated&#44; no new Conference Series are being added&#46; FOREIGN KEY
-                references conference&#95;series&#46;conference&#95;series&#95;id&#46;
+                references ConferenceSeries.ConferenceSeriesId;
               </td>
             </tr>
             <tr>
@@ -4231,117 +4231,117 @@
                 ❄️
               </td>
               <td><a id='Papers_ConferenceInstanceId'>ConferenceInstanceId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FROZEN&#59; no longer updated&#44; no new Conference Instances are being added&#46; FOREIGN KEY
-                references conference&#95;instances&#46;conference&#95;instance&#95;id&#46;
+                references ConferenceInstance.ConferenceInstanceId;
               </td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_Volume'>Volume</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_Issue'>Issue</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_FirstPage'>FirstPage</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_LastPage'>LastPage</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_ReferenceCount'>ReferenceCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_CitationCount'>CitationCount</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td></td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_EstimatedCitation'>EstimatedCitation</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> UPDATED&#59; new algorithm</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_OriginalVenue'>OriginalVenue</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='Papers_FamilyId'>FamilyId</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FROZEN&#59; no longer updated&#46;</td>
             </tr>
             <tr>
               <td>❄️&nbsp;</td>
               <td><a id='Papers_FamilyRank'>FamilyRank</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FROZEN&#59; no longer updated&#46;</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_DocSubTypes'>DocSubTypes</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Possible values&#58; Retracted Publication&#44; Retraction Notice</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Papers_OaStatus'>OaStatus</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; Possible values&#58; closed&#44; green&#44; gold&#44; hybrid&#44; bronze &#40;see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Open&#95;access&#35;Colour&#95;naming&#95;system&#41;</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Papers_BestUrl'>BestUrl</a></td>
-              <td> varchar encode lzo</td>
-              <td> NEW&#59; An url for the paper &#40;see paper&#95;urls table for more&#41;</td>
+              <td> varchar</td>
+              <td> NEW&#59; An url for the paper &#40;see PaperUrls table for more&#41;</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Papers_BestFreeUrl'>BestFreeUrl</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; Url of best legal free&#45;to&#45;read copy when it exists &#40;see https&#58;&#47;&#47;support&#46;unpaywall&#46;org&#47;support&#47;solutions&#47;articles&#47;44001943223&#41;</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Papers_BestFreeVersion'>BestFreeVersion</a></td>
-              <td> varchar encode lzo</td>
-              <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion</td>
+              <td> varchar</td>
+              <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Papers_DoiLower'>DoiLower</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> NEW&#59; lowercase doi for convenience linking to Unpaywall</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='Papers_CreatedDate'>CreatedDate</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
               <td><a id='Papers_UpdatedDate'>UpdatedDate</a></td>
-              <td> timestamp encode az64</td>
+              <td> timestamp</td>
               <td> NEW&#59; set when changes are made going forward</td>
             </tr>
             <tr>
@@ -4599,7 +4599,7 @@
       <div class='card'>
         <div class='card-body'><a id='RelatedFieldOfStudy'
                                   onclick="window.scrollTo(632, 288);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_RelatedFieldOfStudy').classList.add('palpable'); return false;"
-                                  style='cursor:pointer;'><h5 class='card-title'>Table RelatedFieldOfStudy</h5></a>
+                                  style='cursor:pointer;'><h5 class='card-title'> RelatedFieldOfStudy</h5></a>
           <p class="text-muted">Relationships between fields of study
             &#40;advanced&#47;RelatedFieldOfStudy&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
@@ -4625,7 +4625,7 @@
             <tr>
               <td>&nbsp;</td>
               <td><a id='RelatedFieldOfStudy_Type1'>Type1</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Possible values&#58; general&#44; disease&#44; disease&#95;cause&#44; medical&#95;treatment&#44;
                 symptom
               </td>
@@ -4637,13 +4637,13 @@
                 </svg>
               </td>
               <td><a id='RelatedFieldOfStudy_FieldOfStudyId2'>FieldOfStudyId2</a></td>
-              <td> bigint encode az64</td>
+              <td> bigint</td>
               <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td><a id='RelatedFieldOfStudy_Type2'>Type2</a></td>
-              <td> varchar encode lzo</td>
+              <td> varchar</td>
               <td> Possible values&#58; general&#44; disease&#44; disease&#95;cause&#44; medical&#95;treatment&#44;
                 symptom
               </td>
