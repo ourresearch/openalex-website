@@ -4729,12 +4729,19 @@ th[colspan="4"] {
   text-align: left;
 }
 
+tr td:nth-child(2) a {
+  color: #333;
+  cursor: default;
+}
+
 
 table {
   border-collapse: collapse;
   border-bottom: 1px solid #ddd;
   width: 100%;
   margin-bottom: 100px;
+
+
 
   thead {
     tr {
