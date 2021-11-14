@@ -1,11 +1,37 @@
 <template>
   <v-container fluid class="page">
-    <v-container>
+    <v-container class="mb-12">
       <h2 class="text-h3">Schema</h2>
+      <p>
+        OpenAlex is built to be a drop-in replacement for <a
+          href="https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/">Microsoft Academic Graph
+        (MAG)</a>&mdash;that means the schema is backwards-compatible with
+        <a href="https://docs.microsoft.com/en-us/academic-services/graph/reference-data-schema">MAG's schema</a>,
+        allowing MAG users to switch over to OpenAlex with little fuss.. However, although the schemas are <em>compatible</em>
+        they're not <em>identical.</em> There are three important categories of data in the schema below:
+      </p>
+      <ul>
+        <li>
+          <strong>❄️ Frozen:</strong> These columns are currently live and updated regularly using MAG data. However,
+          after December 31st, when
+          <a href="https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/">MAG
+            is retired,</a> they will <em>no longer be updated at all.</em> Although they will remain in the dataset for
+          compatibility, their data will grow increasingly stale.
+        </li>
+        <li>
+          <strong>🔥 New:</strong> These columns are not in MAG. They are currently live and updated regularly using our
+          data, and will continue to be updated indefinitely.
+        </li>
+        <li>
+
+          <strong>Ongoing:</strong> These columns are currently live and updated regularly using MAG data. AFter
+          December 31st, they will continue to be updated indefinitely, but the data will come from us.
+        </li>
+      </ul>
     </v-container>
 
 
-<!--    BEGIN PASTED, AUTO-GENERATED CONTENT -->
+    <!--    BEGIN PASTED, AUTO-GENERATED CONTENT -->
     <div class='container-fluid' style='text-align: center;'>
 
 
@@ -274,17 +300,17 @@
                 style='fill:#eee;'/>
 
           <!-- == Legend == -->
-<!--          <g transform='translate(10,10)'>-->
-<!--            <rect x='10' y='10' width='420' height='70' rx='6' ry='6'-->
-<!--                  style='fill:url(#legendGradient);filter:url(#shadow);'/>-->
-<!--            <text x='20' y='25' class='legendTitle'>Redshift</text>-->
-<!--            <text x='20' y='53' class='legendSubTitle'>-->
-<!--              <tspan>Read table and column comments as mouse-over tooltips.</tspan>-->
-<!--            </text>-->
-<!--            <text x='20' y='67' class='legendSubTitle'>-->
-<!--              <tspan>Zoom ~ Ctrl + mouse wheel, panning ~ drag + right-mouse button.</tspan>-->
-<!--            </text>-->
-<!--          </g>-->
+          <!--          <g transform='translate(10,10)'>-->
+          <!--            <rect x='10' y='10' width='420' height='70' rx='6' ry='6'-->
+          <!--                  style='fill:url(#legendGradient);filter:url(#shadow);'/>-->
+          <!--            <text x='20' y='25' class='legendTitle'>Redshift</text>-->
+          <!--            <text x='20' y='53' class='legendSubTitle'>-->
+          <!--              <tspan>Read table and column comments as mouse-over tooltips.</tspan>-->
+          <!--            </text>-->
+          <!--            <text x='20' y='67' class='legendSubTitle'>-->
+          <!--              <tspan>Zoom ~ Ctrl + mouse wheel, panning ~ drag + right-mouse button.</tspan>-->
+          <!--            </text>-->
+          <!--          </g>-->
 
           <g transform='translate(0,110)'>
             <!-- == Group 'Conferences' == -->
@@ -2052,7 +2078,8 @@
 
       <div class='card'>
         <div class='card-body'>
-          <h5 class='card-title'>Tables</h5>
+<!--          <h5 class='card-title'>Tables</h5>-->
+          <h2 class="text-h3">Tables</h2>
           <ul>
             <li><a href='#Affiliations'>Affiliations</a></li>
             <li><a href='#AuthorExtendedAttributes'>AuthorExtendedAttributes</a></li>
@@ -4667,8 +4694,7 @@
 
     </div>
 
-<!--    END PASTED, AUTO-GENERATED CONTENT -->
-
+    <!--    END PASTED, AUTO-GENERATED CONTENT -->
   </v-container>
 </template>
 
@@ -4678,8 +4704,7 @@
 export default {
   name: "Schema",
   metaInfo: {title: "Schema"},
-  methods: {
-  }
+  methods: {}
 }
 </script>
 
@@ -4692,17 +4717,17 @@ h2 {
 .card {
   padding-top: 100px;
 }
+
 h5 {
   font-size: 30px;
 }
+
 th[colspan="4"] {
   padding-top: 50px;
   //font-size: 20px;
   //font-weight: normal;
   text-align: left;
 }
-
-
 
 
 table {

@@ -1,9 +1,9 @@
 <template>
-<v-container class="page">
-  <h2 class="text-h3">License</h2>
+  <v-container class="page">
+    <h2 class="text-h3">License</h2>
 
 
-</v-container>
+  </v-container>
 </template>
 
 <script>

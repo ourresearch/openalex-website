@@ -157,13 +157,14 @@ export default {
 body {
   .v-application {
       font-family: Inconsolata !important;
+    font-size: 16px;
 
-    p {
+    p, ul, ol, li {
       //font-family: dosis !important;
       //font-family: roboto !important;
       font-family: Inconsolata !important;
       //font-family: Helvetica !important;
-      font-size: 20px !important;
+      font-size: 18px !important;
       //letter-spacing: .05em !important;
     }
 
@@ -178,6 +179,10 @@ body {
 
   }
 
+}
+
+.page {
+  margin-top: 100px;
 }
 
 
