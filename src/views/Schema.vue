@@ -671,13 +671,13 @@
               <text id='Affiliations.GridId' x='931' y='759'>GridId</text>
               <title>GridId
                 varchar
-                FROZEN; ror_id is the new standard identifier for organizations</title></a>
+                FROZEN; RorId is the new standard identifier for organizations</title></a>
             <text x='1069' y='756' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Affiliations_RorId'>
               <text id='Affiliations.RorId' x='931' y='775'>RorId 🔥</text>
               <title>RorId
                 varchar
-                NEW; ROR for this organization, see https://ror.org, https://ror.org/:ror_id</title></a>
+                NEW; ROR for this organization, see https://ror.org, https://ror.org/:RorId</title></a>
             <text x='1069' y='772' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Affiliations_OfficialPage'>
               <text id='Affiliations.OfficialPage' x='931' y='791'>OfficialPage</text>
@@ -698,7 +698,7 @@
               <text id='Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count.</title></a>
+                FROZEN; same value as PaperCount.</title></a>
             <text x='1069' y='836' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Affiliations_CitationCount'>
               <text id='Affiliations.CitationCount' x='931' y='855'>CitationCount</text>
@@ -808,7 +808,7 @@
               <text id='Authors.Orcid' x='1139' y='583'>Orcid 🔥</text>
               <title>Orcid
                 varchar
-                NEW; ORCID identifier for this author</title></a>
+                NEW; ORCID identifier for this author (see https://orcid.org)</title></a>
             <text x='1309' y='580' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Authors_LastKnownAffiliationId'>
               <text id='Authors.LastKnownAffiliationId' x='1139' y='599'
@@ -830,7 +830,7 @@
               <text id='Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count</title></a>
+                FROZEN; same value as PaperCount</title></a>
             <text x='1309' y='628' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Authors_CitationCount'>
               <text id='Authors.CitationCount' x='1139' y='647'>CitationCount</text>
@@ -942,7 +942,7 @@
               <text id='ConferenceInstances.PaperFamilyCount' x='867' y='1271'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count</title></a>
+                FROZEN; same value as PaperCount</title></a>
             <text x='1053' y='1268' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceInstances_CitationCount'>
               <text id='ConferenceInstances.CitationCount' x='867' y='1287'>CitationCount</text>
@@ -1013,7 +1013,7 @@
               <text id='ConferenceSeries.PaperFamilyCount' x='659' y='1175'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count</title></a>
+                FROZEN; same value as PaperCount</title></a>
             <text x='813' y='1172' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceSeries_CitationCount'>
               <text id='ConferenceSeries.CitationCount' x='659' y='1191'>CitationCount</text>
@@ -1205,7 +1205,7 @@
               <text id='FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count.</title></a>
+                FROZEN; same value as PaperCount.</title></a>
             <text x='781' y='260' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#FieldsOfStudy_CitationCount'>
               <text id='FieldsOfStudy.CitationCount' x='643' y='279'>CitationCount</text>
@@ -1299,7 +1299,7 @@
               <text id='Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount ❄️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as &quot;paper_count</title></a>
+                FROZEN; same value as PaperCount</title></a>
             <text x='813' y='772' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Journals_CitationCount'>
               <text id='Journals.CitationCount' x='675' y='791'>CitationCount</text>
@@ -1335,7 +1335,7 @@
               </text>
               <title>PaperId
                 bigint
-                FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                FOREIGN KEY REFERENCES Papers.PaperId</title></a>
             <a xlink:href='#PaperAbstractsInvertedIndex.PaperId'>
               <use id='fk' x='532' y='1308' xlink:href='#fk'/>
               <title>References Papers ( PaperId ) </title></a>
@@ -1428,7 +1428,7 @@
               </text>
               <title>PaperId
                 bigint
-                FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                FOREIGN KEY REFERENCES Papers.PaperId</title></a>
             <a xlink:href='#PaperCitationContexts.PaperId'>
               <use id='fk' x='484' y='1164' xlink:href='#fk'/>
               <title>References Papers ( PaperId ) </title></a>
@@ -1440,7 +1440,7 @@
               </text>
               <title>PaperReferenceId
                 bigint
-                FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                FOREIGN KEY REFERENCES Papers.PaperId</title></a>
             <a xlink:href='#PaperCitationContexts.PaperReferenceId'>
               <use id='fk' x='484' y='1180' xlink:href='#fk'/>
               <title>References Papers ( PaperReferenceId -&gt; PaperId ) </title></a>
@@ -1668,7 +1668,7 @@
               </text>
               <title>PaperId
                 bigint
-                FOREIGN KEY REFERENCES papers.papers_id</title></a>
+                FOREIGN KEY REFERENCES Papers.PaperId</title></a>
             <a xlink:href='#PaperResources.PaperId'>
               <use id='fk' x='228' y='652' xlink:href='#fk'/>
               <title>References Papers ( PaperId ) </title></a>
@@ -1756,7 +1756,7 @@
               <title>Version
                 varchar
                 NEW; version of the free-to-read URL Possible values: submittedVersion, acceptedVersion,
-                publishedVersion</title></a>
+                publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</title></a>
             <text x='237' y='1172' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#PaperUrls_License'>
               <text id='PaperUrls.License' x='83' y='1191'>License 🔥</text>
@@ -1833,7 +1833,7 @@
               <text id='Papers.Genre' x='387' y='583'>Genre 🔥</text>
               <title>Genre
                 varchar
-                NEW; Crossref ontology for work type such as &quot;journal-article, posted-content, dataset, or
+                NEW; Crossref ontology for work type such as journal-article, posted-content, dataset, or
                 book-chapter</title></a>
             <text x='541' y='580' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_IsParatext'>
@@ -1886,7 +1886,7 @@
               </text>
               <title>JournalId
                 bigint
-                FOREIGN KEY references journals.journal_id</title></a>
+                FOREIGN KEY references Journals.JournalId</title></a>
             <a xlink:href='#Papers.JournalId'>
               <use id='fk' x='532' y='716' xlink:href='#fk'/>
               <title>References Journals ( JournalId ) </title></a>
@@ -1899,7 +1899,7 @@
               <title>ConferenceSeriesId
                 bigint
                 FROZEN; no longer updated, no new Conference Series are being added. FOREIGN KEY references
-                conference_series.conference_series_id.</title></a>
+                ConferenceSeries.ConferenceSeriesId.</title></a>
             <a xlink:href='#Papers.ConferenceSeriesId'>
               <use id='fk' x='532' y='732' xlink:href='#fk'/>
               <title>References ConferenceSeries ( ConferenceSeriesId ) </title></a>
@@ -1912,7 +1912,7 @@
               <title>ConferenceInstanceId
                 bigint
                 FROZEN; no longer updated, no new Conference Instances are being added. FOREIGN KEY references
-                conference_instances.conference_instance_id.</title></a>
+                ConferenceInstances.ConferenceInstanceId.</title></a>
             <a xlink:href='#Papers.ConferenceInstanceId'>
               <use id='fk' x='532' y='748' xlink:href='#fk'/>
               <title>References ConferenceInstances ( ConferenceInstanceId ) </title></a>
@@ -1986,7 +1986,7 @@
               <text id='Papers.BestUrl' x='387' y='967'>BestUrl 🔥</text>
               <title>BestUrl
                 varchar
-                NEW; An url for the paper (see paper_urls table for more)</title></a>
+                NEW; An url for the paper (see PaperUrls table for more)</title></a>
             <text x='541' y='964' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_BestFreeUrl'>
               <text id='Papers.BestFreeUrl' x='387' y='983'>BestFreeUrl 🔥</text>
@@ -1999,7 +1999,7 @@
               <text id='Papers.BestFreeVersion' x='387' y='999'>BestFreeVersion 🔥</text>
               <title>BestFreeVersion
                 varchar
-                NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion</title></a>
+                NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</title></a>
             <text x='541' y='996' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_DoiLower'>
               <text id='Papers.DoiLower' x='387' y='1015'>DoiLower 🔥</text>
@@ -2155,13 +2155,13 @@
               <td>❄️</td>
               <td><a id='Affiliations_GridId'>GridId</a></td>
               <td> varchar</td>
-              <td> FROZEN&#59; ror&#95;id is the new standard identifier for organizations</td>
+              <td> FROZEN&#59; RorId is the new standard identifier for organizations</td>
             </tr>
             <tr>
               <td>🔥</td>
               <td><a id='Affiliations_RorId'>RorId</a></td>
               <td> varchar</td>
-              <td> NEW&#59; ROR for this organization&#44; see https&#58;&#47;&#47;ror&#46;org&#44; https&#58;&#47;&#47;ror&#46;org&#47;&#58;ror&#95;id</td>
+              <td> NEW&#59; ROR for this organization&#44; see https&#58;&#47;&#47;ror&#46;org&#44; https&#58;&#47;&#47;ror&#46;org&#47;&#58;RorId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -2185,7 +2185,7 @@
               <td>❄️</td>
               <td><a id='Affiliations_PaperFamilyCount'>PaperFamilyCount </a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count&#46;</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -2373,7 +2373,7 @@
               <td>🔥&nbsp;</td>
               <td><a id='Authors_Orcid'>Orcid</a></td>
               <td> varchar</td>
-              <td> NEW&#59; ORCID identifier for this author</td>
+              <td> NEW&#59; ORCID identifier for this author (see https://orcid.org)</td>
             </tr>
             <tr>
               <td>
@@ -2395,7 +2395,7 @@
               <td>❄️</td>
               <td><a id='Authors_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -2577,7 +2577,7 @@
               <td>❄️</td>
               <td><a id='ConferenceInstances_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -2699,7 +2699,7 @@
               <td>❄️&nbsp;</td>
               <td><a id='ConferenceSeries_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -3018,7 +3018,7 @@
               <td>❄️&nbsp;</td>
               <td><a id='FieldsOfStudy_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count&#46;</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -3222,7 +3222,7 @@
               <td>❄️&nbsp;</td>
               <td><a id='Journals_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as &quot;paper&#95;count</td>
+              <td> FROZEN&#59; same value as PaperCount</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -3290,7 +3290,7 @@
               </td>
               <td><a id='PaperAbstractsInvertedIndex_PaperId'>PaperId</a></td>
               <td> bigint</td>
-              <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+              <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -3468,7 +3468,7 @@
               </td>
               <td><a id='PaperCitationContexts_PaperId'>PaperId</a></td>
               <td> bigint</td>
-              <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+              <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
               <td>
@@ -3478,7 +3478,7 @@
               </td>
               <td><a id='PaperCitationContexts_PaperReferenceId'>PaperReferenceId</a></td>
               <td> bigint</td>
-              <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+              <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -3933,7 +3933,7 @@
               </td>
               <td><a id='PaperResources_PaperId'>PaperId</a></td>
               <td> bigint</td>
-              <td> FOREIGN KEY REFERENCES papers&#46;papers&#95;id</td>
+              <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -4054,7 +4054,7 @@
               <td><a id='PaperUrls_Version'>Version</a></td>
               <td> varchar</td>
               <td> NEW&#59; version of the free&#45;to&#45;read URL Possible values&#58; submittedVersion&#44;
-                acceptedVersion&#44; publishedVersion
+                acceptedVersion&#44; publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)
               </td>
             </tr>
             <tr>
@@ -4148,7 +4148,7 @@
               <td>🔥&nbsp;</td>
               <td><a id='Papers_Genre'>Genre</a></td>
               <td> varchar</td>
-              <td> NEW&#59; Crossref ontology for work type such as &quot;journal&#45;article&#44; posted&#45;content&#44;
+              <td> NEW&#59; Crossref ontology for work type such as journal&#45;article&#44; posted&#45;content&#44;
                 dataset&#44; or book&#45;chapter
               </td>
             </tr>
@@ -4208,7 +4208,7 @@
               </td>
               <td><a id='Papers_JournalId'>JournalId</a></td>
               <td> bigint</td>
-              <td> FOREIGN KEY references journals&#46;journal&#95;id</td>
+              <td> FOREIGN KEY references Journals.JournalId</td>
             </tr>
             <tr>
               <td>
@@ -4220,7 +4220,7 @@
               <td><a id='Papers_ConferenceSeriesId'>ConferenceSeriesId</a></td>
               <td> bigint</td>
               <td> FROZEN&#59; no longer updated&#44; no new Conference Series are being added&#46; FOREIGN KEY
-                references conference&#95;series&#46;conference&#95;series&#95;id&#46;
+                references ConferenceSeries.ConferenceSeriesId;
               </td>
             </tr>
             <tr>
@@ -4233,7 +4233,7 @@
               <td><a id='Papers_ConferenceInstanceId'>ConferenceInstanceId</a></td>
               <td> bigint</td>
               <td> FROZEN&#59; no longer updated&#44; no new Conference Instances are being added&#46; FOREIGN KEY
-                references conference&#95;instances&#46;conference&#95;instance&#95;id&#46;
+                references ConferenceInstance.ConferenceInstanceId;
               </td>
             </tr>
             <tr>
@@ -4312,7 +4312,7 @@
               <td>🔥&nbsp;</td>
               <td><a id='Papers_BestUrl'>BestUrl</a></td>
               <td> varchar</td>
-              <td> NEW&#59; An url for the paper &#40;see paper&#95;urls table for more&#41;</td>
+              <td> NEW&#59; An url for the paper &#40;see PaperUrls table for more&#41;</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
@@ -4324,7 +4324,7 @@
               <td>🔥&nbsp;</td>
               <td><a id='Papers_BestFreeVersion'>BestFreeVersion</a></td>
               <td> varchar</td>
-              <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion</td>
+              <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</td>
             </tr>
             <tr>
               <td>🔥&nbsp;</td>
