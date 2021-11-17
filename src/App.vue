@@ -32,7 +32,7 @@
         <v-menu offset-y content-class="no-highlight">
           <template v-slot:activator="{on}">
             <v-btn text color="" v-on="on" class="low-key-button">
-              Get the data
+              Data
               <v-icon class="">mdi-menu-down</v-icon>
             </v-btn>
           </template>
@@ -43,6 +43,17 @@
             <v-list-item to="/rest-api">
               REST API
             </v-list-item>
+          </v-list>
+        </v-menu>
+
+        <v-menu offset-y content-class="no-highlight">
+          <template v-slot:activator="{on}">
+            <v-btn text color="" v-on="on" class="low-key-button">
+              Docs
+              <v-icon class="">mdi-menu-down</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
             <v-list-item to="/schema">
               Schema
             </v-list-item>
@@ -52,31 +63,10 @@
           </v-list>
         </v-menu>
 
-        <v-menu offset-y content-class="no-highlight">
-          <template v-slot:activator="{on}">
-            <v-btn text color="" v-on="on" class="low-key-button">
-              Learn more
-              <v-icon class="">mdi-menu-down</v-icon>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-item to="/faq">
-              FAQ
-            </v-list-item>
-            <v-list-item to="/coverage">
-              Coverage
-            </v-list-item>
-            <v-list-item to="/roadmap">
-              Roadmap
-            </v-list-item>
-            <v-list-item to="/license">
-              License
-            </v-list-item>
-            <v-list-item to="/pricing">
-              Pricing
-            </v-list-item>
-          </v-list>
-        </v-menu>
+        <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
+        <v-btn class="no-active low-key-button" text to="./faq">FAQ</v-btn>
+
+
 
 
 
@@ -97,9 +87,9 @@
           </template>
           <v-list>
             <v-list-item to="/">Home</v-list-item>
-            <v-list-item to="./about">About</v-list-item>
-            <v-list-item to="./projects">Projects</v-list-item>
-            <v-list-item to="./transparency">Transparency</v-list-item>
+            <v-list-item to="./use-the-data">Use the data</v-list-item>
+            <v-list-item to="./learn-more">Learn more</v-list-item>
+            <v-list-item to="./contact">Contact</v-list-item>
           </v-list>
         </v-menu>
       </div>
@@ -175,6 +165,7 @@ body {
       font-weight: 100;
       letter-spacing: 0.01em !important;
       color: #000 !important;
+      margin: 30px 0 10px;
     }
 
   }

@@ -2116,10 +2116,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -2270,10 +2270,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -2334,10 +2334,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -2383,7 +2383,9 @@
               </td>
               <td><a id='Authors_LastKnownAffiliationId'>LastKnownAffiliationId</a></td>
               <td> integer</td>
-              <td></td>
+              <td>
+                FOREIGN KEY REFERENCES Affiliations.AffiliationId
+              </td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -2480,10 +2482,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -2654,10 +2656,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -2760,10 +2762,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -2823,10 +2825,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -2898,10 +2900,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -2961,10 +2963,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3139,10 +3141,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3275,10 +3277,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3334,10 +3336,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3453,10 +3455,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3533,10 +3535,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3596,10 +3598,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3685,10 +3687,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3764,10 +3766,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3844,10 +3846,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3918,10 +3920,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -3991,10 +3993,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -4107,10 +4109,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>
@@ -4605,10 +4607,10 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th style='width:5%'>Idx</th>
-              <th style='width:20%'>Field Name</th>
-              <th style='width:23%'>Data Type</th>
-              <th style='width:52%'>Description</th>
+              <th class="idx">Idx</th>
+              <th class="field-name">Field Name</th>
+              <th class="data-type">Data Type</th>
+              <th class="description">Description</th>
             </tr>
             </thead>
             <tbody>

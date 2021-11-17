@@ -10,10 +10,7 @@ import Schema from "@/views/Schema";
 import MagMigrationGuide from "@/views/MagMigrationGuide";
 
 import Faq from "@/views/Faq";
-import Coverage from "@/views/Coverage";
-import Roadmap from "@/views/Roadmap";
-import License from "@/views/License";
-import Pricing from "@/views/Pricing";
+import About from "@/views/About";
 
 import Contact from "@/views/Contact";
 
@@ -31,10 +28,7 @@ const routes = [
     {path: '/mag-migration-guide', component: MagMigrationGuide},
 
     {path: '/faq', component: Faq},
-    {path: '/coverage', component: Coverage},
-    {path: '/roadmap', component: Roadmap},
-    {path: '/license', component: License},
-    {path: '/pricing', component: Pricing},
+    {path: '/about', component: About},
 
     {path: '/contact', component: Contact},
 ]
