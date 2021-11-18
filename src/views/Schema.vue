@@ -2252,9 +2252,6 @@
               <td> varchar</td>
               <td></td>
             </tr>
-            <tr>
-              <th colspan='4'>Indexes</th>
-            </tr>
             </tbody>
           </table>
         </div>
