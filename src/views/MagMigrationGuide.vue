@@ -130,12 +130,13 @@
       </li>
       <li>
         <strong>Paper resources:</strong> This table, which gathered code and data associated with a given papers, will
-        be frozen.
+        be frozen, at least for now.
       </li>
       <li>
         <strong>Paper citation contexts:</strong> This table, indexed the text around each citation, will be frozen.
       </li>
     </ul>
+
 
 
     <h5 class="text-h5" id="data-changes-ongoing">2.3 👍 Ongoing</h5>
@@ -158,7 +159,7 @@
       <strong>Author name disambiguation (AND):</strong>
       Like MAG, OpenAlex will use document properties (title, topic, journal, etc) to identify and assign unique author
       IDs, even when authors share a name &mdash; so you'll see one ID for the biologist Jane Smith, and a different one
-      for the Jane Smith who's an art historian. We'll also identify two name strings as referring to the same person
+      for the Jane Smith who's an art historian. Also like MAG, we'll identify two name strings as referring to the same person
       even if they are written differently ("J smith" and "Jane Smith").
     </li>
     <li>
@@ -171,16 +172,16 @@
     <li>
       <strong>Institution identification:</strong>
       Like MAG, we'll identify authors' institutions, even there are no <a
-        href="https://en.wikipedia.org/wiki/Persistent_identifier">PIDs</a> or other structured metadata to use. MAG
-      used the
-      <a href="https://www.grid.ac/">GRID database</a> to unambiguously identify institutions.
+        href="https://en.wikipedia.org/wiki/Persistent_identifier">PIDs</a> or other structured metadata to use.
     </li>
     <li>
       <strong>Topic (field of study) tagging:</strong>
       Like MAG, we automatically tag works with their field of study (variously described as "concepts," "topics," and
-      "fields of study" in the MAG documentation. We're using MAG's same automatically-generated controlled taxonomy,
+      "fields of study" in the MAG documentation). We're using MAG's same automatically-generated controlled taxonomy,
       although we've trimmed it down a bit: we only assign topics that are apply to more than 500 individual works. This
-      means we support about half as many topics as MAG did.
+      means we support about half as many topics as MAG did. We have added a field that specifies the topic assignment algorithm
+      used for a given topic assignment (MAG's algorithm or the new OpenAlex algorithm) to help when comparing
+      topics over time.
 
     </li>
 
