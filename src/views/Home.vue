@@ -8,9 +8,7 @@
         <div class="mt-12">
           <p style="">
 
-            OpenAlex will launch in December 2021, as a drop-in replacement for
-            <a href="https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/">Microsoft
-              Academic Graph.</a> Learn more in our latest blog post, and join the mailing list to stay up-to-date.
+            OpenAlex is like a card catalog for the global research system, indexing hundreds of millions of interconnected entities. We're free, open-source, and currently in early beta, with an official launch on January 3, 2021.
           </p>
 
         </div>
@@ -19,21 +17,21 @@
               x-large
               class=""
               color="primary"
+              to="./data-dump"
+          >
+            Get the data
+          </v-btn>
+
+
+          <v-btn
+              x-large
+              class=""
+              text
+              color="primary"
               href="http://eepurl.com/hA8PhL"
               target="_blank"
           >
             Join mailing list
-            <v-icon right>mdi-open-in-new</v-icon>
-          </v-btn>
-          <v-btn
-              x-large
-              class="ml-4"
-              color="primary"
-              text
-              href="https://blog.ourresearch.org/openalex-update-june"
-              target="_blank"
-          >
-            Read latest blog post
             <v-icon right>mdi-open-in-new</v-icon>
           </v-btn>
 
