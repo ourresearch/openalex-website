@@ -42,12 +42,6 @@
         in the
         <router-link to="./schema">schema docs.</router-link>
       </li>
-      <li>
-        <strong>Host location:</strong>
-        The
-        <router-link to="./data-dump">data dump</router-link>
-        is now hosted on Amazon Web Services (AWS) rather than Azure.
-      </li>
     </ul>
 
 
@@ -197,6 +191,29 @@
       OpenAlex's algorithms and data sources, and that will continue after Jan 3.
     </p>
     <ul>
+      <li>
+        <strong>Open Access (OA) status:</strong>
+        By integrating the industry-standard <a href="https://unpaywall.org">Unpaywall</a> dataset, OpenAlex can now tell you whether a given paper is OA or not, name its copyright license (eg CC-BY), and give you the URL where to find it.
+      </li>
+      <li>
+        <strong>Full ISSN support:</strong>
+        OpenAlex now provides a comprehensive list of ISSNs associated with each journal, including the <a
+          href="https://www.issn.org/understanding-the-issn/assignment-rules/the-issn-l-for-publications-on-multiple-media/">ISSN-L</a>, the standard for for deduplicating journals.
+      </li>
+      <li>
+        <strong>ORCID:</strong>
+        In addition to disambiguating authors, OpenAlex also matches authors to their <a href="https://orcid.org/">ORCID</a> IDs.
+      </li>
+      <li>
+        <strong>ROR:</strong>
+        We report <a href="https://ror.org/">ROR</a> IDs, the new standard which has replaced the old GRID system. Since there's a
+        simple 1-to-1 mapping between them, it's easy to
+        <a href="https://ror.readme.io/docs/gridror-transition-faq">transition from GRID to ROR.</a>
+      </li>
+      <li>
+        <strong>REST API:</strong>
+        Because not everyone has the time and money to manage a 500GB dataset, we're launching a free <router-link to="./rest-api">REST API</router-link> that will support easy, expressive access to the dataset without the need for much technical knowledge.
+      </li>
 
     </ul>
 
@@ -213,7 +230,7 @@
       since OpenAlex is still under construction, and so we don't currently have any data to share.
     </p>
     <p>
-      Please <a href="http://eepurl.com/hA8PhL">subscrie to our mailing list</a> to get updates!
+      Please <a href="http://eepurl.com/hA8PhL">subscribe to our mailing list</a> to get updates!
     </p>
     <div class="py-12"></div>
 
