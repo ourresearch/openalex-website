@@ -76,12 +76,7 @@
         that anyone can use, without having to host it or get the code running. Of course, if you want to create your
         own local API to serve the dataset you can still do that.
       </li>
-      <li>
-        <strong>Random webpage-hosted papers:</strong>
-        MAG piggybacked their harvesting on the Bing crawler, which spiders the whole Web. In contrast, OpenAlex just
-        focuses on scholarly sources. This targeted approach provides better coverage in some ways, and worse in others.
-        In particular, MAG indexed papers hosted exclusively on informal faculty webpages; OpenAlex doesn't.
-      </li>
+
     </ul>
 
 
@@ -103,11 +98,11 @@
     <ul>
       <li>
         <strong>Rank:</strong>
-        MAG computed a "rank" property for lots of things. We won't continue to update this rank.
+        MAG computed a "rank" property for lots of things. We won't continue to update this rank after Jan 3.
       </li>
       <li>
         <strong>Family:</strong>
-        MAG's concept of "family" was used to group a preprint with its associated paper. We won't keep doing this.
+        MAG's concept of "family" was used to group a preprint with its associated paper. We won't keep doing this after Jan 3.
         Instead, OpenAlex treats a preprint and associated paper as the <em>same work,</em> with two different <em>versions.</em>
         That version relationship is enumerated in the new
         <router-link to="./schema#PaperUrls_Version">PaperUrls.version</router-link>
@@ -126,14 +121,18 @@
         In an early announcement, we said OpenAlex might not support conference papers. This turns out to be only partly
         true. We actually will index the vast majority of conference <em>papers.</em> However, we won't do a good job of
         indexing the <em>conference instances</em> and <em>conference series</em> that publish the papers. Those tables
-        will be frozen.
+        will be frozen after Jan 3.
+      </li>
+      <li>
+        <strong>Random webpage-hosted papers:</strong>
+        MAG indexed papers informally hosted on faculty and personal homepages; after Jan 3, we won't be adding more of these.
       </li>
       <li>
         <strong>Paper resources:</strong> This table, which gathered code and data associated with a given papers, will
-        be frozen, at least for now.
+        be frozen on Jan 3.
       </li>
       <li>
-        <strong>Paper citation contexts:</strong> This table, indexed the text around each citation, will be frozen.
+        <strong>Paper citation contexts:</strong> This table, indexed the text around each citation, will be frozen on Jan 3.
       </li>
     </ul>
 
