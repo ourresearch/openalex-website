@@ -12,6 +12,20 @@
       two datasets.
     </p>
 
+    <ol>
+      <li><a href="#formatting-changes">Formatting changes</a></li>
+      <li>
+        <a href="#data-changes">Data changes</a>
+        <ol>
+          <li><a href="#data-changes-unsupported">Unsupported</a></li>
+          <li><a href="#data-changes-archival">Archival</a></li>
+          <li><a href="#data-changes-ongoing">Ongoing</a></li>
+          <li><a href="#data-changes-ongoing"><a href="#data-changes-new">New</a></a></li>
+        </ol>
+      </li>
+      <li><a href="#coverage-comparison">Coverage comparison</a></li>
+    </ol>
+
     <h4 class="text-h4" id="formatting-changes">1. ⚠️ Formatting changes (breaking!)</h4>
     <p>
       For the most part, the OpenAlex data dump is formatted just like the MAG one, for compatibility purposes. However,
@@ -37,9 +51,23 @@
     </ul>
 
 
+    <h4 class="text-h4" id="data-changes">2. ↪️ Data changes️</h4>
+    <p>
+      There are four main relationships between the data/features of OpenAlex and MAG:
+      <a href="#data-changes-unsupported">Unsupported,</a> <a href="#data-changes-archival">Archival,</a> <a
+        href="#data-changes-ongoing">Ongoing,</a> and
+      <a href="#data-changes-new">New.</a> Depending on the data type, new data may come from MAG or OpenAlex, and this
+      will in some cases change on January 3, the date of OpenAlex official release (and approximately the date when MAG
+      is no longer updated). Here's a picture:
+    </p>
+    <img src="https://i.imgur.com/NFd267I.png" alt="" style="max-width: 800px;">
+    <p>As you can see, a lot changes on January 3 when OpenAlex comes out of beta and MAG stops being updated. Currently, all data is live (regularly updated), and most updates are sourced from MAG, since MAG is still active. After Jan 3, most data will be updated via from OpenAlex itself, and some data will become frozen (longer receive updates).</p>
 
-    <h4 class="text-h4 pt-12" id="data-changes">2. ↪️ Data changes️</h4>
-    <h5 class="text-h5" id="data-changes-removed">2.1 ❌ Removed</h5>
+    <p>Below, we dig in to the different data types: </p>
+
+    <h5 class="text-h5" id="data-changes-unsupported">2.1 ❌ Unsupported</h5>
+    <p>These are MAG data types and functionality that are <em>not included</em> in OpenAlex.
+    <p>
     <ul>
       <li>
         <strong>Patents:</strong>
@@ -56,33 +84,138 @@
       </li>
       <li>
         <strong>Random webpage-hosted papers:</strong>
-
         MAG piggybacked their harvesting on the Bing crawler, which spiders the whole Web. In contrast, OpenAlex just
         focuses on scholarly sources. This targeted approach provides better coverage in some ways, and worse in others.
         In particular, MAG indexed papers hosted exclusively on informal faculty webpages; OpenAlex doesn't.
       </li>
     </ul>
 
-    <h5 class="text-h5" id="data-changes-frozen">2.2 ❄️ Frozen</h5>
-    <p>MAG included some types of data that OpenAlex will continue to store and release, but <em>without updating it.</em>  This frozen data is still useful for many purposes, including backwards compatibility and historical research &mdash; but it's important to remember that after Jan 1, it'll become increasingly stale, and increasingly unsuitable for many use cases.
+
+    <h5 class="text-h5" id="data-changes-archival">2.2 📦️ Archival</h5>
+    <p>This data is included in OpenAlex. Until Jan 3, it will be updated via MAG data dumps; after Jan 3, it be included in the OpenAlex data dump and API, but it will
+      <em>no longer be updated.</em>
+    </p>
+
+    <p>
+      This frozen data will remain useful for many purposes, including backwards compatibility and historical research
+      &mdash; but it's important to remember that after Jan 3, it'll become increasingly stale, and increasingly
+      unsuitable for many use cases.
     </p>
     <p>
-      Please see the <router-link to="./schema">schema docs</router-link> to get the detailed, column-level documentation for which data is frozen. But here's a high-level overview:
+      Please see the
+      <router-link to="./schema">schema docs</router-link>
+      to get the detailed, column-level documentation for which data will be frozen. But here's a high-level overview:
     </p>
     <ul>
       <li>
-        MAG computed
+        <strong>Rank:</strong>
+        MAG computed a "rank" property for lots of things. We won't continue to update this rank.
+      </li>
+      <li>
+        <strong>Family:</strong>
+        MAG's concept of "family" was used to group a preprint with its associated paper. We won't keep doing this.
+        Instead, OpenAlex treats a preprint and associated paper as the <em>same work,</em> with two different <em>versions.</em>
+        That version relationship is enumerated in the new
+        <router-link to="./schema#PaperUrls_Version">PaperUrls.version</router-link>
+        column.
+      </li>
+      <li>
+        <strong>GRID IDs:</strong>
+        GRID has now been <a href="https://www.digital-science.com/grid-passes-the-torch-to-ror-faqs/">officially
+        replaced</a> by
+        <a href="https://ror.org/">ROR,</a> and we'll stop updating GRID IDs, and use ROR IDs instead. Since there's a
+        simple 1-to-1 mapping between them, it's easy to
+        <a href="https://ror.readme.io/docs/gridror-transition-faq">transition from GRID to ROR.</a>
+      </li>
+      <li>
+        <strong>Conferences:</strong>
+        In an early announcement, we said OpenAlex might not support conference papers. This turns out to be only partly
+        true. We actually will index the vast majority of conference <em>papers.</em> However, we won't do a good job of
+        indexing the <em>conference instances</em> and <em>conference series</em> that publish the papers. Those tables
+        will be frozen.
+      </li>
+      <li>
+        <strong>Paper resources:</strong> This table, which gathered code and data associated with a given papers, will
+        be frozen.
+      </li>
+      <li>
+        <strong>Paper citation contexts:</strong> This table, indexed the text around each citation, will be frozen.
       </li>
     </ul>
 
 
     <h5 class="text-h5" id="data-changes-ongoing">2.3 👍 Ongoing</h5>
+    <p>
+      This data is included in OpenAlex. Until Jan 3, it'll be updated via MAG data
+      dumps. After Jan 3, it will be updated via OpenAlex's algorithms and data sources.
+    </p>
+    <p>
+      For many MAG use cases, you'll be able to ignore this transition, as the data will be compatible. However, it's
+      important to note that our methods of data collection and processing differ from MAG's. So for many analytical and
+      research cases, it'll be important to note the discontinuity on Jan 3, as MAG's update processes are replaced by
+      ours. OpenAlex is <em>compatible</em> with MAG, but it is absolutely not <em>identical</em> to MAG. In some ways
+      our coverage will be better and more accurate; in others, not so much.
+    </p>
+    <p>
+      Because we get a lot of questions about a few specific MAG data types, we're listing them below to clear up any
+      confusion &mdash; but keep in mind this list is not comprehensive:
+    </p>
+    <li>
+      <strong>Author name disambiguation (AND):</strong>
+      Like MAG, OpenAlex will use document properties (title, topic, journal, etc) to identify and assign unique author
+      IDs, even when authors share a name &mdash; so you'll see one ID for the biologist Jane Smith, and a different one
+      for the Jane Smith who's an art historian. We'll also identify two name strings as referring to the same person
+      even if they are written differently ("J smith" and "Jane Smith").
+    </li>
+    <li>
+      <strong>Work clustering:</strong>
+      Like MAG, we'll infer that two papers are the same, even when they don't have <a
+        href="https://en.wikipedia.org/wiki/Persistent_identifier">PIDs.</a> We'll use fingerprint-based fuzzy matching
+      that's robust again typos, and can identify different versions of the same paper (preprint and version of record,
+      for example).
+    </li>
+    <li>
+      <strong>Institution identification:</strong>
+      Like MAG, we'll identify authors' institutions, even there are no <a
+        href="https://en.wikipedia.org/wiki/Persistent_identifier">PIDs</a> or other structured metadata to use. MAG
+      used the
+      <a href="https://www.grid.ac/">GRID database</a> to unambiguously identify institutions.
+    </li>
+    <li>
+      <strong>Topic (field of study) tagging:</strong>
+      Like MAG, we automatically tag works with their field of study (variously described as "concepts," "topics," and
+      "fields of study" in the MAG documentation. We're using MAG's same automatically-generated controlled taxonomy,
+      although we've trimmed it down a bit: we only assign topics that are apply to more than 500 individual works. This
+      means we support about half as many topics as MAG did.
+
+    </li>
+
+
     <h5 class="text-h5" id="data-changes-new">2.4 🔥 New</h5>
+    <p>
+      These data types and functions are included in OpenAlex, but are <em>not in MAG</em>. They're currently updated using
+      OpenAlex's algorithms and data sources, and that will continue after Jan 3.
+    </p>
+    <ul>
 
+    </ul>
 
-
-
-    <h4 class="text-h4 pt-12" id="coverage-comparison">3. Coverage comparison</h4>
+    <h4 class="text-h4" id="coverage-comparison">3. 📊 Coverage comparison</h4>
+    <p>
+      Because OpenAlex will use a different set of sources and algorithms from MAG, our coverage and accuracy will be
+      different. We'd like to compare the two in greater detail here &mdash; for example, to compare the systems based
+      on number and type of new articles, relative percentage of new papers which include institutional affiliation
+      information, precision/recall of author clustering, and so forth.
+    </p>
+    <p>
+      We're making progress on these comparisons now, and our internal data looks good. OpenAlex will offer similar
+      accuracy and coverage to MAG (better in some ways, and worse in others). However, the comparisons are in flux
+      since OpenAlex is still under construction, and so we don't currently have any data to share.
+    </p>
+    <p>
+      Please <a href="http://eepurl.com/hA8PhL">subscrie to our mailing list</a> to get updates!
+    </p>
+    <div class="py-12"></div>
 
 
   </v-container>
@@ -95,6 +228,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.text-h4 {
+  padding-top: 120px;
+}
+
+.text-h5 {
+  padding-top: 40px;
+}
 
 </style>
