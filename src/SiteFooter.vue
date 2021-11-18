@@ -19,25 +19,14 @@
           <div>
             <router-link to="/mag-migration-guide">MAG migration guide</router-link>
           </div>
-        </v-col>
-        <v-col cols="12" sm="2">
           <div>
             <router-link to="/faq">FAQ</router-link>
           </div>
-          <div>
-            <router-link to="/coverage">Coverage</router-link>
-          </div>
-          <div>
-            <router-link to="/roadmap">Roadmap</router-link>
-          </div>
-          <div>
-            <router-link to="/license">License</router-link>
-          </div>
-          <div>
-            <router-link to="/pricing">Pricing</router-link>
-          </div>
         </v-col>
         <v-col cols="12" sm="2">
+          <div>
+            <router-link to="/about">About</router-link>
+          </div>
           <div>
             <router-link to="/contact">Contact</router-link>
           </div>
@@ -51,7 +40,7 @@
             <a href="https://github.com/ourresearch/openalex-guts" target="_blank">Source code</a>
           </div>
         </v-col>
-        <v-col cols="12" sm="2" class="text-center">
+        <v-col cols="12" sm="4" class="text-center">
                               <router-link to="/">
                                   <img class="site-footer-logo" src="./assets/openalex-logo-icon.png" alt=""/>
                               </router-link>
