@@ -3818,7 +3818,6 @@ h2 {
 
 // deal with all the pasted markup
 .card {
-  padding-top: 100px;
 }
 
 h5 {
