@@ -9,10 +9,10 @@
 
     >
       <router-link to="/" class="d-flex main-logo">
-        <img src="./assets/OpenAlex-logo-5.png" />
-<!--        <span class="logo-text">-->
-<!--          OpenAlex-->
-<!--        </span>-->
+        <img src="./assets/OpenAlex-logo-5.png"/>
+        <!--        <span class="logo-text">-->
+        <!--          OpenAlex-->
+        <!--        </span>-->
         <!--        <v-img-->
         <!--            alt="OurResearch Logo"-->
         <!--            class="shrink mr-2"-->
@@ -67,14 +67,9 @@
         <v-btn class="no-active low-key-button" text to="./faq">FAQ</v-btn>
 
 
-
-
-
-
-
         <v-btn class="no-active low-key-button" text to="./contact">Contact</v-btn>
-<!--        <v-btn class="no-active low-key-button" text to="./projects">Projects</v-btn>-->
-<!--        <v-btn class="no-active low-key-button" text to="./transparency">Transparency</v-btn>-->
+        <!--        <v-btn class="no-active low-key-button" text to="./projects">Projects</v-btn>-->
+        <!--        <v-btn class="no-active low-key-button" text to="./transparency">Transparency</v-btn>-->
       </v-toolbar-items>
 
       <!--      MOBILE MENU -->
@@ -86,10 +81,27 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item to="/">Home</v-list-item>
-            <v-list-item to="./use-the-data">Use the data</v-list-item>
-            <v-list-item to="./learn-more">Learn more</v-list-item>
-            <v-list-item to="./contact">Contact</v-list-item>
+            <v-list-item to="/data-dump">
+              Data dump
+            </v-list-item>
+            <v-list-item to="/rest-api">
+              REST API
+            </v-list-item>
+            <v-list-item to="/schema">
+              Schema
+            </v-list-item>
+            <v-list-item to="/mag-migration-guide">
+              MAG migration guide
+            </v-list-item>
+            <v-list-item to="/about">
+              About
+            </v-list-item>
+            <v-list-item to="/FAQ">
+              FAQ
+            </v-list-item>
+            <v-list-item to="./contact">
+              Contact
+            </v-list-item>
           </v-list>
         </v-menu>
       </div>
@@ -100,7 +112,7 @@
       <router-view/>
     </v-main>
 
-    <site-footer />
+    <site-footer/>
 
   </v-app>
 </template>
@@ -146,7 +158,7 @@ export default {
 
 body {
   .v-application {
-      font-family: Inconsolata !important;
+    font-family: Inconsolata !important;
     font-size: 16px;
 
     p, ul, ol, li, code {
@@ -185,18 +197,19 @@ body {
 }
 
 
-
 a.main-logo {
   img {
     height: 70px;
     margin-left: -20px;
   }
+
   color: #000 !important;
   font-family: dosis;
   font-weight: 300;
   letter-spacing: .05em;
   font-size: 30px;
   text-decoration: none;
+
   .logo-text {
     margin-left: 10px;
     padding-left: 10px;
