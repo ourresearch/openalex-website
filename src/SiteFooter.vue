@@ -77,6 +77,7 @@ export default {
 <style scoped lang="scss">
 .site-footer {
   line-height: 1.8;
+  margin-top: 150px;
   .body-2 {
     font-family: Inconsolata;
   }
