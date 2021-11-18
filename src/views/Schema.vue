@@ -3,31 +3,17 @@
     <v-container class="mb-12">
       <h2 class="text-h3">Schema</h2>
       <p>
-        OpenAlex is built to be a drop-in replacement for <a
-          href="https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/">Microsoft Academic Graph
-        (MAG)</a>&mdash;that means the schema is backwards-compatible with
-        <a href="https://docs.microsoft.com/en-us/academic-services/graph/reference-data-schema">MAG's schema</a>,
-        allowing MAG users to switch over to OpenAlex with little fuss.. However, although the schemas are <em>compatible</em>
-        they're not <em>identical.</em> There are three important categories of data in the schema below:
+        This page documents each of the columns and tables in the data dump (learn how to <router-link to="./data-dump">download the data dump here</router-link>), as well as how they all connect to one another.
       </p>
-      <ul>
-        <li>
-          <strong>❄️ Frozen:</strong> These columns are currently live and updated regularly using MAG data. However,
-          after December 31st, when
-          <a href="https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/">MAG
-            is retired,</a> they will <em>no longer be updated at all.</em> Although they will remain in the dataset for
-          compatibility, their data will grow increasingly stale.
-        </li>
-        <li>
-          <strong>🔥 New:</strong> These columns are not in MAG. They are currently live and updated regularly using our
-          data, and will continue to be updated indefinitely.
-        </li>
-        <li>
-
-          <strong>Ongoing:</strong> These columns are currently live and updated regularly using MAG data. AFter
-          December 31st, they will continue to be updated indefinitely, but the data will come from us.
-        </li>
-      </ul>
+      <p>
+        You may notice that this schema is quite similar to the
+        <a href="https://docs.microsoft.com/en-us/academic-services/graph/reference-data-schema">Microsoft Academic Graph (MAG) schema.</a>
+        However, although the schemas are <em>compatible</em>
+        they're not <em>identical.</em> If you're migrating to OpenAlex from MAG, you'll want to check out the <router-link to="./mag-migration-guide">MAG migration guide</router-link> for more info.
+      </p>
+      <p>
+        You may also want to pay particular attention to tables and columns marked <router-link to="./mag-migration-guide#data-changes-archival">📦️ARCHIVAL</router-link> (not updated after Jan 3) and <router-link to="./mag-migration-guide#data-changes-archival">🔥NEW</router-link> (in OpenAlex, but not MAG).
+      </p>
     </v-container>
 
 
@@ -650,11 +636,11 @@
                 Referred by PaperAuthorAffiliations ( AffiliationId ) </title></a>
             <a xlink:href='#Affiliations_Rank'>
               <text id='Affiliations.Rank' x='931' y='711'>
-                Rank ❄️
+                Rank 📦️
               </text>
               <title>Rank
                 integer
-                FROZEN; no new ranks are being added.</title></a>
+                ARCHIVAL; no new ranks will be added after Jan 3.</title></a>
             <text x='1069' y='708' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Affiliations_NormalizedName'>
               <text id='Affiliations.NormalizedName' x='931' y='727'>NormalizedName</text>
@@ -671,7 +657,7 @@
               <text id='Affiliations.GridId' x='931' y='759'>GridId</text>
               <title>GridId
                 varchar
-                FROZEN; RorId is the new standard identifier for organizations</title></a>
+                ARCHIVAL; RorId is the new standard identifier for organizations</title></a>
             <text x='1069' y='756' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Affiliations_RorId'>
               <text id='Affiliations.RorId' x='931' y='775'>RorId 🔥</text>
@@ -695,10 +681,10 @@
                 bigint</title></a>
             <text x='1069' y='820' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Affiliations_PaperFamilyCount'>
-              <text id='Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount ❄️</text>
+              <text id='Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount 📦️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as PaperCount.</title></a>
+                ARCHIVAL; same value as PaperCount after Jan 3.</title></a>
             <text x='1069' y='836' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Affiliations_CitationCount'>
               <text id='Affiliations.CitationCount' x='931' y='855'>CitationCount</text>
@@ -788,10 +774,10 @@
               <title>Referred by AuthorExtendedAttributes ( AuthorId )
                 Referred by PaperAuthorAffiliations ( AuthorId ) </title></a>
             <a xlink:href='#Authors_Rank'>
-              <text id='Authors.Rank' x='1139' y='535'>Rank ❄️</text>
+              <text id='Authors.Rank' x='1139' y='535'>Rank 📦️</text>
               <title>Rank
                 integer
-                FROZEN; no new ranks are being added</title></a>
+                ARCHIVAL; no new ranks will be added after Jan 3</title></a>
             <text x='1309' y='532' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Authors_NormalizedName'>
               <text id='Authors.NormalizedName' x='1139' y='551'>NormalizedName</text>
@@ -827,10 +813,10 @@
                 bigint</title></a>
             <text x='1309' y='612' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Authors_PaperFamilyCount'>
-              <text id='Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount ❄️</text>
+              <text id='Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount 📦️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as PaperCount</title></a>
+                ARCHIVAL; same value as PaperCount after Jan 3</title></a>
             <text x='1309' y='628' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Authors_CitationCount'>
               <text id='Authors.CitationCount' x='1139' y='647'>CitationCount</text>
@@ -853,9 +839,9 @@
                   height='336'/>
             <rect class='entity' x='848' y='1016' width='208' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
             <a xlink:href='#ConferenceInstances'>
-              <text x='883' y='1035' class='white'>ConferenceInstances ❄️</text>
+              <text x='883' y='1035' class='white'>ConferenceInstances 📦️</text>
               <title> ConferenceInstances
-                FROZEN; Base table for Conference Instances (mag/ConferenceInstances.txt)</title></a>
+                ARCHIVAL; Base table for Conference Instances (mag/ConferenceInstances.txt)</title></a>
             <use id='idx1' x='850' y='1052' xlink:href='#idx1'><title>Distribution ( ConferenceInstanceId ) Sorting (
               ConferenceInstanceId ) </title></use>
             <a xlink:href='#ConferenceInstances_ConferenceInstanceId'>
@@ -939,10 +925,10 @@
                 bigint</title></a>
             <text x='1053' y='1252' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceInstances_PaperFamilyCount'>
-              <text id='ConferenceInstances.PaperFamilyCount' x='867' y='1271'>PaperFamilyCount ❄️</text>
+              <text id='ConferenceInstances.PaperFamilyCount' x='867' y='1271'>PaperFamilyCount</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as PaperCount</title></a>
+                ARCHIVAL; same value as PaperCount after Jan 3</title></a>
             <text x='1053' y='1268' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceInstances_CitationCount'>
               <text id='ConferenceInstances.CitationCount' x='867' y='1287'>CitationCount</text>
@@ -969,9 +955,9 @@
                   height='176'/>
             <rect class='entity' x='640' y='1048' width='176' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
             <a xlink:href='#ConferenceSeries'>
-              <text x='669' y='1067' class='white'>ConferenceSeries ❄️</text>
+              <text x='669' y='1067' class='white'>ConferenceSeries 📦️</text>
               <title> ConferenceSeries
-                FROZEN; Base table for Conference Series (mag/ConferenceSeries.txt)</title></a>
+                ARCHIVAL; Base table for Conference Series (mag/ConferenceSeries.txt)</title></a>
             <use id='idx1' x='642' y='1084' xlink:href='#idx1'><title>Distribution ( ConferenceSeriesId ) Sorting (
               ConferenceSeriesId ) </title></use>
             <a xlink:href='#ConferenceSeries_ConferenceSeriesId'>
@@ -988,10 +974,10 @@
               <title>Referred by Papers ( ConferenceSeriesId )
                 Referred by ConferenceInstances ( ConferenceSeriesId ) </title></a>
             <a xlink:href='#ConferenceSeries_Rank'>
-              <text id='ConferenceSeries.Rank' x='659' y='1111'>Rank ❄️</text>
+              <text id='ConferenceSeries.Rank' x='659' y='1111'>Rank</text>
               <title>Rank
                 integer
-                FROZEN; no new ranks are being added</title></a>
+                ARCHIVAL; no new ranks will be added after Jan 3</title></a>
             <text x='813' y='1108' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceSeries_NormalizedName'>
               <text id='ConferenceSeries.NormalizedName' x='659' y='1127'>NormalizedName</text>
@@ -1010,10 +996,10 @@
                 bigint</title></a>
             <text x='813' y='1156' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceSeries_PaperFamilyCount'>
-              <text id='ConferenceSeries.PaperFamilyCount' x='659' y='1175'>PaperFamilyCount ❄️</text>
+              <text id='ConferenceSeries.PaperFamilyCount' x='659' y='1175'>PaperFamilyCount</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as PaperCount</title></a>
+                ARCHIVAL; same value as PaperCount after Jan 3</title></a>
             <text x='813' y='1172' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#ConferenceSeries_CitationCount'>
               <text id='ConferenceSeries.CitationCount' x='659' y='1191'>CitationCount</text>
@@ -1169,10 +1155,10 @@
                 Referred by FieldOfStudyExtendedAttributes ( FieldOfStudyId )
                 Referred by PaperFieldsOfStudy ( FieldOfStudyId ) </title></a>
             <a xlink:href='#FieldsOfStudy_Rank'>
-              <text id='FieldsOfStudy.Rank' x='643' y='167'>Rank ❄️</text>
+              <text id='FieldsOfStudy.Rank' x='643' y='167'>Rank 📦️</text>
               <title>Rank
                 varchar
-                FROZEN; no new ranks are being added.</title></a>
+                ARCHIVAL; no new ranks will be added after Jan 3.</title></a>
             <text x='781' y='164' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#FieldsOfStudy_NormalizedName'>
               <text id='FieldsOfStudy.NormalizedName' x='643' y='183'>NormalizedName</text>
@@ -1202,10 +1188,10 @@
                 bigint</title></a>
             <text x='781' y='244' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#FieldsOfStudy_PaperFamilyCount'>
-              <text id='FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount ❄️</text>
+              <text id='FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount 📦️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as PaperCount.</title></a>
+                ARCHIVAL; same value as PaperCount after Jan 3.</title></a>
             <text x='781' y='260' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#FieldsOfStudy_CitationCount'>
               <text id='FieldsOfStudy.CitationCount' x='643' y='279'>CitationCount</text>
@@ -1238,10 +1224,10 @@
               <use id='ref' x='804' y='588' xlink:href='#ref'/>
               <title>Referred by Papers ( JournalId ) </title></a>
             <a xlink:href='#Journals_Rank'>
-              <text id='Journals.Rank' x='675' y='615'>Rank ❄️</text>
+              <text id='Journals.Rank' x='675' y='615'>Rank 📦️</text>
               <title>Rank
                 integer
-                FROZEN; no new ranks are being added</title></a>
+                ARCHIVAL; no new ranks will be added after Jan 3</title></a>
             <text x='813' y='612' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Journals_NormalizedName'>
               <text id='Journals.NormalizedName' x='675' y='631'>NormalizedName</text>
@@ -1296,10 +1282,10 @@
                 bigint</title></a>
             <text x='813' y='756' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Journals_PaperFamilyCount'>
-              <text id='Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount ❄️</text>
+              <text id='Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount 📦️</text>
               <title>PaperFamilyCount
                 bigint
-                FROZEN; same value as PaperCount</title></a>
+                ARCHIVAL; same value as PaperCount after Jan 3</title></a>
             <text x='813' y='772' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Journals_CitationCount'>
               <text id='Journals.CitationCount' x='675' y='791'>CitationCount</text>
@@ -1415,9 +1401,9 @@
                   height='96'/>
             <rect class='entity' x='336' y='1128' width='160' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperCitationContexts'>
-              <text x='341' y='1147' class='white'>PaperCitationContexts ❄️</text>
+              <text x='341' y='1147' class='white'>PaperCitationContexts 📦️</text>
               <title> PaperCitationContexts
-                FROZEN; citation contexts (nlp/PaperCitationContexts.txt)</title></a>
+                ARCHIVAL, not updated after Jan 3; citation contexts (nlp/PaperCitationContexts.txt)</title></a>
             <use id='idx1' x='338' y='1164' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
             <a xlink:href='#PaperCitationContexts_PaperId'>
@@ -1525,7 +1511,7 @@
               <text id='PaperFieldsOfStudy.AlgorithmVersion' x='451' y='327'>AlgorithmVersion 🔥</text>
               <title>AlgorithmVersion
                 integer
-                NEW; version of algorithm to assign fields. Possible values: 1=old MAG (FROZEN), 2=OpenAlex</title></a>
+                NEW; version of algorithm to assign fields. Possible values: 1=old MAG (ARCHIVAL), 2=OpenAlex</title></a>
             <text x='589' y='324' text-anchor='end' class='colType'>#</text>
             <!-- == Table 'PaperMeSH' == -->
             <rect id='depict_PaperMeSH' class='entity' style='stroke:#ADBCC9' x='96' y='760' width='144' height='144'/>
@@ -1655,9 +1641,9 @@
                   height='128'/>
             <rect class='entity' x='80' y='616' width='160' height='28' style='stroke:#ADBCC9; fill:#6A89A1'/>
             <a xlink:href='#PaperResources'>
-              <text x='107' y='635' class='white'>PaperResources ❄️</text>
+              <text x='107' y='635' class='white'>PaperResources 📦️</text>
               <title> PaperResources
-                FROZEN; no longer updated. Data and code urls associated with papers (mag/PaperResources.txt)</title>
+                ARCHIVAL; not updated after Jan 3. Data and code urls associated with papers (mag/PaperResources.txt)</title>
             </a>
             <use id='idx1' x='82' y='652' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1810,10 +1796,10 @@
                 Referred by PaperFieldsOfStudy ( PaperId )
                 Referred by PaperAuthorAffiliations ( PaperId ) </title></a>
             <a xlink:href='#Papers_Rank'>
-              <text id='Papers.Rank' x='387' y='535'>Rank ❄️</text>
+              <text id='Papers.Rank' x='387' y='535'>Rank 📦️</text>
               <title>Rank
                 integer
-                FROZEN; no new ranks are being added</title></a>
+                ARCHIVAL; no new ranks will be added after Jan 3</title></a>
             <text x='541' y='532' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Papers_Doi'>
               <text id='Papers.Doi' x='387' y='551'>Doi</text>
@@ -1827,7 +1813,7 @@
               <title>DocType
                 varchar
                 Possible values: Book, BookChapter, Conference, Dataset, Journal, Patent, Repository, Thesis, NULL :
-                unknown. Patent is FROZEN; no new Patents are being added.</title></a>
+                unknown. Patent is REMOVED; no Patents are now included.</title></a>
             <text x='541' y='564' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_Genre'>
               <text id='Papers.Genre' x='387' y='583'>Genre 🔥</text>
@@ -1894,11 +1880,11 @@
               <text id='Papers.ConferenceSeriesId' x='387' y='743'
                     onmouseover="hghl(['Papers_Fk_Papers_ConferenceSeries','ConferenceSeries.ConferenceSeriesId'])"
                     onmouseout="uhghl(['Papers_Fk_Papers_ConferenceSeries','ConferenceSeries.ConferenceSeriesId'])">
-                ConferenceSeriesId ❄️
+                ConferenceSeriesId 📦️
               </text>
               <title>ConferenceSeriesId
                 bigint
-                FROZEN; no longer updated, no new Conference Series are being added. FOREIGN KEY references
+                ARCHIVAL; not updated after Jan 3, no new Conference Series will be added after Jan 3. FOREIGN KEY references
                 ConferenceSeries.ConferenceSeriesId.</title></a>
             <a xlink:href='#Papers.ConferenceSeriesId'>
               <use id='fk' x='532' y='732' xlink:href='#fk'/>
@@ -1907,11 +1893,11 @@
               <text id='Papers.ConferenceInstanceId' x='387' y='759'
                     onmouseover="hghl(['Papers_Fk_Papers_ConferenceInstances','ConferenceInstances.ConferenceInstanceId'])"
                     onmouseout="uhghl(['Papers_Fk_Papers_ConferenceInstances','ConferenceInstances.ConferenceInstanceId'])">
-                ConferenceInstanceId ❄️
+                ConferenceInstanceId 📦️
               </text>
               <title>ConferenceInstanceId
                 bigint
-                FROZEN; no longer updated, no new Conference Instances are being added. FOREIGN KEY references
+                ARCHIVAL; not updated after Jan 3, no new Conference Instances will be added after Jan 3. FOREIGN KEY references
                 ConferenceInstances.ConferenceInstanceId.</title></a>
             <a xlink:href='#Papers.ConferenceInstanceId'>
               <use id='fk' x='532' y='748' xlink:href='#fk'/>
@@ -1958,16 +1944,16 @@
                 varchar</title></a>
             <text x='541' y='884' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_FamilyId'>
-              <text id='Papers.FamilyId' x='387' y='903'>FamilyId ❄️</text>
+              <text id='Papers.FamilyId' x='387' y='903'>FamilyId 📦️</text>
               <title>FamilyId
                 bigint
-                FROZEN; no longer updated.</title></a>
+                ARCHIVAL; not updated after Jan 3.</title></a>
             <text x='541' y='900' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Papers_FamilyRank'>
-              <text id='Papers.FamilyRank' x='387' y='919'>FamilyRank ❄️</text>
+              <text id='Papers.FamilyRank' x='387' y='919'>FamilyRank 📦️</text>
               <title>FamilyRank
                 bigint
-                FROZEN; no longer updated.</title></a>
+                ARCHIVAL; not updated after Jan 3.</title></a>
             <text x='541' y='916' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Papers_DocSubTypes'>
               <text id='Papers.DocSubTypes' x='387' y='935'>DocSubTypes</text>
@@ -2065,10 +2051,10 @@
                 Possible values: general, disease, disease_cause, medical_treatment, symptom</title></a>
             <text x='973' y='372' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#RelatedFieldOfStudy_Rank'>
-              <text id='RelatedFieldOfStudy.Rank' x='851' y='391'>Rank ❄️</text>
+              <text id='RelatedFieldOfStudy.Rank' x='851' y='391'>Rank 📦️</text>
               <title>Rank
                 real
-                FROZEN; no new ranks are being added.</title></a>
+                ARCHIVAL; no new ranks will be added after Jan 3.</title></a>
             <text x='973' y='388' text-anchor='end' class='colType'>#</text>
           </g>
         </svg>
@@ -2116,7 +2102,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2134,28 +2120,28 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>❄️</td>
+              <td>📦️</td>
               <td><a id='Affiliations_Rank'>Rank</a></td>
               <td> integer</td>
-              <td> FROZEN&#59; no new ranks are being added&#46;</td>
+              <td> ARCHIVAL&#59; no new ranks will be added after Jan 3&#46;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_NormalizedName'>NormalizedName</a></td>
               <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_DisplayName'>DisplayName</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>❄️</td>
+              <td>📦️</td>
               <td><a id='Affiliations_GridId'>GridId</a></td>
               <td> varchar</td>
-              <td> FROZEN&#59; RorId is the new standard identifier for organizations</td>
+              <td> ARCHIVAL&#59; RorId is the new standard identifier for organizations</td>
             </tr>
             <tr>
               <td>🔥</td>
@@ -2164,97 +2150,64 @@
               <td> NEW&#59; ROR for this organization&#44; see https&#58;&#47;&#47;ror&#46;org&#44; https&#58;&#47;&#47;ror&#46;org&#47;&#58;RorId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_OfficialPage'>OfficialPage</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_WikiPage'>WikiPage</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_PaperCount'>PaperCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>❄️</td>
+              <td>📦️</td>
               <td><a id='Affiliations_PaperFamilyCount'>PaperFamilyCount </a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as PaperCount</td>
+              <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_CitationCount'>CitationCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_Iso3166Code'>Iso3166Code</a></td>
               <td> varchar</td>
               <td> Two&#45;letter country codes&#44; see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;ISO&#95;3166&#45;2</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_Latitude'>Latitude</a></td>
               <td> real</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_Longitude'>Longitude</a></td>
               <td> real</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Affiliations_CreatedDate'>CreatedDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Affiliations_UpdatedDate'>UpdatedDate</a></td>
               <td> timestamp</td>
               <td> NEW&#59; set values updated from new ror data</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Referring Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_Authors_Affiliations</td>
-              <td> (AffiliationId) &#8592; <a href='#outs&#46;Authors'
-                                              onclick="window.scrollTo(920, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Authors').classList.add('palpable'); return false;">Authors</a>(LastKnownAffiliationId)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperAuthorAffiliations_Affiliations</td>
-              <td> (AffiliationId) &#8592; <a href='#outs&#46;PaperAuthorAffiliations'
-                                              onclick="window.scrollTo(696, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperAuthorAffiliations').classList.add('palpable'); return false;">PaperAuthorAffiliations</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -2270,7 +2223,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2288,37 +2241,19 @@
               <td> FOREIGN KEY REFERENCES Authors&#46;AuthorId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='AuthorExtendedAttributes_AttributeType'>AttributeType</a></td>
               <td> integer</td>
               <td> Possible values&#58; 1&#61;Alternative name</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='AuthorExtendedAttributes_AttributeValue'>AttributeValue</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
               <th colspan='4'>Indexes</th>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_AuthorExtendedAttributes_Authors</td>
-              <td> (AuthorId) &#8594; <a href='#outs&#46;Authors'
-                                         onclick="window.scrollTo(920, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Authors').classList.add('palpable'); return false;">Authors</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -2334,7 +2269,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2352,28 +2287,28 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>❄️</td>
+              <td>📦️</td>
               <td><a id='Authors_Rank'>Rank</a></td>
               <td> integer</td>
-              <td> FROZEN&#59; no new ranks are being added</td>
+              <td> ARCHIVAL&#59; no new ranks will be added after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Authors_NormalizedName'>NormalizedName</a></td>
               <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Authors_DisplayName'>DisplayName</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥⚠️</td>
               <td><a id='Authors_Orcid'>Orcid</a></td>
               <td> varchar</td>
-              <td> NEW&#59; ORCID identifier for this author (see https://orcid.org)</td>
+              <td> NEW&#59; ORCID identifier for this author (see https://orcid.org). ⚠️ KNOWN ERROR: some ORCIDs are wrong, due to an error in the Crossref API. Should be fixed in next data dump.</td>
             </tr>
             <tr>
               <td>
@@ -2388,85 +2323,34 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Authors_PaperCount'>PaperCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>❄️</td>
+              <td>📦️</td>
               <td><a id='Authors_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as PaperCount</td>
+              <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Authors_CitationCount'>CitationCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Authors_CreatedDate'>CreatedDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Authors_UpdatedDate'>UpdatedDate</a></td>
               <td> timestamp</td>
               <td> NEW&#59; set when changes are made going forward</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_Authors_Affiliations</td>
-              <td> (LastKnownAffiliationId) &#8594; <a href='#outs&#46;Affiliations'
-                                                       onclick="window.scrollTo(712, 656);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Affiliations').classList.add('palpable'); return false;">Affiliations</a>(AffiliationId)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Referring Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_AuthorExtendedAttributes_Authors</td>
-              <td> (AuthorId) &#8592; <a href='#outs&#46;AuthorExtendedAttributes'
-                                         onclick="window.scrollTo(1144, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_AuthorExtendedAttributes').classList.add('palpable'); return false;">AuthorExtendedAttributes</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperAuthorAffiliations_Authors</td>
-              <td> (AuthorId) &#8592; <a href='#outs&#46;PaperAuthorAffiliations'
-                                         onclick="window.scrollTo(696, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperAuthorAffiliations').classList.add('palpable'); return false;">PaperAuthorAffiliations</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -2478,11 +2362,11 @@
         <div class='card-body'><a id='ConferenceInstances'
                                   onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceInstances').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> ConferenceInstances</h5></a>
-          <p class="text-muted">❄️ FROZEN&#59; Base table for Conference Instances &#40;mag&#47;ConferenceInstances&#46;txt&#41;</p>
+          <p class="text-muted">📦️ ARCHIVAL&#59; Base table for Conference Instances &#40;mag&#47;ConferenceInstances&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2500,13 +2384,13 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_NormalizedName'>NormalizedName</a></td>
               <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_DisplayName'>DisplayName</a></td>
               <td> varchar</td>
               <td></td>
@@ -2522,123 +2406,87 @@
               <td> FOREIGN KEY REFERENCES ConferenceSeries&#46;ConferenceSeriesId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_Location'>Location</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_OfficialUrl'>OfficialUrl</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_StartDate'>StartDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_EndDate'>EndDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_AbstractRegistrationDate'>AbstractRegistrationDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_SubmissionDeadlineDate'>SubmissionDeadlineDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_NotificationDueDate'>NotificationDueDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_FinalVersionDueDate'>FinalVersionDueDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_PaperCount'>PaperCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>❄️</td>
+              <td></td>
               <td><a id='ConferenceInstances_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as PaperCount</td>
+              <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_CitationCount'>CitationCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_Latitude'>Latitude</a></td>
               <td> real</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_Longitude'>Longitude</a></td>
               <td> real</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceInstances_CreatedDate'>CreatedDate</a></td>
               <td> varchar</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_ConferenceInstances_ConferenceSeries</td>
-              <td> (ConferenceSeriesId) &#8594; <a href='#outs&#46;ConferenceSeries'
-                                                   onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceSeries').classList.add('palpable'); return false;">ConferenceSeries</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Referring Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_Papers_ConferenceInstances</td>
-              <td> (ConferenceInstanceId) &#8592; <a href='#outs&#46;Papers'
-                                                     onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
               <td></td>
             </tr>
             </tbody>
@@ -2651,12 +2499,12 @@
         <div class='card-body'><a id='ConferenceSeries'
                                   onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceSeries').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> ConferenceSeries</h5></a>
-          <p class="text-muted">❄️ FROZEN&#59; Base table for Conference Series
+          <p class="text-muted">📦️ ARCHIVAL&#59; Base table for Conference Series
             &#40;mag&#47;ConferenceSeries&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2674,78 +2522,45 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>❄️</td>
+              <td></td>
               <td><a id='ConferenceSeries_Rank'>Rank</a></td>
               <td> integer</td>
-              <td> FROZEN&#59; no new ranks are being added</td>
+              <td> ARCHIVAL&#59; no new ranks will be added after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceSeries_NormalizedName'>NormalizedName</a></td>
               <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceSeries_DisplayName'>DisplayName</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceSeries_PaperCount'>PaperCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>️</td>
               <td><a id='ConferenceSeries_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as PaperCount</td>
+              <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceSeries_CitationCount'>CitationCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='ConferenceSeries_CreatedDate'>CreatedDate</a></td>
               <td> varchar</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Referring Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_Papers_ConferenceSeries</td>
-              <td> (ConferenceSeriesId) &#8592; <a href='#outs&#46;Papers'
-                                                   onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_ConferenceInstances_ConferenceSeries</td>
-              <td> (ConferenceSeriesId) &#8592; <a href='#outs&#46;ConferenceInstances'
-                                                   onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceInstances').classList.add('palpable'); return false;">ConferenceInstances</a>
-              </td>
               <td></td>
             </tr>
             </tbody>
@@ -2762,7 +2577,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2770,33 +2585,33 @@
             </thead>
             <tbody>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='EntityRelatedEntities_EntityId'>EntityId</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='EntityRelatedEntities_EntityType'>EntityType</a></td>
               <td> varchar</td>
               <td> Possible values&#58; af &#40;Affiliation&#41;&#44; j &#40;Journal&#41;&#44; c &#40;Conference&#41;
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='EntityRelatedEntities_RelatedEntityId'>RelatedEntityId</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='EntityRelatedEntities_RelatedEntityType'>RelatedEntityType</a></td>
               <td> varchar</td>
               <td> Possible values&#58; af &#40;Affiliation&#41;&#44; j &#40;Journal&#41;&#44; c &#40;Conference&#41;
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='EntityRelatedEntities_RelatedType'>RelatedType</a></td>
               <td> integer</td>
               <td> Possible values&#58; 0 &#40;same paper&#41;&#44; 1 &#40;common coauthors&#41;&#44; 2 &#40;co&#45;cited&#41;&#44;
@@ -2805,7 +2620,7 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='EntityRelatedEntities_Score'>Score</a></td>
               <td> real</td>
               <td> Confidence range between 0 and 1&#46; Larger number representing higher confidence&#46;</td>
@@ -2825,7 +2640,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2852,39 +2667,6 @@
               <td> bigint</td>
               <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
             </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_FieldOfStudyChildren_FieldsOfStudy</td>
-              <td> (FieldOfStudyId) &#8594; <a href='#outs&#46;FieldsOfStudy'
-                                               onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_FieldOfStudyChildren_FieldsOfStudy_0</td>
-              <td> (ChildFieldOfStudyId) &#8594; <a href='#outs&#46;FieldsOfStudy'
-                                                    onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>(FieldOfStudyId)
-              </td>
-              <td></td>
-            </tr>
             </tbody>
           </table>
         </div>
@@ -2900,7 +2682,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2918,7 +2700,7 @@
               <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldOfStudyExtendedAttributes_AttributeType'>AttributeType</a></td>
               <td> bigint</td>
               <td> Possible values&#58; 1 &#40;AUI from UMLS https&#58;&#47;&#47;www&#46;nlm&#46;nih&#46;gov&#47;research&#47;umls&#47;licensedcontent&#47;umlsarchives04&#46;html&#35;2018AA&#41;&#44;
@@ -2926,27 +2708,9 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldOfStudyExtendedAttributes_AttributeValue'>AttributeValue</a></td>
               <td> varchar</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy</td>
-              <td> (FieldOfStudyId) &#8594; <a href='#outs&#46;FieldsOfStudy'
-                                               onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>
-              </td>
               <td></td>
             </tr>
             </tbody>
@@ -2963,7 +2727,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -2981,150 +2745,57 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='FieldsOfStudy_Rank'>Rank</a></td>
               <td> varchar</td>
-              <td> FROZEN&#59; no new ranks are being added&#46;</td>
+              <td> ARCHIVAL&#59; no new ranks will be added after Jan 3&#46;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldsOfStudy_NormalizedName'>NormalizedName</a></td>
               <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldsOfStudy_DisplayName'>DisplayName</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldsOfStudy_MainType'>MainType</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldsOfStudy_Level'>Level</a></td>
               <td> integer</td>
               <td> Possible values&#58; 0&#45;5</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldsOfStudy_PaperCount'>PaperCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='FieldsOfStudy_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as PaperCount</td>
+              <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldsOfStudy_CitationCount'>CitationCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='FieldsOfStudy_CreatedDate'>CreatedDate</a></td>
               <td> varchar</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Referring Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_FieldOfStudyChildren_FieldsOfStudy</td>
-              <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;FieldOfStudyChildren'
-                                               onclick="window.scrollTo(632, 192);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldOfStudyChildren').classList.add('palpable'); return false;">FieldOfStudyChildren</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_FieldOfStudyChildren_FieldsOfStudy_0</td>
-              <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;FieldOfStudyChildren'
-                                               onclick="window.scrollTo(632, 192);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldOfStudyChildren').classList.add('palpable'); return false;">FieldOfStudyChildren</a>(ChildFieldOfStudyId)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_RelatedFieldOfStudy_FieldsOfStudy</td>
-              <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;RelatedFieldOfStudy'
-                                               onclick="window.scrollTo(632, 288);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_RelatedFieldOfStudy').classList.add('palpable'); return false;">RelatedFieldOfStudy</a>(FieldOfStudyId1)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_RelatedFieldOfStudy_FieldsOfStudy_0</td>
-              <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;RelatedFieldOfStudy'
-                                               onclick="window.scrollTo(632, 288);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_RelatedFieldOfStudy').classList.add('palpable'); return false;">RelatedFieldOfStudy</a>(FieldOfStudyId2)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_FieldOfStudyExtendedAttributes_FieldsOfStudy</td>
-              <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;FieldOfStudyExtendedAttributes'
-                                               onclick="window.scrollTo(632, 80);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldOfStudyExtendedAttributes').classList.add('palpable'); return false;">FieldOfStudyExtendedAttributes</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperFieldsOfStudy_FieldsOfStudy</td>
-              <td> (FieldOfStudyId) &#8592; <a href='#outs&#46;PaperFieldsOfStudy'
-                                               onclick="window.scrollTo(232, 240);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperFieldsOfStudy').classList.add('palpable'); return false;">PaperFieldsOfStudy</a>
-              </td>
               <td></td>
             </tr>
             </tbody>
@@ -3141,7 +2812,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3159,31 +2830,31 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='Journals_Rank'>Rank</a></td>
               <td> integer</td>
-              <td> FROZEN&#59; no new ranks are being added</td>
+              <td> ARCHIVAL&#59; no new ranks will be added after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Journals_NormalizedName'>NormalizedName</a></td>
               <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Journals_DisplayName'>DisplayName</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Journals_Issn'>Issn</a></td>
               <td> varchar</td>
               <td> UPDATED&#59; the ISSN&#45;L for the journal &#40;see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;International&#95;Standard&#95;Serial&#95;Number&#35;Linking&#95;ISSN&#41;</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Journals_Issns'>Issns</a></td>
               <td> varchar</td>
               <td> NEW&#59; JSON list of all ISSNs for this journal &#40;example&#58; &#39;&#91;&quot;1469&#45;5073&quot;&#44;&quot;0016&#45;6723&quot;&#93;&#39;
@@ -3191,76 +2862,58 @@
               </td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Journals_IsOa'>IsOa</a></td>
               <td> boolean</td>
               <td> NEW&#59; TRUE when the journal is 100&#37; OA</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Journals_IsInDoaj'>IsInDoaj</a></td>
               <td> boolean</td>
               <td> NEW&#59; TRUE when the journal is in DOAJ &#40;see https&#58;&#47;&#47;doaj&#46;org&#47;&#41;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Journals_Publisher'>Publisher</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Journals_Webpage'>Webpage</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Journals_PaperCount'>PaperCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='Journals_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; same value as PaperCount</td>
+              <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Journals_CitationCount'>CitationCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Journals_CreatedDate'>CreatedDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Journals_UpdatedDate'>UpdatedDate</a></td>
               <td> timestamp</td>
               <td> NEW&#59; set when changes are made going forward</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Referring Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_Papers_Journals</td>
-              <td> (JournalId) &#8592; <a href='#outs&#46;Papers'
-                                          onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -3277,7 +2930,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3295,30 +2948,12 @@
               <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperAbstractsInvertedIndex_IndexedAbstract'>IndexedAbstract</a></td>
               <td> varchar</td>
               <td> Inverted index&#44; see
                 https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Inverted&#95;index
               </td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperAbstractsInvertedIndex_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -3336,7 +2971,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3374,7 +3009,7 @@
               <td> FOREIGN KEY REFERENCES Affiliations&#46;AffiliationId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperAuthorAffiliations_AuthorSequenceNumber'>AuthorSequenceNumber</a></td>
               <td> integer</td>
               <td> 1&#45;based author sequence number&#46; 1&#58; the 1st author listed on paper&#44; 2&#58; the 2nd
@@ -3382,63 +3017,15 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperAuthorAffiliations_OriginalAuthor'>OriginalAuthor</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperAuthorAffiliations_OriginalAffiliation'>OriginalAffiliation</a></td>
               <td> varchar</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperAuthorAffiliations_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperAuthorAffiliations_Authors</td>
-              <td> (AuthorId) &#8594; <a href='#outs&#46;Authors'
-                                         onclick="window.scrollTo(920, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Authors').classList.add('palpable'); return false;">Authors</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperAuthorAffiliations_Affiliations</td>
-              <td> (AffiliationId) &#8594; <a href='#outs&#46;Affiliations'
-                                              onclick="window.scrollTo(712, 656);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Affiliations').classList.add('palpable'); return false;">Affiliations</a>
-              </td>
               <td></td>
             </tr>
             </tbody>
@@ -3451,11 +3038,11 @@
         <div class='card-body'><a id='PaperCitationContexts'
                                   onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperCitationContexts').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> PaperCitationContexts</h5></a>
-          <p class="text-muted">❄️ FROZEN&#59; citation contexts &#40;nlp&#47;PaperCitationContexts&#46;txt&#41;</p>
+          <p class="text-muted">📦️ ARCHIVAL&#59; citation contexts &#40;nlp&#47;PaperCitationContexts&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3483,42 +3070,9 @@
               <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperCitationContexts_CitationContext'>CitationContext</a></td>
               <td> varchar</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperCitationContexts_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperCitationContexts_Papers_0</td>
-              <td> (PaperReferenceId) &#8594; <a href='#outs&#46;Papers'
-                                                 onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>(PaperId)
-              </td>
               <td></td>
             </tr>
             </tbody>
@@ -3535,7 +3089,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3553,7 +3107,7 @@
               <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperExtendedAttributes_AttributeType'>AttributeType</a></td>
               <td> integer</td>
               <td> Possible values&#58; 1&#61;PatentId&#44; 2&#61;PubMedId&#44; 3&#61;PmcId&#44; 4&#61;Alternative
@@ -3561,27 +3115,9 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperExtendedAttributes_AttributeValue'>AttributeValue</a></td>
               <td> varchar</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperExtendedAttributes_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
               <td></td>
             </tr>
             </tbody>
@@ -3598,7 +3134,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3626,51 +3162,18 @@
               <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperFieldsOfStudy_Score'>Score</a></td>
               <td> real</td>
               <td> Confidence range between 0 and 1&#46; Bigger number representing higher confidence&#46;</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='PaperFieldsOfStudy_AlgorithmVersion'>AlgorithmVersion</a></td>
               <td> integer</td>
-              <td> NEW&#59; version of algorithm to assign fields&#46; Possible values&#58; 1&#61;old MAG &#40;FROZEN&#41;&#44;
+              <td> NEW&#59; version of algorithm to assign fields&#46; Possible values&#58; 1&#61;old MAG &#40;ARCHIVAL&#41;&#44;
                 2&#61;OpenAlex
               </td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperFieldsOfStudy_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperFieldsOfStudy_FieldsOfStudy</td>
-              <td> (FieldOfStudyId) &#8594; <a href='#outs&#46;FieldsOfStudy'
-                                               onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -3687,7 +3190,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3705,52 +3208,34 @@
               <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperMeSH_DescriptorUI'>DescriptorUI</a></td>
               <td> varchar</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperMeSH_DescriptorName'>DescriptorName</a></td>
               <td> varchar</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperMeSH_QualifierUI'>QualifierUI</a></td>
               <td> varchar</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperMeSH_QualifierName'>QualifierName</a></td>
               <td> varchar</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperMeSH_IsMajorTopic'>IsMajorTopic</a></td>
               <td> boolean</td>
               <td> see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Medical&#95;Subject&#95;Headings</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperMeSH_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -3766,7 +3251,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3794,43 +3279,10 @@
               <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperRecommendations_Score'>Score</a></td>
               <td> real</td>
               <td> Confidence range between 0 and 1&#46; Bigger number representing higher confidence&#46;</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperRecommendations_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperRecommendations_Papers_0</td>
-              <td> (RecommendedPaperId) &#8594; <a href='#outs&#46;Papers'
-                                                   onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>(PaperId)
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -3846,7 +3298,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3873,39 +3325,6 @@
               <td> bigint</td>
               <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
             </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperReferences_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperReferences_Papers_0</td>
-              <td> (PaperReferenceId) &#8594; <a href='#outs&#46;Papers'
-                                                 onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>(PaperId)
-              </td>
-              <td></td>
-            </tr>
             </tbody>
           </table>
         </div>
@@ -3916,11 +3335,11 @@
         <div class='card-body'><a id='PaperResources'
                                   onclick="window.scrollTo(60, 624);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperResources').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> PaperResources</h5></a>
-          <p class="text-muted">❄️ FROZEN&#59; no longer updated&#46; Data and code urls associated with papers &#40;mag&#47;PaperResources&#46;txt&#41;</p>
+          <p class="text-muted">📦️ ARCHIVAL&#59; not updated after Jan 3&#46; Data and code urls associated with papers &#40;mag&#47;PaperResources&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -3938,46 +3357,28 @@
               <td> FOREIGN KEY REFERENCES Papers.PaperId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperResources_ResourceType'>ResourceType</a></td>
               <td> integer</td>
               <td> Bit flags&#58; 1&#61;Project&#44; 2&#61;Data&#44; 4&#61;Code</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperResources_ResourceUrl'>ResourceUrl</a></td>
               <td> varchar</td>
               <td> Url of resource</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperResources_SourceUrl'>SourceUrl</a></td>
               <td> varchar</td>
               <td> List of urls associated with the project&#44; used to derive resource&#95;url</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperResources_RelationshipType'>RelationshipType</a></td>
               <td> integer</td>
               <td> Bit flags&#58; 1&#61;Own&#44; 2&#61;Cite</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperResources_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -3993,7 +3394,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -4011,7 +3412,7 @@
               <td> FOREIGN KEY REFERENCES Papers&#46;PaperId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperUrls_SourceType'>SourceType</a></td>
               <td> integer</td>
               <td> Possible values&#58; 1&#61;Html&#44; 2&#61;Text&#44; 3&#61;Pdf&#44; 4&#61;Doc&#44; 5&#61;Ppt&#44; 6&#61;Xls&#44;
@@ -4020,31 +3421,31 @@
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperUrls_SourceUrl'>SourceUrl</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='PaperUrls_LanguageCode'>LanguageCode</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='PaperUrls_UrlForLandingPage'>UrlForLandingPage</a></td>
               <td> varchar</td>
               <td> NEW&#59; URL for the landing page&#44; when article is free to read</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='PaperUrls_UrlForPdf'>UrlForPdf</a></td>
               <td> varchar</td>
               <td> NEW&#59; URL for the PDF&#44; when article is free to read</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='PaperUrls_HostType'>HostType</a></td>
               <td> varchar</td>
               <td> NEW&#59; host type of the free&#45;to&#45;read URL&#44; Possible values&#58; publisher&#44;
@@ -4052,7 +3453,7 @@
               </td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='PaperUrls_Version'>Version</a></td>
               <td> varchar</td>
               <td> NEW&#59; version of the free&#45;to&#45;read URL Possible values&#58; submittedVersion&#44;
@@ -4060,40 +3461,22 @@
               </td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='PaperUrls_License'>License</a></td>
               <td> varchar</td>
               <td> NEW&#59; license of the free&#45;to&#45;read URL &#40;example&#58; cc0&#44; cc&#45;by&#44; publisher&#45;specific&#41;</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='PaperUrls_RepositoryInstitution'>RepositoryInstitution</a></td>
               <td> varchar</td>
               <td> NEW&#59; name of repository host of URL</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='PaperUrls_OaiPmhId'>OaiPmhId</a></td>
               <td> varchar</td>
               <td> NEW&#59; OAH&#45;PMH id of the repository record</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperUrls_Papers</td>
-              <td> (PaperId) &#8594; <a href='#outs&#46;Papers'
-                                        onclick="window.scrollTo(168, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Papers').classList.add('palpable'); return false;">Papers</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -4109,7 +3492,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -4127,27 +3510,27 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='Papers_Rank'>Rank</a></td>
               <td> integer</td>
-              <td> FROZEN&#59; no new ranks are being added</td>
+              <td> ARCHIVAL&#59; no new ranks will be added after Jan 3</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_Doi'>Doi</a></td>
               <td> varchar</td>
               <td> Doi values are upper&#45;cased per DOI standard at https&#58;&#47;&#47;www&#46;doi&#46;org&#47;doi&#95;handbook&#47;2&#95;Numbering&#46;html&#35;2&#46;4</td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='Papers_DocType'>DocType</a></td>
               <td> varchar</td>
               <td> Possible values&#58; Book&#44; BookChapter&#44; Conference&#44; Dataset&#44; Journal&#44; Patent&#44;
-                Repository&#44; Thesis&#44; NULL &#58; unknown&#46; Patent is FROZEN&#59; no new Patents are being added&#46;
+                Repository&#44; Thesis&#44; NULL &#58; unknown&#46; Patent is REMOVED&#59; no patents are included&#46;
               </td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Papers_Genre'>Genre</a></td>
               <td> varchar</td>
               <td> NEW&#59; Crossref ontology for work type such as journal&#45;article&#44; posted&#45;content&#44;
@@ -4155,49 +3538,49 @@
               </td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Papers_IsParatext'>IsParatext</a></td>
               <td> boolean</td>
               <td> NEW&#59; indicates front&#45;matter&#46; See https&#58;&#47;&#47;support&#46;unpaywall&#46;org&#47;support&#47;solutions&#47;articles&#47;44001894783</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_PaperTitle'>PaperTitle</a></td>
               <td> varchar</td>
               <td> UPDATED&#59; slightly different normalization algorithm</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_OriginalTitle'>OriginalTitle</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_BookTitle'>BookTitle</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_Year'>Year</a></td>
               <td> integer</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_Date'>Date</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_OnlineDate'>OnlineDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_Publisher'>Publisher</a></td>
               <td> varchar</td>
               <td></td>
@@ -4217,11 +3600,11 @@
                 <svg width='14' height='14'>
                   <use xlink:href='#fk'/>
                 </svg>
-                ❄️
+                📦️
               </td>
               <td><a id='Papers_ConferenceSeriesId'>ConferenceSeriesId</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; no longer updated&#44; no new Conference Series are being added&#46; FOREIGN KEY
+              <td> ARCHIVAL&#59; not updated after Jan 3&#44; no new Conference Series will be added after Jan 3&#46; FOREIGN KEY
                 references ConferenceSeries.ConferenceSeriesId;
               </td>
             </tr>
@@ -4230,367 +3613,121 @@
                 <svg width='14' height='14'>
                   <use xlink:href='#fk'/>
                 </svg>
-                ❄️
+                📦️
               </td>
               <td><a id='Papers_ConferenceInstanceId'>ConferenceInstanceId</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; no longer updated&#44; no new Conference Instances are being added&#46; FOREIGN KEY
+              <td> ARCHIVAL&#59; not updated after Jan 3&#44; no new Conference Instances will be added after Jan 3&#46; FOREIGN KEY
                 references ConferenceInstance.ConferenceInstanceId;
               </td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_Volume'>Volume</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_Issue'>Issue</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_FirstPage'>FirstPage</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_LastPage'>LastPage</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_ReferenceCount'>ReferenceCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_CitationCount'>CitationCount</a></td>
               <td> bigint</td>
               <td></td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_EstimatedCitation'>EstimatedCitation</a></td>
               <td> bigint</td>
               <td> UPDATED&#59; new algorithm</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_OriginalVenue'>OriginalVenue</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='Papers_FamilyId'>FamilyId</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; no longer updated&#46;</td>
+              <td> ARCHIVAL&#59; not updated after Jan 3&#46;</td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='Papers_FamilyRank'>FamilyRank</a></td>
               <td> bigint</td>
-              <td> FROZEN&#59; no longer updated&#46;</td>
+              <td> ARCHIVAL&#59; not updated after Jan 3&#46;</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_DocSubTypes'>DocSubTypes</a></td>
               <td> varchar</td>
               <td> Possible values&#58; Retracted Publication&#44; Retraction Notice</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Papers_OaStatus'>OaStatus</a></td>
               <td> varchar</td>
               <td> NEW&#59; Possible values&#58; closed&#44; green&#44; gold&#44; hybrid&#44; bronze &#40;see https&#58;&#47;&#47;en&#46;wikipedia&#46;org&#47;wiki&#47;Open&#95;access&#35;Colour&#95;naming&#95;system&#41;</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Papers_BestUrl'>BestUrl</a></td>
               <td> varchar</td>
               <td> NEW&#59; An url for the paper &#40;see PaperUrls table for more&#41;</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Papers_BestFreeUrl'>BestFreeUrl</a></td>
               <td> varchar</td>
               <td> NEW&#59; Url of best legal free&#45;to&#45;read copy when it exists &#40;see https&#58;&#47;&#47;support&#46;unpaywall&#46;org&#47;support&#47;solutions&#47;articles&#47;44001943223&#41;</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Papers_BestFreeVersion'>BestFreeVersion</a></td>
               <td> varchar</td>
               <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Papers_DoiLower'>DoiLower</a></td>
               <td> varchar</td>
               <td> NEW&#59; lowercase doi for convenience linking to Unpaywall</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='Papers_CreatedDate'>CreatedDate</a></td>
               <td> varchar</td>
               <td></td>
             </tr>
             <tr>
-              <td>🔥&nbsp;</td>
+              <td>🔥</td>
               <td><a id='Papers_UpdatedDate'>UpdatedDate</a></td>
               <td> timestamp</td>
               <td> NEW&#59; set when changes are made going forward</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_Papers_Journals</td>
-              <td> (JournalId) &#8594; <a href='#outs&#46;Journals'
-                                          onclick="window.scrollTo(456, 560);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_Journals').classList.add('palpable'); return false;">Journals</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_Papers_ConferenceSeries</td>
-              <td> (ConferenceSeriesId) &#8594; <a href='#outs&#46;ConferenceSeries'
-                                                   onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceSeries').classList.add('palpable'); return false;">ConferenceSeries</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_Papers_ConferenceInstances</td>
-              <td> (ConferenceInstanceId) &#8594; <a href='#outs&#46;ConferenceInstances'
-                                                     onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceInstances').classList.add('palpable'); return false;">ConferenceInstances</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan='4'>Referring Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperUrls_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperUrls'
-                                        onclick="window.scrollTo(60, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperUrls').classList.add('palpable'); return false;">PaperUrls</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperResources_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperResources'
-                                        onclick="window.scrollTo(60, 624);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperResources').classList.add('palpable'); return false;">PaperResources</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperReferences_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperReferences'
-                                        onclick="window.scrollTo(60, 928);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperReferences').classList.add('palpable'); return false;">PaperReferences</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperReferences_Papers_0</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperReferences'
-                                        onclick="window.scrollTo(60, 928);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperReferences').classList.add('palpable'); return false;">PaperReferences</a>(PaperReferenceId)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperRecommendations_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperRecommendations'
-                                        onclick="window.scrollTo(60, 512);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperRecommendations').classList.add('palpable'); return false;">PaperRecommendations</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperRecommendations_Papers_0</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperRecommendations'
-                                        onclick="window.scrollTo(60, 512);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperRecommendations').classList.add('palpable'); return false;">PaperRecommendations</a>(RecommendedPaperId)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperMeSH_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperMeSH'
-                                        onclick="window.scrollTo(60, 768);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperMeSH').classList.add('palpable'); return false;">PaperMeSH</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperExtendedAttributes_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperExtendedAttributes'
-                                        onclick="window.scrollTo(60, 400);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperExtendedAttributes').classList.add('palpable'); return false;">PaperExtendedAttributes</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperCitationContexts_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperCitationContexts'
-                                        onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperCitationContexts').classList.add('palpable'); return false;">PaperCitationContexts</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperCitationContexts_Papers_0</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperCitationContexts'
-                                        onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperCitationContexts').classList.add('palpable'); return false;">PaperCitationContexts</a>(PaperReferenceId)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperAbstractsInvertedIndex_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperAbstractsInvertedIndex'
-                                        onclick="window.scrollTo(136, 1280);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperAbstractsInvertedIndex').classList.add('palpable'); return false;">PaperAbstractsInvertedIndex</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperFieldsOfStudy_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperFieldsOfStudy'
-                                        onclick="window.scrollTo(232, 240);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperFieldsOfStudy').classList.add('palpable'); return false;">PaperFieldsOfStudy</a>
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#ref'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_PaperAuthorAffiliations_Papers</td>
-              <td> (PaperId) &#8592; <a href='#outs&#46;PaperAuthorAffiliations'
-                                        onclick="window.scrollTo(696, 480);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperAuthorAffiliations').classList.add('palpable'); return false;">PaperAuthorAffiliations</a>
-              </td>
-              <td></td>
             </tr>
             </tbody>
           </table>
@@ -4607,7 +3744,7 @@
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
-              <th class="idx">Idx</th>
+              <th class="idx"></th>
               <th class="field-name">Field Name</th>
               <th class="data-type">Data Type</th>
               <th class="description">Description</th>
@@ -4625,7 +3762,7 @@
               <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='RelatedFieldOfStudy_Type1'>Type1</a></td>
               <td> varchar</td>
               <td> Possible values&#58; general&#44; disease&#44; disease&#95;cause&#44; medical&#95;treatment&#44;
@@ -4643,7 +3780,7 @@
               <td> FOREIGN KEY REFERENCES FieldsOfStudy&#46;FieldOfStudyId</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
+              <td></td>
               <td><a id='RelatedFieldOfStudy_Type2'>Type2</a></td>
               <td> varchar</td>
               <td> Possible values&#58; general&#44; disease&#44; disease&#95;cause&#44; medical&#95;treatment&#44;
@@ -4651,43 +3788,10 @@
               </td>
             </tr>
             <tr>
-              <td>❄️&nbsp;</td>
+              <td>📦️</td>
               <td><a id='RelatedFieldOfStudy_Rank'>Rank</a></td>
               <td> real</td>
-              <td> FROZEN&#59; no new ranks are being added&#46;</td>
-            </tr>
-            <tr>
-              <th colspan='4'>Foreign Keys</th>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_RelatedFieldOfStudy_FieldsOfStudy</td>
-              <td> (FieldOfStudyId1) &#8594; <a href='#outs&#46;FieldsOfStudy'
-                                                onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>(FieldOfStudyId)
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>
-                <svg width='14' height='14'>
-                  <use xlink:href='#fk'/>
-                </svg>
-                <svg width='14' height='14'>
-                  <use xlink:href='#virtual'/>
-                </svg>
-              </td>
-              <td>Fk_RelatedFieldOfStudy_FieldsOfStudy_0</td>
-              <td> (FieldOfStudyId2) &#8594; <a href='#outs&#46;FieldsOfStudy'
-                                                onclick="window.scrollTo(424, 112);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_FieldsOfStudy').classList.add('palpable'); return false;">FieldsOfStudy</a>(FieldOfStudyId)
-              </td>
-              <td></td>
+              <td> ARCHIVAL&#59; no new ranks will be added after Jan 3&#46;</td>
             </tr>
             </tbody>
           </table>
@@ -4749,6 +3853,9 @@ table {
     tr {
       th {
         text-align: left;
+        &.idx {width: 3%;}
+        &.field-name {width: 20%;}
+        &.data-type {width: 15%;}
       }
     }
   }
@@ -4845,7 +3952,7 @@ rect.entity {
   stroke: #777;
   stroke-width: 0;
   shape-rendering: crispEdges;
-  filter: url(#shadow);
+  filter: url(#shadow)
 }
 
 line.delim {

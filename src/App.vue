@@ -149,7 +149,7 @@ body {
       font-family: Inconsolata !important;
     font-size: 16px;
 
-    p, ul, ol, li {
+    p, ul, ol, li, code {
       //font-family: dosis !important;
       //font-family: roboto !important;
       font-family: Inconsolata !important;
