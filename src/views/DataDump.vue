@@ -32,8 +32,8 @@
       This is a <a
         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ObjectsinRequesterPaysBuckets.html">"Requester Pays"
       bucket.</a> Your AWS account will be charged for the cost of the transfer, which is around $10 USD &mdash; but if
-      you can't afford that, please
-      <a href="mailto:team@ourresearch.org">let us know,</a> and we'll cover the cost for you.
+      you can't afford that, just
+      <a href="mailto:team@ourresearch.org">let us know</a> and we'll be happy cover the cost for you.
     </p>
 
     <p>
