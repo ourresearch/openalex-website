@@ -9,7 +9,7 @@
 
     <p>
       The data dump is a complete export of the OpenAlex database; with it, you can host and run your own identical
-      local copy of OpenAlex.
+      local copy of OpenAlex.  We release a new version of the data dump (updated with the latest data) approximately every two weeks.
     </p>
     <p>
       The data dump is great if you're migrating from Microsoft Academic Graph (MAG) to OpenAlex. In that case, you'll
@@ -20,7 +20,7 @@
       which documents how the dataset is put together.
     </p>
     <p>
-      For many use cases, however, the full 500-terabyte data dump is overkill&mdash;you'll be better served using our
+      For many use cases, the full 500-terabyte data dump is overkill&mdash;you'll be better served using our
       free
       <router-link to="./rest-api">REST API.</router-link>
       The API lets you access and query the full dataset, without having to host a humongous database.
@@ -28,7 +28,7 @@
 
     <h4 class="text-h4 mt-12" id="download">Download</h4>
     <p>
-      The dataset is hosted on Amazon Web Services (AWS) S3 bucket. We will be releasing new datasets approximately every two weeks.
+      The dataset is hosted on Amazon Web Services (AWS) S3 bucket.
       Here's the URI for the most recent dump:
     </p>
     <a class="font-weight-bold pb-12" href="" style="font-size: 28px;">

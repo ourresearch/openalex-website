@@ -1,19 +1,19 @@
 <template>
   <v-container class="page">
-    <h3 class="text-h3">MAG migration guide</h3>
+    <h3 class="text-h3">Microsoft Academic Graph (MAG) migration guide</h3>
     <v-alert outlined type="info">
         <strong>Beta release:</strong>
         We recommend against using OpenAlex data in production contexts until our official release on Jan 3.
       </v-alert>
     <p>
       <a href="https://blog.ourresearch.org/were-building-a-replacement-for-microsoft-academic-graph/">From the
-        beginning,</a> we've worked to ensure that users of Microsoft Academic Graph (MAG) could easily switch to using
-      <router-link to="./data-dump">OpenAlex data dump</router-link>
+        beginning,</a> we've worked to ensure that <a href="https://aka.ms/msracad">MAG</a> users could easily migrate to OpenAlex data
+
       when <a
         href="https://www.microsoft.com/en-us/research/project/academic/articles/microsoft-academic-to-expand-horizons-with-community-driven-approach/">MAG
-      goes away at the end of 2021.</a> If you're looking at making this switch, you're in the right place! The page
-      describes what you'll need to do to switch, as well as getting into what differences you can expect between the
-      two datasets.
+      goes away at the end of 2021.</a> If you're looking at making this switch, you're in the right place!  This page
+      describes what you'll need to do to switch, as well as detailing the differences you can expect between the
+      two datasets. (If you just want to download the data, see the <router-link to="./data-dump">data dump</router-link> page.)
     </p>
 
     <ol>
@@ -158,6 +158,10 @@
       Because we get a lot of questions about a few specific MAG data types, we're listing them below to clear up any
       confusion &mdash; but keep in mind this list is not comprehensive:
     </p>
+    <li>
+      <strong>Updates every two weeks:</strong>
+      Like MAG, we'll continue to release a new <router-link to="./data-dump">data dump,</router-link> updated with all the latest data, every two weeks or so.
+    </li>
     <li>
       <strong>Author name disambiguation (AND):</strong>
       Like MAG, OpenAlex will use document properties (title, topic, journal, etc) to identify and assign unique author
