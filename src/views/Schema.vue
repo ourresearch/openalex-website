@@ -2,17 +2,29 @@
   <v-container fluid class="page">
     <v-container class="mb-12">
       <h2 class="text-h3">Schema</h2>
+      <v-alert outlined type="info">
+        <strong>Beta release:</strong>
+        We recommend against using OpenAlex data in production contexts until our official release on Jan 3.
+      </v-alert>
       <p>
-        This page documents each of the columns and tables in the data dump (learn how to <router-link to="./data-dump">download the data dump here</router-link>), as well as how they all connect to one another.
+        This page documents each of the columns and tables in the
+        <router-link to="./data-dump">data dump,</router-link> as well as how they all connect to one another.
       </p>
       <p>
         You may notice that this schema is quite similar to the
-        <a href="https://docs.microsoft.com/en-us/academic-services/graph/reference-data-schema">Microsoft Academic Graph (MAG) schema.</a>
+        <a href="https://docs.microsoft.com/en-us/academic-services/graph/reference-data-schema">Microsoft Academic
+          Graph (MAG) schema.</a>
         However, although the schemas are <em>compatible</em>
-        they're not <em>identical.</em> If you're migrating to OpenAlex from MAG, you'll want to check out the <router-link to="./mag-migration-guide">MAG migration guide</router-link> for more info.
+        they're not <em>identical.</em> If you're migrating to OpenAlex from MAG, you'll want to check out the
+        <router-link to="./mag-migration-guide">MAG migration guide</router-link>
+        for more info.
       </p>
       <p>
-        You may also want to pay particular attention to tables and columns marked <router-link to="./mag-migration-guide#data-changes-archival">📦️ARCHIVAL</router-link> (not updated after Jan 3) and <router-link to="./mag-migration-guide#data-changes-archival">🔥NEW</router-link> (in OpenAlex, but not MAG).
+        You may also want to pay particular attention to tables and columns marked
+        <router-link to="./mag-migration-guide#data-changes-archival">📦️ARCHIVAL</router-link>
+        (not updated after Jan 3) and
+        <router-link to="./mag-migration-guide#data-changes-archival">🔥NEW</router-link>
+        (in OpenAlex, but not MAG).
       </p>
     </v-container>
 
@@ -1310,7 +1322,8 @@
             <a xlink:href='#PaperAbstractsInvertedIndex'>
               <text x='345' y='1291' class='white'>PaperAbstractsInvertedIndex</text>
               <title> PaperAbstractsInvertedIndex
-                Inverted index of abstracts (nlp/PaperAbstractsInvertedIndex.txt{*} split across multiple files)</title></a>
+                Inverted index of abstracts (nlp/PaperAbstractsInvertedIndex.txt{*} split across multiple files)</title>
+            </a>
             <use id='idx1' x='338' y='1308' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
             <a xlink:href='#PaperAbstractsInvertedIndex_PaperId'>
@@ -1511,7 +1524,8 @@
               <text id='PaperFieldsOfStudy.AlgorithmVersion' x='451' y='327'>AlgorithmVersion 🔥</text>
               <title>AlgorithmVersion
                 integer
-                NEW; version of algorithm to assign fields. Possible values: 1=old MAG (ARCHIVAL), 2=OpenAlex</title></a>
+                NEW; version of algorithm to assign fields. Possible values: 1=old MAG (ARCHIVAL), 2=OpenAlex</title>
+            </a>
             <text x='589' y='324' text-anchor='end' class='colType'>#</text>
             <!-- == Table 'PaperMeSH' == -->
             <rect id='depict_PaperMeSH' class='entity' style='stroke:#ADBCC9' x='96' y='760' width='144' height='144'/>
@@ -1643,7 +1657,8 @@
             <a xlink:href='#PaperResources'>
               <text x='107' y='635' class='white'>PaperResources 📦️</text>
               <title> PaperResources
-                ARCHIVAL; not updated after Jan 3. Data and code urls associated with papers (mag/PaperResources.txt)</title>
+                ARCHIVAL; not updated after Jan 3. Data and code urls associated with papers
+                (mag/PaperResources.txt)</title>
             </a>
             <use id='idx1' x='82' y='652' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
               ) </title></use>
@@ -1884,7 +1899,8 @@
               </text>
               <title>ConferenceSeriesId
                 bigint
-                ARCHIVAL; not updated after Jan 3, no new Conference Series will be added after Jan 3. FOREIGN KEY references
+                ARCHIVAL; not updated after Jan 3, no new Conference Series will be added after Jan 3. FOREIGN KEY
+                references
                 ConferenceSeries.ConferenceSeriesId.</title></a>
             <a xlink:href='#Papers.ConferenceSeriesId'>
               <use id='fk' x='532' y='732' xlink:href='#fk'/>
@@ -1897,7 +1913,8 @@
               </text>
               <title>ConferenceInstanceId
                 bigint
-                ARCHIVAL; not updated after Jan 3, no new Conference Instances will be added after Jan 3. FOREIGN KEY references
+                ARCHIVAL; not updated after Jan 3, no new Conference Instances will be added after Jan 3. FOREIGN KEY
+                references
                 ConferenceInstances.ConferenceInstanceId.</title></a>
             <a xlink:href='#Papers.ConferenceInstanceId'>
               <use id='fk' x='532' y='748' xlink:href='#fk'/>
@@ -1985,7 +2002,8 @@
               <text id='Papers.BestFreeVersion' x='387' y='999'>BestFreeVersion 🔥</text>
               <title>BestFreeVersion
                 varchar
-                NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</title></a>
+                NEW; Possible values: submittedVersion, acceptedVersion, publishedVersion (see
+                https://support.unpaywall.org/support/solutions/articles/44000708792)</title></a>
             <text x='541' y='996' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_DoiLower'>
               <text id='Papers.DoiLower' x='387' y='1015'>DoiLower 🔥</text>
@@ -2064,7 +2082,7 @@
 
       <div class='card'>
         <div class='card-body'>
-<!--          <h5 class='card-title'>Tables</h5>-->
+          <!--          <h5 class='card-title'>Tables</h5>-->
           <h2 class="text-h3">Tables</h2>
           <ul>
             <li><a href='#Affiliations'>Affiliations</a></li>
@@ -2305,7 +2323,9 @@
               <td>🔥⚠️</td>
               <td><a id='Authors_Orcid'>Orcid</a></td>
               <td> varchar</td>
-              <td> NEW&#59; ORCID identifier for this author (see https://orcid.org). ⚠️ KNOWN ERROR: some ORCIDs are wrong, due to an error in the Crossref API. Should be fixed in next data dump.</td>
+              <td> NEW&#59; ORCID identifier for this author (see https://orcid.org). ⚠️ KNOWN ERROR: some ORCIDs are
+                wrong, due to an error in the Crossref API. Should be fixed in next data dump.
+              </td>
             </tr>
             <tr>
               <td>
@@ -2923,7 +2943,8 @@
                                   onclick="window.scrollTo(136, 1280);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperAbstractsInvertedIndex').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> PaperAbstractsInvertedIndex</h5>
         </a>
-          <p class="text-muted">Inverted index of abstracts (nlp/PaperAbstractsInvertedIndex.txt{*} split across multiple files)</p>
+          <p class="text-muted">Inverted index of abstracts (nlp/PaperAbstractsInvertedIndex.txt{*} split across
+            multiple files)</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
@@ -3332,7 +3353,8 @@
         <div class='card-body'><a id='PaperResources'
                                   onclick="window.scrollTo(60, 624);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperResources').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> PaperResources</h5></a>
-          <p class="text-muted">📦️ ARCHIVAL&#59; not updated after Jan 3&#46; Data and code urls associated with papers &#40;mag&#47;PaperResources&#46;txt&#41;</p>
+          <p class="text-muted">📦️ ARCHIVAL&#59; not updated after Jan 3&#46; Data and code urls associated with papers
+            &#40;mag&#47;PaperResources&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
@@ -3454,7 +3476,8 @@
               <td><a id='PaperUrls_Version'>Version</a></td>
               <td> varchar</td>
               <td> NEW&#59; version of the free&#45;to&#45;read URL Possible values&#58; submittedVersion&#44;
-                acceptedVersion&#44; publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)
+                acceptedVersion&#44; publishedVersion (see
+                https://support.unpaywall.org/support/solutions/articles/44000708792)
               </td>
             </tr>
             <tr>
@@ -3601,7 +3624,8 @@
               </td>
               <td><a id='Papers_ConferenceSeriesId'>ConferenceSeriesId</a></td>
               <td> bigint</td>
-              <td> ARCHIVAL&#59; not updated after Jan 3&#44; no new Conference Series will be added after Jan 3&#46; FOREIGN KEY
+              <td> ARCHIVAL&#59; not updated after Jan 3&#44; no new Conference Series will be added after Jan 3&#46;
+                FOREIGN KEY
                 references ConferenceSeries.ConferenceSeriesId;
               </td>
             </tr>
@@ -3614,7 +3638,8 @@
               </td>
               <td><a id='Papers_ConferenceInstanceId'>ConferenceInstanceId</a></td>
               <td> bigint</td>
-              <td> ARCHIVAL&#59; not updated after Jan 3&#44; no new Conference Instances will be added after Jan 3&#46; FOREIGN KEY
+              <td> ARCHIVAL&#59; not updated after Jan 3&#44; no new Conference Instances will be added after Jan 3&#46;
+                FOREIGN KEY
                 references ConferenceInstance.ConferenceInstanceId;
               </td>
             </tr>
@@ -3706,7 +3731,9 @@
               <td>🔥</td>
               <td><a id='Papers_BestFreeVersion'>BestFreeVersion</a></td>
               <td> varchar</td>
-              <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion (see https://support.unpaywall.org/support/solutions/articles/44000708792)</td>
+              <td> NEW&#59; Possible values&#58; submittedVersion&#44; acceptedVersion&#44; publishedVersion (see
+                https://support.unpaywall.org/support/solutions/articles/44000708792)
+              </td>
             </tr>
             <tr>
               <td>🔥</td>
@@ -3844,14 +3871,22 @@ table {
   margin-bottom: 100px;
 
 
-
   thead {
     tr {
       th {
         text-align: left;
-        &.idx {width: 3%;}
-        &.field-name {width: 20%;}
-        &.data-type {width: 15%;}
+
+        &.idx {
+          width: 3%;
+        }
+
+        &.field-name {
+          width: 20%;
+        }
+
+        &.data-type {
+          width: 15%;
+        }
       }
     }
   }

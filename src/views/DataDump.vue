@@ -1,6 +1,12 @@
 <template>
   <v-container class="page">
     <h2 class="text-h3">Data dump</h2>
+
+    <v-alert outlined type="info">
+      <strong>Beta release:</strong>
+      We recommend against using this data in production contexts until our official release on Jan 3.
+    </v-alert>
+
     <p>
       The data dump is a complete export of the OpenAlex database; with it, you can host and run your own identical
       local copy of OpenAlex.

@@ -1,6 +1,10 @@
 <template>
   <v-container class="page">
     <h3 class="text-h3">MAG migration guide</h3>
+    <v-alert outlined type="info">
+        <strong>Beta release:</strong>
+        We recommend against using OpenAlex data in production contexts until our official release on Jan 3.
+      </v-alert>
     <p>
       <a href="https://blog.ourresearch.org/were-building-a-replacement-for-microsoft-academic-graph/">From the
         beginning,</a> we've worked to ensure that users of Microsoft Academic Graph (MAG) could easily switch to using
