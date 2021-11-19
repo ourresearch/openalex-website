@@ -124,8 +124,8 @@ export default {
   name: 'App',
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'OurResearch',
-    titleTemplate: '%s | OurResearch',
+    title: 'OpenAlex',
+    titleTemplate: '%s | OpenAlex',
     link: [],
 
     meta: []
