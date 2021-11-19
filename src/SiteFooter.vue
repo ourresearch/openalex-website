@@ -19,9 +19,9 @@
           <div>
             <router-link to="/mag-migration-guide">MAG migration guide</router-link>
           </div>
-          <div>
-            <router-link to="/faq">FAQ</router-link>
-          </div>
+<!--          <div>-->
+<!--            <router-link to="/faq">FAQ</router-link>-->
+<!--          </div>-->
         </v-col>
         <v-col cols="12" sm="2">
           <div>

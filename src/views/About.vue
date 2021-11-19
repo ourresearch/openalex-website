@@ -122,8 +122,7 @@
     <p>
       We'd like to thank everyone behind all our <a href="#sources">data sources,</a> but especially the folks at MAG
       for building a really audacious and cool thing, and providing us lots of help and support as we build its
-      replacement. We'd also like to thank all the programmers behind the open-source libraries we use, all the tireless
-      advocates for research funding and Open Science.
+      replacement.
     </p>
 
 
@@ -137,6 +136,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.text-h4 {
+  padding-top: 50px;
+}
 
 </style>

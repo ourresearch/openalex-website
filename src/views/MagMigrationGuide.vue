@@ -26,7 +26,7 @@
       <li><a href="#coverage-comparison">Coverage comparison</a></li>
     </ol>
 
-    <h4 class="text-h4" id="formatting-changes">1. ⚠️ Formatting changes (breaking!)</h4>
+    <h4 class="text-h4" id="formatting-changes">1. Formatting changes (breaking!)</h4>
     <p>
       For the most part, the OpenAlex data dump is formatted just like the MAG one, for compatibility purposes. However,
       there are a few important changes. You'll probably need to modify your MAG ingest script to acommodate these:
@@ -45,7 +45,7 @@
     </ul>
 
 
-    <h4 class="text-h4" id="data-changes">2. ↪️ Data changes️</h4>
+    <h4 class="text-h4" id="data-changes">2. Data changes️</h4>
     <p>
       There are four main relationships between the data/features of OpenAlex and MAG:
       <a href="#data-changes-unsupported">Unsupported,</a> <a href="#data-changes-archival">Archival,</a> <a
@@ -59,7 +59,7 @@
 
     <p>Below, we dig in to the different data types: </p>
 
-    <h5 class="text-h5" id="data-changes-unsupported">2.1 ❌ Unsupported</h5>
+    <h5 class="text-h5" id="data-changes-unsupported">2.1 Unsupported ❌ </h5>
     <p>These are MAG data types and functionality that are <em>not included</em> in OpenAlex.
     <p>
     <ul>
@@ -80,7 +80,7 @@
     </ul>
 
 
-    <h5 class="text-h5" id="data-changes-archival">2.2 📦️ Archival</h5>
+    <h5 class="text-h5" id="data-changes-archival">2.2 Archival 📦️ </h5>
     <p>This data is included in OpenAlex. Until Jan 3, it will be updated via MAG data dumps; after Jan 3, it be included in the OpenAlex data dump and API, but it will
       <em>no longer be updated.</em>
     </p>
@@ -138,7 +138,7 @@
 
 
 
-    <h5 class="text-h5" id="data-changes-ongoing">2.3 👍 Ongoing</h5>
+    <h5 class="text-h5" id="data-changes-ongoing">2.3 Ongoing 👍 </h5>
     <p>
       This data is included in OpenAlex. Until Jan 3, it'll be updated via MAG data
       dumps. After Jan 3, it will be updated via OpenAlex's algorithms and data sources.
@@ -185,7 +185,7 @@
     </li>
 
 
-    <h5 class="text-h5" id="data-changes-new">2.4 🔥 New</h5>
+    <h5 class="text-h5" id="data-changes-new">2.4 New 🔥 </h5>
     <p>
       These data types and functions are included in OpenAlex, but are <em>not in MAG</em>. They're currently updated using
       OpenAlex's algorithms and data sources, and that will continue after Jan 3.
@@ -217,7 +217,7 @@
 
     </ul>
 
-    <h4 class="text-h4" id="coverage-comparison">3. 📊 Coverage comparison</h4>
+    <h4 class="text-h4" id="coverage-comparison">3. Coverage comparison</h4>
     <p>
       Because OpenAlex will use a different set of sources and algorithms from MAG, our coverage and accuracy will be
       different. We'd like to compare the two in greater detail here &mdash; for example, to compare the systems based

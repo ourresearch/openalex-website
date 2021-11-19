@@ -64,7 +64,7 @@
         </v-menu>
 
         <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
-        <v-btn class="no-active low-key-button" text to="./faq">FAQ</v-btn>
+<!--        <v-btn class="no-active low-key-button" text to="./faq">FAQ</v-btn>-->
 
 
         <v-btn class="no-active low-key-button" text to="./contact">Contact</v-btn>
@@ -96,9 +96,9 @@
             <v-list-item to="/about">
               About
             </v-list-item>
-            <v-list-item to="/FAQ">
-              FAQ
-            </v-list-item>
+<!--            <v-list-item to="/FAQ">-->
+<!--              FAQ-->
+<!--            </v-list-item>-->
             <v-list-item to="./contact">
               Contact
             </v-list-item>
@@ -163,8 +163,8 @@ body {
 
     p, ul, ol, li, code {
       //font-family: dosis !important;
-      //font-family: roboto !important;
-      font-family: Inconsolata !important;
+      font-family: roboto !important;
+      //font-family: Inconsolata !important;
       //font-family: Helvetica !important;
       font-size: 18px !important;
       //letter-spacing: .05em !important;
