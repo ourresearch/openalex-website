@@ -62,6 +62,18 @@
       </code>
     </div>
 
+    <h4 class="text-h4 mt-12" id="tables">Format</h4>
+    <p>
+      The data export files are:
+      <ul>
+    <li>tab-delimited</li>
+    <li>with a header row (please make use of the header row because additional columns may be added in future releases)</li>
+    <li>using a zero-length string for NULL</li>
+    <li>escaped as per the ESCAPE option in Amazon Redshift's <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_UNLOAD.html">UNLOAD documentation</a>.</li>
+    <li>not using quotes around strings</li>
+    </ul>
+    </p>
+
     <h4 class="text-h4 mt-12" id="tables">Tables</h4>
     <p>
       Once you've downloaded the full directory, you'll be able to import the files into tables. Here are <a
