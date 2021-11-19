@@ -34,7 +34,7 @@
     </p>
     <p>
       Fast forward a few millenia: OpenAlex had been a dream at
-      <a href="httsp://ourresearch.org">our little nonprofit</a> for a long time, but two doors opened simultaneously in
+      <a href="https://ourresearch.org">our little nonprofit</a> for a long time, but two doors opened simultaneously in
       May 2021. First,
       <a href="https://blog.ourresearch.org/arcadia-2021-grant/">we received a generous, $4.5M grant</a> from <a
         href="https://www.arcadiafund.org.uk/">Arcadia, a charitable fund of Lisbet Rausing and Peter Baldwin.</a>
@@ -81,8 +81,9 @@
       <router-link to="./data-dump">data dump</router-link>
       is...<em>nearly</em> free. It’s hosted on AWS in a <a
         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ObjectsinRequesterPaysBuckets.html">"Requester Pays"
-      bucket,</a> which means they’ll charge you (not us) for the download bandwidth; since it’s a very large file,
-      that’ll run you around $10. If you can’t afford that, <a href="mailto:team@ourresearch.org">let us know</a> and
+      bucket,</a> which means they’ll charge you (not us) for the download bandwidth; since it’s a number of very large files,
+      it’ll cost about $10 to download the whole dataset. We will be releasing updated datasets every two weeks, so it will
+      run you about $260/year. If you can’t afford that, <a href="mailto:team@ourresearch.org">let us know</a> and
       we’ll happily cover it for you.
     </p>
     <p>
@@ -90,9 +91,7 @@
     </p>
     <ul>
       <li>
-        It adds up quick. We project data transfer will cost over $250,000 our first year &mdash; and that’s before some
-        well-meaning grad student accidentally leaves <code>download_everything_repeatedly.sh</code> running all
-        weekend....
+        It adds up quickly. We estimate data transfer costs will be more than $250,000 our first year.
 
       </li>
       <li>
@@ -120,7 +119,7 @@
 
     <h4 class="text-h4" id="acknowledgements">Acknowledgements</h4>
     <p>
-      We'd like to thank everyone behind all our <a href="#sources">data sources,</a> but especially the folks at MAG
+      We'd like to thank everyone behind all our <a href="#sources">data sources,</a> but especially the folks at <a href="https://aka.ms/msracad">MAG</a>
       for building a really audacious and cool thing, and providing us lots of help and support as we build its
       replacement.
     </p>

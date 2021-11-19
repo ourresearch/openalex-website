@@ -22,7 +22,8 @@
 
     <h4 class="text-h4 mt-12" id="download">Download</h4>
     <p>
-      The dataset is hosted on Amazon Web Services (AWS) S3 bucket. Here's the URI for the most recent dump:
+      The dataset is hosted on Amazon Web Services (AWS) S3 bucket. We will be releasing new datasets approximately every two weeks.
+      Here's the URI for the most recent dump:
     </p>
     <a class="font-weight-bold pb-12" href="" style="font-size: 28px;">
       s3://openalex/data_dump_v1/2021-10-11
