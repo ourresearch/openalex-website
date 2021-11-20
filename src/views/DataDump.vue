@@ -20,7 +20,7 @@
       which documents how the dataset is put together.
     </p>
     <p>
-      For many use cases, the full 500-terabyte data dump is overkill&mdash;you'll be better served using our
+      For many use cases, the full 500-gigaabyte data dump is overkill&mdash;you'll be better served using our
       free
       <router-link to="./rest-api">REST API.</router-link>
       The API lets you access and query the full dataset, without having to host a humongous database.
@@ -38,7 +38,7 @@
     <p class="mt-6">
       This is a <a
         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ObjectsinRequesterPaysBuckets.html">"Requester Pays"
-      bucket.</a> Your AWS account will be charged for the cost of the transfer, which is around $10 USD &mdash; but if
+      bucket</a> in the region us-east-1. Your AWS account will be charged for the cost of the transfer, which is around $10 USD &mdash; but if
       you can't afford that, just
       <a href="mailto:team@ourresearch.org">let us know</a> and we'll be happy cover the cost for you.
     </p>
@@ -73,11 +73,15 @@
       The data export files are:
       <ul>
     <li>tab-delimited</li>
+    <li>uncompressed</li>
     <li>with a header row (please make use of the header row because additional columns may be added in future releases)</li>
     <li>using a zero-length string for NULL</li>
     <li>escaped as per the ESCAPE option in Amazon Redshift's <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_UNLOAD.html">UNLOAD documentation</a>.</li>
     <li>not using quotes around strings</li>
+    <li>one file per table, except for abstracts which are split across several files</li>
     </ul>
+    <p>
+    These choices were made so the data dump would be backwards-compatible with MAG (the header row is the only difference between this data format and MAG's).
     </p>
 
     <h4 class="text-h4 mt-12" id="tables">Tables</h4>
