@@ -20,7 +20,7 @@
       which documents how the dataset is put together.
     </p>
     <p>
-      For many use cases, the full 500-terabyte data dump is overkill&mdash;you'll be better served using our
+      For many use cases, the full 500-gigabyte data dump is overkill&mdash;you'll be better served using our
       free
       <router-link to="./rest-api">REST API.</router-link>
       The API lets you access and query the full dataset, without having to host a humongous database.
@@ -73,11 +73,16 @@
       The data export files are:
       <ul>
     <li>tab-delimited</li>
+    <li>uncompressed</li>
     <li>with a header row (please make use of the header row because additional columns may be added in future releases)</li>
     <li>using a zero-length string for NULL</li>
     <li>escaped as per the ESCAPE option in Amazon Redshift's <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_UNLOAD.html">UNLOAD documentation</a>.</li>
     <li>not using quotes around strings</li>
+    <li>in one file per table, other than PaperAbstractsInvertedIndex which is spread across several files</li>
     </ul>
+    </p>
+    <p>
+      This data export format was chosen to be backwards compatible with MAG (the format is the same as MAG's other than the addition of a header row).
     </p>
 
     <h4 class="text-h4 mt-12" id="tables">Tables</h4>
