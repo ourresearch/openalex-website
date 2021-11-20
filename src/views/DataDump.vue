@@ -78,7 +78,7 @@
     <li>using a zero-length string for NULL</li>
     <li>escaped as per the ESCAPE option in Amazon Redshift's <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_UNLOAD.html">UNLOAD documentation</a>.</li>
     <li>not using quotes around strings</li>
-    <li>in one file per table, other than PaperAbstractsInvertedIndex which is spread across several files</li>
+    <li>one file per table, other than PaperAbstractsInvertedIndex which is spread across several files</li>
     </ul>
     </p>
     <p>
