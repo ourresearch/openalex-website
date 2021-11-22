@@ -50,7 +50,7 @@
 
     <div class="my-6">
       <code>
-        aws s3 cp s3://openalex/data_dump_v1/2021-10-11 . --recursive --request-payer requester
+        aws s3 cp s3://openalex/data_dump_v1/2021-10-11 . --recursive --region us-east-1 --request-payer requester
       </code>
 
     </div>
@@ -64,7 +64,7 @@
     </p>
     <div class="my-6">
       <code>
-        aws s3 cp s3://openalex/data_dump_v1/2021-10-11/LISTING.txt . --request-payer requester
+        aws s3 cp s3://openalex/data_dump_v1/2021-10-11/LISTING.txt . --region us-east-1 --request-payer requester
       </code>
     </div>
 

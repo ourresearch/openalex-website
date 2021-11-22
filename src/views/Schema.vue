@@ -2324,7 +2324,7 @@
               <td><a id='Authors_Orcid'>Orcid</a></td>
               <td> varchar</td>
               <td> NEW&#59; ORCID identifier for this author (see https://orcid.org). ⚠️ KNOWN ERROR: some ORCIDs are
-                wrong, due to an error in the Crossref API. Should be fixed in next data dump.
+                wrong, due to errors in the source Crossref data. Should be fixed before Jan 3rd.
               </td>
             </tr>
             <tr>
