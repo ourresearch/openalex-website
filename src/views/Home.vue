@@ -8,7 +8,7 @@
         <div class="mt-12">
           <p style="">
 
-            Inspired by the ancient Library of Alexandria, OpenAlex is an index of hundreds of millions of interconnected entities across the global research system. We're free, open-source, and currently in early beta, with an official launch on January 3, 2021.
+            Inspired by the ancient Library of Alexandria, OpenAlex is an index of hundreds of millions of interconnected entities across the global research system. We're free, open-source, and currently in early beta, with an official launch on January 3, 2022.
           </p>
 
         </div>
