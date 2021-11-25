@@ -93,6 +93,15 @@
       linked above, since most tables are contained within a single file.
     </p>
 
+    <h4 class="text-h4 mt-12" id="troubleshooting">Troubleshooting</h4>
+    <p>
+      If you are having problems downloading the files, check these things:
+      <ul>
+    <li>the AWS CLI tools you are using are at version 2.0.0 or higher (<code>aws --version</code>)</li>
+    <li>the AWS account you are using does not restrict access to us-east-1</li>
+    <li>you are specifing <code>--request-payer requester</code> in your request, as described above</li>
+    </ul>
+    </p>
 
   </v-container>
 </template>
