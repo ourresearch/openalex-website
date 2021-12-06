@@ -76,7 +76,7 @@
         MAG included code to help you create a private, locally-hosted REST API. This was called <a
           href="https://docs.microsoft.com/en-us/academic-services/knowledge-exploration-service/?view=makes-3.0">MAKES,</a>
         and OpenAlex doesn't support it. Instead, we support a single
-        <router-link to="./rest-apy">centrally-hosted REST API</router-link>
+        <router-link to="./rest-api">centrally-hosted REST API</router-link>
         that anyone can use, without having to host it or get the code running. Of course, if you want to create your
         own local API to serve the dataset you can still do that.
       </li>

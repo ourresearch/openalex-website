@@ -9,7 +9,7 @@
   <p>
     OpenAlex will not support the locally-hosted, private <a
           href="https://docs.microsoft.com/en-us/academic-services/knowledge-exploration-service/?view=makes-3.0">MAKES API tool.</a> Instead, we will have a single,
-        <router-link to="./rest-apy">centrally-hosted REST API</router-link>
+        <router-link to="./rest-api">centrally-hosted REST API</router-link>
         that anyone can use, without having to host it or get the code running.
   </p>
   <p>
