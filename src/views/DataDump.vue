@@ -32,7 +32,7 @@
       Here's the URI for the most recent dump:
     </p>
     <a class="font-weight-bold pb-12" href="" style="font-size: 28px;">
-      s3://openalex/data_dump_v1/2021-10-11
+      s3://openalex/data_dump_v1/2021-11-08
     </a>
 
     <p class="mt-6">
@@ -50,7 +50,7 @@
 
     <div class="my-6">
       <code>
-        aws s3 cp s3://openalex/data_dump_v1/2021-10-11 . --recursive --request-payer requester
+        aws s3 cp s3://openalex/data_dump_v1/2021-11-08 . --recursive --region us-east-1 --request-payer requester
       </code>
 
     </div>
@@ -64,9 +64,12 @@
     </p>
     <div class="my-6">
       <code>
-        aws s3 cp s3://openalex/data_dump_v1/2021-10-11/LISTING.txt . --request-payer requester
+        aws s3 cp s3://openalex/data_dump_v1/2021-11-08/LISTING.txt . --region us-east-1 --request-payer requester
       </code>
     </div>
+    <p>
+      There are release notes describing previous releases at s3://openalex/data_dump_v1/RELEASE_NOTES.txt
+    </p>
 
     <h4 class="text-h4 mt-12" id="tables">Format</h4>
     <p>
@@ -93,6 +96,16 @@
       linked above, since most tables are contained within a single file.
     </p>
 
+    <h4 class="text-h4 mt-12" id="troubleshooting">Troubleshooting</h4>
+    <p>
+      If you are having problems downloading the files, check these things:
+      <ul>
+    <li>the AWS CLI tools you are using are at version 2.0.0 or higher (<code>aws --version</code>)</li>
+    <li>the AWS account you are using does not restrict access to us-east-1</li>
+    <li>you are specifing <code>--request-payer requester</code> in your request, as described above</li>
+    <li>try accessing with s3cmd instead (<a href="https://softwarerecs.stackexchange.com/a/25927">instructions</a>)</li>
+    </ul>
+    </p>
 
   </v-container>
 </template>

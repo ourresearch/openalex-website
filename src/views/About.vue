@@ -11,9 +11,9 @@
       graph. You can help <strong>manage</strong> research by tracking citation impact, spotting promising new research
       areas, and identifying and promoting work from underrepresented groups. And you can do <strong>research</strong> on research
       itself, in areas like
-      <a href="https://en.wikipedia.org/wiki/Bibliometrics">bibliometrics,</a>
-      <a href="https://en.wikipedia.org/wiki/Science_and_technology_studies">science and technology studies,</a> and
-      <a href="https://en.wikipedia.org/wiki/Science_of_science_policy">Science of science policy</a>
+      <a href="https://en.wikipedia.org/wiki/Bibliometrics">bibliometrics</a>,
+      <a href="https://en.wikipedia.org/wiki/Science_and_technology_studies">science and technology studies</a>, and
+      <a href="https://en.wikipedia.org/wiki/Science_of_science_policy">Science of science policy</a>.
     </p>
     <p>
       Because we think all research should be free and open, OpenAlex is free and open itself, and we're built on a fully <a href="https://github.com/ourresearch/openalex-guts">Open Source codebase.</a>
