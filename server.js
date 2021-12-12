@@ -10,14 +10,51 @@ let app = express();
 app.use(serveStatic(__dirname + "/dist"));
 
 
+const entityTypes = {
+    "W": "works",
+    "I": "institutions",
+    "V": "venues",
+    "A": "authors",
+    "C": "concepts",
+};
 
+
+// match these:
+// /w123.json
+// /w123
+// /W123
+//
+// // miss me with these:
+// /w123.html
+// /123
+// /u123
+const openAlexIdRegex = /^\/([wWiIvVaAcC]\d+)(\.json)?$/;
+
+
+// if we want to always redirect to https, use this:
+// https://medium.com/@seunghunsunmoonlee/how-to-enforce-https-redirect-http-to-https-on-heroku-deployed-apps-a87a653ba61e
+// not going to implement for now because it's not essential and we're short on time.
 app.get('*', function (req, res) {
-    // if we want to always redirect to https, use this:
-    // https://medium.com/@seunghunsunmoonlee/how-to-enforce-https-redirect-http-to-https-on-heroku-deployed-apps-a87a653ba61e
-    // not going to implement for now because it's not essential and we're short on time.
 
+    const pathIdMatches = req.match(openAlexIdRegex)
 
-    res.sendfile('./dist/index.html');
+    // this is actually a PID that we need to resolve, not a page on this site.
+    // we can resolve it to the API, or the web UI
+    if (pathIdMatches) {
+        const pathEndsInDotJson = !!pathIdMatches[2]
+        const subdomain = (pathEndsInDotJson) ? "api" : "web"
+
+        const id = pathIdMatches[0]
+        const idFirstLetter = id.substr(1, 1).toUpperCase()
+        const entityType = entityTypes[idFirstLetter];
+
+        const redirectUrl = `https://${subdomain}.openalex.org/${entityType}/${id}`
+        res.redirect(301, redirectUrl);
+
+    // the actually do want a webpage on openalex.org, so let's load up the Vue site
+    } else {
+        res.sendfile('./dist/index.html');
+    }
 });
 
 const port = process.env.PORT || 5000;
