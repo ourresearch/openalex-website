@@ -36,7 +36,7 @@ const openAlexIdRegex = /^\/([wWiIvVaAcC]\d+)(\.json)?$/;
 // not going to implement for now because it's not essential and we're short on time.
 app.get('*', function (req, res) {
 
-    const pathIdMatches = req.match(openAlexIdRegex)
+    const pathIdMatches = req.path.match(openAlexIdRegex)
 
     // this is actually a PID that we need to resolve, not a page on this site.
     // we can resolve it to the API, or the web UI
