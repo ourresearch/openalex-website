@@ -44,8 +44,8 @@ app.get('*', function (req, res) {
         const pathEndsInDotJson = !!pathIdMatches[2]
         const subdomain = (pathEndsInDotJson) ? "api" : "web"
 
-        const id = pathIdMatches[0]
-        const idFirstLetter = id.substr(1, 1).toUpperCase()
+        const id = pathIdMatches[1]
+        const idFirstLetter = id.substr(0, 1).toUpperCase()
         const entityType = entityTypes[idFirstLetter];
 
         const redirectUrl = `https://${subdomain}.openalex.org/${entityType}/${id}`
