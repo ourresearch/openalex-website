@@ -32,7 +32,7 @@
       Here's the URI for the most recent dump:
     </p>
     <a class="font-weight-bold pb-12" href="" style="font-size: 28px;">
-      s3://openalex/data_dump_v1/2021-11-08
+      s3://openalex-mag-format/data_dump_v1/2021-11-08
     </a>
 
     <p class="mt-6">
@@ -50,7 +50,7 @@
 
     <div class="my-6">
       <code>
-        aws s3 cp s3://openalex/data_dump_v1/2021-11-08 . --recursive --region us-east-1 --request-payer requester
+        aws s3 cp s3://openalex-mag-format/data_dump_v1/2021-11-08 . --recursive --region us-east-1 --request-payer requester
       </code>
 
     </div>
@@ -64,11 +64,14 @@
     </p>
     <div class="my-6">
       <code>
-        aws s3 cp s3://openalex/data_dump_v1/2021-11-08/LISTING.txt . --region us-east-1 --request-payer requester
+        aws s3 cp s3://openalex-mag-format/data_dump_v1/2021-11-08/LISTING.txt . --region us-east-1 --request-payer requester
       </code>
     </div>
     <p>
-      There are release notes describing previous releases at s3://openalex/data_dump_v1/RELEASE_NOTES.txt
+      There are release notes describing previous releases at s3://openalex-mag-format/data_dump_v1/RELEASE_NOTES.txt
+    </p>
+    <p>
+      NOTE: the bucket for the MAG format has changed, it is now at <b>s3://openalex-mag-format</b>. More documentation on this change will be posted on Jan 3rd.
     </p>
 
     <h4 class="text-h4 mt-12" id="tables">Format</h4>
