@@ -21,7 +21,7 @@
       </p>
       <p>
         You may also want to pay particular attention to tables and columns marked
-        <router-link to="./mag-migration-guide#data-changes-archival">📦️ARCHIVAL</router-link>
+        <router-link to="./mag-migration-guide#data-changes-archival">❄️️ARCHIVAL</router-link>
         (not updated after Jan 3) and
         <router-link to="./mag-migration-guide#data-changes-archival">🔥NEW</router-link>
         (in OpenAlex, but not MAG).
@@ -648,7 +648,7 @@
                 Referred by PaperAuthorAffiliations ( AffiliationId ) </title></a>
             <a xlink:href='#Affiliations_Rank'>
               <text id='Affiliations.Rank' x='931' y='711'>
-                Rank 📦️
+                Rank ❄️️
               </text>
               <title>Rank
                 integer
@@ -693,7 +693,7 @@
                 bigint</title></a>
             <text x='1069' y='820' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Affiliations_PaperFamilyCount'>
-              <text id='Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount 📦️</text>
+              <text id='Affiliations.PaperFamilyCount' x='931' y='839'>PaperFamilyCount ❄️️</text>
               <title>PaperFamilyCount
                 bigint
                 ARCHIVAL; same value as PaperCount after Jan 3.</title></a>
@@ -786,7 +786,7 @@
               <title>Referred by AuthorExtendedAttributes ( AuthorId )
                 Referred by PaperAuthorAffiliations ( AuthorId ) </title></a>
             <a xlink:href='#Authors_Rank'>
-              <text id='Authors.Rank' x='1139' y='535'>Rank 📦️</text>
+              <text id='Authors.Rank' x='1139' y='535'>Rank ❄️️</text>
               <title>Rank
                 integer
                 ARCHIVAL; no new ranks will be added after Jan 3</title></a>
@@ -825,7 +825,7 @@
                 bigint</title></a>
             <text x='1309' y='612' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Authors_PaperFamilyCount'>
-              <text id='Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount 📦️</text>
+              <text id='Authors.PaperFamilyCount' x='1139' y='631'>PaperFamilyCount ❄️️</text>
               <title>PaperFamilyCount
                 bigint
                 ARCHIVAL; same value as PaperCount after Jan 3</title></a>
@@ -851,7 +851,7 @@
                   height='336'/>
             <rect class='entity' x='848' y='1016' width='208' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
             <a xlink:href='#ConferenceInstances'>
-              <text x='883' y='1035' class='white'>ConferenceInstances 📦️</text>
+              <text x='883' y='1035' class='white'>ConferenceInstances ❄️️</text>
               <title> ConferenceInstances
                 ARCHIVAL; Base table for Conference Instances (mag/ConferenceInstances.txt)</title></a>
             <use id='idx1' x='850' y='1052' xlink:href='#idx1'><title>Distribution ( ConferenceInstanceId ) Sorting (
@@ -967,7 +967,7 @@
                   height='176'/>
             <rect class='entity' x='640' y='1048' width='176' height='28' style='stroke:#B4ADC9; fill:#786AA1'/>
             <a xlink:href='#ConferenceSeries'>
-              <text x='669' y='1067' class='white'>ConferenceSeries 📦️</text>
+              <text x='669' y='1067' class='white'>ConferenceSeries ❄️️</text>
               <title> ConferenceSeries
                 ARCHIVAL; Base table for Conference Series (mag/ConferenceSeries.txt)</title></a>
             <use id='idx1' x='642' y='1084' xlink:href='#idx1'><title>Distribution ( ConferenceSeriesId ) Sorting (
@@ -1167,7 +1167,7 @@
                 Referred by FieldOfStudyExtendedAttributes ( FieldOfStudyId )
                 Referred by PaperFieldsOfStudy ( FieldOfStudyId ) </title></a>
             <a xlink:href='#FieldsOfStudy_Rank'>
-              <text id='FieldsOfStudy.Rank' x='643' y='167'>Rank 📦️</text>
+              <text id='FieldsOfStudy.Rank' x='643' y='167'>Rank ❄️️</text>
               <title>Rank
                 varchar
                 ARCHIVAL; no new ranks will be added after Jan 3.</title></a>
@@ -1200,7 +1200,7 @@
                 bigint</title></a>
             <text x='781' y='244' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#FieldsOfStudy_PaperFamilyCount'>
-              <text id='FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount 📦️</text>
+              <text id='FieldsOfStudy.PaperFamilyCount' x='643' y='263'>PaperFamilyCount ❄️️</text>
               <title>PaperFamilyCount
                 bigint
                 ARCHIVAL; same value as PaperCount after Jan 3.</title></a>
@@ -1236,7 +1236,7 @@
               <use id='ref' x='804' y='588' xlink:href='#ref'/>
               <title>Referred by Papers ( JournalId ) </title></a>
             <a xlink:href='#Journals_Rank'>
-              <text id='Journals.Rank' x='675' y='615'>Rank 📦️</text>
+              <text id='Journals.Rank' x='675' y='615'>Rank ❄️️</text>
               <title>Rank
                 integer
                 ARCHIVAL; no new ranks will be added after Jan 3</title></a>
@@ -1294,7 +1294,7 @@
                 bigint</title></a>
             <text x='813' y='756' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Journals_PaperFamilyCount'>
-              <text id='Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount 📦️</text>
+              <text id='Journals.PaperFamilyCount' x='675' y='775'>PaperFamilyCount ❄️️</text>
               <title>PaperFamilyCount
                 bigint
                 ARCHIVAL; same value as PaperCount after Jan 3</title></a>
@@ -1414,7 +1414,7 @@
                   height='96'/>
             <rect class='entity' x='336' y='1128' width='160' height='28' style='stroke:#ADBBC9; fill:#6A87A1'/>
             <a xlink:href='#PaperCitationContexts'>
-              <text x='341' y='1147' class='white'>PaperCitationContexts 📦️</text>
+              <text x='341' y='1147' class='white'>PaperCitationContexts ❄️️</text>
               <title> PaperCitationContexts
                 ARCHIVAL, not updated after Jan 3; citation contexts (nlp/PaperCitationContexts.txt)</title></a>
             <use id='idx1' x='338' y='1164' xlink:href='#idx1'><title>Distribution ( PaperId ) Sorting ( PaperId
@@ -1655,7 +1655,7 @@
                   height='128'/>
             <rect class='entity' x='80' y='616' width='160' height='28' style='stroke:#ADBCC9; fill:#6A89A1'/>
             <a xlink:href='#PaperResources'>
-              <text x='107' y='635' class='white'>PaperResources 📦️</text>
+              <text x='107' y='635' class='white'>PaperResources ❄️️</text>
               <title> PaperResources
                 ARCHIVAL; not updated after Jan 3. Data and code urls associated with papers
                 (mag/PaperResources.txt)</title>
@@ -1811,7 +1811,7 @@
                 Referred by PaperFieldsOfStudy ( PaperId )
                 Referred by PaperAuthorAffiliations ( PaperId ) </title></a>
             <a xlink:href='#Papers_Rank'>
-              <text id='Papers.Rank' x='387' y='535'>Rank 📦️</text>
+              <text id='Papers.Rank' x='387' y='535'>Rank ❄️️</text>
               <title>Rank
                 integer
                 ARCHIVAL; no new ranks will be added after Jan 3</title></a>
@@ -1895,7 +1895,7 @@
               <text id='Papers.ConferenceSeriesId' x='387' y='743'
                     onmouseover="hghl(['Papers_Fk_Papers_ConferenceSeries','ConferenceSeries.ConferenceSeriesId'])"
                     onmouseout="uhghl(['Papers_Fk_Papers_ConferenceSeries','ConferenceSeries.ConferenceSeriesId'])">
-                ConferenceSeriesId 📦️
+                ConferenceSeriesId ❄️️
               </text>
               <title>ConferenceSeriesId
                 bigint
@@ -1909,7 +1909,7 @@
               <text id='Papers.ConferenceInstanceId' x='387' y='759'
                     onmouseover="hghl(['Papers_Fk_Papers_ConferenceInstances','ConferenceInstances.ConferenceInstanceId'])"
                     onmouseout="uhghl(['Papers_Fk_Papers_ConferenceInstances','ConferenceInstances.ConferenceInstanceId'])">
-                ConferenceInstanceId 📦️
+                ConferenceInstanceId ❄️️
               </text>
               <title>ConferenceInstanceId
                 bigint
@@ -1961,13 +1961,13 @@
                 varchar</title></a>
             <text x='541' y='884' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#Papers_FamilyId'>
-              <text id='Papers.FamilyId' x='387' y='903'>FamilyId 📦️</text>
+              <text id='Papers.FamilyId' x='387' y='903'>FamilyId ❄️️</text>
               <title>FamilyId
                 bigint
                 ARCHIVAL; not updated after Jan 3.</title></a>
             <text x='541' y='900' text-anchor='end' class='colType'>#</text>
             <a xlink:href='#Papers_FamilyRank'>
-              <text id='Papers.FamilyRank' x='387' y='919'>FamilyRank 📦️</text>
+              <text id='Papers.FamilyRank' x='387' y='919'>FamilyRank ❄️️</text>
               <title>FamilyRank
                 bigint
                 ARCHIVAL; not updated after Jan 3.</title></a>
@@ -2069,7 +2069,7 @@
                 Possible values: general, disease, disease_cause, medical_treatment, symptom</title></a>
             <text x='973' y='372' text-anchor='end' class='colType'>t</text>
             <a xlink:href='#RelatedFieldOfStudy_Rank'>
-              <text id='RelatedFieldOfStudy.Rank' x='851' y='391'>Rank 📦️</text>
+              <text id='RelatedFieldOfStudy.Rank' x='851' y='391'>Rank ❄️️</text>
               <title>Rank
                 real
                 ARCHIVAL; no new ranks will be added after Jan 3.</title></a>
@@ -2138,7 +2138,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Affiliations_Rank'>Rank</a></td>
               <td> integer</td>
               <td> ARCHIVAL&#59; no new ranks will be added after Jan 3&#46;</td>
@@ -2156,7 +2156,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Affiliations_GridId'>GridId</a></td>
               <td> varchar</td>
               <td> ARCHIVAL&#59; RorId is the new standard identifier for organizations</td>
@@ -2186,7 +2186,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Affiliations_PaperFamilyCount'>PaperFamilyCount </a></td>
               <td> bigint</td>
               <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
@@ -2302,7 +2302,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Authors_Rank'>Rank</a></td>
               <td> integer</td>
               <td> ARCHIVAL&#59; no new ranks will be added after Jan 3</td>
@@ -2346,7 +2346,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Authors_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
               <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
@@ -2379,7 +2379,7 @@
         <div class='card-body'><a id='ConferenceInstances'
                                   onclick="window.scrollTo(648, 1024);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceInstances').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> ConferenceInstances</h5></a>
-          <p class="text-muted">📦️ ARCHIVAL&#59; Base table for Conference Instances &#40;mag&#47;ConferenceInstances&#46;txt&#41;</p>
+          <p class="text-muted">❄️️ ARCHIVAL&#59; Base table for Conference Instances &#40;mag&#47;ConferenceInstances&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
@@ -2516,7 +2516,7 @@
         <div class='card-body'><a id='ConferenceSeries'
                                   onclick="window.scrollTo(440, 1056);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_ConferenceSeries').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> ConferenceSeries</h5></a>
-          <p class="text-muted">📦️ ARCHIVAL&#59; Base table for Conference Series
+          <p class="text-muted">❄️️ ARCHIVAL&#59; Base table for Conference Series
             &#40;mag&#47;ConferenceSeries&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -2762,7 +2762,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='FieldsOfStudy_Rank'>Rank</a></td>
               <td> varchar</td>
               <td> ARCHIVAL&#59; no new ranks will be added after Jan 3&#46;</td>
@@ -2798,7 +2798,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='FieldsOfStudy_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
               <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
@@ -2847,7 +2847,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Journals_Rank'>Rank</a></td>
               <td> integer</td>
               <td> ARCHIVAL&#59; no new ranks will be added after Jan 3</td>
@@ -2909,7 +2909,7 @@
               <td></td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Journals_PaperFamilyCount'>PaperFamilyCount</a></td>
               <td> bigint</td>
               <td> ARCHIVAL&#59; same value as PaperCount after Jan 3</td>
@@ -3056,7 +3056,7 @@
         <div class='card-body'><a id='PaperCitationContexts'
                                   onclick="window.scrollTo(136, 1136);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperCitationContexts').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> PaperCitationContexts</h5></a>
-          <p class="text-muted">📦️ ARCHIVAL&#59; citation contexts &#40;nlp&#47;PaperCitationContexts&#46;txt&#41;</p>
+          <p class="text-muted">❄️️ ARCHIVAL&#59; citation contexts &#40;nlp&#47;PaperCitationContexts&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
             <tr>
@@ -3353,7 +3353,7 @@
         <div class='card-body'><a id='PaperResources'
                                   onclick="window.scrollTo(60, 624);var nodes = document.getElementsByClassName('palpable');for (var i = 0; i < nodes.length; i++) { nodes[i].classList.remove('palpable');}; document.getElementById('depict_PaperResources').classList.add('palpable'); return false;"
                                   style='cursor:pointer;'><h5 class='card-title'> PaperResources</h5></a>
-          <p class="text-muted">📦️ ARCHIVAL&#59; not updated after Jan 3&#46; Data and code urls associated with papers
+          <p class="text-muted">❄️️ ARCHIVAL&#59; not updated after Jan 3&#46; Data and code urls associated with papers
             &#40;mag&#47;PaperResources&#46;txt&#41;</p>
           <table class='table table-sm small' style='table-layout: fixed; word-wrap: break-word;'>
             <thead>
@@ -3530,7 +3530,7 @@
               <td> PRIMARY KEY</td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Papers_Rank'>Rank</a></td>
               <td> integer</td>
               <td> ARCHIVAL&#59; no new ranks will be added after Jan 3</td>
@@ -3542,7 +3542,7 @@
               <td> Doi values are upper&#45;cased per DOI standard at https&#58;&#47;&#47;www&#46;doi&#46;org&#47;doi&#95;handbook&#47;2&#95;Numbering&#46;html&#35;2&#46;4</td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Papers_DocType'>DocType</a></td>
               <td> varchar</td>
               <td> Possible values&#58; Book&#44; BookChapter&#44; Conference&#44; Dataset&#44; Journal&#44; Patent&#44;
@@ -3620,7 +3620,7 @@
                 <svg width='14' height='14'>
                   <use xlink:href='#fk'/>
                 </svg>
-                📦️
+                ❄️️
               </td>
               <td><a id='Papers_ConferenceSeriesId'>ConferenceSeriesId</a></td>
               <td> bigint</td>
@@ -3634,7 +3634,7 @@
                 <svg width='14' height='14'>
                   <use xlink:href='#fk'/>
                 </svg>
-                📦️
+                ❄️️
               </td>
               <td><a id='Papers_ConferenceInstanceId'>ConferenceInstanceId</a></td>
               <td> bigint</td>
@@ -3692,13 +3692,13 @@
               <td></td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Papers_FamilyId'>FamilyId</a></td>
               <td> bigint</td>
               <td> ARCHIVAL&#59; not updated after Jan 3&#46;</td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='Papers_FamilyRank'>FamilyRank</a></td>
               <td> bigint</td>
               <td> ARCHIVAL&#59; not updated after Jan 3&#46;</td>
@@ -3812,7 +3812,7 @@
               </td>
             </tr>
             <tr>
-              <td>📦️</td>
+              <td>❄️️</td>
               <td><a id='RelatedFieldOfStudy_Rank'>Rank</a></td>
               <td> real</td>
               <td> ARCHIVAL&#59; no new ranks will be added after Jan 3&#46;</td>

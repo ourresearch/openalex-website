@@ -84,7 +84,7 @@
     </ul>
 
 
-    <h5 class="text-h5" id="data-changes-archival">2.2 Archival 📦️ </h5>
+    <h5 class="text-h5" id="data-changes-archival">2.2 Archival ❄️ </h5>
     <p>This data is included in OpenAlex. Until Jan 3, it will be updated via MAG data dumps; after Jan 3, it be included in the OpenAlex data dump and API, but it will
       <em>no longer be updated.</em>
     </p>
