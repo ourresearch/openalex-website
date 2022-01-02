@@ -42,7 +42,7 @@ app.get('*', function (req, res) {
     // we can resolve it to the API, or the web UI
     if (pathIdMatches) {
         const pathEndsInDotJson = !!pathIdMatches[2]
-        const subdomain = (pathEndsInDotJson) ? "api" : "web"
+        const subdomain = (pathEndsInDotJson) ? "api" : "explore"
 
         const id = pathIdMatches[1]
         const idFirstLetter = id.substr(0, 1).toUpperCase()
