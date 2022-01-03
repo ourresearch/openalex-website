@@ -28,43 +28,48 @@
       <!--      DESKTOP MENU -->
       <v-toolbar-items class=" hidden-sm-and-down">
         <v-btn class="no-active low-key-button" text to="/">Home</v-btn>
+        <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
+          Read the docs
+          <v-icon right>mdi-open-in-new</v-icon>
+        </v-btn>
 
-        <v-menu offset-y content-class="no-highlight">
-          <template v-slot:activator="{on}">
-            <v-btn text color="" v-on="on" class="low-key-button">
-              Data
-              <v-icon class="">mdi-menu-down</v-icon>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-item to="/data-dump">
-              Data dump
-            </v-list-item>
-            <v-list-item to="/rest-api">
-              REST API
-            </v-list-item>
-          </v-list>
-        </v-menu>
 
-        <v-menu offset-y content-class="no-highlight">
-          <template v-slot:activator="{on}">
-            <v-btn text color="" v-on="on" class="low-key-button">
-              Docs
-              <v-icon class="">mdi-menu-down</v-icon>
-            </v-btn>
-          </template>
-          <v-list>
-            <v-list-item to="/schema">
-              Schema
-            </v-list-item>
-            <v-list-item to="/mag-migration-guide">
-              MAG migration guide
-            </v-list-item>
-          </v-list>
-        </v-menu>
+        <!--        <v-menu offset-y content-class="no-highlight">-->
+        <!--          <template v-slot:activator="{on}">-->
+        <!--            <v-btn text color="" v-on="on" class="low-key-button">-->
+        <!--              Data-->
+        <!--              <v-icon class="">mdi-menu-down</v-icon>-->
+        <!--            </v-btn>-->
+        <!--          </template>-->
+        <!--          <v-list>-->
+        <!--            <v-list-item to="/data-dump">-->
+        <!--              Data dump-->
+        <!--            </v-list-item>-->
+        <!--            <v-list-item to="/rest-api">-->
+        <!--              REST API-->
+        <!--            </v-list-item>-->
+        <!--          </v-list>-->
+        <!--        </v-menu>-->
+
+        <!--        <v-menu offset-y content-class="no-highlight">-->
+        <!--          <template v-slot:activator="{on}">-->
+        <!--            <v-btn text color="" v-on="on" class="low-key-button">-->
+        <!--              Docs-->
+        <!--              <v-icon class="">mdi-menu-down</v-icon>-->
+        <!--            </v-btn>-->
+        <!--          </template>-->
+        <!--          <v-list>-->
+        <!--            <v-list-item to="/schema">-->
+        <!--              Schema-->
+        <!--            </v-list-item>-->
+        <!--            <v-list-item to="/mag-migration-guide">-->
+        <!--              MAG migration guide-->
+        <!--            </v-list-item>-->
+        <!--          </v-list>-->
+        <!--        </v-menu>-->
 
         <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
-<!--        <v-btn class="no-active low-key-button" text to="./faq">FAQ</v-btn>-->
+        <!--        <v-btn class="no-active low-key-button" text to="./faq">FAQ</v-btn>-->
 
 
         <v-btn class="no-active low-key-button" text to="./contact">Contact</v-btn>
@@ -81,24 +86,25 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item to="/data-dump">
-              Data dump
-            </v-list-item>
-            <v-list-item to="/rest-api">
-              REST API
-            </v-list-item>
-            <v-list-item to="/schema">
-              Schema
-            </v-list-item>
-            <v-list-item to="/mag-migration-guide">
-              MAG migration guide
-            </v-list-item>
+            <!--            <v-list-item to="/data-dump">-->
+            <!--              Data dump-->
+            <!--            </v-list-item>-->
+            <!--            <v-list-item to="/rest-api">-->
+            <!--              REST API-->
+            <!--            </v-list-item>-->
+            <!--            <v-list-item to="/schema">-->
+            <!--              Schema-->
+            <!--            </v-list-item>-->
+            <!--            <v-list-item to="/mag-migration-guide">-->
+            <!--              MAG migration guide-->
+            <!--            </v-list-item>-->
+            <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
+              Read the docs
+              <v-icon right>mdi-open-in-new</v-icon>
+            </v-btn>
             <v-list-item to="/about">
               About
             </v-list-item>
-<!--            <v-list-item to="/FAQ">-->
-<!--              FAQ-->
-<!--            </v-list-item>-->
             <v-list-item to="./contact">
               Contact
             </v-list-item>
