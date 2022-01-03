@@ -8,7 +8,7 @@
         <div class="mt-12">
           <p style="">
 
-            Inspired by the ancient Library of Alexandria, OpenAlex is an index of hundreds of millions of interconnected entities across the global research system. We're free, open-source, and currently in early beta, with an official launch on January 3, 2022.
+            Inspired by the ancient Library of Alexandria, OpenAlex is an index of hundreds of millions of interconnected entities across the global research system. We're 100% free and open source, and offer access via a web interface, API, and database snapshot.
           </p>
 
         </div>
@@ -17,23 +17,24 @@
               x-large
               class=""
               color="primary"
-              to="./data-dump"
+              href="https://docs.openalex.org/"
           >
-            Get the data
-          </v-btn>
-
-
-          <v-btn
-              x-large
-              class=""
-              text
-              color="primary"
-              href="http://eepurl.com/hA8PhL"
-              target="_blank"
-          >
-            Join mailing list
+            Learn more
             <v-icon right>mdi-open-in-new</v-icon>
           </v-btn>
+
+
+<!--          <v-btn-->
+<!--              x-large-->
+<!--              class=""-->
+<!--              text-->
+<!--              color="primary"-->
+<!--              href="http://eepurl.com/hA8PhL"-->
+<!--              target="_blank"-->
+<!--          >-->
+<!--            Join mailing list-->
+<!--            <v-icon right>mdi-open-in-new</v-icon>-->
+<!--          </v-btn>-->
 
         </div>
       </v-container>
