@@ -75,40 +75,11 @@
 
     <h4 class="text-h4" id="pricing">Pricing</h4>
     <p>
-      The OpenAlex
-      <router-link to="./rest-api">API</router-link>
-      is free. The
-      <router-link to="./data-dump">data dump</router-link>
-      is...<em>nearly</em> free. It’s hosted on AWS in a <a
-        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ObjectsinRequesterPaysBuckets.html">"Requester Pays"
-      bucket,</a> which means they’ll charge you (not us) for the download bandwidth; since it’s a number of very large files,
-      it’ll cost about $10 to download the whole dataset. We will be releasing updated datasets every two weeks, so it will
-      run you about $260/year. If you can’t afford that, <a href="mailto:team@ourresearch.org">let us know</a> and
-      we’ll happily cover it for you.
+      OpenAlex is <a href="https://docs.openalex.org/faq#how-much-does-openalex-cost">completely free.</a>
     </p>
-    <p>
-      We’re passing that $10 cost on to users for a few reasons:
-    </p>
-    <ul>
-      <li>
-        It adds up quickly. We estimate data transfer costs will be more than $250,000 our first year.
 
-      </li>
-      <li>
-        It honors <a href="https://blog.ourresearch.org/posi/">our commitment</a> to the <a
-          href="https://openscholarlyinfrastructure.org/">POSI principles,</a> which (rightly) discourage using one-time
-        grant money to fund ongoing operational costs.
-
-      </li>
-      <li>
-        As open data advocates, we often hear “gosh I’d like to make my dataset open, but the hosting’s too expensive.”
-        We’d like to model one easy solution to that. (Kudos to <a href="https://arxiv.org/help/bulk_data_s3">arXiv</a>
-        and others for leading the way).
-
-      </li>
-    </ul>
     <p class="mt-4">
-      We’re also currently exploring sustainability models around enhanced access (like a daily update feed, or a
+      We’re  currently exploring sustainability models around premium access (like a daily update feed, or a
       high-throughput API). We’re proud that our other projects (<a
         href="https://unsub.org">Unsub</a> and <a href="https://unpaywall.org">Unpaywall</a>) have both been
       self-sustaining for years, and we think that’s vital for OpenAlex (and other scholarly infrastructure projects) as
