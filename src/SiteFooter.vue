@@ -7,29 +7,18 @@
     <v-container>
       <v-row>
         <v-col cols="12" sm="2">
-          <div>
-            <router-link to="/data-dump">Data dump</router-link>
-          </div>
-          <div>
-            <router-link to="/rest-api">REST API</router-link>
-          </div>
-          <div>
-            <router-link to="/schema">Schema</router-link>
-          </div>
-          <div>
-            <router-link to="/mag-migration-guide">MAG migration guide</router-link>
-          </div>
-<!--          <div>-->
-<!--            <router-link to="/faq">FAQ</router-link>-->
-<!--          </div>-->
-        </v-col>
-        <v-col cols="12" sm="2">
+          <a href="https://docs.openalex.org/">
+          Read the docs
+          <v-icon small>mdi-open-in-new</v-icon>
+        </a>
           <div>
             <router-link to="/about">About</router-link>
           </div>
           <div>
             <router-link to="/contact">Contact</router-link>
           </div>
+        </v-col>
+        <v-col cols="12" sm="2">
           <div>
             <a href="http://eepurl.com/hA8PhL" target="_blank">Mailing list</a>
           </div>

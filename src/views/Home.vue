@@ -1,7 +1,7 @@
 <template>
-  <div class="home d-flex justify-center align-center" style="min-height: 90vh;">
+  <div class="home d-flex justify-center">
     <div class="above-the-fold">
-      <v-container class="">
+      <v-container class="" style="margin-top: 150px">
         <div class="text-h3" style="line-height: 1.3;">
           An open and comprehensive catalog of scholarly papers, authors, institutions, and more.
         </div>

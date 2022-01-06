@@ -22,10 +22,12 @@ const routes = [
         name: 'Home',
         component: Home
     },
-    {path: '/data-dump', component: DataDump},
-    {path: '/rest-api', component: RestApi},
-    {path: '/schema', component: Schema},
-    {path: '/mag-migration-guide', component: MagMigrationGuide},
+    {path: '/data-dump', beforeEnter() {window.location.href = "https://docs.openalex.org/download-snapshot" }},
+    {path: '/rest-api', beforeEnter() {window.location.href = "https://docs.openalex.org/api" }},
+    {path: '/schema', beforeEnter() {window.location.href = "https://docs.openalex.org/download-snapshot" }},
+    {path: '/mag-migration-guide', beforeEnter() {window.location.href = "https://docs.openalex.org/download-snapshot/mag-format" }},
+
+
 
     {path: '/faq', component: Faq},
     {path: '/about', component: About},
