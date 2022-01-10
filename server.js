@@ -30,6 +30,19 @@ const entityTypes = {
 // /u123
 const openAlexIdRegex = /^\/([wWiIvVaAcC]\d+)(\.json)?$/;
 
+function requestPrefersJson(req) {
+    var acceptTypes = {}
+
+    for (const acceptPair of (req.headers.accept ?? "").split(",").map(a => a.split(";"))) {
+        const acceptType = acceptPair[0];
+        const acceptQuality = parseFloat((acceptPair[1] ?? "").split("q=")[1] ?? "1");
+        acceptTypes[acceptType] = isNaN(acceptQuality) ? 1 : acceptQuality;
+    }
+
+    const maxQuality = Math.max.apply(null, Object.values(acceptTypes));
+    const typesWithMaxQuality = Object.entries(acceptTypes).filter(e => e[1] >= maxQuality).map(e => e[0]);
+    return typesWithMaxQuality.some(t => t.toLowerCase().includes("json"));
+}
 
 // if we want to always redirect to https, use this:
 // https://medium.com/@seunghunsunmoonlee/how-to-enforce-https-redirect-http-to-https-on-heroku-deployed-apps-a87a653ba61e
@@ -42,7 +55,8 @@ app.get('*', function (req, res) {
     // we can resolve it to the API, or the web UI
     if (pathIdMatches) {
         const pathEndsInDotJson = !!pathIdMatches[2]
-        const subdomain = (pathEndsInDotJson) ? "api" : "explore"
+        const preferJson = requestPrefersJson(req);
+        const subdomain = (pathEndsInDotJson || preferJson) ? "api" : "explore"
 
         const id = pathIdMatches[1]
         const idFirstLetter = id.substr(0, 1).toUpperCase()
