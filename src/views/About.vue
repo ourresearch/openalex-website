@@ -44,8 +44,7 @@
       had the means and the opportunity, and we ran with it!
     </p>
     <p>
-      Our first beta data dump release was in in mid-November, 2021. OpenAlex will remain in beta until our official
-      launch on January 3, 2022 &mdash; just in time to take up the mantle from MAG, which closes up shop December 31st.
+      The OpenAlex beta launched on January 3rd, 2022. We plan to emerge from beta in February or March of 2022.
     </p>
     <p>
       If you're interested in following our progress, we encourage you to <a href="http://eepurl.com/hA8PhL">join our
