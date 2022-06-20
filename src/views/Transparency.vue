@@ -49,11 +49,6 @@
       <a href="https://blog.ourresearch.org/our-research/">changed our name</a> to OurResearch in 2019, but that's a <a
         href="https://en.wikipedia.org/wiki/Trade_name">DBA</a>--we're still Impactstory to the government.
     </p>
-    <p>
-      Our most recent 990 filing (fiscal year 2020) is not public yet, but you can <a href="/IRS-form-990-2020.pdf"
-                                                                                      target="_blank">download it
-      here.</a>
-    </p>
 
 
     <div class="text-h4" id="posi">Principles for Open Scholarly Infrastructure (POSI)</div>
