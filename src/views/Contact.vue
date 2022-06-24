@@ -3,8 +3,9 @@
   <h2 class="text-h3 pb-6">Contact us</h2>
   
   <p>
-  We'd love to hear from you! Drop us an email at <a
-      href="mailto:team@ourresearch.org">team@ourresearch.org</a> any time.
+    We'd love to hear from you! Please contact us at <a href="mailto:support@openalex.org">support@openalex.org</a>
+    with any bug reports, data quality issues, or technical questions not answered by the <a href="https://docs.openalex.org/">documentation</a>.
+    For other questions or comments, drop us an email at <a href="mailto:team@ourresearch.org">team@ourresearch.org</a> any time.
   </p>
 
   <p>
