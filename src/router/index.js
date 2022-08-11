@@ -10,8 +10,8 @@ import Schema from "@/views/Schema";
 import MagMigrationGuide from "@/views/MagMigrationGuide";
 
 import Faq from "@/views/Faq";
+import Users from "@/views/Users";
 import About from "@/views/About";
-
 import Contact from "@/views/Contact";
 
 Vue.use(VueRouter)
@@ -26,12 +26,9 @@ const routes = [
     {path: '/rest-api', beforeEnter() {window.location.href = "https://docs.openalex.org/api" }},
     {path: '/schema', beforeEnter() {window.location.href = "https://docs.openalex.org/download-snapshot" }},
     {path: '/mag-migration-guide', beforeEnter() {window.location.href = "https://docs.openalex.org/download-snapshot/mag-format" }},
-
-
-
     {path: '/faq', component: Faq},
+    {path: '/users', component: Users},
     {path: '/about', component: About},
-
     {path: '/contact', component: Contact},
 ]
 

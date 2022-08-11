@@ -68,10 +68,9 @@
         <!--          </v-list>-->
         <!--        </v-menu>-->
 
+        <v-btn class="no-active low-key-button" text to="./users">Users</v-btn>
         <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
         <!--        <v-btn class="no-active low-key-button" text to="./faq">FAQ</v-btn>-->
-
-
         <v-btn class="no-active low-key-button" text to="./contact">Contact</v-btn>
         <!--        <v-btn class="no-active low-key-button" text to="./projects">Projects</v-btn>-->
         <!--        <v-btn class="no-active low-key-button" text to="./transparency">Transparency</v-btn>-->

@@ -12,6 +12,9 @@
           <v-icon small>mdi-open-in-new</v-icon>
         </a>
           <div>
+            <router-link to="/users">Users</router-link>
+          </div>
+          <div>
             <router-link to="/about">About</router-link>
           </div>
           <div>

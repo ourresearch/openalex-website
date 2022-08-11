@@ -46,7 +46,7 @@
     <p>
       OpenAlex beta launched on January 3rd, 2022. Currently the data is available via an <a
         href="https://docs.openalex.org/api">API</a> and a full <a
-        href="https://docs.openalex.org/download-snapshot">database snapshot.</a> Our next big milestons will be the release of a web-based graphical user interface in summer of 2022.
+        href="https://docs.openalex.org/download-snapshot">database snapshot.</a> Our next big milestone will be the release of a web-based graphical user interface in summer of 2022.
     </p>
     <p>
       If you're interested in following our progress, we encourage you to <a href="http://eepurl.com/hA8PhL">join our
@@ -80,7 +80,7 @@
     </p>
 
     <p class="mt-4">
-      We’re  currently exploring sustainability models around premium access (like a daily update feed, or a
+      We’re currently exploring sustainability models around premium access (like a daily update feed, or a
       high-throughput API). We’re proud that our other projects (<a
         href="https://unsub.org">Unsub</a> and <a href="https://unpaywall.org">Unpaywall</a>) have both been
       self-sustaining for years, and we think that’s vital for OpenAlex (and other scholarly infrastructure projects) as
