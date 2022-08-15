@@ -5,6 +5,7 @@
       Thousands of people use OpenAlex! Here are some of the most notable:
     </p>
     <ul>
+      <li><a href="https://keenious.com/" target="_blank">Keenious</a> - Find relevant research</li>
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
       <li><a href="https://opensyllabus.org/" target="_blank">Open Syllabus</a> - Opening the curricular black box across 7M+ syllabi
       </li>
