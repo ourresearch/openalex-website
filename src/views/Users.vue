@@ -6,6 +6,7 @@
     </p>
     <ul>
       <li><a href="https://keenious.com/" target="_blank">Keenious</a> - Find relevant research</li>
+      <li><a href="https://laser.ai)" target="_blank">Laser AI</a> - Tool for living systematic reviews of literature</li>
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
       <li><a href="https://opensyllabus.org/" target="_blank">Open Syllabus</a> - Opening the curricular black box across 7M+ syllabi
       </li>
@@ -16,11 +17,18 @@
       </li>
     </ul>
 
-    <h4 class="text-h4" id="start-up-enterprise">List your organization</h4>
+    <h4 class="text-h4" id="user-tesimonials">Testimonials</h4>
+    <p>Here's what some of our users have to say about OpenAlex.</p>
+    <ul>
+      <li><i>"OpenAlex allows me to have an API that is easy to query and that responds very quickly, with quality data."</i></li>
+      <li><i>"I'm really impressed by the speed and thoroughness of your [support]!"</i></li>
+    </ul>
+
+    <h4 class="text-h4" id="list-organization">List your organization</h4>
     <p>Have an app or initiative that uses OpenAlex? Send an email to <a href="mailto:team@openalex.org">team@openalex.org</a>
       along with the project URL and a short description and we'll add it to this page.</p>
 
-    <h4 class="text-h4" id="start-up-enterprise">Join the community</h4>
+    <h4 class="text-h4" id="join-community">Join the community</h4>
     <p>Have a question or suggestion? Try the <a href="https://groups.google.com/g/openalex-users">OpenAlex users
       group</a>!
       Then subscribe to the <a
