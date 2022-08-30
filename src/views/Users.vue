@@ -5,6 +5,7 @@
       Thousands of people use OpenAlex! Here are some of the most notable:
     </p>
     <ul>
+      <li><a href="https://www.inist.fr/" target="_blank">INIST-CNRS</a> - Institute for scientific and technical information</li>
       <li><a href="https://keenious.com/" target="_blank">Keenious</a> - Find relevant research</li>
       <li><a href="https://laser.ai" target="_blank">Laser AI</a> - Tool for living systematic reviews of literature</li>
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
