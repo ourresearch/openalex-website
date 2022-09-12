@@ -5,11 +5,14 @@
       Thousands of people use OpenAlex! Here are some of the most notable:
     </p>
     <ul>
+      <li><a href="https://blog.dblp.org/2022/08/31/openalex-integration-in-dblp/" target="_blank">dblp computer science bibliography</a> - Open bibliographic information on computer science journals and proceedings</li>
       <li><a href="https://www.inist.fr/" target="_blank">INIST-CNRS</a> - Institute for scientific and technical information</li>
       <li><a href="https://keenious.com/" target="_blank">Keenious</a> - Find relevant research</li>
       <li><a href="https://laser.ai" target="_blank">Laser AI</a> - Tool for living systematic reviews of literature</li>
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
       <li><a href="https://opensyllabus.org/" target="_blank">Open Syllabus</a> - Opening the curricular black box across 7M+ syllabi
+      </li>
+      <li><a href="https://s4.scienceofscience.org/" target="_blank">Science of Science Summer School</a> - Understanding current practices in science
       </li>
       <li><a href="https://scite.ai" target="_blank">scite</a> - Building the next generation of citations
       </li>
