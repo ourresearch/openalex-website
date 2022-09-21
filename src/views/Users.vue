@@ -14,6 +14,8 @@
       </li>
       <li><a href="https://s4.scienceofscience.org/" target="_blank">Science of Science Summer School</a> - Understanding current practices in science
       </li>
+      <li><a href="https://scileads.com/" target="_blank">SciLeads</a> - Find scientific leads and prospects
+      </li>
       <li><a href="https://scite.ai" target="_blank">scite</a> - Building the next generation of citations
       </li>
       <li><a href="https://eppi.ioe.ac.uk/cms/Default.aspx?tabid=2914" target="_blank">The EPPI Centre</a>
