@@ -12,6 +12,8 @@
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
       <li><a href="https://opensyllabus.org/" target="_blank">Open Syllabus</a> - Opening the curricular black box across 7M+ syllabi
       </li>
+      <li><a href="https://www.researchhub.com/" target="_blank">ResearchHub</a> - Tool for open publication and discussion of scientific research
+      </li>
       <li><a href="https://s4.scienceofscience.org/" target="_blank">Science of Science Summer School</a> - Understanding current practices in science
       </li>
       <li><a href="https://scileads.com/" target="_blank">SciLeads</a> - Find scientific leads and prospects
@@ -27,7 +29,7 @@
     <p>Here's what some of our users have to say about OpenAlex.</p>
     <ul>
       <li><i>"OpenAlex allows me to have an API that is easy to query and that responds very quickly, with quality data."</i></li>
-      <li><i>"I'm really impressed by the speed and thoroughness of your [support]!"</i></li>
+      <li><i>"I'm really impressed by the speed and thoroughness of your support!"</i></li>
     </ul>
 
     <h4 class="text-h4" id="list-organization">List your organization</h4>
