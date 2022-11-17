@@ -20,6 +20,7 @@
       </li>
       <li><a href="https://scite.ai" target="_blank">scite</a> - Building the next generation of citations
       </li>
+      <li><a href="https://www.scribbr.com/" target="_blank">Scribbr</a> - Citation generator</li>
       <li><a href="https://eppi.ioe.ac.uk/cms/Default.aspx?tabid=2914" target="_blank">The EPPI Centre</a>
         - Utilising ML technologies to aid the review process and manage references
       </li>
