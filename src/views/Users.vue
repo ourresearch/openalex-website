@@ -5,10 +5,15 @@
       Thousands of people use OpenAlex! Here are some of the most notable:
     </p>
     <ul>
+      <li><a href="https://www.csiro.au/en/" target="_blank">CSIRO</a> - Australia's national science agency</li>
+      <li><a href="https://www.osti.gov/" target="_blank">DOE Office of Scientific and Technical Information (OSTI)</a>
+        - Department of Energery's source for science, technology, and engineering research information
+      </li>
       <li><a href="https://blog.dblp.org/2022/08/31/openalex-integration-in-dblp/" target="_blank">dblp computer science bibliography</a> - Open bibliographic information on computer science journals and proceedings</li>
       <li><a href="https://www.inist.fr/" target="_blank">INIST-CNRS</a> - Institute for scientific and technical information</li>
       <li><a href="https://keenious.com/" target="_blank">Keenious</a> - Find relevant research</li>
       <li><a href="https://laser.ai" target="_blank">Laser AI</a> - Tool for living systematic reviews of literature</li>
+      <li><a href="https://leibniz-psychology.org/en/research/big-data/" target="_blank">Leibniz Institute for Psychology: Big Data Research Unit</a> - Bibliometric analyses</li>
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
       <li><a href="https://opensyllabus.org/" target="_blank">Open Syllabus</a> - Opening the curricular black box across 7M+ syllabi
       </li>
@@ -21,6 +26,7 @@
       <li><a href="https://scite.ai" target="_blank">scite</a> - Building the next generation of citations
       </li>
       <li><a href="https://www.scribbr.com/" target="_blank">Scribbr</a> - Citation generator</li>
+      <li><a href="https://us.sagepub.com/en-us/nam/home" target="_blank">SAGE Publications</a> - Academic publisher</li>
       <li><a href="https://suave2.sdsc.edu/main/file=suavedemos_Transboundary_Aquifers_Research_Landscape.csv&view=netvis" target="_blank">SuAVE – Transboundary Aquifers Research Landscape</a> - Evolution of international co-authorship networks with OpenAlex</li>
       <li><a href="https://eppi.ioe.ac.uk/cms/Default.aspx?tabid=2914" target="_blank">The EPPI Centre</a>
         - Utilising ML technologies to aid the review process and manage references
