@@ -31,6 +31,9 @@
       <li><a href="https://eppi.ioe.ac.uk/cms/Default.aspx?tabid=2914" target="_blank">The EPPI Centre</a>
         - Utilising ML technologies to aid the review process and manage references
       </li>
+      <li><a href="https://vu.nl/en/about-vu/divisions/university-library/more-about/team-research-support" target="_blank">Vrije Universiteit Amsterdam</a>
+        - Research intelligence and support
+      </li>
     </ul>
 
     <h4 class="text-h4" id="user-tesimonials">Testimonials</h4>
