@@ -10,6 +10,7 @@
         - Department of Energery's source for science, technology, and engineering research information
       </li>
       <li><a href="https://blog.dblp.org/2022/08/31/openalex-integration-in-dblp/" target="_blank">dblp computer science bibliography</a> - Open bibliographic information on computer science journals and proceedings</li>
+      <li><a href="https://globalcampus.ai/" target="_blank">GlobalCampus</a> - Find your academic expert using semantic search</li>
       <li><a href="https://www.inist.fr/" target="_blank">INIST-CNRS</a> - Institute for scientific and technical information</li>
       <li><a href="https://keenious.com/" target="_blank">Keenious</a> - Find relevant research</li>
       <li><a href="https://laser.ai" target="_blank">Laser AI</a> - Tool for living systematic reviews of literature</li>
