@@ -1,23 +1,20 @@
 <template>
-<v-container class="page">
-  <h2 class="text-h3 pb-6">Contact us</h2>
-  
-  <p>
-    We'd love to hear from you! Please contact us at <a href="mailto:support@openalex.org">support@openalex.org</a>
-    with any bug reports, data quality issues, or technical questions not answered by the <a href="https://docs.openalex.org/">documentation</a>.
-    For other questions or comments, drop us an email at <a href="mailto:team@ourresearch.org">team@ourresearch.org</a> any time.
-  </p>
+  <v-container class="page">
+    <h2 class="text-h3 pb-6">Contact us</h2>
 
-  <p>
-You can also stay in touch with us via the <a
-      href="http://eepurl.com/hA8PhL">OpenAlex mailing list,</a> and on Twitter at <a
-      href="https://twitter.com/openalex_org">@OpenAlex_org.</a>
-  </p>
+    <p>
+      We'd love to hear from you! For support questions, check out our <a href="https://docs.openalex.org/">docs</a>,
+      then refer to our <a href="/help">help page</a>. For other questions or comments, drop us an email at <a
+        href="mailto:team@ourresearch.org">team@ourresearch.org</a> any time.
+    </p>
 
-  
-  
+    <p>
+      You can also stay in touch with us via the <a href="https://groups.google.com/g/openalex-users">OpenAlex User's Group</a> or via Twitter at <a
+        href="https://twitter.com/openalex_org">@OpenAlex_org.</a>
+    </p>
 
-</v-container>
+
+  </v-container>
 </template>
 
 <script>

@@ -10,17 +10,6 @@
     >
       <router-link to="/" class="d-flex main-logo">
         <img src="./assets/OpenAlex-logo-5.png"/>
-        <!--        <span class="logo-text">-->
-        <!--          OpenAlex-->
-        <!--        </span>-->
-        <!--        <v-img-->
-        <!--            alt="OurResearch Logo"-->
-        <!--            class="shrink mr-2"-->
-        <!--            contain-->
-        <!--            src="@/assets/logos/ourresearch_logo.png"-->
-        <!--            transition="scale-transition"-->
-        <!--            width="200"-->
-        <!--        />-->
       </router-link>
 
       <v-spacer></v-spacer>
@@ -33,47 +22,10 @@
           <v-icon right>mdi-open-in-new</v-icon>
         </v-btn>
 
-
-        <!--        <v-menu offset-y content-class="no-highlight">-->
-        <!--          <template v-slot:activator="{on}">-->
-        <!--            <v-btn text color="" v-on="on" class="low-key-button">-->
-        <!--              Data-->
-        <!--              <v-icon class="">mdi-menu-down</v-icon>-->
-        <!--            </v-btn>-->
-        <!--          </template>-->
-        <!--          <v-list>-->
-        <!--            <v-list-item to="/data-dump">-->
-        <!--              Data dump-->
-        <!--            </v-list-item>-->
-        <!--            <v-list-item to="/rest-api">-->
-        <!--              REST API-->
-        <!--            </v-list-item>-->
-        <!--          </v-list>-->
-        <!--        </v-menu>-->
-
-        <!--        <v-menu offset-y content-class="no-highlight">-->
-        <!--          <template v-slot:activator="{on}">-->
-        <!--            <v-btn text color="" v-on="on" class="low-key-button">-->
-        <!--              Docs-->
-        <!--              <v-icon class="">mdi-menu-down</v-icon>-->
-        <!--            </v-btn>-->
-        <!--          </template>-->
-        <!--          <v-list>-->
-        <!--            <v-list-item to="/schema">-->
-        <!--              Schema-->
-        <!--            </v-list-item>-->
-        <!--            <v-list-item to="/mag-migration-guide">-->
-        <!--              MAG migration guide-->
-        <!--            </v-list-item>-->
-        <!--          </v-list>-->
-        <!--        </v-menu>-->
-
         <v-btn class="no-active low-key-button" text to="./users">Users</v-btn>
         <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
-        <!--        <v-btn class="no-active low-key-button" text to="./faq">FAQ</v-btn>-->
+        <v-btn class="no-active low-key-button" text to="./help">Help</v-btn>
         <v-btn class="no-active low-key-button" text to="./contact">Contact</v-btn>
-        <!--        <v-btn class="no-active low-key-button" text to="./projects">Projects</v-btn>-->
-        <!--        <v-btn class="no-active low-key-button" text to="./transparency">Transparency</v-btn>-->
       </v-toolbar-items>
 
       <!--      MOBILE MENU -->
@@ -85,24 +37,15 @@
             </v-btn>
           </template>
           <v-list>
-            <!--            <v-list-item to="/data-dump">-->
-            <!--              Data dump-->
-            <!--            </v-list-item>-->
-            <!--            <v-list-item to="/rest-api">-->
-            <!--              REST API-->
-            <!--            </v-list-item>-->
-            <!--            <v-list-item to="/schema">-->
-            <!--              Schema-->
-            <!--            </v-list-item>-->
-            <!--            <v-list-item to="/mag-migration-guide">-->
-            <!--              MAG migration guide-->
-            <!--            </v-list-item>-->
             <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
               Read the docs
               <v-icon right>mdi-open-in-new</v-icon>
             </v-btn>
             <v-list-item to="/about">
               About
+            </v-list-item>
+            <v-list-item to="/help">
+              Help
             </v-list-item>
             <v-list-item to="./contact">
               Contact
@@ -183,6 +126,10 @@ body {
       letter-spacing: 0.01em !important;
       color: #000 !important;
       margin: 30px 0 10px;
+    }
+    .help-form {
+      width: 50%;
+      margin: 0 auto;
     }
 
   }

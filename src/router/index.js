@@ -12,6 +12,7 @@ import MagMigrationGuide from "@/views/MagMigrationGuide";
 import Faq from "@/views/Faq";
 import Users from "@/views/Users";
 import About from "@/views/About";
+import Help from "@/views/Help";
 import Contact from "@/views/Contact";
 
 Vue.use(VueRouter)
@@ -29,6 +30,7 @@ const routes = [
     {path: '/faq', component: Faq},
     {path: '/users', component: Users},
     {path: '/about', component: About},
+    {path: '/help', component: Help},
     {path: '/contact', component: Contact},
 ]
 

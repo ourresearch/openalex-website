@@ -12,6 +12,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "base-64": "^1.0.0",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "vue": "^2.6.11",

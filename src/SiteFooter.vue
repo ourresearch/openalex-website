@@ -18,6 +18,9 @@
             <router-link to="/about">About</router-link>
           </div>
           <div>
+            <router-link to="/help">Help</router-link>
+          </div>
+          <div>
             <router-link to="/contact">Contact</router-link>
           </div>
         </v-col>
