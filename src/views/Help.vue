@@ -34,15 +34,6 @@
             required
         ></v-text-field>
 
-        <v-select
-            v-model="topic"
-            :items="topics"
-            :rules="topicRules"
-            label="Topic"
-            outlined
-            required
-        ></v-select>
-
         <v-textarea
             v-model="message"
             :rules="messageRules"
@@ -89,14 +80,6 @@ export default {
       v => !!v || 'E-mail is required',
       v => /^(([^<>()[\]\\.,;:\s@']+(\.[^<>()\\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(v) || 'E-mail must be valid',
     ],
-    topic: '',
-    topics: [
-      'Technical Question',
-      'Data Correction',
-      'Bug Report',
-      'Feature Request',
-      'Other',
-    ],
     topicRules: [
       v => !!v || 'Topic is required',
     ],
@@ -112,7 +95,6 @@ export default {
     submitForm() {
       if (this.$refs.form.validate()) {
         // submit form to zendesk API
-        let topic_tag = this.topic.replace(' ', '_').toLowerCase();
         fetch(
             'https://openalex.zendesk.com/api/v2/requests.json',
             {
@@ -130,7 +112,6 @@ export default {
                     "name": this.name,
                     "email": this.email
                   },
-                  "custom_fields": [{"id": 10965188751767, "value": topic_tag}]
                 }
               })
             }
