@@ -45,7 +45,7 @@
     </ul>
 
     <h4 class="text-h4" id="list-organization">List your organization</h4>
-    <p>Have an app or initiative that uses OpenAlex? Send an email to <a href="mailto:team@openalex.org">team@openalex.org</a>
+    <p>Have an app or initiative that uses OpenAlex? Send an email to <a href="mailto:team@ourresearch.org">team@ourresearch.org</a>
       along with the project URL and a short description and we'll add it to this page.</p>
 
     <h4 class="text-h4" id="join-community">Join the community</h4>
