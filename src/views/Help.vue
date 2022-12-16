@@ -2,7 +2,7 @@
   <v-container class="page">
     <div class="help-form">
       <h3 class="text-h3">Get Help</h3>
-      <p ref="description">Use this form to tell us about bug reports, data corrections, or
+      <p ref="description">Use this form to send a bug report or ask
         questions not answered by the <a href="https://docs.openalex.org/">documentation</a>.</p>
 
       <v-form
