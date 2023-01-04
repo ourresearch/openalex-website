@@ -45,8 +45,8 @@
     </p>
     <p>
       OpenAlex beta launched on January 3rd, 2022. Currently the data is available via an <a
-        href="https://docs.openalex.org/api">API</a> and a full <a
-        href="https://docs.openalex.org/download-snapshot">database snapshot.</a> Our next big milestone will be the release of a web-based graphical user interface in summer of 2022.
+        href="https://docs.openalex.org/">API</a> and a full <a
+        href="https://docs.openalex.org/download-all-data/openalex-snapshot">database snapshot.</a> We also have plans to create a web-based graphical user interface.
     </p>
     <p>
       If you're interested in following our progress, we encourage you to <a href="http://eepurl.com/hA8PhL">join our
