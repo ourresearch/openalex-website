@@ -15,6 +15,7 @@
       <li><a href="https://keenious.com/" target="_blank">Keenious</a> - Find relevant research</li>
       <li><a href="https://laser.ai" target="_blank">Laser AI</a> - Tool for living systematic reviews of literature</li>
       <li><a href="https://leibniz-psychology.org/en/research/big-data/" target="_blank">Leibniz Institute for Psychology: Big Data Research Unit</a> - Bibliometric analyses</li>
+      <li><a href="https://timwoelfle.github.io/Local-Citation-Network/" target="_blank">Local Citation Network</a> - Visualization of local citation networks</li>
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
       <li><a href="https://opensyllabus.org/" target="_blank">Open Syllabus</a> - Opening the curricular black box across 7M+ syllabi
       </li>
