@@ -18,6 +18,8 @@
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
       <li><a href="https://opensyllabus.org/" target="_blank">Open Syllabus</a> - Opening the curricular black box across 7M+ syllabi
       </li>
+      <li><a href="https://discovery.researcher.life/" target="_blank">R Discovery</a> - Article recommendation service
+      </li>
       <li><a href="https://www.researchhub.com/" target="_blank">ResearchHub</a> - Tool for open publication and discussion of scientific research
       </li>
       <li><a href="https://s4.scienceofscience.org/" target="_blank">Science of Science Summer School</a> - Understanding current practices in science
@@ -26,6 +28,7 @@
       </li>
       <li><a href="https://scite.ai" target="_blank">scite</a> - Building the next generation of citations
       </li>
+      <li><a href="https://scholytics.net/" target="_blank">Scholytics</a> - Research evaluation platform</li>
       <li><a href="https://www.scribbr.com/" target="_blank">Scribbr</a> - Citation generator</li>
       <li><a href="https://us.sagepub.com/en-us/nam/home" target="_blank">SAGE Publications</a> - Academic publisher</li>
       <li><a href="https://suave2.sdsc.edu/main/file=suavedemos_Transboundary_Aquifers_Research_Landscape.csv&view=netvis" target="_blank">SuAVE – Transboundary Aquifers Research Landscape</a> - Evolution of international co-authorship networks with OpenAlex</li>
