@@ -18,7 +18,7 @@
     </p>
     <p>
       Because we think all research should be free and open, OpenAlex is free and open itself, and we're built on a fully
-      <a href="https://github.com/ourresearch/OpenAlex">Open Source codebase.</a>
+      <a href="https://github.com/orgs/ourresearch/repositories?language=&q=openalex&sort=&type=public">Open Source codebase.</a>
     </p>
     <p>
       We believe the global research system is one of humankind's most beautiful creations. OpenAlex aims to make that
