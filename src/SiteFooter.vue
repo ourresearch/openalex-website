@@ -32,7 +32,7 @@
             <a href="https://twitter.com/openalex_org" target="_blank">Twitter</a>
           </div>
           <div>
-            <a href="https://github.com/ourresearch/openalex-guts" target="_blank">Source code</a>
+            <a href="https://github.com/orgs/ourresearch/repositories?language=&q=openalex&sort=&type=public" target="_blank">Source code</a>
           </div>
         </v-col>
         <v-col cols="12" sm="4" class="text-center">
