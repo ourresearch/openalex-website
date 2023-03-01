@@ -17,6 +17,7 @@
       <li><a href="https://leibniz-psychology.org/en/research/big-data/" target="_blank">Leibniz Institute for Psychology: Big Data Research Unit</a> - Bibliometric analyses</li>
       <li><a href="https://timwoelfle.github.io/Local-Citation-Network/" target="_blank">Local Citation Network</a> - Visualization of local citation networks</li>
       <li><a href="https://oa.works" target="_blank">OA.Works</a> - Building tools so that open access is easy and equitable</li>
+      <li><a href="http://www.oahelper.org/" target="_blank">Open Access Helper</a> - An iOS / iPadOS App which brings unpaywall functionality to mobile Safari, with search functionality using OpenAlex.</li>
       <li><a href="https://opensyllabus.org/" target="_blank">Open Syllabus</a> - Opening the curricular black box across 7M+ syllabi
       </li>
       <li><a href="https://discovery.researcher.life/" target="_blank">R Discovery</a> - Article recommendation service
