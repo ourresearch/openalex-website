@@ -18,7 +18,8 @@
     </p>
     <p>
       Because we think all research should be free and open, OpenAlex is free and open itself, and we're built on a fully
-      <a href="https://github.com/orgs/ourresearch/repositories?language=&q=openalex&sort=&type=public">Open Source codebase.</a>
+      <a href="https://github.com/orgs/ourresearch/repositories?language=&q=openalex&sort=&type=public">Open Source
+        codebase.</a>
     </p>
     <p>
       We believe the global research system is one of humankind's most beautiful creations. OpenAlex aims to make that
@@ -53,8 +54,9 @@
       create a web-based graphical user interface.
     </p>
     <p>
-      If you're interested in following our progress, we encourage you to <a href="http://eepurl.com/hA8PhL">join our
-        mailing list!</a>
+      If you're interested in following our progress, we encourage you to <a
+        href="https://groups.google.com/g/openalex-users">join our Google Group</a> and follow us on <a
+        href="https://twitter.com/openalex_org">Twitter</a> and <a href="https://mastodon.social/@OpenAlex">Mastodon</a>.
     </p>
 
     <h4 class="text-h4" id="sources">Sources</h4>
