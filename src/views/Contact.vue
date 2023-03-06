@@ -3,14 +3,14 @@
     <h2 class="text-h3 pb-6">Contact us</h2>
 
     <p>
-      We'd love to hear from you! For support questions, check out our <a href="https://docs.openalex.org/">docs</a>. If
-      you can't find the answer there, submit a ticket via our <a href="/help">help page</a>. For other questions or
-      comments, drop us an email at <a href="mailto:team@ourresearch.org">team@ourresearch.org</a> any time.
+      We'd love to hear from you! If you have a question, and you can't find the answer in our <a
+        href="https://docs.openalex.org/">documentation</a>,
+      submit a ticket via our <a href="/help">help page</a>.
     </p>
 
     <p>
       You can also stay in touch with us via the <a href="https://groups.google.com/g/openalex-users">OpenAlex User's
-        Group</a> and via Twitter at (<a href="https://twitter.com/openalex_org">@OpenAlex_org</a>) and Mastodon (<a
+        Group</a> and via Twitter (<a href="https://twitter.com/openalex_org">@OpenAlex_org</a>) and Mastodon (<a
         href="https://mastodon.social/@OpenAlex">@OpenAlex@mastodon.social</a>).
     </p>
 
