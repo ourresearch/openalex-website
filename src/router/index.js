@@ -14,6 +14,7 @@ import Users from "@/views/Users";
 import About from "@/views/About";
 import Help from "@/views/Help";
 import Contact from "@/views/Contact";
+import Pricing from "@/views/Pricing";
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,7 @@ const routes = [
     {path: '/about', component: About},
     {path: '/help', component: Help},
     {path: '/contact', component: Contact},
+    {path: '/pricing', component: Pricing},
 ]
 
 const router = new VueRouter({
