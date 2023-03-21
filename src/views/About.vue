@@ -84,21 +84,6 @@
         href="https://docs.openalex.org/api-entities/venues/get-lists-of-venues">using our API.</a>
     </p>
 
-    <h4 class="text-h4" id="pricing">Pricing</h4>
-    <p>
-      OpenAlex is <a href="https://docs.openalex.org/faq#how-much-does-openalex-cost">completely free.</a>
-    </p>
-
-    <p class="mt-4">
-      We’re currently exploring sustainability models around premium access (like a daily update feed, or a
-      high-throughput API). We’re proud that our other projects (<a href="https://unsub.org">Unsub</a> and <a
-        href="https://unpaywall.org">Unpaywall</a>) have both been
-      self-sustaining for years, and we think that’s vital for OpenAlex (and other scholarly infrastructure projects) as
-      well.
-
-    </p>
-
-
     <h4 class="text-h4" id="acknowledgements">Acknowledgements</h4>
     <p>
       We'd like to thank everyone behind all our <a href="#sources">data sources,</a> but especially the folks at <a

@@ -1,36 +1,30 @@
 <template>
   <v-container class="page">
     <h2 class="text-h3">Pricing</h2>
-    <p>
+    <p class="important-text">
       <strong>OpenAlex is free.</strong>
     </p>
     <p>
       The website, API, and data snapshot are all available at no charge. The data is licensed as <a
         href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0</a> so it
-      is free to use and distribute. As a nonprofit, making this data free and open is part of our mission.
+      is free to use and distribute. As a <a href="https://ourresearch.org/" target="_blank"
+        rel="noopener noreferrer">nonprofit,</a> making this data free and open is part of our mission.
     </p>
     <p>
-      If the free service does not meet your needs, we offer a premium subscription service.
+      <a href="https://docs.openalex.org/additional-help/faq#whats-your-sustainability-plan" target="_blank"
+        rel="noopener noreferrer">Being sustainable</a>
+      is also part of our mission! So, for users who’d like a higher level of service, we have the Premium plan that
+      offers three benefits:
     </p>
     <ul>
-      <li>You may not need premium! The free API (with its limit of
-        <a href="https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication" target="_blank"
-          rel="noopener noreferrer">100,000 calls per day</a>), and/or the free <a
-          href="https://docs.openalex.org/download-all-data/openalex-snapshot" target="_blank"
-          rel="noopener noreferrer">data snapshot</a> are sufficient for many use cases, and we are proud to offer that as
-        part of our commitment to open and accessible science.
-      </li>
-      <li>The premium service is a key part of our
-        <a href="https://docs.openalex.org/additional-help/faq#whats-your-sustainability-plan" target="_blank"
-          rel="noopener noreferrer">sustainability model.</a>
-        Our other projects—<a href="https://unsub.org" target="_blank" rel="noopener noreferrer">Unsub</a> and <a
-          href="https://unpaywall.org" target="_blank" rel="noopener noreferrer">Unpaywall</a>— have been self-sustaining
-        for years, and we think that is vital for OpenAlex's long-term plan as well.
-      </li>
-      <li>
-        If you are interested in our premium service, <a href="mailto:support@openalex.org">contact us for a quote.</a>
-      </li>
+      <li><strong>Faster updates,</strong> so you can get fresher data,</li>
+      <li><strong>Higher API limits,</strong> so you can use the API more, and</li>
+      <li><strong>Priority support</strong> for faster and more detailed help.</li>
     </ul>
+    <p>
+      If you are interested in our premium service, <a href="mailto:support@openalex.org">contact us to get a quote—and a
+        free trial!</a>
+    </p>
 
     <h3 class="text-h3">OpenAlex Premium</h3>
 
@@ -64,47 +58,34 @@
       </table>
     </div>
 
-    <h4 class="text-h4">Use Cases</h4>
-    <h5 class="text-h5">Faster update frequency</h5>
-    <ul>
-      <li>Get new articles as they are published</li>
-      <ul>
-        <li>Articles about a particular concept</li>
-        <li>Articles by a certain person, institution, or journal</li>
-      </ul>
-      <li>Get new citations to articles</li>
-      <ul>
-        <li>Monitor a particular article or set of articles for new citations</li>
-        <li>Montior all new citations</li>
-      </ul>
-      <li>See when articles change</li>
-      <ul>
-        <li>OA status changes</li>
-        <li>Author metadata changes</li>
-      </ul>
-      <li>Technical: you get a API key that lets you use these two API endpoints:</li>
-      <ul>
-        <li><a href="https://docs.openalex.org/api-entities/works/filter-works#from_updated_date" target="_blank"
-            rel="noopener noreferrer">https://docs.openalex.org/api-entities/works/filter-works#from_updated_date</a></li>
-        <li><a href="https://docs.openalex.org/api-entities/works/filter-works#from_created_date" target="_blank"
-            rel="noopener noreferrer">https://docs.openalex.org/api-entities/works/filter-works#from_created_date</a></li>
-      </ul>
-    </ul>
+    <h4 class="text-h4">Update frequency</h4>
+    <p>We release a new <a href="https://docs.openalex.org/download-all-data/openalex-snapshot" target="_blank"
+        rel="noopener noreferrer">snapshot</a> of OpenAlex every month. If you’d like more up-to-date data, you can poll
+      our API to be
+      notified of new and modified works every hour. That way your local copy of OpenAlex will be perfectly synced with
+      ours.
+    </p>
+    <p>
+      To do this, you just use the <a href="https://docs.openalex.org/api-entities/works/filter-works#from_updated_date"
+        target="_blank" rel="noopener noreferrer">from_updated_date</a> and <a
+        href="https://docs.openalex.org/api-entities/works/filter-works#from_created_date" target="_blank"
+        rel="noopener noreferrer">from_created_date</a> filters in the API, along with a unique API key
+      we give you as part of your Premium subscription.
+    </p>
 
-    <h5 class="text-h5">Higher API limit</h5>
-    <ul>
-      <li>Avoid having to download and sync the whole database</li>
-      <ul>
-        <li>Use our API to back production systems in real time</li>
-        <li>Scroll through a large chunk of the whole database regularly, to keep internal systems up-to-date</li>
-      </ul>
-    </ul>
+    <h4 class="text-h4">API limit</h4>
+    <p>
+      The API has a limit of 100,000 calls per day, with a maximum of 10 per second. However, for Premium users we can
+      (and do) support millions of calls per day, with low latency and high uptime. You just need to include your unique
+      Premium API key along with your requests, and you’re good to go.
+    </p>
 
-    <h5 class="text-h5">Priority support</h5>
-    <ul>
-      <li>Technical support and other questions and requests</li>
-      <li>Work with us to have a great experience using OpenAlex</li>
-    </ul>
+    <h4 class="text-h4">Priority support</h4>
+    <p>
+      Premium subscribers get to go to the head of the queue when they have support requests. We can even schedule a
+      support call with your team to give you custom advice on how to integrate OpenAlex into your system.
+    </p>
+
 
   </v-container>
 </template>
@@ -195,5 +176,6 @@ export default {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+
 }
 </style>

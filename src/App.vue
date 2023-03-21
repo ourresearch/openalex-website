@@ -26,6 +26,7 @@
         <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
         <v-btn class="no-active low-key-button" text to="./help">Help</v-btn>
         <v-btn class="no-active low-key-button" text to="./contact">Contact</v-btn>
+        <v-btn class="no-active low-key-button" text to="./pricing">Pricing</v-btn>
       </v-toolbar-items>
 
       <!--      MOBILE MENU -->
@@ -49,6 +50,9 @@
             </v-list-item>
             <v-list-item to="./contact">
               Contact
+            </v-list-item>
+            <v-list-item to="./pricing">
+              Pricing
             </v-list-item>
           </v-list>
         </v-menu>
