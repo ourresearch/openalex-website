@@ -22,7 +22,9 @@
       <li><strong>Priority support</strong> for faster and more detailed help.</li>
     </ul>
     <p>
-      If you are interested in our premium service, <a href="mailto:support@openalex.org">contact us to get a quote—and a
+      If you are interested in our premium service, <a
+        href="https://forms.monday.com/forms/ee6421d4e48d57a150c31ce88cc99f4d?r=use1" target="_blank"
+        rel="noopener noreferrer">contact us to get a quote—and a
         free trial!</a>
     </p>
 
