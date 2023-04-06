@@ -15,6 +15,7 @@ import About from "@/views/About";
 import Help from "@/views/Help";
 import Contact from "@/views/Contact";
 import Pricing from "@/views/Pricing";
+import Testimonials from "@/views/Testimonials";
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,7 @@ const routes = [
     {path: '/mag-migration-guide', beforeEnter() {window.location.href = "https://docs.openalex.org/download-snapshot/mag-format" }},
     {path: '/faq', component: Faq},
     {path: '/users', component: Users},
+    {path: '/testimonials', component: Testimonials},
     {path: '/about', component: About},
     {path: '/help', component: Help},
     {path: '/contact', component: Contact},
