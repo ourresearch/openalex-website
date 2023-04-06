@@ -68,10 +68,9 @@
       ours.
     </p>
     <p>
-      To do this, you just use the <a href="https://docs.openalex.org/api-entities/works/filter-works#from_updated_date"
-        target="_blank" rel="noopener noreferrer">from_updated_date</a> and <a
-        href="https://docs.openalex.org/api-entities/works/filter-works#from_created_date" target="_blank"
-        rel="noopener noreferrer">from_created_date</a> filters in the API, along with a unique API key
+      To do this, you <a
+        href="https://github.com/ourresearch/openalex-api-tutorials/blob/main/notebooks/getting-started/premium.ipynb"
+        target="_blank" rel="noopener noreferrer">just use two Premium-only API filters,</a> along with a unique API key
       we give you as part of your Premium subscription.
     </p>
 
