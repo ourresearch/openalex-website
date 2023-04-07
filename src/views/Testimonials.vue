@@ -189,6 +189,32 @@ OpenAlex has successfully bridged this gap and now provides even more relevant i
           name: "Tim Wölfle",
           org: `Local Citation Network`,
         },
+
+
+
+
+
+        {
+          short: `Before learning about OpenAlex, I had to rely on paid services...<br><br>
+
+But now OpenAlex gives me <strong> an open-source alternative that's large, free, and has an easy-to-use API.</strong>`,
+          long: `I am a PhD student with research interests in science & technology policy, scientometrics, machine learning, and data science. OpenAlex is helping me to gain access to large-scale bibliometric data with its convenient and free API. I am using the data OpenAlex provides to research the evolution of scientific communities through citation network analysis of directed acyclic graphs.<br><br>
+
+Before learning about OpenAlex, I had to rely on paid services like Web of Science, Scopus, or Dimensions for bibliometric data.  But now OpenAlex gives me an open-source alternative that's large, free, and has an easy-to-use API.<br><br>
+
+Although there are other options available for academic or corporate researchers who can afford costly subscription services, a service like OpenAlex levels the playing field and makes data equally accessible to researchers. This may help researchers have a common source of information for comparison, instead of trying to compare data from one paid service to another.<br><br>
+
+I would highly recommend OpenAlex to others with scientometric and bibliometric interests. Some of the most important advances in our world are attributable to increasing access to technologies. Its open-access values encourage a common data framework of accessibility, equity, and diversity. `,
+          name: "Chris B.",
+          org: `PhD student at US research university`,
+        },
+
+
+
+
+
+
+
       ]
     }
   },
