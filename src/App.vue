@@ -17,7 +17,7 @@
       <!--      DESKTOP MENU -->
       <v-toolbar-items class=" hidden-sm-and-down">
         <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
-        <v-btn class="no-active low-key-button" text to="./about">Testimonials</v-btn>
+        <v-btn class="no-active low-key-button" text to="./testimonials">Testimonials</v-btn>
         <v-btn class="no-active low-key-button" text to="./pricing">Pricing</v-btn>
         <v-btn class="no-active low-key-button" text to="./help">Help</v-btn>
         <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
