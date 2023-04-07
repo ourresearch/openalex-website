@@ -67,6 +67,18 @@ We strongly recommend OpenAlex to anyone seeking a reliable and fast source of s
           name: "Sven Hanssen",
           org: `Scribbr`,
         },
+        {
+          short: `OpenAlex provides <strong>accurate affiliation data, effortlessly and quickly</strong>....[and] daily updates ensure our clients always have access to the most current information.`,
+          long: `INSERES is a software company that makes Piri Discovery Service, a search-focused, enterprise-level tool specifically tailored for academic professionals, researchers, and students.<br><br>
+
+Before OpenAlex, we faced challenges in listing publications affiliated with the given institutions; furthermore, we had no citation information for institution-affiliated publications, except for data provided by OpenCitations. Additionally, there was no discipline-specific data available for these institution-affiliated publications. We attempted to collect affiliation data from our various data sources including CrossRef, but none of these yielded satisfactory results. <br><br>
+
+OpenAlex sovled this by providing publication information, citation data, and discipline-specific insights for institution-affiliated publications. This support proved to be invaluable for our operations. OpenAlex provides accurate affiliation data, effortlessly and quickly; this has been a great advantage for us. Furthermore, OpenAlex’s daily updates ensure our clients always have access to the most current information. <br><br>
+
+We are impressed with OpenAlex's ability to establish relationships between various data points: it connects publications with authors, institutions with authors, and publications with disciplines. I would definitely recommend OpenAlex to others. In my opinion, OpenAlex has the potential to become an essential service used globally. To be honest, we are heavily reliant on SciVal and InCites for institutional statistics. Scopus and Web of Science (WoS) companies are quite strict with their data due to this dependence. I see OpenAlex as an important initiative that could eventually replace these products...I believe OpenAlex holds great promise for the future.`,
+          name: "Ahmet Mungen",
+          org: `INSERES`,
+        },
       ]
     }
   },
