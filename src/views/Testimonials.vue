@@ -28,6 +28,26 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-dialog v-model="isDialogOpen">
+      <v-card v-if="dialogData">
+          <v-card-text >
+
+            <q style="font: 18px Roboto; line-height: 1.3" v-html="dialogData.long"/>
+            <div class="mt-3 d-flex">
+              <div class="mr-1">
+                &mdash;
+              </div>
+              <div>
+              {{ dialogData.name }}, {{ dialogData.org }}
+              </div>
+            </div>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn text @click="closeDialog()">Close</v-btn>
+          </v-card-actions>
+
+        </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -41,6 +61,8 @@ export default {
   props: {},
   data() {
     return {
+      isDialogOpen: false,
+      dialogData: null,
       items: [
         {
           short: `<strong>The OpenAlex dataset was a game changer for us.</strong> As we are informing public policy, using an open dataset that allows for transparency is essential.`,
@@ -79,6 +101,14 @@ We are impressed with OpenAlex's ability to establish relationships between vari
           name: "Ahmet Mungen",
           org: `INSERES`,
         },
+        {
+          short: `OpenAlex helps [us] <strong>significantly optimize our performance of the literature search,</strong> and thus shorten our overall R&D time.`,
+          long: `In early development of the drug discovery process at BMS, we have to do a lot of literature search, often across different sources like bioRxiv, medRxiv, PubMed, etc. <br><br>
+
+          OpenAlex helps streamline this process and significantly optimize our performance of the literature search, and thus shorten our overall R&D time. We highly recommend OpenAlex to anyone who needs a unified interface to acquire open scholarly metadata.`,
+          name: "Trang Le",
+          org: `Bristol Myers Squibb`,
+        },
       ]
     }
   },
@@ -104,8 +134,13 @@ We are impressed with OpenAlex's ability to establish relationships between vari
     ]),
     ...mapActions([]),
     showMore(item) {
-      console.log("shorMore", item)
-    }
+      this.dialogData = item
+      this.isDialogOpen = true
+    },
+    closeDialog(){
+      this.isDialogOpen = false
+      this.dialogData = null
+    },
 
 
   },
