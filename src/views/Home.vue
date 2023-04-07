@@ -19,8 +19,17 @@
               color="primary"
               href="https://docs.openalex.org/"
           >
-            Learn more
+            Read the docs
             <v-icon right>mdi-open-in-new</v-icon>
+          </v-btn>
+          <v-btn
+              x-large
+              outlined
+              color="primary"
+              to="/testimonials"
+              class="ml-4"
+          >
+            Read testimonials
           </v-btn>
 
 

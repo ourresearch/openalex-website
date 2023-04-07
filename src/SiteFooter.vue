@@ -3,21 +3,21 @@
     <v-container>
       <v-row>
         <v-col cols="12" sm="2">
+          <div>
+            <router-link to="/about">About</router-link>
+          </div>
+          <div>
+            <router-link to="/testimonials">Testimonials</router-link>
+          </div>
+          <div>
+            <router-link to="/help">Help</router-link>
+          </div>
           <a href="https://docs.openalex.org/">
             Read the docs
             <v-icon small>mdi-open-in-new</v-icon>
           </a>
           <div>
-            <router-link to="/users">Users</router-link>
-          </div>
-          <div>
-            <router-link to="/about">About</router-link>
-          </div>
-          <div>
-            <router-link to="/help">Help</router-link>
-          </div>
-          <div>
-            <router-link to="/contact">Contact</router-link>
+            <router-link to="/about#contact">Contact</router-link>
           </div>
         </v-col>
         <v-col cols="12" sm="2">

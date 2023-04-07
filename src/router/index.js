@@ -13,7 +13,6 @@ import Faq from "@/views/Faq";
 import Users from "@/views/Users";
 import About from "@/views/About";
 import Help from "@/views/Help";
-import Contact from "@/views/Contact";
 import Pricing from "@/views/Pricing";
 import Testimonials from "@/views/Testimonials";
 
@@ -30,11 +29,11 @@ const routes = [
     {path: '/schema', beforeEnter() {window.location.href = "https://docs.openalex.org/download-snapshot" }},
     {path: '/mag-migration-guide', beforeEnter() {window.location.href = "https://docs.openalex.org/download-snapshot/mag-format" }},
     {path: '/faq', component: Faq},
-    {path: '/users', component: Users},
-    {path: '/testimonials', component: Testimonials},
-    {path: '/about', component: About},
+    {path: '/users', redirect: {name: "testimonials"}},
+    {path: '/testimonials', name: "testimonials", component: Testimonials},
+    {path: '/about', name: "about", component: About},
     {path: '/help', component: Help},
-    {path: '/contact', component: Contact},
+    {path: '/contact', redirect: {name: "about"}},
     {path: '/pricing', component: Pricing},
 ]
 

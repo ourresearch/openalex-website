@@ -16,17 +16,14 @@
 
       <!--      DESKTOP MENU -->
       <v-toolbar-items class=" hidden-sm-and-down">
-        <v-btn class="no-active low-key-button" text to="/">Home</v-btn>
+        <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
+        <v-btn class="no-active low-key-button" text to="./about">Testimonials</v-btn>
+        <v-btn class="no-active low-key-button" text to="./pricing">Pricing</v-btn>
+        <v-btn class="no-active low-key-button" text to="./help">Help</v-btn>
         <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
-          Read the docs
+          Docs
           <v-icon right>mdi-open-in-new</v-icon>
         </v-btn>
-
-        <v-btn class="no-active low-key-button" text to="./users">Users</v-btn>
-        <v-btn class="no-active low-key-button" text to="./about">About</v-btn>
-        <v-btn class="no-active low-key-button" text to="./help">Help</v-btn>
-        <v-btn class="no-active low-key-button" text to="./contact">Contact</v-btn>
-        <v-btn class="no-active low-key-button" text to="./pricing">Pricing</v-btn>
       </v-toolbar-items>
 
       <!--      MOBILE MENU -->
@@ -38,22 +35,20 @@
             </v-btn>
           </template>
           <v-list>
-            <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
-              Read the docs
-              <v-icon right>mdi-open-in-new</v-icon>
-            </v-btn>
             <v-list-item to="/about">
               About
+            </v-list-item>
+            <v-btn class="no-active low-key-button" text to="./about">Testimonials</v-btn>
+            <v-list-item to="./pricing">
+              Pricing
             </v-list-item>
             <v-list-item to="/help">
               Help
             </v-list-item>
-            <v-list-item to="./contact">
-              Contact
-            </v-list-item>
-            <v-list-item to="./pricing">
-              Pricing
-            </v-list-item>
+            <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
+              Docs
+              <v-icon right>mdi-open-in-new</v-icon>
+            </v-btn>
           </v-list>
         </v-menu>
       </div>
