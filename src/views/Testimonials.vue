@@ -213,6 +213,21 @@ I would highly recommend OpenAlex to others with scientometric and bibliometric 
 
 
 
+        {
+          short: `OpenAlex is an easy-to-use solution with <strong> excellent documentation, extensive and improving database, and a robust yet simple API </strong> that's free of charge.<br><br> This makes it the best solution for academic use cases like ours that are working to further diversity and equity in research.`,
+          long: `I am the lead student researcher for Georgia Tech's Executive VP of Research. A primary aim of our office is to document research and faculty collaboration of the college with HBCU institutions as a part of institute collaboration goals. <br><br>
+
+ We used OpenAlex extensively as a ground truth to document research across Georgia Tech and its HBCU partners.<br><br>
+
+  OpenAlex is an easy to use solution with excellent documentation, extensive and improving database, and a robust yet simple API that's  free of charge. This makes it the best solution for academic use cases like ours that are working to further diversity and equity in research. I recommend OpenAlex to whoever I know to be working in the domain of scientometrics.`,
+          name: "Chinar Dankhara",
+          org: `Georgia Institute of Technology`,
+        },
+
+
+
+
+
 
 
       ]
