@@ -7,21 +7,34 @@
     </p>
     <p>
 
-      Using OpenAlex, you can <strong>build</strong> your own scholarly search engine, recommender service, or knowledge
-      graph. You can help <strong>manage</strong> research by tracking citation impact, spotting promising new research
-      areas, and identifying and promoting work from underrepresented groups. And you can do <strong>research</strong> on
-      research
-      itself, in areas like
-      <a href="https://en.wikipedia.org/wiki/Bibliometrics">bibliometrics</a>,
-      <a href="https://en.wikipedia.org/wiki/Science_and_technology_studies">science and technology studies</a>, and
-      <a href="https://en.wikipedia.org/wiki/Science_of_science_policy">Science of science policy</a>.
+      Using OpenAlex, you can <strong>build</strong> your own scholarly search engine, recommender service, or trend
+      detector. You can help <strong>manage</strong> research by tracking impact, spotting emerging fields, and
+      identifying key groups. And you can do <strong>research</strong> to better understand how scholarship works..
     </p>
     <p>
-      Because we think all research should be free and open, OpenAlex is free and open itself, and we're built on a fully
-      <a href="https://github.com/orgs/ourresearch/repositories?language=&q=openalex&sort=&type=public">Open Source
-        codebase.</a>
+      Because we think all research should be free and open, OpenAlex is free and open itself:
     </p>
-    <p>
+    <ul>
+      <li>
+        We're operated by a <a href="http://ourresearch.org/transparency">sustainable and transparent nonprofit,</a>
+      </li>
+      <li>
+        our <a
+        href="https://docs.openalex.org/download-all-data/openalex-snapshot">complete dataset</a>  is free under the
+        <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0 license,</a>
+      </li>
+      <li>
+        We offer a
+        <a href="https://docs.openalex.org/">free API,</a>
+        and
+      </li>
+      <li>
+        <a href="https://github.com/orgs/ourresearch/repositories?language=&q=openalex&sort=&type=public">Our code
+        </a> is fully open-source.
+      </li>
+    </ul>
+
+    <p class="mt-6">
       We believe the global research system is one of humankind's most beautiful creations. OpenAlex aims to make that
       whole beautiful creation available to everyone, everywhere.
     </p>
@@ -31,7 +44,7 @@
     <p>
       Let's start <em>way</em> back at the beginning, with the ancient <a
         href="https://en.wikipedia.org/wiki/Library_of_Alexandria">Library of Alexandria.</a> Working create a Universal
-      Library, they didn't just <em>gather</em> knowledge &mdash; they made it useful by <em>indexing</em> it in the
+      Library, they didn't just gather knowledge &mdash; they made it useful by indexing it in the
       world's first library catalog, the
       <a href="https://en.wikipedia.org/wiki/Pinakes">Pinakes.</a> That's what we're trying to do, too, and so our name
       is an homage to them!
@@ -40,24 +53,33 @@
       Fast forward a few millenia: OpenAlex had been a dream at
       <a href="https://ourresearch.org">our little nonprofit</a> for a long time, but two doors opened simultaneously in
       May 2021. First,
-      <a href="https://blog.ourresearch.org/arcadia-2021-grant/">we received a generous, $4.5M grant</a> from <a
+      <a href="https://blog.ourresearch.org/arcadia-2021-grant/">we received a generous grant</a> from <a
         href="https://www.arcadiafund.org.uk/">Arcadia, a charitable fund of Lisbet Rausing and Peter Baldwin.</a>
       Second, Microsoft announced it would shutter <a
         href="https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/">Microsoft Academic Graph
-        (MAG),</a> which much of the community has come to rely upon as our best index of scholarly communication. So, we
+      (MAG),</a> which much of the community has come to rely upon as our best index of scholarly communication. So, we
       had the means and the opportunity, and we ran with it!
     </p>
     <p>
       OpenAlex beta launched on January 3rd, 2022. Currently the data is available via an <a
         href="https://docs.openalex.org/">API</a> and a full <a
-        href="https://docs.openalex.org/download-all-data/openalex-snapshot">database snapshot.</a> We also have plans to
-      create a web-based graphical user interface.
+        href="https://docs.openalex.org/download-all-data/openalex-snapshot">database snapshot.</a> We're also working
+      on a web-based graphical user interface.
     </p>
+
+    <h4 class="text-h4" id="contact">Contact</h4>
     <p>
-      If you're interested in following our progress, we encourage you to <a
-        href="https://groups.google.com/g/openalex-users">join our Google Group</a> and follow us on <a
-        href="https://twitter.com/openalex_org">Twitter</a> and <a href="https://mastodon.social/@OpenAlex">Mastodon</a>.
+      We'd love to hear from you! If you have a question, and you can't find the answer in our <a
+        href="https://docs.openalex.org/">documentation</a>,
+      submit a ticket via our <a href="/help">help page</a>.
     </p>
+
+    <p>
+      You can also stay in touch with us via the <a href="https://groups.google.com/g/openalex-users">OpenAlex User
+      Group</a> and via Twitter (<a href="https://twitter.com/openalex_org">@OpenAlex_org</a>) and Mastodon (<a
+        href="https://mastodon.social/@OpenAlex">@OpenAlex@mastodon.social</a>).
+    </p>
+
 
     <h4 class="text-h4" id="sources">Sources</h4>
     <p>
@@ -99,7 +121,7 @@
 <script>
 export default {
   name: "About",
-  metaInfo: { title: "About" }
+  metaInfo: {title: "About"}
 }
 </script>
 

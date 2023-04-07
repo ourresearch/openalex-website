@@ -1,14 +1,14 @@
 <template>
   <v-container class="page">
     <h3 class="text-h3">Testimonials</h3>
-    <p
-    >We think OpenAlex is super powerful, but you don't have to take our word for it--here's what some of our users have
-      to say!
+    <p>
+      Here's what some of our users have to say about OpenAlex.
     </p>
+
     <v-row>
-      <v-col cols="12" md="4" v-for="item in items" :key="item.name">
-        <v-card>
-          <v-card-text >
+      <v-col cols="12" md="4" class="" v-for="item in items" :key="item.name">
+        <v-card class="fill-height d-flex flex-column">
+          <v-card-text class="flex-grow-1">
 
             <q style="font: 18px Roboto; line-height: 1.3" v-html="item.short"/>
             <div class="mt-3 d-flex">
@@ -16,37 +16,58 @@
                 &mdash;
               </div>
               <div>
-              {{ item.name }}, {{ item.org }}
+                {{ item.name }}, {{ item.org }}
 
               </div>
             </div>
           </v-card-text>
-          <v-card-actions>
+          <v-card-actions class="pt-0">
             <v-btn small text @click="showMore(item)">More</v-btn>
           </v-card-actions>
 
         </v-card>
       </v-col>
     </v-row>
-    <v-dialog v-model="isDialogOpen">
+    <div>
+      <v-alert type="info" outlined text class="mt-8">
+        <p>
+
+          Want to share a testimonial of your own? We'd love to hear it!
+        </p>
+        <div>
+          <v-btn color="primary" href="https://wkf.ms/42RdSkP" target="_blank">
+            Share testimonial
+            <v-icon right>mdi-open-in-new</v-icon>
+          </v-btn>
+        </div>
+      </v-alert>
+    </div>
+    <v-dialog v-model="isDialogOpen" max-width="600">
       <v-card v-if="dialogData">
-          <v-card-text >
+        <v-card-title>
+          <!--          {{ dialogData.org }}-->
+          <v-spacer/>
+          <v-btn icon @click="closeDialog">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-title>
+        <v-card-text>
 
-            <q style="font: 18px Roboto; line-height: 1.3" v-html="dialogData.long"/>
-            <div class="mt-3 d-flex">
-              <div class="mr-1">
-                &mdash;
-              </div>
-              <div>
-              {{ dialogData.name }}, {{ dialogData.org }}
-              </div>
+          <q style="font: 16px Roboto; line-height: 1.3" v-html="dialogData.long"/>
+          <div class="mt-3 d-flex">
+            <div class="mr-1">
+              &mdash;
             </div>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text @click="closeDialog()">Close</v-btn>
-          </v-card-actions>
+            <div>
+              {{ dialogData.name }}, {{ dialogData.org }}
+            </div>
+          </div>
+        </v-card-text>
+        <v-card-actions>
+          <v-btn text @click="closeDialog()">Close</v-btn>
+        </v-card-actions>
 
-        </v-card>
+      </v-card>
     </v-dialog>
   </v-container>
 </template>
@@ -102,10 +123,10 @@ We are impressed with OpenAlex's ability to establish relationships between vari
           org: `INSERES`,
         },
         {
-          short: `OpenAlex helps [us] <strong>significantly optimize our performance of the literature search,</strong> and thus shorten our overall R&D time.`,
+          short: `OpenAlex helps <strong>significantly optimize the performance of our literature search,</strong> and thus shorten our overall R&D time.`,
           long: `In early development of the drug discovery process at BMS, we have to do a lot of literature search, often across different sources like bioRxiv, medRxiv, PubMed, etc. <br><br>
 
-          OpenAlex helps streamline this process and significantly optimize our performance of the literature search, and thus shorten our overall R&D time. We highly recommend OpenAlex to anyone who needs a unified interface to acquire open scholarly metadata.`,
+          OpenAlex helps streamline this process and significantly optimize the performance of our literature search, and thus shorten our overall R&D time. We highly recommend OpenAlex to anyone who needs a unified interface to acquire open scholarly metadata.`,
           name: "Trang Le",
           org: `Bristol Myers Squibb`,
         },
@@ -137,7 +158,7 @@ We are impressed with OpenAlex's ability to establish relationships between vari
       this.dialogData = item
       this.isDialogOpen = true
     },
-    closeDialog(){
+    closeDialog() {
       this.isDialogOpen = false
       this.dialogData = null
     },
