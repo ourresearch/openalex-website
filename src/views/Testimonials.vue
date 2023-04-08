@@ -240,6 +240,20 @@ The clear syntax makes it easy to construct a query, and the grouping, filtering
 
 
 
+        {
+          short: `We used Microsoft Academic Graph, Semantic Scholar, Crossref, PubMed and ArXiv...<br><br>but <strong>OpenAlex is the best</strong> in terms of completeness, data quality, and ease of use....<strong>OpenAlex is better than the paid data sources</strong>`,
+          long: `Clear Skies detects signs of research fraud in the academic literature. Some of our methods rely on article metadata. OpenAlex is an excellent source of that data.<br><br>
+
+Prior to OpenAlex, we used Microsoft Academic Graph, Semantic Scholar, Crossref, PubMed and ArXiv. All of these are excellent in their own way, but OpenAlex is the best in terms of completeness, data quality, and ease of use. The API is fast and intuitive. The regular snapshots facilitate moden data engineering practices. It's also free. We don't have the financial resources to use any paid data source and OpenAlex is better than the paid data sources we know of.<br><br>
+
+The latest version of the Papermill Alarm was trained on OpenAlex data (for the most part). Building it took months of work. Throughout that work, OpenAlex was solidly reliable. The result is a tool that, as far as I know, has the highest recall for papermill detection.`,
+          name: "Adam Day",
+          org: `Clear Skies`,
+        },
+
+
+
+
 
 
 
