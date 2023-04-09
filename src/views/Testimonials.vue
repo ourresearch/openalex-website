@@ -22,11 +22,11 @@
             </div>
           </v-card-text>
           <v-card-actions class="pt-0">
+            <v-chip small outlined color="orange" v-if="item.type==='enterprise'">{{ item.type }}</v-chip>
+            <v-chip small outlined color="teal" v-if="item.type==='analytics'">{{ item.type }}</v-chip>
+            <v-chip small outlined color="purple" v-if="item.type==='research'">{{ item.type }}</v-chip>
+            <v-spacer/>
             <v-btn small text @click="showMore(item)">More</v-btn>
-            <v-spacer />
-              <v-chip small outlined color="orange" v-if="item.type==='enterprise'">{{item.type}}</v-chip>
-              <v-chip small outlined color="teal" v-if="item.type==='analytics'">{{item.type}}</v-chip>
-              <v-chip small outlined color="purple" v-if="item.type==='research'">{{item.type}}</v-chip>
           </v-card-actions>
 
         </v-card>
@@ -68,11 +68,11 @@
           </div>
         </v-card-text>
         <v-card-actions>
+          <v-chip small outlined color="orange" v-if="dialogData.type==='enterprise'">{{ dialogData.type }}</v-chip>
+          <v-chip small outlined color="teal" v-if="dialogData.type==='analytics'">{{ dialogData.type }}</v-chip>
+          <v-chip small outlined color="purple" v-if="dialogData.type==='research'">{{ dialogData.type }}</v-chip>
+          <v-spacer/>
           <v-btn text @click="closeDialog()">Close</v-btn>
-            <v-spacer />
-              <v-chip small outlined color="orange" v-if="dialogData.type==='enterprise'">{{dialogData.type}}</v-chip>
-              <v-chip small outlined color="teal" v-if="dialogData.type==='analytics'">{{dialogData.type}}</v-chip>
-              <v-chip small outlined color="purple" v-if="dialogData.type==='research'">{{dialogData.type}}</v-chip>
         </v-card-actions>
 
       </v-card>
@@ -207,9 +207,6 @@ OpenAlex has successfully bridged this gap and now provides even more relevant i
         },
 
 
-
-
-
         {
           short: `Before learning about OpenAlex, I had to rely on paid services...<br><br>
 
@@ -227,9 +224,6 @@ I would highly recommend OpenAlex to others with scientometric and bibliometric 
         },
 
 
-
-
-
         {
           short: `OpenAlex is the best solution for academic use cases like ours that are working to further <strong> diversity and equity in research.</strong><br><br>What they're doing is <strong>invaluable and has no replacement.</strong>`,
           long: `I am the lead student researcher for Georgia Tech's Executive VP of Research. A primary aim of our office is to document research and faculty collaboration of the college with HBCU institutions as a part of institute collaboration goals. <br><br>
@@ -243,7 +237,6 @@ I would highly recommend OpenAlex to others with scientometric and bibliometric 
         },
 
 
-
         {
           short: `The clear syntax makes it easy to construct a query, and the grouping, filtering, and limiting gives us snapshots of trends very quickly.<br><br>  This is a powerful tool...<strong>an integral and vital part of bibliographic studies.</strong>`,
           long: `I am a Collection Analysis Librarian, responsible for better understanding our campus publishing patterns and helping to negotiate open publishing agreements with publishers. I need high quality bibliographic metadata to do this work, and while I do have access to some subscription products, I still use the OpenAlex API every week (sometimes every day).<br><br>
@@ -253,8 +246,6 @@ The clear syntax makes it easy to construct a query, and the grouping, filtering
           org: `Iowa State University Library`,
           type: "analytics",
         },
-
-
 
 
         {
@@ -268,11 +259,6 @@ The latest version of the Papermill Alarm was trained on OpenAlex data (for the 
           org: `Clear Skies`,
           type: "enterprise",
         },
-
-
-
-
-
 
 
       ]
