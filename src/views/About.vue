@@ -148,10 +148,10 @@
             <td class="tg-loku">Non-profit</td>
           </tr>
           <tr>
-            <td class="tg-lhf6"><a href="https://www.elsevier.com/solutions/scopus">Scopus</a></td>
+            <td class="tg-lhf6"><a href="https://www.elsevier.com/solutions/scopus" target="_blank" rel="noopener noreferrer">Scopus</a></td>
             <td class="tg-loku">87M</td>
             <td class="tg-loku"><span style="font-style:normal">20.5M (</span><a
-                href="https://blog.scopus.com/posts/scopus-now-includes-90-million-content-records">ref</a><span
+                href="https://blog.scopus.com/posts/scopus-now-includes-90-million-content-records" target="_blank" rel="noopener noreferrer">ref</a><span
                 style="font-style:normal">)</span></td>
             <td class="tg-loku">1.8B</td>
             <td class="tg-loku">Subscription</td>
@@ -159,24 +159,24 @@
             <td class="tg-loku">For Profit</td>
           </tr>
           <tr>
-            <td class="tg-lhf6"><a href="https://clarivate.com/webofsciencegroup/solutions/web-of-science">Web of
-                Science</a></td>
-            <td class="tg-loku"><span style="font-style:normal">200M (full platform) (</span><a
-                href="https://clarivate.libguides.com/librarianresources/coverage">ref</a><span
+            <td class="tg-lhf6"><a href="https://clarivate.com/webofsciencegroup/solutions/web-of-science" target="_blank" rel="noopener noreferrer">Web of
+                Science (core)</a></td>
+            <td class="tg-loku"><span style="font-style:normal">87M (</span><a
+                href="https://clarivate.libguides.com/librarianresources/coverage" target="_blank" rel="noopener noreferrer">ref</a><span
                 style="font-style:normal">)</span></td>
             <td class="tg-loku"><span style="font-style:normal">12M (</span><a
-                href="https://clarivate.com/webofsciencegroup/solutions/open-access/">ref</a><span
+                href="https://clarivate.com/webofsciencegroup/solutions/open-access/" target="_blank" rel="noopener noreferrer">ref</a><span
                 style="font-style:normal">)</span></td>
-            <td class="tg-loku">?</td>
+            <td class="tg-loku">1.8B</td>
             <td class="tg-loku">Subscription</td>
             <td class="tg-loku">Closed</td>
             <td class="tg-loku">For Profit</td>
           </tr>
           <tr>
-            <td class="tg-lhf6"><a href="https://www.dimensions.ai/">Dimensions</a></td>
+            <td class="tg-lhf6"><a href="https://www.dimensions.ai/" target="_blank" rel="noopener noreferrer">Dimensions</a></td>
             <td class="tg-loku">135M</td>
             <td class="tg-loku"><span style="font-style:normal">29M (</span><a
-                href="https://www.dimensions.ai/resources/evaluate-your-universitys-oa-status/">ref</a><span
+                href="https://www.dimensions.ai/resources/evaluate-your-universitys-oa-status/" target="_blank" rel="noopener noreferrer">ref</a><span
                 style="font-style:normal">)</span></td>
             <td class="tg-loku">1.7B</td>
             <td class="tg-loku">Freemium</td>
@@ -184,9 +184,9 @@
             <td class="tg-loku">For Profit</td>
           </tr>
           <tr>
-            <td class="tg-lhf6"><a href="https://scholar.google.com/">Google Scholar</a></td>
+            <td class="tg-lhf6"><a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a></td>
             <td class="tg-loku"><span style="font-style:normal">389M (</span><a
-                href="https://doi.org/10.1007/s11192-018-2958-5">estimated</a><span style="font-style:normal">)</span>
+                href="https://doi.org/10.1007/s11192-018-2958-5" target="_blank" rel="noopener noreferrer">estimated</a><span style="font-style:normal">)</span>
             </td>
             <td class="tg-loku">?</td>
             <td class="tg-loku">?</td>
@@ -195,7 +195,7 @@
             <td class="tg-loku">For Profit</td>
           </tr>
           <tr>
-            <td class="tg-lhf6"><a href="https://www.crossref.org/">Crossref</a></td>
+            <td class="tg-lhf6"><a href="https://www.crossref.org/" target="_blank" rel="noopener noreferrer">Crossref</a></td>
             <td class="tg-loku">145M</td>
             <td class="tg-loku">?</td>
             <td class="tg-loku">1.45B</td>
