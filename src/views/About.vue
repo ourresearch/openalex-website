@@ -197,7 +197,7 @@
           <tr>
             <td class="tg-lhf6"><a href="https://www.crossref.org/" target="_blank" rel="noopener noreferrer">Crossref</a></td>
             <td class="tg-loku">145M</td>
-            <td class="tg-loku">?</td>
+            <td class="tg-loku">20M</td>
             <td class="tg-loku">1.45B</td>
             <td class="tg-loku">Free</td>
             <td class="tg-loku">Fully open, CC0 license</td>
