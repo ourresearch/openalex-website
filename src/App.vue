@@ -105,10 +105,10 @@ export default {
 
 body {
   .v-application {
-    font-family: Inconsolata !important;
+    //font-family: Inconsolata !important;
     font-size: 16px;
 
-    p, ul, ol, li, code {
+    p, ul, ol, li {
       //font-family: dosis !important;
       font-family: roboto !important;
       //font-family: Inconsolata !important;
@@ -117,8 +117,8 @@ body {
       //letter-spacing: .05em !important;
     }
 
-    .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6 {
-      font-family: roboto !important;
+    .text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6,  {
+      //font-family: roboto !important;
       font-family: Inconsolata !important;
       //font-family: dosis !important;
       font-weight: 100;
