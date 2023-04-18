@@ -5,7 +5,7 @@
     <p>
       Here's what some of our users have to say about OpenAlex:
     </p>
-    <v-divider class="mb-4" />
+    <v-divider class="mb-4"/>
     <v-row>
       <v-col cols="12" sm="2">
         <v-list>
@@ -24,26 +24,28 @@
             <v-card class="fill-height d-flex flex-column">
               <v-card-text class="flex-grow-1">
 
-            <q style="font: 16px Roboto; line-height: 1.3" v-html="item.short"/>
-            <div class="mt-3 d-flex">
-              <div class="mr-1">
-                &mdash;
-              </div>
-              <div>
-                {{ item.name }}, {{ item.org }}
+                <q style="font: 16px Roboto; line-height: 1.3" v-html="item.short"/>
+                <div class="mt-3 d-flex">
+                  <div class="mr-1">
+                    &mdash;
+                  </div>
+                  <div>
+                    {{ item.name }}, {{ item.org }}
 
-              </div>
-            </div>
-          </v-card-text>
-          <v-card-actions class="pt-0">
-            <v-chip small outlined color="orange" v-if="item.type==='enterprise'">{{ item.type }}</v-chip>
-            <v-chip small outlined color="teal" v-if="item.type==='analytics'">{{ item.type }}</v-chip>
-            <v-chip small outlined color="purple" v-if="item.type==='research'">{{ item.type }}</v-chip>
-            <v-spacer/>
-            <v-btn small text @click="showMore(item)">More</v-btn>
-          </v-card-actions>
+                  </div>
+                </div>
+              </v-card-text>
+              <v-card-actions class="pt-0">
+                <v-btn small text @click="showMore(item)">More</v-btn>
+                <v-spacer/>
+                <v-chip small outlined color="orange" v-if="item.type==='enterprise'">{{ item.type }}</v-chip>
+                <v-chip small outlined color="teal" v-if="item.type==='analytics'">{{ item.type }}</v-chip>
+                <v-chip small outlined color="purple" v-if="item.type==='research'">{{ item.type }}</v-chip>
+              </v-card-actions>
 
-        </v-card>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
     <div>
@@ -280,8 +282,8 @@ The latest version of the Papermill Alarm was trained on OpenAlex data (for the 
     ...mapGetters([
       "resultsFilters",
     ]),
-    filteredItems(){
-     return this.items
+    filteredItems() {
+      return this.items
     },
     isOpen: {
       get() {
