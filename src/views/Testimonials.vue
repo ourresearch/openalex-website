@@ -1,33 +1,51 @@
 <template>
   <v-container class="page">
     <h3 class="text-h3">Testimonials</h3>
+
     <p>
-      Here's what some of our users have to say about OpenAlex.
+      Here's what some of our users have to say about OpenAlex:
     </p>
-
+    <v-divider class="mb-4" />
     <v-row>
-      <v-col cols="12" md="4" class="" v-for="item in items" :key="item.name">
-        <v-card class="fill-height d-flex flex-column">
-          <v-card-text class="flex-grow-1">
+      <v-col cols="12" sm="2">
+        <v-list>
 
-            <q style="font: 18px Roboto; line-height: 1.3" v-html="item.short"/>
-            <div class="mt-3 d-flex">
-              <div class="mr-1">
-                &mdash;
-              </div>
-              <div>
-                {{ item.name }}, {{ item.org }}
+        </v-list>
+      </v-col>
+      <v-col cols="12" sm="10">
+        <v-row>
+          <v-col
+              cols="12"
+              md="4"
+              class=""
+              v-for="item in filteredItems"
+              :key="item.name"
+          >
+            <v-card class="fill-height d-flex flex-column">
+              <v-card-text class="flex-grow-1">
 
-              </div>
-            </div>
-          </v-card-text>
-          <v-card-actions class="pt-0">
-            <v-btn small text @click="showMore(item)">More</v-btn>
-          </v-card-actions>
+                <q style="font: 18px Roboto; line-height: 1.3" v-html="item.short"/>
+                <div class="mt-3 d-flex">
+                  <div class="mr-1">
+                    &mdash;
+                  </div>
+                  <div>
+                    {{ item.name }}, {{ item.org }}
 
-        </v-card>
+                  </div>
+                </div>
+              </v-card-text>
+              <v-card-actions class="pt-0">
+                <v-btn small text @click="showMore(item)">More</v-btn>
+              </v-card-actions>
+
+            </v-card>
+          </v-col>
+        </v-row>
+
       </v-col>
     </v-row>
+
     <div>
       <v-alert type="info" outlined text class="mt-8">
         <p>
@@ -86,7 +104,7 @@ export default {
       dialogData: null,
       items: [
         {
-          short: `<strong>The OpenAlex dataset was a game changer for us.</strong> As we are informing public policy, using an open dataset that allows for transparency is essential.`,
+          short: `<strong>The OpenAlex dataset was a game changer....</strong>an open dataset that allows for transparency is essential.`,
           long: `Dragonfly Data Science is a New Zealand based consulting company that specializes in data science, statistical analysis and machine learning.<br><br>
 
  For a report commissioned by the New Zealand Ministry for Business, Innovation and Employment, we were tasked with looking at changes in the New Zealand research workforce over a twenty year period, to be used in a reimagining of the New Zealand science system.<br><br>
@@ -100,7 +118,7 @@ The OpenAlex dataset was a game changer for us. As we are informing public polic
 
 
         {
-          short: `OpenAlex is faster and more dependable...With its extensive catalog of scholarly papers, OpenAlex has enabled us to <strong>effortlessly locate the right sources</strong> that students are searching for.`,
+          short: `With its extensive catalog of scholarly papers, OpenAlex has enabled us to <strong>effortlessly locate the right sources</strong> that students are searching for.`,
           long: `Scribbr is a multilingual editing service guiding students on their journey to become better academic writers through AI tools and expert feedback.<br><br>
 
 When assisting students one of our core free services is providing citation generation. Our previous external data solutions for this were slow and not as dependable as we’d like. They left students frustrated.<br><br>
@@ -115,7 +133,7 @@ We strongly recommend OpenAlex to anyone seeking a reliable and fast source of s
 
 
         {
-          short: `OpenAlex provides <strong>accurate affiliation data, effortlessly and quickly</strong>....[and] daily updates ensure our clients always have access to the most current information.`,
+          short: `OpenAlex provides <strong>accurate affiliation data, effortlessly and quickly</strong>`,
           long: `INSERES is a software company that makes Piri Discovery Service, a search-focused, enterprise-level tool specifically tailored for academic professionals, researchers, and students.<br><br>
 
 Before OpenAlex, we faced challenges in listing publications affiliated with the given institutions; furthermore, we had no citation information for institution-affiliated publications, except for data provided by OpenCitations. Additionally, there was no discipline-specific data available for these institution-affiliated publications. We attempted to collect affiliation data from our various data sources including CrossRef, but none of these yielded satisfactory results. <br><br>
@@ -139,7 +157,7 @@ We are impressed with OpenAlex's ability to establish relationships between vari
 
 
         {
-          short: `The OpenAlex API helps us <strong>consolidate and accelerate our data collection</strong>... We recommend university libraries use OpenAlex to build and maintain <strong> sustainable, noncommercial scholary infrastructures.</strong>`,
+          short: `We recommend university libraries use OpenAlex to build and maintain <strong> sustainable, noncommercial scholarly infrastructures.</strong>`,
           long: `The Open Access team at TU Berlin (Germany) works with publication data of affiliated researchers in various ways: analyzing institutional output, monitoring open access, assisting authors with self-archiving, and consluting for publication strategy.<br><br>
 
 To do this, we have to pull data from various sources (e.g. Web of Science, Scopus, ORCID, etc) and aggregate data from various services (e.g. Crossref, Unpaywall, etc).<br><br>
@@ -151,7 +169,7 @@ The OpenAlex API helps us to consolidate and accelerate our data collection, so 
 
 
         {
-          short: ` We previously relied on a combination of paid databases, the Microsoft Academic API and The Lens, but <strong>have now moved 100% to OpenAlex.</strong><br><br> The API is super speedy, has generous rate limits and is easy to work with, <strong> data and metadata are very complete, all at no cost.`,
+          short: ` We previously relied on a combination of paid databases, the Microsoft Academic API and The Lens, but <strong>...have now moved 100% to OpenAlex.</strong>`,
           long: `Kenedict is an innovation analytics consultancy and uses OpenAlex to collect data on scientific output, authors and institutions for client projects. The data is mapped as graphs / networks to provide clients a connected perspective on scientific activity.<br><br>
 
  We previously relied on a combination of paid databases, the Microsoft Academic API and The Lens, but have now moved 100% to OpenAlex. The API is super speedy, has generous rate limits and is easy to work with, data and metadata are very complete, all at no cost. <br><br>
@@ -163,7 +181,7 @@ The OpenAlex API helps us to consolidate and accelerate our data collection, so 
 
 
         {
-          short: ` We used to only use Scopus...But the licensing terms restrict us from [sharing the data].<br><br> <strong>OpenAlex is CC0 and we can share everything</strong> without worrying or talking to lawyers! It is really great.
+          short: `<strong>OpenAlex is CC0 and we can share everything</strong> without worrying or talking to lawyers! It is really great.
 `,
           long: `Our research lab looks at the migration of researchers. We use bibliometric data to detect changes in affiliations of individual scholars.<br><br>
 
@@ -178,7 +196,7 @@ OpenAlex is CC0 and we can share everything without worrying or talking to lawye
 
 
         {
-          short: `Microsoft Academic used to be our primary source but was discontinued... OpenAlex has successfully bridged this gap and now <strong>provides even more relevant information.</strong><br><br>OpenAlex is highly recommended<strong> for  its fast, open, and high-quality scholarly data</strong>
+          short: `OpenAlex is highly recommended for its<strong> fast, open, and high-quality scholarly data</strong>
 `,
           long: `Local Citation Network is an open source bibliometric web app for visualizing citation graphs and literature discovery. <br><br>
 
@@ -191,13 +209,8 @@ OpenAlex has successfully bridged this gap and now provides even more relevant i
         },
 
 
-
-
-
         {
-          short: `Before learning about OpenAlex, I had to rely on paid services...<br><br>
-
-But now OpenAlex gives me <strong> an open-source alternative that's large, free, and has an easy-to-use API.</strong>`,
+          short: `OpenAlex gives me <strong> an open-source alternative that's large, free, and has an easy-to-use API.</strong>`,
           long: `I am a PhD student with research interests in science & technology policy, scientometrics, machine learning, and data science. OpenAlex is helping me to gain access to large-scale bibliometric data with its convenient and free API. I am using the data OpenAlex provides to research the evolution of scientific communities through citation network analysis of directed acyclic graphs.<br><br>
 
 Before learning about OpenAlex, I had to rely on paid services like Web of Science, Scopus, or Dimensions for bibliometric data.  But now OpenAlex gives me an open-source alternative that's large, free, and has an easy-to-use API.<br><br>
@@ -210,11 +223,8 @@ I would highly recommend OpenAlex to others with scientometric and bibliometric 
         },
 
 
-
-
-
         {
-          short: `OpenAlex is an easy-to-use solution with <strong> excellent documentation, extensive and improving database, and a robust yet simple API </strong> that's free of charge.<br><br> This makes it the best solution for academic use cases like ours that are working to further diversity and equity in research.`,
+          short: `<strong>The best solution</strong> for academic use cases like ours that are working to further diversity and equity in research.`,
           long: `I am the lead student researcher for Georgia Tech's Executive VP of Research. A primary aim of our office is to document research and faculty collaboration of the college with HBCU institutions as a part of institute collaboration goals. <br><br>
 
  We used OpenAlex extensively as a ground truth to document research across Georgia Tech and its HBCU partners.<br><br>
@@ -225,11 +235,8 @@ I would highly recommend OpenAlex to others with scientometric and bibliometric 
         },
 
 
-
         {
-          short: `I use the OpenAlex API every week (sometimes every day)...<br><br>
-
-The clear syntax makes it easy to construct a query, and the grouping, filtering, and limiting gives us snapshots of trends very quickly. <strong> This is a powerful tool...integral and vital... </strong>`,
+          short: `This is a powerful tool that has already cemented itself as an <strong> integral and vital part of bibliographic studies.</strong>`,
           long: `I am a Collection Analysis Librarian, responsible for better understanding our campus publishing patterns and helping to negotiate open publishing agreements with publishers. I need high quality bibliographic metadata to do this work, and while I do have access to some subscription products, I still use the OpenAlex API every week (sometimes every day).<br><br>
 
 The clear syntax makes it easy to construct a query, and the grouping, filtering, and limiting gives us snapshots of trends very quickly. This is a powerful tool that has already cemented itself as an integral and vital part of bibliographic studies.`,
@@ -238,10 +245,8 @@ The clear syntax makes it easy to construct a query, and the grouping, filtering
         },
 
 
-
-
         {
-          short: `We used Microsoft Academic Graph, Semantic Scholar, Crossref, PubMed and ArXiv...<br><br>but <strong>OpenAlex is the best</strong> in terms of completeness, data quality, and ease of use....<strong>OpenAlex is better than the paid data sources</strong>`,
+          short: `OpenAlex is the best in terms of completeness, data quality, and ease of use....<strong>OpenAlex is better than the paid data sources</strong>`,
           long: `Clear Skies detects signs of research fraud in the academic literature. Some of our methods rely on article metadata. OpenAlex is an excellent source of that data.<br><br>
 
 Prior to OpenAlex, we used Microsoft Academic Graph, Semantic Scholar, Crossref, PubMed and ArXiv. All of these are excellent in their own way, but OpenAlex is the best in terms of completeness, data quality, and ease of use. The API is fast and intuitive. The regular snapshots facilitate moden data engineering practices. It's also free. We don't have the financial resources to use any paid data source and OpenAlex is better than the paid data sources we know of.<br><br>
@@ -252,11 +257,6 @@ The latest version of the Papermill Alarm was trained on OpenAlex data (for the 
         },
 
 
-
-
-
-
-
       ]
     }
   },
@@ -264,6 +264,9 @@ The latest version of the Papermill Alarm was trained on OpenAlex data (for the 
     ...mapGetters([
       "resultsFilters",
     ]),
+    filteredItems(){
+     return this.items
+    },
     isOpen: {
       get() {
         if (!this.$vuetify.breakpoint.mobile) return true
