@@ -24,28 +24,28 @@
             <v-card class="fill-height d-flex flex-column">
               <v-card-text class="flex-grow-1">
 
-                <q style="font: 18px Roboto; line-height: 1.3" v-html="item.short"/>
-                <div class="mt-3 d-flex">
-                  <div class="mr-1">
-                    &mdash;
-                  </div>
-                  <div>
-                    {{ item.name }}, {{ item.org }}
+            <q style="font: 16px Roboto; line-height: 1.3" v-html="item.short"/>
+            <div class="mt-3 d-flex">
+              <div class="mr-1">
+                &mdash;
+              </div>
+              <div>
+                {{ item.name }}, {{ item.org }}
 
-                  </div>
-                </div>
-              </v-card-text>
-              <v-card-actions class="pt-0">
-                <v-btn small text @click="showMore(item)">More</v-btn>
-              </v-card-actions>
+              </div>
+            </div>
+          </v-card-text>
+          <v-card-actions class="pt-0">
+            <v-chip small outlined color="orange" v-if="item.type==='enterprise'">{{ item.type }}</v-chip>
+            <v-chip small outlined color="teal" v-if="item.type==='analytics'">{{ item.type }}</v-chip>
+            <v-chip small outlined color="purple" v-if="item.type==='research'">{{ item.type }}</v-chip>
+            <v-spacer/>
+            <v-btn small text @click="showMore(item)">More</v-btn>
+          </v-card-actions>
 
-            </v-card>
-          </v-col>
-        </v-row>
-
+        </v-card>
       </v-col>
     </v-row>
-
     <div>
       <v-alert type="info" outlined text class="mt-8">
         <p>
@@ -82,6 +82,10 @@
           </div>
         </v-card-text>
         <v-card-actions>
+          <v-chip small outlined color="orange" v-if="dialogData.type==='enterprise'">{{ dialogData.type }}</v-chip>
+          <v-chip small outlined color="teal" v-if="dialogData.type==='analytics'">{{ dialogData.type }}</v-chip>
+          <v-chip small outlined color="purple" v-if="dialogData.type==='research'">{{ dialogData.type }}</v-chip>
+          <v-spacer/>
           <v-btn text @click="closeDialog()">Close</v-btn>
         </v-card-actions>
 
@@ -114,6 +118,7 @@ OpenAlex provided us with a single consistent dataset of publications, allowing 
 The OpenAlex dataset was a game changer for us. As we are informing public policy, using an open dataset that allows for transparency is essential. We are planning to release a small dataset, derived from OpenAlex, that is of New Zealand researchers only. This will be widely accessible. This kind of repurposing would not be possible without the open licensing provided by OpenAlex`,
           name: "Edward Abraham",
           org: "Dragonfly Data Science",
+          type: "analytics",
         },
 
 
@@ -129,6 +134,7 @@ Since incorporating OpenAlex into our Citation Generator, our service has become
 We strongly recommend OpenAlex to anyone seeking a reliable and fast source of scholarly papers.`,
           name: "Sven Hanssen",
           org: `Scribbr`,
+          type: "enterprise",
         },
 
 
@@ -143,6 +149,7 @@ OpenAlex sovled this by providing publication information, citation data, and di
 We are impressed with OpenAlex's ability to establish relationships between various data points: it connects publications with authors, institutions with authors, and publications with disciplines. I would definitely recommend OpenAlex to others. In my opinion, OpenAlex has the potential to become an essential service used globally. To be honest, we are heavily reliant on SciVal and InCites for institutional statistics. Scopus and Web of Science (WoS) companies are quite strict with their data due to this dependence. I see OpenAlex as an important initiative that could eventually replace these products...I believe OpenAlex holds great promise for the future.`,
           name: "Ahmet Mungen",
           org: `INSERES`,
+          type: "enterprise",
         },
 
 
@@ -153,6 +160,7 @@ We are impressed with OpenAlex's ability to establish relationships between vari
           OpenAlex helps streamline this process and significantly optimize the performance of our literature search, and thus shorten our overall R&D time. We highly recommend OpenAlex to anyone who needs a unified interface to acquire open scholarly metadata.`,
           name: "Trang Le",
           org: `Bristol Myers Squibb`,
+          type: "enterprise",
         },
 
 
@@ -165,6 +173,7 @@ To do this, we have to pull data from various sources (e.g. Web of Science, Scop
 The OpenAlex API helps us to consolidate and accelerate our data collection, so that we can support TU Berlin researchers more efficiently. In the long run we hope a GUI will meet researchers needs for searching/browsing. We recommend university libraries use OpenAlex to build and maintain sustainable, noncommercial scholary infrastructures.`,
           name: "Michaela Voigt",
           org: `Technische Universität Berlin (University library)`,
+          type: "analytics",
         },
 
 
@@ -177,6 +186,7 @@ The OpenAlex API helps us to consolidate and accelerate our data collection, so 
  We have used OpenAlex data in various projects now, providing clients with valuable insights on themes and peers of their interest. We would definitely recommend OpenAlex to anyone working with scientific publication data.`,
           name: "André Vermeij",
           org: `Kenedict`,
+          type: "enterprise",
         },
 
 
@@ -192,6 +202,7 @@ OpenAlex is CC0 and we can share everything without worrying or talking to lawye
  We compared the data and found some differences (E.g.. OA: better coverage in South America, lower coverage in China; Author disambiguation is a bit better with Scopus; Affiliation disambiguation with ROR ids is more useful at OpenAlex), but overall we are happy with the data quality. I recommend everyone to try OpenAlex for bibliometric research.`,
           name: "Tom Theile",
           org: `Max-Planck-Institute for demographic research`,
+          type: "research",
         },
 
 
@@ -206,6 +217,7 @@ OpenAlex has successfully bridged this gap and now provides even more relevant i
 `,
           name: "Tim Wölfle",
           org: `Local Citation Network`,
+          type: "enterprise",
         },
 
 
@@ -220,6 +232,7 @@ Although there are other options available for academic or corporate researchers
 I would highly recommend OpenAlex to others with scientometric and bibliometric interests. Some of the most important advances in our world are attributable to increasing access to technologies. Its open-access values encourage a common data framework of accessibility, equity, and diversity. `,
           name: "Chris B.",
           org: `PhD student at US research university`,
+          type: "research",
         },
 
 
@@ -232,6 +245,7 @@ I would highly recommend OpenAlex to others with scientometric and bibliometric 
   OpenAlex is an easy to use solution with excellent documentation, extensive and improving database, and a robust yet simple API that's  free of charge. This makes it the best solution for academic use cases like ours that are working to further diversity and equity in research. I recommend OpenAlex to whoever I know to be working in the domain of scientometrics.`,
           name: "Chinar Dankhara",
           org: `Georgia Institute of Technology`,
+          type: "analytics",
         },
 
 
@@ -242,6 +256,7 @@ I would highly recommend OpenAlex to others with scientometric and bibliometric 
 The clear syntax makes it easy to construct a query, and the grouping, filtering, and limiting gives us snapshots of trends very quickly. This is a powerful tool that has already cemented itself as an integral and vital part of bibliographic studies.`,
           name: "Eric Schares",
           org: `Iowa State University Library`,
+          type: "analytics",
         },
 
 
@@ -254,6 +269,7 @@ Prior to OpenAlex, we used Microsoft Academic Graph, Semantic Scholar, Crossref,
 The latest version of the Papermill Alarm was trained on OpenAlex data (for the most part). Building it took months of work. Throughout that work, OpenAlex was solidly reliable. The result is a tool that, as far as I know, has the highest recall for papermill detection.`,
           name: "Adam Day",
           org: `Clear Skies`,
+          type: "enterprise",
         },
 
 
