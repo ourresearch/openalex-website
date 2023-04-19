@@ -113,7 +113,7 @@ body {
       font-family: roboto !important;
       //font-family: Inconsolata !important;
       //font-family: Helvetica !important;
-      font-size: 18px !important;
+      font-size: 16px !important;
       //letter-spacing: .05em !important;
     }
 
