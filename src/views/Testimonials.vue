@@ -320,6 +320,26 @@ The latest version of the Papermill Alarm was trained on OpenAlex data (for the 
                 },
 
 
+                {
+                    short: `<strong>OpenAlex is of crucial importance</strong>... it offers a better performance than other databases...a fundamental building block.`,
+                    long: `I am the main developer of VOSviewer, one of the most popular software tools worldwide for visualizing scientific literature based on bibliographic data. VOSviewer supports a large number of bibliographic databases. However, most of these databases have important limitations:
+
+<ul>
+<li>They require an expensive subscription (Web of Science, Scopus),</li>
+<li>their coverage of the scientific literature is limited (Web of Science, Scopus),</li>
+<li>they allow only small amounts of data to be exported (Web of Science, Scopus, Dimensions),</li>
+ <li>they are restricted to specific disciplines (PubMed, Europe PMC),
+ <li>there are major gaps in their data (PubMed, Europe PMC, Crossref, OpenCitations), and/or</li>
+ <li>downloading data is very slow (Crossref, OpenCitations).</li>
+ </ul>
+
+                     OpenAlex is of crucial importance for VOSviewer users because it offers a better performance than other databases on all the above-mentioned criteria. VOSviewer users regularly run into problems because of the limitations of bibliographic databases. When they ask me for help, I often refer them to OpenAlex as an alternative database that is likely to offer a solution to their problem. I consider OpenAlex to be a fundamental building block for an ecosystem of open infrastructures for high-quality research analytics.`,
+                    name: "Nees Jan van Eck",
+                    org: `Centre for Science and Technology Studies (CWTS), Leiden University`,
+                    type: "research",
+                },
+
+
             ]
         }
     },
