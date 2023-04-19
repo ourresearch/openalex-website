@@ -320,7 +320,7 @@ The latest version of the Papermill Alarm was trained on OpenAlex data (for the 
 
 
                 {
-                    short: `<strong>OpenAlex is of crucial importance</strong>... it offers a better performance than other databases...a fundamental building block.`,
+                    short: `OpenAlex is of crucial importance... it offers a <strong>better performance than other databases</strong>...a fundamental building block.`,
                     long: `I am the main developer of VOSviewer, one of the most popular software tools worldwide for visualizing scientific literature based on bibliographic data. VOSviewer supports a large number of bibliographic databases. However, most of these databases have important limitations:<br><br>
 
 <ul>
@@ -341,7 +341,7 @@ The latest version of the Papermill Alarm was trained on OpenAlex data (for the 
                 },
 
                 {
-                    short: `OpenAlex has been at the core of my research...<strong>the OpenAlex API has vastly improved my workflow</strong> and has (almost) eliminated any setup costs.`,
+                    short: `OpenAlex has been at the core of my research...the OpenAlex API has <strong>vastly improved my workflow</strong> and has (almost) eliminated any setup costs.`,
                     long: `I am a PhD student at the Haas School of Business, UC Berkeley. I work on issues related to diffusion of scientific knowledge and identifying channels through which knowledge travels from universities to industry. <br><br>
 
 OpenAlex has been at the core of my research as it provides free access to bibliometric data that is relatively clean and easy to access via the API. I was using MAG before it was discontinued and had to download the entire dataset on my local computer. It took me a few months to set up MAG to run simple queries. OpenAlex API has vastly improved my workflow and has (almost) eliminated any setup costs. <br><br>
@@ -385,6 +385,21 @@ OpenAlex’s ease of use, transparent and high standards with regard to data qua
                     name: "Manuela Collis",
                     org: `University of Toronto`,
                     type: "research",
+                },
+
+                {
+                    short: `the API has turned out to be highly valuable for us as it provides <strong> fast and easy</strong> access to the data we need.`,
+                    long: `The Research Intelligence team at the Vrije Universiteit Amsterdam creates dashboards and reports for policy makers within and outside the university.<br><br>
+
+ While our own publications are registered in-house, we rely on scholarly databases for analyses with a broader scope such as international benchmarking.<br><br>
+
+  OpenAlex has been very beneficial for us and promises to be a worthy alternative to commercial databases. Especially the API has turned out to be highly valuable for us as it provides fast and easy access to the data we need, even allowing us to quickly generate aggregated overviews via the groupby parameter, for instance a summary of our open access percentages.<br><br>
+
+   We highly recommend OpenAlex to anyone looking for a straightforward integration of scholarly metadata into BI solutions such as dashboards.
+`,
+                    name: "Max Paulus",
+                    org: `Vrije Universiteit Amsterdam (Research Intelligence team)`,
+                    type: "analytics",
                 },
 
 
@@ -478,21 +493,6 @@ able to add crucial features to our tool and increase researchers' productivity,
                     name: "Marcin Makulec",
                     org: `Evidence Prime`,
                     type: "enterprise",
-                },
-
-                {
-                    short: `the API has turned out to be highly valuable for us as it provides <strong> fast and easy</strong> access to the data we need.`,
-                    long: `The Research Intelligence team at the Vrije Universiteit Amsterdam creates dashboards and reports for policy makers within and outside the university.<br><br>
-
- While our own publications are registered in-house, we rely on scholarly databases for analyses with a broader scope such as international benchmarking.<br><br>
-
-  OpenAlex has been very beneficial for us and promises to be a worthy alternative to commercial databases. Especially the API has turned out to be highly valuable for us as it provides fast and easy access to the data we need, even allowing us to quickly generate aggregated overviews via the groupby parameter, for instance a summary of our open access percentages.<br><br>
-
-   We highly recommend OpenAlex to anyone looking for a straightforward integration of scholarly metadata into BI solutions such as dashboards.
-`,
-                    name: "Max Paulus",
-                    org: `Vrije Universiteit Amsterdam (Research Intelligence team)`,
-                    type: "analytics",
                 },
 
 
