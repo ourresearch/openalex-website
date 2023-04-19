@@ -108,6 +108,12 @@ export default {
     return {
       isDialogOpen: false,
       dialogData: null,
+      selectedItemTypes: [],
+      itemTypes: [
+        "analytics",
+        "enterprise",
+        "research",
+      ],
       items: [
         {
           short: `<strong>The OpenAlex dataset was a game changer....</strong>an open dataset that allows for transparency is essential.`,
