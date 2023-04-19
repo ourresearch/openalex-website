@@ -339,6 +339,33 @@ The latest version of the Papermill Alarm was trained on OpenAlex data (for the 
                     type: "research",
                 },
 
+                {
+                    short: `OpenAlex has been at the core of my research...<strong>the OpenAlex API has vastly improved my workflow</strong> and has (almost) eliminated any setup costs.`,
+                    long: `I am a PhD student at the Haas School of Business, UC Berkeley. I work on issues related to diffusion of scientific knowledge and identifying channels through which knowledge travels from universities to industry. <br><br>
+
+OpenAlex has been at the core of my research as it provides free access to bibliometric data that is relatively clean and easy to access via the API. I was using MAG before it was discontinued and had to download the entire dataset on my local computer. It took me a few months to set up MAG to run simple queries. OpenAlex API has vastly improved my workflow and has (almost) eliminated any setup costs. <br><br>
+
+In my current project, OpenAlex author disambiguation and affiliation data havs been helpful in identifying the sources of scientific knowledge and in matching the information to media data. <br><br>
+
+I have recommended OpenAlex to many colleagues.`,
+                    name: "Saqib Mumtaz",
+                    org: `UC Berkeley`,
+                    type: "research",
+                },
+                {
+                    short: `I am currently moving all of my projects to use OpenAlex... [it] has among the <strong> best available data </strong> on disambiguated authorship and author metadata that I have encountered.`,
+                    long: `I am a sociologist who researches the dynamics of scholarly communication. My research relies centrally on high quality and reliable data on citations, publication metadata, author characteristics, and other aspects of the publication ecosystem.<br><br>
+
+Previously (and currently) I use expensive proprietary data sources for my research, but I am currently moving all of my projects to use OpenAlex. Not only is OpenAlex more affordable, but it provides more convenient access (well structured data downloads and an extremely well designed API), and I have found the data to be often of higher quality. In particular, OpenAlex has among the best available data on disambiguated authorship and author metadata that I have encountered. It also offers up-to-date data from a variety of sources, without undue focus on only, e.g., books or journals.<br><br>
+
+As one example, an ongoing project requires both bibliometric data and full text of published articles. OpenAlex makes it extremely easy to find high-quality versions of open-access publications that can be processed programmatically. There is no better solution for this kind of project that I know of.<br><br>
+
+I would, and often do, recommend OpenAlex to others who need this kind of data.`,
+                    name: "Peter McMahan",
+                    org: `McGill University`,
+                    type: "research",
+                },
+
 
             ]
         }
