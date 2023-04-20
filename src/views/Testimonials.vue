@@ -447,7 +447,7 @@ To do this, we need to be able to retrieve academic papers from often limited in
 Now, using OpenAlex, we can do this in a single step, retrieving both metadata and the 'best' location of the paper. This is much faster - often by several seconds per article. What's more, the help and support we get from the OpenAlex team is great, and they helped us accelerate our adoption and implementation.<br><br>
 
 We highly recommend OpenAlex to any institution or startup that needs fast, responsive and comprehensive access to scholarly metadata.`,
-                    name: "Phil Gootch",
+                    name: "Phil Gooch",
                     org: `Scholarcy`,
                     type: "enterprise",
                 },
