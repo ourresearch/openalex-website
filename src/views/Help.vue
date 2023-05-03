@@ -1,7 +1,7 @@
 <template>
   <v-container class="page">
     <div class="help-form">
-      <h3 class="text-h3">Get Help</h3>
+      <h3 class="text-h3">Get in Touch</h3>
       <p ref="description">Use this form to send a bug report or ask
         questions not answered by the <a href="https://docs.openalex.org/">documentation</a>.</p>
 

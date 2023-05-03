@@ -33,6 +33,7 @@ const routes = [
     {path: '/testimonials', name: "testimonials", component: Testimonials},
     {path: '/about', name: "about", component: About},
     {path: '/help', component: Help},
+    {path: '/feedback', component: Help},
     {path: '/contact', redirect: {name: "about"}},
     {path: '/pricing', component: Pricing},
 ]
