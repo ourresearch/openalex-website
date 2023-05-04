@@ -140,7 +140,7 @@
         <tbody>
           <tr>
             <td class="tg-lhf6"><a href="https://openalex.org/">OpenAlex</a></td>
-            <td class="tg-loku">250M</td>
+            <td class="tg-loku">240M</td>
             <td class="tg-loku">43.8M</td>
             <td class="tg-loku">1.9B</td>
             <td class="tg-loku">Freemium</td>
