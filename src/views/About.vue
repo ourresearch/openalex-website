@@ -134,7 +134,7 @@
             <th class="tg-q56f">Citations</th>
             <th class="tg-q56f">Price</th>
             <th class="tg-q56f">Data Openness</th>
-            <th class="tg-q56f">Org struture</th>
+            <th class="tg-q56f">Org structure</th>
           </tr>
         </thead>
         <tbody>
