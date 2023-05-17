@@ -1,7 +1,7 @@
 <template>
-  <div class="home d-flex justify-center">
+  <div class="">
     <div class="above-the-fold">
-      <v-container class="" style="margin-top: 150px">
+      <v-container style="margin-top: 150px">
         <div class="text-h3" style="line-height: 1.3;">
           An open and comprehensive catalog of scholarly papers, authors, institutions, and more.
         </div>
@@ -12,9 +12,8 @@
           </p>
 
         </div>
-        <div class="mt-8 d-flex">
-          <v-btn
-              x-large
+        <div class="mt-8">
+          <v-btn x-large
               class=""
               color="primary"
               href="https://docs.openalex.org/"
