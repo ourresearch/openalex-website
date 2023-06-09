@@ -102,7 +102,7 @@
     </ul>
     <p>
       You can get the full list of sources <a
-        href="https://docs.openalex.org/api-entities/sources/get-lists-of-sources">using our API.</a>
+        href="https://docs.openalex.org/api-entities/venues/get-lists-of-venues">using our API.</a>
     </p>
 
     <h4 class="text-h4" id="comparison">Comparison with other scholarly data sources</h4>
