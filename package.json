@@ -6,7 +6,6 @@
     "npm": ">=8.0.0",
     "node": ">=14.0.0"
   },
-  "type": "module",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
