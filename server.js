@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const serveStatic = require('serve-static');
 
-const sslRedirect = require('heroku-ssl-redirect');  // supposed to use import instead of require, but that crashed the app
+import sslRedirect from 'heroku-ssl-redirect';
 
 let app = express();
 
