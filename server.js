@@ -1,14 +1,13 @@
 const express = require('express');
 const path = require('path');
 const serveStatic = require('serve-static');
-// import sslRedirect from 'heroku-ssl-redirect';
-// const sslRedirect = require('heroku-ssl-redirect');
+const sslRedirect = require('heroku-ssl-redirect');
 
 let app = express();
 
 
 // always redirect to https:
-// app.use(sslRedirect(['production'], 301));
+app.use(sslRedirect(['production'], 301));
 
 // this was helpful for configs:
 // https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular
