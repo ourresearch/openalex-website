@@ -7,6 +7,9 @@ const sslRedirect = require('heroku-ssl-redirect');
 let app = express();
 
 
+// always redirect to https:
+app.use(sslRedirect(['production'], 301));
+
 // this was helpful for configs:
 // https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular
 app.use(serveStatic(__dirname + "/dist"));
@@ -45,9 +48,6 @@ function requestPrefersJson(req) {
     const typesWithMaxQuality = Object.entries(acceptTypes).filter(e => e[1] >= maxQuality).map(e => e[0]);
     return typesWithMaxQuality.some(t => t.toLowerCase().includes("json"));
 }
-
-// always redirect to https:
-app.use(sslRedirect(['production'], 301));
 
 app.get('*', function (req, res) {
 
