@@ -69,7 +69,7 @@ app.get('*', function (req, res) {
 
     // the actually do want a webpage on openalex.org, so let's load up the Vue site
     } else {
-        res.sendFile('./dist/index.html');
+        res.sendFile('./dist/index.html', { root: __dirname });
     }
 });
 
