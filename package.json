@@ -15,7 +15,7 @@
     "base-64": "^1.0.0",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
-    "heroku-ssl-redirect": "^0.1.1",
+    "heroku-ssl-redirect": "^0.0.4",
     "vue": "^2.6.11",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.2.0",
