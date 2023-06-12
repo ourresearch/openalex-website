@@ -1,6 +1,8 @@
-const express = require('express');
-const path = require('path');
-const serveStatic = require('serve-static');
+import express from 'express';
+import sslRedirect from 'heroku-ssl-redirect';
+// const path = require('path');
+// const serveStatic = require('serve-static');
+import serveStatic from 'serve-static';
 
 let app = express();
 
@@ -44,9 +46,9 @@ function requestPrefersJson(req) {
     return typesWithMaxQuality.some(t => t.toLowerCase().includes("json"));
 }
 
-// if we want to always redirect to https, use this:
-// https://medium.com/@seunghunsunmoonlee/how-to-enforce-https-redirect-http-to-https-on-heroku-deployed-apps-a87a653ba61e
-// not going to implement for now because it's not essential and we're short on time.
+// always redirect to https:
+app.use(sslRedirect());
+
 app.get('*', function (req, res) {
 
     const pathIdMatches = req.path.match(openAlexIdRegex)
@@ -67,7 +69,7 @@ app.get('*', function (req, res) {
 
     // the actually do want a webpage on openalex.org, so let's load up the Vue site
     } else {
-        res.sendfile('./dist/index.html');
+        res.sendFile('./dist/index.html');
     }
 });
 
