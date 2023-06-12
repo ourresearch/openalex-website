@@ -47,7 +47,7 @@ function requestPrefersJson(req) {
 }
 
 // always redirect to https:
-app.use(sslRedirect());
+app.use(sslRedirect(['production'], 301));
 
 app.get('*', function (req, res) {
 
