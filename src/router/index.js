@@ -15,6 +15,7 @@ import About from "@/views/About";
 import Help from "@/views/Help";
 import Pricing from "@/views/Pricing";
 import Testimonials from "@/views/Testimonials";
+import Webinars from "@/views/Webinars";
 
 Vue.use(VueRouter)
 
@@ -36,6 +37,7 @@ const routes = [
     {path: '/feedback', component: Help},
     {path: '/contact', redirect: {name: "about"}},
     {path: '/pricing', component: Pricing},
+    {path: '/webinars', component: Webinars},
 ]
 
 const router = new VueRouter({
