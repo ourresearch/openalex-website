@@ -10,8 +10,16 @@
             <router-link to="/testimonials">Testimonials</router-link>
           </div>
           <div>
+            <router-link to="/pricing">Pricing</router-link>
+          </div>
+          <div>
             <router-link to="/help">Help</router-link>
           </div>
+          <div>
+            <router-link to="/webinars">Webinars</router-link>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="2">
           <a href="https://docs.openalex.org/">
             Read the docs
             <v-icon small>mdi-open-in-new</v-icon>
@@ -19,8 +27,6 @@
           <div>
             <router-link to="/about#contact">Contact</router-link>
           </div>
-        </v-col>
-        <v-col cols="12" sm="2">
           <div>
             <a href="https://groups.google.com/g/openalex-users" target="_blank">Mailing list</a>
           </div>

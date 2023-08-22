@@ -20,6 +20,7 @@
         <v-btn class="no-active low-key-button" text to="./testimonials">Testimonials</v-btn>
         <v-btn class="no-active low-key-button" text to="./pricing">Pricing</v-btn>
         <v-btn class="no-active low-key-button" text to="./help">Help</v-btn>
+        <v-btn class="no-active low-key-button" text to="./webinars">Webinars</v-btn>
         <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
           Docs
           <v-icon right>mdi-open-in-new</v-icon>
@@ -44,6 +45,9 @@
             </v-list-item>
             <v-list-item to="/help">
               Help
+            </v-list-item>
+            <v-list-item to="/webinars">
+              Webinars
             </v-list-item>
             <v-btn class="no-active low-key-button" text href="https://docs.openalex.org/">
               Docs

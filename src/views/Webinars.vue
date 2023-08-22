@@ -1,6 +1,6 @@
 <template>
   <v-container class="page">
-    <h2 class="text-h2">Webinar and Tutorial Videos for Community Engagement</h2>
+    <h2 class="text-h2">Webinars</h2>
     <p>
       Less than 2 years since its initial launch, OpenAlex has already become a favorite in the toolkit of bibliometric
       experts because its open nature and comprehensive coverage make high-quality research analytics more accessible than
