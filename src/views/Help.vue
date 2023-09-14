@@ -2,8 +2,8 @@
   <v-container class="page">
     <div class="help-form">
       <h3 class="text-h3">Get in Touch</h3>
-      <p ref="description">Use this form to send a bug report or ask
-        questions not answered by the <a href="https://docs.openalex.org/">documentation</a>.</p>
+      <p ref="description">Use this form to get in touch with the OpenAlex team, to send a bug report, or to ask
+        any questions not answered by the <a href="https://docs.openalex.org/">documentation</a>.</p>
 
       <v-form
           ref="form"
@@ -37,7 +37,7 @@
         <v-textarea
             v-model="message"
             :rules="messageRules"
-            label="Describe the issue"
+            label="Message"
             outlined
             required></v-textarea>
 
