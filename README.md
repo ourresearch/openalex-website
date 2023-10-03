@@ -1,4 +1,6 @@
-# ourresearch-website-2
+# DEPRECATED ourresearch-website-2
+
+**ATTENTION** — [openalex.org](httsp://openalex.org) is no longer using this code. It was moved to the `openalex-gui` repository in September, 2023.
 
 ## Project setup
 ```
